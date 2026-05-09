@@ -17,7 +17,7 @@ export function StatsGrid({ stats }: { stats: EventStatsSummary[] }) {
         ))}
       </div>
 
-      <div className="mt-6 rounded-[28px] border border-dashed border-line bg-black/[0.02] px-6 py-10 text-center text-sm text-muted">
+      <div className="mt-6 rounded-[28px] border border-dashed border-line bg-black/[0.02] px-6 py-10 text-center text-sm text-[#6f675d]">
         图表模块占位区。后续接真实数据后，可扩展为分数走势、对局时长分布、选手表现对比等图表。
       </div>
     </section>

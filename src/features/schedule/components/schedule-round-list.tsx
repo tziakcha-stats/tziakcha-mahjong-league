@@ -18,16 +18,16 @@ export function ScheduleRoundList({ rounds }: { rounds: EventScheduleRound[] }) 
                 <p className="display-font text-sm font-semibold uppercase tracking-[0.24em] text-brand">
                   {round.stage}
                 </p>
-                <p className="mt-2 text-sm text-muted">{round.date}</p>
+                <p className="mt-2 text-sm text-[#6f675d]">{round.date}</p>
               </div>
               <div>
                 <h3 className="text-xl font-semibold tracking-tight">{round.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-muted">{round.summary}</p>
+                <p className="mt-3 text-sm leading-7 text-[#6f675d]">{round.summary}</p>
               </div>
             </div>
           ))
         ) : (
-          <p className="rounded-2xl bg-black/[0.03] px-4 py-8 text-center text-sm text-muted">
+          <p className="rounded-2xl bg-black/[0.03] px-4 py-8 text-center text-sm text-[#6f675d]">
             当前赛事尚未公布完整赛程。
           </p>
         )}

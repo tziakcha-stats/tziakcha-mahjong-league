@@ -18,9 +18,9 @@ export function EventCard({ event }: { event: LeagueEvent }) {
         <StatusBadge status={event.status} />
       </div>
 
-      <p className="mt-4 flex-1 text-sm leading-7 text-muted">{event.tagline}</p>
+      <p className="mt-4 flex-1 text-sm leading-7 text-[#6f675d]">{event.tagline}</p>
 
-      <dl className="mt-5 space-y-2 text-sm text-muted">
+      <dl className="mt-5 space-y-2 text-sm text-[#6f675d]">
         <div className="flex items-center justify-between gap-4">
           <dt>时间</dt>
           <dd>{formatDateRange(event.startDate, event.endDate)}</dd>
@@ -36,10 +36,11 @@ export function EventCard({ event }: { event: LeagueEvent }) {
       </dl>
 
       <div className="mt-6 flex items-center justify-between border-t border-line pt-5">
-        <span className="text-sm text-muted">{event.venue}</span>
+        <span className="text-sm text-[#6f675d]">{event.venue}</span>
         <Link
           href={`/events/${event.slug}`}
-          className="rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background transition-colors hover:bg-brand"
+          className="rounded-full bg-[#16120f] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-brand"
+          style={{ color: "#ffffff" }}
         >
           查看赛事
         </Link>

@@ -20,7 +20,7 @@ export function EventOverview({ detail }: { detail: EventDetail }) {
             title="核心规则摘要"
             description="第一版先以摘要形式展示，后续可以扩展成完整规则文档页面。"
           />
-          <ul className="mt-6 space-y-3 text-sm leading-7 text-muted">
+          <ul className="mt-6 space-y-3 text-sm leading-7 text-[#6f675d]">
             {detail.rules.map((rule) => (
               <li key={rule} className="rounded-2xl bg-black/[0.02] px-4 py-3">
                 {rule}
@@ -59,8 +59,8 @@ export function EventOverview({ detail }: { detail: EventDetail }) {
                     {round.stage}
                   </span>
                 </div>
-                <p className="mt-2 text-sm text-muted">{round.date}</p>
-                <p className="mt-3 text-sm leading-7 text-muted">{round.summary}</p>
+                <p className="mt-2 text-sm text-[#6f675d]">{round.date}</p>
+                <p className="mt-3 text-sm leading-7 text-[#6f675d]">{round.summary}</p>
               </div>
             ))}
           </div>

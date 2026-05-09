@@ -30,8 +30,9 @@ export function EventSubnav({
                 "rounded-full border px-4 py-2 text-sm transition-colors",
                 isActive
                   ? "border-brand bg-brand text-white"
-                  : "border-line bg-white/70 text-muted hover:bg-white",
+                  : "border-line bg-white/70 text-[#6f675d] hover:bg-white",
               )}
+              style={isActive ? { color: "#ffffff" } : undefined}
             >
               {item.label}
             </Link>

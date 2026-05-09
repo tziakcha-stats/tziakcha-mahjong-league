@@ -12,7 +12,7 @@ export function MatchRecordsTable({ matches }: { matches: MatchRecord[] }) {
 
       <div className="mt-8 overflow-hidden rounded-[24px] border border-line">
         <table className="min-w-full divide-y divide-line text-left text-sm">
-          <thead className="bg-black/[0.03] text-muted">
+          <thead className="bg-black/[0.03] text-[#6f675d]">
             <tr>
               <th className="px-4 py-3 font-medium">桌次</th>
               <th className="px-4 py-3 font-medium">轮次</th>
@@ -27,16 +27,16 @@ export function MatchRecordsTable({ matches }: { matches: MatchRecord[] }) {
               matches.map((match) => (
                 <tr key={match.id}>
                   <td className="px-4 py-4 font-semibold">{match.tableName}</td>
-                  <td className="px-4 py-4 text-muted">{match.roundLabel}</td>
-                  <td className="px-4 py-4 text-muted">{match.players.join(" / ")}</td>
+                  <td className="px-4 py-4 text-[#6f675d]">{match.roundLabel}</td>
+                  <td className="px-4 py-4 text-[#6f675d]">{match.players.join(" / ")}</td>
                   <td className="px-4 py-4">{match.winner}</td>
                   <td className="px-4 py-4 text-brand">{match.points}</td>
-                  <td className="px-4 py-4 text-muted">{match.finishedAt}</td>
+                  <td className="px-4 py-4 text-[#6f675d]">{match.finishedAt}</td>
                 </tr>
               ))
             ) : (
               <tr>
-                <td colSpan={6} className="px-4 py-10 text-center text-muted">
+                <td colSpan={6} className="px-4 py-10 text-center text-[#6f675d]">
                   当前赛事尚未产生对局记录。
                 </td>
               </tr>

@@ -28,15 +28,15 @@ export function RankingTable({ ranking }: { ranking: PlayerRankingEntry[] }) {
                 <tr key={entry.name}>
                   <td className="px-4 py-4 font-semibold">{entry.rank}</td>
                   <td className="px-4 py-4">{entry.name}</td>
-                  <td className="px-4 py-4 text-muted">{entry.club}</td>
+                  <td className="px-4 py-4 text-[#6f675d]">{entry.club}</td>
                   <td className="px-4 py-4 text-brand">{entry.totalPoints}</td>
-                  <td className="px-4 py-4 text-muted">{entry.averagePlacement}</td>
-                  <td className="px-4 py-4 text-muted">{entry.bonus}</td>
+                  <td className="px-4 py-4 text-[#6f675d]">{entry.averagePlacement}</td>
+                  <td className="px-4 py-4 text-[#6f675d]">{entry.bonus}</td>
                 </tr>
               ))
             ) : (
               <tr>
-                <td colSpan={6} className="px-4 py-10 text-center text-muted">
+                <td colSpan={6} className="px-4 py-10 text-center text-[#6f675d]">
                   当前赛事尚未产生排行榜数据。
                 </td>
               </tr>
