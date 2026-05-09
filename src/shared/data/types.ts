@@ -49,6 +49,16 @@ export interface EventStatsSummary {
   note: string;
 }
 
+export interface TeamInfo {
+  id: string;
+  name: string;
+  school: string;
+  captain: string;
+  members: string[];
+  record: string;
+  note: string;
+}
+
 export interface EventDetail {
   event: LeagueEvent;
   story: string;
@@ -57,4 +67,5 @@ export interface EventDetail {
   matches: MatchRecord[];
   ranking: PlayerRankingEntry[];
   stats: EventStatsSummary[];
+  teams: TeamInfo[];
 }

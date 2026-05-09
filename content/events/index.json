@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "sdu-riichi-team-championship",
+    "name": "SDU国标麻将团体赛",
+    "shortName": "SDU团体赛",
+    "tagline": "以团体积分与轮转策略为核心的国标麻将赛事展示站。",
+    "city": "济南",
+    "venue": "山东大学学生活动中心",
+    "startDate": "2026.05.24",
+    "endDate": "2026.05.25",
+    "players": 48,
+    "rounds": 10,
+    "status": "进行中",
+    "season": "2026 Team Season",
+    "coverAccent": "from-[#4a1010] to-[#7f1d1d]"
+  }
+]

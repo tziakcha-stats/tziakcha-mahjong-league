@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 
 const navItems = [
   { label: "概览", href: "" },
+  { label: "队伍信息", href: "/teams" },
   { label: "赛程", href: "/schedule" },
   { label: "对局", href: "/matches" },
   { label: "统计", href: "/stats" },

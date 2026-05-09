@@ -1,0 +1,42 @@
+[
+  {
+    "rank": 1,
+    "name": "SDU 一队",
+    "club": "山东大学",
+    "totalPoints": 176,
+    "averagePlacement": 1.9,
+    "bonus": 12
+  },
+  {
+    "rank": 2,
+    "name": "博观队",
+    "club": "山东大学",
+    "totalPoints": 168,
+    "averagePlacement": 2.0,
+    "bonus": 10
+  },
+  {
+    "rank": 3,
+    "name": "泉城牌社",
+    "club": "济南",
+    "totalPoints": 151,
+    "averagePlacement": 2.2,
+    "bonus": 8
+  },
+  {
+    "rank": 4,
+    "name": "青未了队",
+    "club": "山东",
+    "totalPoints": 143,
+    "averagePlacement": 2.3,
+    "bonus": 6
+  },
+  {
+    "rank": 5,
+    "name": "SDU 二队",
+    "club": "山东大学",
+    "totalPoints": 136,
+    "averagePlacement": 2.4,
+    "bonus": 4
+  }
+]

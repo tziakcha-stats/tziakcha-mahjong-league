@@ -1,0 +1,29 @@
+[
+  {
+    "id": "m1",
+    "tableName": "A1 桌",
+    "roundLabel": "小组赛第 3 轮",
+    "finishedAt": "05.24 13:20",
+    "players": ["SDU 一队", "泉城牌社", "齐鲁雀研会", "海右竞技组"],
+    "winner": "SDU 一队",
+    "points": "+48.0"
+  },
+  {
+    "id": "m2",
+    "tableName": "B3 桌",
+    "roundLabel": "小组赛第 4 轮",
+    "finishedAt": "05.24 14:10",
+    "players": ["青未了队", "博观队", "SDU 二队", "国标推广社"],
+    "winner": "青未了队",
+    "points": "+36.0"
+  },
+  {
+    "id": "m3",
+    "tableName": "C2 桌",
+    "roundLabel": "小组赛第 5 轮",
+    "finishedAt": "05.24 16:40",
+    "players": ["SDU 一队", "博观队", "泉城牌社", "国标推广社"],
+    "winner": "博观队",
+    "points": "+41.0"
+  }
+]
