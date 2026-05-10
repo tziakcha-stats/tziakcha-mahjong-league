@@ -1,3 +1,4 @@
+import fs from "node:fs/promises";
 import path from "node:path";
 
 import {
@@ -5,20 +6,23 @@ import {
   parseCsv,
   percentage,
   readJson,
+  readJsonIfExists,
   readText,
 } from "./sw-league-utils.mjs";
 
 const DEFAULT_TEAM_NAME = "未匹配队伍";
 const RECENT_MATCH_LIMIT = 20;
+const STANDARD_POINTS_BY_PLACEMENT = [4, 2, 1, 0];
+const PLACEMENT_KEYS = ["first", "second", "third", "fourth"];
 
-function buildPlayerIndex(teamRows) {
+function buildPlayerIndex(teamRows, aliases = {}) {
   const index = new Map();
 
   for (const team of teamRows) {
     const players = [team.captain, team.member1, team.member2, team.member3].filter(Boolean);
 
     for (const playerName of players) {
-      index.set(playerName, {
+      index.set(resolvePlayerName(playerName, aliases), {
         teamId: String(team.id),
         teamName: team.teamName,
       });
@@ -26,6 +30,47 @@ function buildPlayerIndex(teamRows) {
   }
 
   return index;
+}
+
+async function readPlayerAliases(projectRoot) {
+  const playerRoot = path.join(projectRoot, "data", "sw_league", "player");
+  const aliases = {};
+  let files;
+
+  try {
+    files = await fs.readdir(playerRoot);
+  } catch (error) {
+    if (error?.code === "ENOENT") {
+      return aliases;
+    }
+
+    throw error;
+  }
+
+  for (const fileName of files) {
+    if (!fileName.endsWith(".json")) {
+      continue;
+    }
+
+    const player = await readJson(path.join(playerRoot, fileName));
+    const currentName = player.name;
+
+    if (!currentName) {
+      continue;
+    }
+
+    for (const alias of player.alias_history ?? []) {
+      if (alias.name && alias.name !== currentName) {
+        aliases[alias.name] = currentName;
+      }
+    }
+  }
+
+  return aliases;
+}
+
+function resolvePlayerName(playerName, aliases = {}) {
+  return aliases[playerName] ?? playerName;
 }
 
 async function readCsv(projectRoot, ...segments) {
@@ -37,6 +82,79 @@ async function readCsv(projectRoot, ...segments) {
 function toNumber(value) {
   const parsed = Number(value);
   return Number.isFinite(parsed) ? parsed : 0;
+}
+
+function greatestCommonDivisor(left, right) {
+  let a = Math.abs(left);
+  let b = Math.abs(right);
+
+  while (b !== 0) {
+    const next = a % b;
+    a = b;
+    b = next;
+  }
+
+  return a || 1;
+}
+
+function createFraction(numerator, denominator = 1) {
+  if (denominator === 0) {
+    throw new Error("Fraction denominator cannot be zero.");
+  }
+
+  const sign = denominator < 0 ? -1 : 1;
+  const normalizedNumerator = numerator * sign;
+  const normalizedDenominator = Math.abs(denominator);
+  const divisor = greatestCommonDivisor(normalizedNumerator, normalizedDenominator);
+
+  return {
+    numerator: normalizedNumerator / divisor,
+    denominator: normalizedDenominator / divisor,
+  };
+}
+
+function addFractions(left, right) {
+  return createFraction(
+    left.numerator * right.denominator + right.numerator * left.denominator,
+    left.denominator * right.denominator,
+  );
+}
+
+function formatFraction(fraction) {
+  const normalized = createFraction(fraction.numerator, fraction.denominator);
+  const { numerator, denominator } = normalized;
+
+  if (denominator === 1) {
+    return String(numerator);
+  }
+
+  const absoluteNumerator = Math.abs(numerator);
+  const whole = Math.trunc(absoluteNumerator / denominator);
+  const remainder = absoluteNumerator % denominator;
+  const sign = numerator < 0 ? "-" : "";
+
+  if (whole === 0) {
+    return `${sign}${remainder}/${denominator}`;
+  }
+
+  if (remainder === 0) {
+    return `${sign}${whole}`;
+  }
+
+  return `${sign}${whole}又${remainder}/${denominator}`;
+}
+
+function serializeFraction(fraction) {
+  const normalized = createFraction(fraction.numerator, fraction.denominator);
+
+  return {
+    ...normalized,
+    label: formatFraction(normalized),
+  };
+}
+
+function fractionToNumber(fraction) {
+  return fraction.numerator / fraction.denominator;
 }
 
 function formatRateNote(rounds, sourceLabel) {
@@ -59,6 +177,57 @@ function formatFinishedAt(timestamp) {
 
 function formatScore(score) {
   return score > 0 ? `+${score}` : String(score);
+}
+
+function roundToTwoDecimals(value) {
+  return Math.round(value * 100) / 100;
+}
+
+function getTieGroups(players) {
+  const sortedPlayers = players
+    .map((player, index) => ({ player, seatIndex: index }))
+    .sort((left, right) => {
+      const scoreDiff = right.player.s - left.player.s;
+      return scoreDiff === 0 ? left.seatIndex - right.seatIndex : scoreDiff;
+    });
+
+  const groups = [];
+  let cursor = 0;
+
+  while (cursor < sortedPlayers.length) {
+    const score = sortedPlayers[cursor].player.s;
+    const members = [];
+    let nextCursor = cursor;
+
+    while (
+      nextCursor < sortedPlayers.length &&
+      sortedPlayers[nextCursor].player.s === score
+    ) {
+      members.push(sortedPlayers[nextCursor]);
+      nextCursor += 1;
+    }
+
+    groups.push({
+      startIndex: cursor,
+      members,
+    });
+    cursor = nextCursor;
+  }
+
+  return groups;
+}
+
+function getStandardPointFraction(startIndex, size) {
+  const total = STANDARD_POINTS_BY_PLACEMENT.slice(
+    startIndex,
+    startIndex + size,
+  ).reduce((sum, point) => sum + point, 0);
+
+  return createFraction(total, size);
+}
+
+function getPlacementShareFraction(size) {
+  return createFraction(1, size);
 }
 
 function parseMatchTitle(title) {
@@ -100,7 +269,7 @@ function normalizeRoundNumber(value) {
 
 function buildLeaderboard(rows, playerTeamIndex, options) {
   return rows.map((row) => {
-    const playerName = row["Player Name"];
+    const playerName = options.resolvePlayerName(row["Player Name"]);
     const team = playerTeamIndex.get(playerName);
 
     return {
@@ -120,11 +289,12 @@ function buildPlayerStatsMap({
   fangchongRows,
   beizimoRows,
   winCountRows,
+  aliases,
 }) {
   const statsMap = new Map();
 
   for (const row of huleRows) {
-    const name = row["Player Name"];
+    const name = resolvePlayerName(row["Player Name"], aliases);
     statsMap.set(name, {
       rounds: toNumber(row.Rounds),
       huleRate: percentage(toNumber(row.Rate)),
@@ -139,14 +309,14 @@ function buildPlayerStatsMap({
   }
 
   for (const row of winCountRows) {
-    const stats = statsMap.get(row["Player Name"]);
+    const stats = statsMap.get(resolvePlayerName(row["Player Name"], aliases));
     if (stats) {
       stats.huleCount = toNumber(row.Value);
     }
   }
 
   for (const row of zimoRows) {
-    const stats = statsMap.get(row["Player Name"]);
+    const stats = statsMap.get(resolvePlayerName(row["Player Name"], aliases));
     if (stats) {
       stats.zimoRate = percentage(toNumber(row.Rate));
       stats.zimoCount = Math.round(toNumber(row.Rate) * stats.huleCount);
@@ -154,7 +324,7 @@ function buildPlayerStatsMap({
   }
 
   for (const row of fangchongRows) {
-    const stats = statsMap.get(row["Player Name"]);
+    const stats = statsMap.get(resolvePlayerName(row["Player Name"], aliases));
     if (stats) {
       stats.fangchongRate = percentage(toNumber(row.Rate));
       stats.fangchongCount = Math.round(toNumber(row.Rate) * stats.rounds);
@@ -162,7 +332,7 @@ function buildPlayerStatsMap({
   }
 
   for (const row of beizimoRows) {
-    const stats = statsMap.get(row["Player Name"]);
+    const stats = statsMap.get(resolvePlayerName(row["Player Name"], aliases));
     if (stats) {
       stats.beizimoRate = percentage(toNumber(row.Rate));
       stats.beizimoCount = Math.round(toNumber(row.Rate) * stats.rounds);
@@ -203,7 +373,7 @@ function buildTeamEntries(teamRows, playerStatsMap) {
   });
 }
 
-function buildRecentMatches(historyRows, playerTeamIndex) {
+function buildRecentMatches(historyRows, playerTeamIndex, aliases) {
   return [...historyRows]
     .sort((left, right) => right.finish_time - left.finish_time)
     .slice(0, RECENT_MATCH_LIMIT)
@@ -223,12 +393,13 @@ function buildRecentMatches(historyRows, playerTeamIndex) {
           })
           .map(({ player }, index) => {
             const score = toNumber(player.s);
-            const team = playerTeamIndex.get(player.n);
+            const playerName = resolvePlayerName(player.n, aliases);
+            const team = playerTeamIndex.get(playerName);
 
             return {
               placement: index + 1,
               team: team?.teamName ?? DEFAULT_TEAM_NAME,
-              player: player.n,
+              player: playerName,
               score,
               scoreLabel: formatScore(score),
             };
@@ -237,12 +408,160 @@ function buildRecentMatches(historyRows, playerTeamIndex) {
     });
 }
 
+function buildOverviewRanking(historyRows, playerTeamIndex, aliases) {
+  const playerSummaries = new Map();
+  const teamSummaries = new Map();
+
+  for (const match of historyRows) {
+    const matchTeams = new Set();
+
+    for (const group of getTieGroups(match.players)) {
+      const standardPoints = getStandardPointFraction(
+        group.startIndex,
+        group.members.length,
+      );
+      const placementShare = getPlacementShareFraction(group.members.length);
+      const placementAverage =
+        group.members.reduce((sum, _member, index) => {
+          return sum + group.startIndex + index + 1;
+        }, 0) / group.members.length;
+
+      for (const { player } of group.members) {
+        const score = toNumber(player.s);
+        const playerName = resolvePlayerName(player.n, aliases);
+        const team = playerTeamIndex.get(playerName);
+        const teamName = team?.teamName ?? DEFAULT_TEAM_NAME;
+        const current = playerSummaries.get(playerName) ?? {
+          name: playerName,
+          teamName,
+          totalPoints: 0,
+          standardPoints: createFraction(0),
+          matchCount: 0,
+          placementTotal: 0,
+          placementCounts: Object.fromEntries(
+            PLACEMENT_KEYS.map((placementKey) => [placementKey, createFraction(0)]),
+          ),
+        };
+
+        current.totalPoints += score;
+        current.standardPoints = addFractions(
+          current.standardPoints,
+          standardPoints,
+        );
+        current.matchCount += 1;
+        current.placementTotal += placementAverage;
+
+        for (
+          let placementIndex = group.startIndex;
+          placementIndex < group.startIndex + group.members.length;
+          placementIndex += 1
+        ) {
+          const placementKey = PLACEMENT_KEYS[placementIndex];
+          current.placementCounts[placementKey] = addFractions(
+            current.placementCounts[placementKey],
+            placementShare,
+          );
+        }
+
+        playerSummaries.set(playerName, current);
+
+        const teamSummary = teamSummaries.get(teamName) ?? {
+          name: teamName,
+          totalPoints: 0,
+          standardPoints: createFraction(0),
+          matchIds: new Set(),
+          memberNames: new Set(),
+        };
+        teamSummary.totalPoints += score;
+        teamSummary.standardPoints = addFractions(
+          teamSummary.standardPoints,
+          standardPoints,
+        );
+        teamSummary.memberNames.add(playerName);
+        teamSummaries.set(teamName, teamSummary);
+        matchTeams.add(teamName);
+      }
+    }
+
+    for (const teamName of matchTeams) {
+      teamSummaries.get(teamName)?.matchIds.add(match.id);
+    }
+  }
+
+  const ranking = [...playerSummaries.values()]
+    .sort((left, right) => {
+      const standardPointDiff =
+        fractionToNumber(right.standardPoints) - fractionToNumber(left.standardPoints);
+      if (standardPointDiff !== 0) {
+        return standardPointDiff;
+      }
+
+      const totalPointDiff = right.totalPoints - left.totalPoints;
+      if (totalPointDiff !== 0) {
+        return totalPointDiff;
+      }
+
+      return left.name.localeCompare(right.name, "zh-Hans-CN");
+    })
+    .map((player, index) => {
+      return {
+        rank: index + 1,
+        name: player.name,
+        club: player.teamName,
+        totalPoints: player.totalPoints,
+        standardPoints: serializeFraction(player.standardPoints),
+        averagePlacement: roundToTwoDecimals(
+          fractionToNumber(player.standardPoints) / player.matchCount,
+        ),
+        bonus: player.matchCount,
+        placementCounts: Object.fromEntries(
+          Object.entries(player.placementCounts).map(([placementKey, fraction]) => [
+            placementKey,
+            serializeFraction(fraction),
+          ]),
+        ),
+      };
+    });
+
+  const teamRanking = [...teamSummaries.values()]
+    .sort((left, right) => {
+      const standardPointDiff =
+        fractionToNumber(right.standardPoints) - fractionToNumber(left.standardPoints);
+      if (standardPointDiff !== 0) {
+        return standardPointDiff;
+      }
+
+      const totalPointDiff = right.totalPoints - left.totalPoints;
+      if (totalPointDiff !== 0) {
+        return totalPointDiff;
+      }
+
+      return left.name.localeCompare(right.name, "zh-Hans-CN");
+    })
+    .map((team, index) => ({
+      rank: index + 1,
+      name: team.name,
+      totalPoints: team.totalPoints,
+      standardPoints: serializeFraction(team.standardPoints),
+      averageStandardPoints: roundToTwoDecimals(
+        fractionToNumber(team.standardPoints) / team.matchIds.size,
+      ),
+      matchCount: team.matchIds.size,
+      memberCount: team.memberNames.size,
+    }));
+
+  return { ranking, teamRanking };
+}
+
 export async function generateSwLeagueContent(projectRoot = process.cwd()) {
   const teamJsonPath = path.join(projectRoot, "data", "sw_league", "team.json");
+  const aliasJsonPath = path.join(projectRoot, "data", "sw_league", "alias.json");
   const historyJsonPath = path.join(projectRoot, "data", "sw_league", "history.json");
 
   const [
     teams,
+    playerAliases,
+    manualAliases,
     historyRows,
     huleRows,
     zimoRows,
@@ -251,6 +570,8 @@ export async function generateSwLeagueContent(projectRoot = process.cwd()) {
     winCountRows,
   ] = await Promise.all([
     readJson(teamJsonPath),
+    readPlayerAliases(projectRoot),
+    readJsonIfExists(aliasJsonPath, {}),
     readJson(historyJsonPath),
     readCsv(projectRoot, "data", "sw_league", "rank", "rate_win_rate.csv"),
     readCsv(projectRoot, "data", "sw_league", "rank", "rate_tsumo_rate.csv"),
@@ -259,22 +580,34 @@ export async function generateSwLeagueContent(projectRoot = process.cwd()) {
     readCsv(projectRoot, "data", "sw_league", "rank", "stats_win_count.csv"),
   ]);
 
-  const playerTeamIndex = buildPlayerIndex(teams);
+  const aliases = {
+    ...playerAliases,
+    ...manualAliases,
+  };
+
+  const playerTeamIndex = buildPlayerIndex(teams, aliases);
+  const resolveAlias = (playerName) => resolvePlayerName(playerName, aliases);
   const playerStatsMap = buildPlayerStatsMap({
     huleRows,
     zimoRows,
     fangchongRows,
     beizimoRows,
     winCountRows,
+    aliases,
   });
+
+  const overview = buildOverviewRanking(historyRows, playerTeamIndex, aliases);
 
   return {
     teams: buildTeamEntries(teams, playerStatsMap),
-    matches: buildRecentMatches(historyRows, playerTeamIndex),
+    matches: buildRecentMatches(historyRows, playerTeamIndex, aliases),
+    ranking: overview.ranking,
+    teamRanking: overview.teamRanking,
     leaderboards: {
       huleRate: buildLeaderboard(huleRows, playerTeamIndex, {
         countColumn: "Value",
         sourceLabel: "rate_win_rate.csv",
+        resolvePlayerName: resolveAlias,
       }).map((row) => ({
         ...row,
         count: playerStatsMap.get(row.name)?.huleCount ?? row.count,
@@ -282,6 +615,7 @@ export async function generateSwLeagueContent(projectRoot = process.cwd()) {
       zimoRate: buildLeaderboard(zimoRows, playerTeamIndex, {
         countColumn: "Value",
         sourceLabel: "rate_tsumo_rate.csv",
+        resolvePlayerName: resolveAlias,
       }).map((row) => ({
         ...row,
         count: playerStatsMap.get(row.name)?.zimoCount ?? row.count,
@@ -289,6 +623,7 @@ export async function generateSwLeagueContent(projectRoot = process.cwd()) {
       fangchongRate: buildLeaderboard(fangchongRows, playerTeamIndex, {
         countColumn: "Value",
         sourceLabel: "rate_deal_in_rate.csv",
+        resolvePlayerName: resolveAlias,
       }).map((row) => ({
         ...row,
         count: playerStatsMap.get(row.name)?.fangchongCount ?? row.count,
@@ -296,6 +631,7 @@ export async function generateSwLeagueContent(projectRoot = process.cwd()) {
       beizimoRate: buildLeaderboard(beizimoRows, playerTeamIndex, {
         countColumn: "Value",
         sourceLabel: "rate_tsumo_against_rate.csv",
+        resolvePlayerName: resolveAlias,
       }).map((row) => ({
         ...row,
         count: playerStatsMap.get(row.name)?.beizimoCount ?? row.count,

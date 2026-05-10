@@ -6,9 +6,25 @@ export async function readJson(filePath) {
   return JSON.parse(content);
 }
 
+export async function readJsonIfExists(filePath, fallbackValue) {
+  try {
+    return await readJson(filePath);
+  } catch (error) {
+    if (error?.code === "ENOENT") {
+      return fallbackValue;
+    }
+
+    throw error;
+  }
+}
+
 export async function writeJson(filePath, value) {
   await fs.mkdir(path.dirname(filePath), { recursive: true });
   await fs.writeFile(filePath, `${JSON.stringify(value, null, 2)}\n`, "utf8");
+}
+
+export async function readText(filePath) {
+  return fs.readFile(filePath, "utf8");
 }
 
 export function getProjectPath(...segments) {
@@ -16,5 +32,59 @@ export function getProjectPath(...segments) {
 }
 
 export function percentage(value) {
-  return Number(value.toFixed(3));
+  return Number(value.toFixed(6));
+}
+
+export function parseCsv(content) {
+  const lines = content
+    .split(/\r?\n/u)
+    .map((line) => line.trim())
+    .filter(Boolean);
+
+  if (!lines.length) {
+    return [];
+  }
+
+  const headers = parseCsvLine(lines[0]);
+
+  return lines.slice(1).map((line) => {
+    const values = parseCsvLine(line);
+    return Object.fromEntries(
+      headers.map((header, index) => [header, values[index] ?? ""]),
+    );
+  });
+}
+
+function parseCsvLine(line) {
+  const values = [];
+  let current = "";
+  let inQuotes = false;
+
+  for (let index = 0; index < line.length; index += 1) {
+    const char = line[index];
+
+    if (char === '"') {
+      const nextChar = line[index + 1];
+
+      if (inQuotes && nextChar === '"') {
+        current += '"';
+        index += 1;
+        continue;
+      }
+
+      inQuotes = !inQuotes;
+      continue;
+    }
+
+    if (char === "," && !inQuotes) {
+      values.push(current);
+      current = "";
+      continue;
+    }
+
+    current += char;
+  }
+
+  values.push(current);
+  return values;
 }

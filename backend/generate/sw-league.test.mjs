@@ -1,5 +1,8 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import fs from "node:fs/promises";
+import os from "node:os";
+import path from "node:path";
 
 import { generateSwLeagueContent } from "../shared/sw-league-generator.mjs";
 
@@ -71,4 +74,165 @@ test("generateSwLeagueContent builds recent matches from session history", async
       scoreLabel: "-215",
     },
   ]);
+});
+
+test("generateSwLeagueContent calculates overview ranking from session history", async () => {
+  const result = await generateSwLeagueContent(process.cwd());
+
+  assert.deepEqual(result.ranking.slice(0, 3), [
+    {
+      rank: 1,
+      name: "叶凡",
+      club: "复仇者联盟",
+      totalPoints: 1461,
+      standardPoints: {
+        numerator: 51,
+        denominator: 1,
+        label: "51",
+      },
+      averagePlacement: 2.22,
+      bonus: 23,
+      placementCounts: {
+        first: { numerator: 7, denominator: 1, label: "7" },
+        second: { numerator: 8, denominator: 1, label: "8" },
+        third: { numerator: 7, denominator: 1, label: "7" },
+        fourth: { numerator: 1, denominator: 1, label: "1" },
+      },
+    },
+    {
+      rank: 2,
+      name: "Sw279695293",
+      club: "择日读",
+      totalPoints: 796,
+      standardPoints: {
+        numerator: 63,
+        denominator: 2,
+        label: "31又1/2",
+      },
+      averagePlacement: 2.25,
+      bonus: 14,
+      placementCounts: {
+        first: { numerator: 6, denominator: 1, label: "6" },
+        second: { numerator: 2, denominator: 1, label: "2" },
+        third: { numerator: 7, denominator: 2, label: "3又1/2" },
+        fourth: { numerator: 5, denominator: 2, label: "2又1/2" },
+      },
+    },
+    {
+      rank: 3,
+      name: "zsseg",
+      club: "杠上开花队",
+      totalPoints: 190,
+      standardPoints: {
+        numerator: 31,
+        denominator: 1,
+        label: "31",
+      },
+      averagePlacement: 2.07,
+      bonus: 15,
+      placementCounts: {
+        first: { numerator: 4, denominator: 1, label: "4" },
+        second: { numerator: 6, denominator: 1, label: "6" },
+        third: { numerator: 3, denominator: 1, label: "3" },
+        fourth: { numerator: 2, denominator: 1, label: "2" },
+      },
+    },
+  ]);
+});
+
+test("generateSwLeagueContent calculates team overview from player standard points", async () => {
+  const result = await generateSwLeagueContent(process.cwd());
+
+  assert.deepEqual(result.teamRanking.slice(0, 3), [
+    {
+      rank: 1,
+      name: "择日读",
+      totalPoints: 1220,
+      standardPoints: {
+        numerator: 191,
+        denominator: 2,
+        label: "95又1/2",
+      },
+      averageStandardPoints: 2.12,
+      matchCount: 45,
+      memberCount: 4,
+    },
+    {
+      rank: 2,
+      name: "绿小龙",
+      totalPoints: 1068,
+      standardPoints: {
+        numerator: 92,
+        denominator: 1,
+        label: "92",
+      },
+      averageStandardPoints: 1.96,
+      matchCount: 47,
+      memberCount: 4,
+    },
+    {
+      rank: 3,
+      name: "青柠现代麻将文化研究协会",
+      totalPoints: -267,
+      standardPoints: {
+        numerator: 84,
+        denominator: 1,
+        label: "84",
+      },
+      averageStandardPoints: 1.87,
+      matchCount: 45,
+      memberCount: 4,
+    },
+  ]);
+});
+
+test("generateSwLeagueContent resolves player aliases before team matching", async () => {
+  const result = await generateSwLeagueContent(process.cwd());
+
+  assert.equal(
+    result.ranking.some((row) => row.club === "未匹配队伍"),
+    false,
+  );
+  assert.equal(
+    result.teamRanking.some((row) => row.name === "未匹配队伍"),
+    false,
+  );
+  assert.equal(
+    result.matches.some((match) =>
+      match.placements.some((placement) => placement.team === "未匹配队伍"),
+    ),
+    false,
+  );
+});
+
+test("generateSwLeagueContent derives aliases from player alias history without alias.json", async () => {
+  const sourceRoot = process.cwd();
+  const tempRoot = await fs.mkdtemp(path.join(os.tmpdir(), "sw-league-alias-"));
+  const tempDataRoot = path.join(tempRoot, "data", "sw_league");
+
+  await fs.cp(path.join(sourceRoot, "data", "sw_league"), tempDataRoot, {
+    recursive: true,
+  });
+  await fs.rm(path.join(tempDataRoot, "alias.json"));
+
+  const result = await generateSwLeagueContent(tempRoot);
+
+  assert.equal(
+    result.ranking.some((row) => row.club === "未匹配队伍"),
+    false,
+  );
+  assert.ok(result.ranking.some((row) => row.name === "海仲利安"));
+  assert.ok(result.ranking.some((row) => row.name === "海叔利安"));
+  assert.equal(result.ranking.some((row) => row.name === "世界第一"), false);
+  assert.equal(result.ranking.some((row) => row.name === "凛津"), false);
+});
+
+test("generateSwLeagueContent splits standard points and placement counts on ties", async () => {
+  const result = await generateSwLeagueContent(process.cwd());
+  const sw279695293 = result.ranking.find((row) => row.name === "Sw279695293");
+
+  assert.ok(sw279695293);
+  assert.equal(sw279695293.standardPoints.label, "31又1/2");
+  assert.equal(sw279695293.placementCounts.third.label, "3又1/2");
+  assert.equal(sw279695293.placementCounts.fourth.label, "2又1/2");
 });

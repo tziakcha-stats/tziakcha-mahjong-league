@@ -45,8 +45,33 @@ export interface PlayerRankingEntry {
   name: string;
   club: string;
   totalPoints: number;
+  standardPoints: FractionValue;
   averagePlacement: number;
   bonus: number;
+  placementCounts: PlacementCounts;
+}
+
+export interface TeamRankingEntry {
+  rank: number;
+  name: string;
+  totalPoints: number;
+  standardPoints: FractionValue;
+  averageStandardPoints: number;
+  matchCount: number;
+  memberCount: number;
+}
+
+export interface FractionValue {
+  numerator: number;
+  denominator: number;
+  label: string;
+}
+
+export interface PlacementCounts {
+  first: FractionValue;
+  second: FractionValue;
+  third: FractionValue;
+  fourth: FractionValue;
 }
 
 export interface EventStatsSummary {
@@ -81,6 +106,7 @@ export interface EventDetail {
   schedule: EventScheduleRound[];
   matches: MatchRecord[];
   ranking: PlayerRankingEntry[];
+  teamRanking: TeamRankingEntry[];
   stats: EventStatsSummary[];
   teams: TeamInfo[];
   leaderboards: {

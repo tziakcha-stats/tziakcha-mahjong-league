@@ -1,0 +1,132 @@
+[
+  {
+    "rank": 1,
+    "name": "择日读",
+    "totalPoints": 1220,
+    "standardPoints": {
+      "numerator": 191,
+      "denominator": 2,
+      "label": "95又1/2"
+    },
+    "averageStandardPoints": 2.12,
+    "matchCount": 45,
+    "memberCount": 4
+  },
+  {
+    "rank": 2,
+    "name": "绿小龙",
+    "totalPoints": 1068,
+    "standardPoints": {
+      "numerator": 92,
+      "denominator": 1,
+      "label": "92"
+    },
+    "averageStandardPoints": 1.96,
+    "matchCount": 47,
+    "memberCount": 4
+  },
+  {
+    "rank": 3,
+    "name": "青柠现代麻将文化研究协会",
+    "totalPoints": -267,
+    "standardPoints": {
+      "numerator": 84,
+      "denominator": 1,
+      "label": "84"
+    },
+    "averageStandardPoints": 1.87,
+    "matchCount": 45,
+    "memberCount": 4
+  },
+  {
+    "rank": 4,
+    "name": "云上秋雨",
+    "totalPoints": -187,
+    "standardPoints": {
+      "numerator": 79,
+      "denominator": 1,
+      "label": "79"
+    },
+    "averageStandardPoints": 1.84,
+    "matchCount": 43,
+    "memberCount": 4
+  },
+  {
+    "rank": 5,
+    "name": "小鲨鱼动物园",
+    "totalPoints": 174,
+    "standardPoints": {
+      "numerator": 157,
+      "denominator": 2,
+      "label": "78又1/2"
+    },
+    "averageStandardPoints": 1.87,
+    "matchCount": 42,
+    "memberCount": 4
+  },
+  {
+    "rank": 6,
+    "name": "复仇者联盟",
+    "totalPoints": 756,
+    "standardPoints": {
+      "numerator": 151,
+      "denominator": 2,
+      "label": "75又1/2"
+    },
+    "averageStandardPoints": 1.8,
+    "matchCount": 42,
+    "memberCount": 4
+  },
+  {
+    "rank": 7,
+    "name": "特邀——没上过沙袋",
+    "totalPoints": 652,
+    "standardPoints": {
+      "numerator": 75,
+      "denominator": 1,
+      "label": "75"
+    },
+    "averageStandardPoints": 2.03,
+    "matchCount": 37,
+    "memberCount": 4
+  },
+  {
+    "rank": 8,
+    "name": "杠上开花队",
+    "totalPoints": -1318,
+    "standardPoints": {
+      "numerator": 60,
+      "denominator": 1,
+      "label": "60"
+    },
+    "averageStandardPoints": 1.36,
+    "matchCount": 44,
+    "memberCount": 4
+  },
+  {
+    "rank": 9,
+    "name": "自摸七队",
+    "totalPoints": -656,
+    "standardPoints": {
+      "numerator": 56,
+      "denominator": 1,
+      "label": "56"
+    },
+    "averageStandardPoints": 1.4,
+    "matchCount": 40,
+    "memberCount": 4
+  },
+  {
+    "rank": 10,
+    "name": "呼噜呼噜哼🐷",
+    "totalPoints": -1682,
+    "standardPoints": {
+      "numerator": 107,
+      "denominator": 2,
+      "label": "53又1/2"
+    },
+    "averageStandardPoints": 1.24,
+    "matchCount": 43,
+    "memberCount": 4
+  }
+]

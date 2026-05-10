@@ -9,6 +9,8 @@ async function main() {
 
   await writeJson(path.join(outputRoot, "teams.json"), result.teams);
   await writeJson(path.join(outputRoot, "matches.json"), result.matches);
+  await writeJson(path.join(outputRoot, "ranking.json"), result.ranking);
+  await writeJson(path.join(outputRoot, "team-ranking.json"), result.teamRanking);
   await writeJson(
     path.join(outputRoot, "leaderboards", "hule-rate.json"),
     result.leaderboards.huleRate,
@@ -29,6 +31,8 @@ async function main() {
   console.log("Generated sw-league content:");
   console.log(`- ${path.join(outputRoot, "teams.json")}`);
   console.log(`- ${path.join(outputRoot, "matches.json")}`);
+  console.log(`- ${path.join(outputRoot, "ranking.json")}`);
+  console.log(`- ${path.join(outputRoot, "team-ranking.json")}`);
   console.log(`- ${path.join(outputRoot, "leaderboards", "hule-rate.json")}`);
   console.log(`- ${path.join(outputRoot, "leaderboards", "zimo-rate.json")}`);
   console.log(`- ${path.join(outputRoot, "leaderboards", "fangchong-rate.json")}`);
