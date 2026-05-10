@@ -11,6 +11,8 @@ import huleRate from "../../../content/generated/sw-league/leaderboards/hule-rat
 import zimoRate from "../../../content/generated/sw-league/leaderboards/zimo-rate.json";
 import fangchongRate from "../../../content/generated/sw-league/leaderboards/fangchong-rate.json";
 import beizimoRate from "../../../content/generated/sw-league/leaderboards/beizimo-rate.json";
+import averageWinFan from "../../../content/generated/sw-league/leaderboards/average-win-fan.json";
+import averageDealInFan from "../../../content/generated/sw-league/leaderboards/average-deal-in-fan.json";
 import type {
   EventDetail,
   EventScheduleRound,
@@ -41,6 +43,8 @@ const eventDetailsBySlug: Record<string, EventDetail> = {
       zimoRate: zimoRate as RateLeaderboardEntry[],
       fangchongRate: fangchongRate as RateLeaderboardEntry[],
       beizimoRate: beizimoRate as RateLeaderboardEntry[],
+      averageWinFan: averageWinFan as RateLeaderboardEntry[],
+      averageDealInFan: averageDealInFan as RateLeaderboardEntry[],
     },
   },
 };
@@ -59,7 +63,13 @@ export function getEventDetail(slug: string): EventDetail | undefined {
 
 export function getLeaderboard(
   slug: string,
-  key: "huleRate" | "zimoRate" | "fangchongRate" | "beizimoRate",
+  key:
+    | "huleRate"
+    | "zimoRate"
+    | "fangchongRate"
+    | "beizimoRate"
+    | "averageWinFan"
+    | "averageDealInFan",
 ) {
   return eventDetailsBySlug[slug]?.leaderboards[key] ?? [];
 }

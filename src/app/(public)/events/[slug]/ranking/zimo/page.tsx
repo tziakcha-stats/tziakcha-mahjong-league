@@ -6,5 +6,5 @@ export default async function ZimoRatePage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  permanentRedirect(`/events/${slug}/ranking`);
+  permanentRedirect(`/events/${slug}/analysis`);
 }

@@ -46,7 +46,7 @@ export function RankingTable({ ranking }: { ranking: PlayerRankingEntry[] }) {
                   <td className="px-4 py-4 text-[#6f675d]">{entry.club}</td>
                   <td className="px-4 py-4 text-brand">{entry.totalPoints}</td>
                   <td className="px-4 py-4 text-brand">
-                    <FractionDisplay value={entry.standardPoints} />
+                    <PenaltyAwareFraction entry={entry} />
                   </td>
                   <td className="px-4 py-4 text-[#6f675d]">{entry.averagePlacement}</td>
                   <td className="px-4 py-4 text-[#6f675d]">{entry.bonus}</td>
@@ -68,5 +68,20 @@ export function RankingTable({ ranking }: { ranking: PlayerRankingEntry[] }) {
         </table>
       </div>
     </section>
+  );
+}
+
+function PenaltyAwareFraction({ entry }: { entry: PlayerRankingEntry }) {
+  const hasPenalty = entry.standardPointPenalty.numerator !== 0;
+
+  return (
+    <span className="inline-flex items-baseline gap-1">
+      <FractionDisplay value={entry.standardPoints} />
+      {hasPenalty ? (
+        <span className="text-xs text-[#b4503b]">
+          (-<FractionDisplay value={entry.standardPointPenalty} />)
+        </span>
+      ) : null}
+    </span>
   );
 }

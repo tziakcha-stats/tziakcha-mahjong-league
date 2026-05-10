@@ -1,0 +1,322 @@
+[
+  {
+    "rank": 1,
+    "name": "histo",
+    "team": "杠上开花队",
+    "rate": 23.666667,
+    "count": 18,
+    "note": "18 次样本，总番数 426，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 2,
+    "name": "海仲利安",
+    "team": "自摸七队",
+    "rate": 17.586957,
+    "count": 46,
+    "note": "46 次样本，总番数 809，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 3,
+    "name": "Nephele",
+    "team": "云上秋雨",
+    "rate": 17.103448,
+    "count": 29,
+    "note": "29 次样本，总番数 496，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 4,
+    "name": "CKLm",
+    "team": "择日读",
+    "rate": 16.895833,
+    "count": 48,
+    "note": "48 次样本，总番数 811，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 5,
+    "name": "River",
+    "team": "绿小龙",
+    "rate": 16.268293,
+    "count": 41,
+    "note": "41 次样本，总番数 667，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 6,
+    "name": "未有期",
+    "team": "杠上开花队",
+    "rate": 16.166667,
+    "count": 30,
+    "note": "30 次样本，总番数 485，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 7,
+    "name": "lidai",
+    "team": "小鲨鱼动物园",
+    "rate": 16.074074,
+    "count": 54,
+    "note": "54 次样本，总番数 868，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 8,
+    "name": "QinNai",
+    "team": "呼噜呼噜哼🐷",
+    "rate": 16.066667,
+    "count": 30,
+    "note": "30 次样本，总番数 482，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 9,
+    "name": "日出",
+    "team": "择日读",
+    "rate": 16,
+    "count": 27,
+    "note": "27 次样本，总番数 432，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 10,
+    "name": "幻秋",
+    "team": "呼噜呼噜哼🐷",
+    "rate": 15.909091,
+    "count": 22,
+    "note": "22 次样本，总番数 350，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 11,
+    "name": "吴下阿濛",
+    "team": "绿小龙",
+    "rate": 15.761905,
+    "count": 42,
+    "note": "42 次样本，总番数 662，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 12,
+    "name": "璃茉",
+    "team": "青柠现代麻将文化研究协会",
+    "rate": 15.76,
+    "count": 25,
+    "note": "25 次样本，总番数 394，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 13,
+    "name": "叶凡",
+    "team": "复仇者联盟",
+    "rate": 15.759259,
+    "count": 108,
+    "note": "108 次样本，总番数 1702，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 14,
+    "name": "bzh",
+    "team": "呼噜呼噜哼🐷",
+    "rate": 15.621622,
+    "count": 37,
+    "note": "37 次样本，总番数 578，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 15,
+    "name": "南桥s01",
+    "team": "云上秋雨",
+    "rate": 15.462963,
+    "count": 54,
+    "note": "54 次样本，总番数 835，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 16,
+    "name": "云出无心",
+    "team": "小鲨鱼动物园",
+    "rate": 15.461538,
+    "count": 52,
+    "note": "52 次样本，总番数 804，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 17,
+    "name": "zsseg",
+    "team": "杠上开花队",
+    "rate": 15.301587,
+    "count": 63,
+    "note": "63 次样本，总番数 964，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 18,
+    "name": "月曦",
+    "team": "复仇者联盟",
+    "rate": 15.266667,
+    "count": 15,
+    "note": "15 次样本，总番数 229，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 19,
+    "name": "zumgze",
+    "team": "青柠现代麻将文化研究协会",
+    "rate": 15.22,
+    "count": 50,
+    "note": "50 次样本，总番数 761，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 20,
+    "name": "Quandaiwu42",
+    "team": "特邀——没上过沙袋",
+    "rate": 15.0625,
+    "count": 32,
+    "note": "32 次样本，总番数 482，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 21,
+    "name": "三只大土鳖",
+    "team": "小鲨鱼动物园",
+    "rate": 14.971429,
+    "count": 35,
+    "note": "35 次样本，总番数 524，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 22,
+    "name": "墨色清涟池",
+    "team": "特邀——没上过沙袋",
+    "rate": 14.921569,
+    "count": 51,
+    "note": "51 次样本，总番数 761，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 23,
+    "name": "ChaosDon",
+    "team": "绿小龙",
+    "rate": 14.909091,
+    "count": 55,
+    "note": "55 次样本，总番数 820，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 24,
+    "name": "自摸七对",
+    "team": "自摸七队",
+    "rate": 14.888889,
+    "count": 27,
+    "note": "27 次样本，总番数 402，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 25,
+    "name": "Sw279695293",
+    "team": "择日读",
+    "rate": 14.836066,
+    "count": 61,
+    "note": "61 次样本，总番数 905，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 26,
+    "name": "海叔利安",
+    "team": "自摸七队",
+    "rate": 14.769231,
+    "count": 39,
+    "note": "39 次样本，总番数 576，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 27,
+    "name": "CatHikari",
+    "team": "呼噜呼噜哼🐷",
+    "rate": 14.666667,
+    "count": 42,
+    "note": "42 次样本，总番数 616，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 28,
+    "name": "川上珧",
+    "team": "云上秋雨",
+    "rate": 14.52381,
+    "count": 21,
+    "note": "21 次样本，总番数 305，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 29,
+    "name": "青火",
+    "team": "复仇者联盟",
+    "rate": 14.25,
+    "count": 24,
+    "note": "24 次样本，总番数 342，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 30,
+    "name": "redbean",
+    "team": "杠上开花队",
+    "rate": 14.205128,
+    "count": 39,
+    "note": "39 次样本，总番数 554，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 31,
+    "name": "琳雨空",
+    "team": "云上秋雨",
+    "rate": 14.137255,
+    "count": 51,
+    "note": "51 次样本，总番数 721，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 32,
+    "name": "alaya23",
+    "team": "绿小龙",
+    "rate": 14.040816,
+    "count": 49,
+    "note": "49 次样本，总番数 688，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 33,
+    "name": "xixi",
+    "team": "复仇者联盟",
+    "rate": 14,
+    "count": 21,
+    "note": "21 次样本，总番数 294，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 34,
+    "name": "钙热",
+    "team": "特邀——没上过沙袋",
+    "rate": 13.941176,
+    "count": 34,
+    "note": "34 次样本，总番数 474，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 35,
+    "name": "Choimoe",
+    "team": "青柠现代麻将文化研究协会",
+    "rate": 13.769231,
+    "count": 39,
+    "note": "39 次样本，总番数 537，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 36,
+    "name": "足立レイ",
+    "team": "青柠现代麻将文化研究协会",
+    "rate": 13.560976,
+    "count": 41,
+    "note": "41 次样本，总番数 556，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 37,
+    "name": "sdmt",
+    "team": "小鲨鱼动物园",
+    "rate": 13.541667,
+    "count": 24,
+    "note": "24 次样本，总番数 325，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 38,
+    "name": "小黄鸭",
+    "team": "自摸七队",
+    "rate": 13.423077,
+    "count": 26,
+    "note": "26 次样本，总番数 349，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 39,
+    "name": "黄腾",
+    "team": "择日读",
+    "rate": 13.044444,
+    "count": 45,
+    "note": "45 次样本，总番数 587，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 40,
+    "name": "米夜",
+    "team": "特邀——没上过沙袋",
+    "rate": 12.861111,
+    "count": 36,
+    "note": "36 次样本，总番数 463，来源：详细牌谱 + tziakcha-fetcher"
+  }
+]

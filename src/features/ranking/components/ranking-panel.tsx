@@ -3,109 +3,24 @@
 import { useMemo, useState } from "react";
 import { cn } from "@/lib/utils";
 import type {
+  FractionValue,
   PlayerRankingEntry,
-  RateLeaderboardEntry,
   TeamRankingEntry,
 } from "@/shared/data/types";
 import { FractionDisplay } from "@/shared/ui/fraction-display";
 import { SectionHeading } from "@/shared/ui/section-heading";
 import {
   getNextSortState,
-  type LeaderboardSortKey,
   type RankingSortKey,
-  sortLeaderboardRows,
   sortRankingRows,
-  type SortDirection,
   type SortState,
 } from "./ranking-sort";
 import { TeamRankCell } from "./team-rank-cell";
 
-type RankingTabKey =
-  | "overview"
-  | "personal"
-  | "huleRate"
-  | "zimoRate"
-  | "fangchongRate"
-  | "beizimoRate";
-
 interface RankingPanelProps {
   ranking: PlayerRankingEntry[];
   teamRanking: TeamRankingEntry[];
-  leaderboards: {
-    huleRate: RateLeaderboardEntry[];
-    zimoRate: RateLeaderboardEntry[];
-    fangchongRate: RateLeaderboardEntry[];
-    beizimoRate: RateLeaderboardEntry[];
-  };
 }
-
-const tabConfig: Record<
-  RankingTabKey,
-  {
-    label: string;
-    title: string;
-    description: string;
-    valueLabel?: string;
-  }
-> = {
-  overview: {
-    label: "总览",
-    title: "队伍排行",
-    description: "按队伍标准分排序，队伍出场数按参与桌次数统计。",
-  },
-  personal: {
-    label: "个人排行",
-    title: "个人排行",
-    description: "按玩家标准分排序，平均标准分用于观察单场效率。",
-  },
-  huleRate: {
-    label: "和牌率",
-    title: "和牌率榜单",
-    description:
-      "统计每位选手的和牌效率，数值越高表示越容易在对局中完成和牌。",
-    valueLabel: "和牌率",
-  },
-  zimoRate: {
-    label: "自摸率",
-    title: "自摸率榜单",
-    description:
-      "统计每位选手的自摸和牌占比，适合观察门清推进和收尾能力。",
-    valueLabel: "自摸率",
-  },
-  fangchongRate: {
-    label: "放铳率",
-    title: "放铳率榜单",
-    description:
-      "统计每位选手的放铳控制能力，数值越低通常代表防守更稳定。",
-    valueLabel: "放铳率",
-  },
-  beizimoRate: {
-    label: "被自摸率",
-    title: "被自摸率榜单",
-    description:
-      "统计每位选手在样本局数中被他家自摸带走的比例，数值越低通常代表局况承压更少。",
-    valueLabel: "被自摸率",
-  },
-};
-
-const orderedTabs: RankingTabKey[] = [
-  "overview",
-  "personal",
-  "huleRate",
-  "zimoRate",
-  "fangchongRate",
-  "beizimoRate",
-];
-
-const leaderboardDefaultDirections: Record<
-  Exclude<RankingTabKey, "overview" | "personal">,
-  SortDirection
-> = {
-  huleRate: "desc",
-  zimoRate: "desc",
-  fangchongRate: "asc",
-  beizimoRate: "asc",
-};
 
 const rankingColumns: { key: RankingSortKey; label: string }[] = [
   { key: "rank", label: "排名" },
@@ -132,23 +47,6 @@ const placementCountColumns = [
   { key: "third", label: "三位" },
   { key: "fourth", label: "四位" },
 ] as const;
-
-const leaderboardColumns: {
-  key: LeaderboardSortKey;
-  label: string;
-  valueLabel?: true;
-}[] = [
-  { key: "rank", label: "排名" },
-  { key: "name", label: "选手" },
-  { key: "team", label: "队伍" },
-  { key: "rate", label: "", valueLabel: true },
-  { key: "count", label: "数量 / 小局数" },
-];
-
-function getSampleSize(note: string) {
-  const match = note.match(/(\d+)\s*局样本/);
-  return match ? Number(match[1]) : null;
-}
 
 function getSortIndicator<TSortKey extends string>(
   sortState: SortState<TSortKey> | null,
@@ -205,90 +103,26 @@ function SortableHeader<TSortKey extends string>({
   );
 }
 
-export function RankingPanel({
-  ranking,
-  teamRanking,
-  leaderboards,
-}: RankingPanelProps) {
-  const [activeTab, setActiveTab] = useState<RankingTabKey>("overview");
+export function RankingPanel({ ranking, teamRanking }: RankingPanelProps) {
   const [rankingSort, setRankingSort] =
     useState<SortState<RankingSortKey> | null>(null);
-  const [leaderboardSorts, setLeaderboardSorts] = useState<
-    Record<
-      Exclude<RankingTabKey, "overview" | "personal">,
-      SortState<LeaderboardSortKey> | null
-    >
-  >({
-    huleRate: null,
-    zimoRate: null,
-    fangchongRate: null,
-    beizimoRate: null,
-  });
-  const config = tabConfig[activeTab];
-  const isOverview = activeTab === "overview";
-  const isPersonal = activeTab === "personal";
   const sortedRanking = useMemo(
     () => sortRankingRows(ranking, rankingSort),
     [ranking, rankingSort],
   );
-  const activeLeaderboardSort =
-    !isOverview && !isPersonal ? leaderboardSorts[activeTab] : null;
-  const sortedActiveRows = useMemo(() => {
-    if (isOverview || isPersonal) {
-      return [];
-    }
-
-    const activeRows = leaderboards[activeTab];
-
-    return sortLeaderboardRows(
-      activeRows,
-      activeLeaderboardSort,
-      leaderboardDefaultDirections[activeTab],
-    );
-  }, [activeLeaderboardSort, activeTab, isOverview, isPersonal, leaderboards]);
 
   function handleRankingSort(key: RankingSortKey) {
     setRankingSort((currentSort) => getNextSortState(currentSort, key));
   }
 
-  function handleLeaderboardSort(key: LeaderboardSortKey) {
-    if (isOverview || isPersonal) {
-      return;
-    }
-
-    setLeaderboardSorts((currentSorts) => ({
-      ...currentSorts,
-      [activeTab]: getNextSortState(currentSorts[activeTab], key),
-    }));
-  }
-
   return (
-    <section className="surface-card rounded-[30px] border border-line p-6">
-      <SectionHeading eyebrow="排行" title={config.title} />
+    <div className="space-y-6">
+      <section className="surface-card rounded-[30px] border border-line p-6">
+        <SectionHeading eyebrow="排行" title="队伍排行" />
 
-      <div className="mt-5 flex flex-wrap gap-3">
-        {orderedTabs.map((tab) => (
-          <button
-            key={tab}
-            type="button"
-            onClick={() => setActiveTab(tab)}
-            className={cn(
-              "rounded-full border px-4 py-2 text-sm transition-colors",
-              activeTab === tab
-                ? "border-brand bg-brand text-white"
-                : "border-line bg-white/70 text-[#6f675d] hover:bg-white",
-            )}
-            style={activeTab === tab ? { color: "#ffffff" } : undefined}
-          >
-            {tabConfig[tab].label}
-          </button>
-        ))}
-      </div>
-
-      {isOverview ? (
-        <div className="mt-8 overflow-hidden rounded-[24px] border border-line">
+        <div className="mt-8 max-h-[780px] overflow-auto rounded-[24px] border border-line">
           <table className="min-w-full divide-y divide-line text-left text-sm">
-            <thead className="bg-brand text-white/85">
+            <thead className="sticky top-0 z-10 bg-brand text-white/85">
               <tr>
                 {teamRankingColumns.map((column) => (
                   <th key={column.key} className="px-4 py-3 font-medium">
@@ -309,7 +143,10 @@ export function RankingPanel({
                     <TeamRankCell rank={entry.rank} teamName={entry.name} />
                     <td className="px-4 py-4 font-semibold">{entry.name}</td>
                     <td className="px-4 py-4 text-brand">
-                      <FractionDisplay value={entry.standardPoints} />
+                      <PenaltyAwareFraction
+                        standardPoints={entry.standardPoints}
+                        standardPointPenalty={entry.standardPointPenalty}
+                      />
                     </td>
                     <td className="px-4 py-4 text-[#6f675d]">
                       {entry.averageStandardPoints}
@@ -340,10 +177,14 @@ export function RankingPanel({
             </tbody>
           </table>
         </div>
-      ) : isPersonal ? (
-        <div className="mt-8 overflow-hidden rounded-[24px] border border-line">
+      </section>
+
+      <section className="surface-card rounded-[30px] border border-line p-6">
+        <SectionHeading eyebrow="个人" title="个人排行" />
+
+        <div className="mt-8 max-h-[780px] overflow-auto rounded-[24px] border border-line">
           <table className="min-w-full divide-y divide-line text-left text-sm">
-            <thead className="bg-brand text-white/85">
+            <thead className="sticky top-0 z-10 bg-brand text-white/85">
               <tr>
                 {rankingColumns.map((column) => (
                   <SortableHeader
@@ -370,7 +211,10 @@ export function RankingPanel({
                     <td className="px-4 py-4 text-[#6f675d]">{entry.club}</td>
                     <td className="px-4 py-4 text-brand">{entry.totalPoints}</td>
                     <td className="px-4 py-4 text-brand">
-                      <FractionDisplay value={entry.standardPoints} />
+                      <PenaltyAwareFraction
+                        standardPoints={entry.standardPoints}
+                        standardPointPenalty={entry.standardPointPenalty}
+                      />
                     </td>
                     <td className="px-4 py-4 text-[#6f675d]">
                       {entry.averagePlacement}
@@ -396,56 +240,28 @@ export function RankingPanel({
             </tbody>
           </table>
         </div>
-      ) : (
-        <div className="mt-8 overflow-hidden rounded-[24px] border border-line">
-          <table className="min-w-full divide-y divide-line text-left text-sm">
-            <thead className="bg-black/[0.03] text-[#6f675d]">
-              <tr>
-                {leaderboardColumns.map((column) => (
-                  <SortableHeader
-                    key={column.key}
-                    label={column.valueLabel ? config.valueLabel ?? "" : column.label}
-                    columnKey={column.key}
-                    sortState={activeLeaderboardSort}
-                    onSort={handleLeaderboardSort}
-                    className="text-[#6f675d]"
-                  />
-                ))}
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-line bg-white/80">
-              {sortedActiveRows.length ? (
-                sortedActiveRows.map((row) => {
-                  const sampleSize = getSampleSize(row.note);
+      </section>
+    </div>
+  );
+}
 
-                  return (
-                    <tr key={`${row.rank}-${row.name}`}>
-                      <TeamRankCell rank={row.rank} teamName={row.team} />
-                      <td className="px-4 py-4 text-[#16120f]">{row.name}</td>
-                      <td className="px-4 py-4 text-[#6f675d]">{row.team}</td>
-                      <td className="px-4 py-4 text-brand">
-                        {(row.rate * 100).toFixed(1)}%
-                      </td>
-                      <td className="px-4 py-4 text-[#6f675d]">
-                        {sampleSize ? `${row.count} / ${sampleSize}` : row.count}
-                      </td>
-                    </tr>
-                  );
-                })
-              ) : (
-                <tr>
-                  <td
-                    colSpan={5}
-                    className="px-4 py-10 text-center text-[#6f675d]"
-                  >
-                    当前榜单暂无数据。
-                  </td>
-                </tr>
-              )}
-            </tbody>
-          </table>
-        </div>
-      )}
-    </section>
+function PenaltyAwareFraction({
+  standardPoints,
+  standardPointPenalty,
+}: {
+  standardPoints: FractionValue;
+  standardPointPenalty: FractionValue;
+}) {
+  const hasPenalty = standardPointPenalty.numerator !== 0;
+
+  return (
+    <span className="inline-flex items-baseline gap-1">
+      <FractionDisplay value={standardPoints} />
+      {hasPenalty ? (
+        <span className="text-xs text-[#b4503b]">
+          (-<FractionDisplay value={standardPointPenalty} />)
+        </span>
+      ) : null}
+    </span>
   );
 }

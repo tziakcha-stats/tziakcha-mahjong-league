@@ -8,9 +8,36 @@ import {
 } from "./ranking-sort.mjs";
 
 const rankingRows = [
-  { rank: 1, name: "Charlie", club: "Club B", totalPoints: 30, averagePlacement: 2.1, bonus: 5 },
-  { rank: 2, name: "Alice", club: "Club A", totalPoints: 50, averagePlacement: 1.8, bonus: 3 },
-  { rank: 3, name: "Bob", club: "Club C", totalPoints: 40, averagePlacement: 2.4, bonus: 8 },
+  {
+    rank: 1,
+    name: "Charlie",
+    club: "Club B",
+    totalPoints: 30,
+    standardPoints: { numerator: 5, denominator: 1, label: "5" },
+    adjustedStandardPoints: { numerator: 5, denominator: 1, label: "5" },
+    averagePlacement: 2.1,
+    bonus: 5,
+  },
+  {
+    rank: 2,
+    name: "Alice",
+    club: "Club A",
+    totalPoints: 50,
+    standardPoints: { numerator: 8, denominator: 1, label: "8" },
+    adjustedStandardPoints: { numerator: 6, denominator: 1, label: "6" },
+    averagePlacement: 1.8,
+    bonus: 3,
+  },
+  {
+    rank: 3,
+    name: "Bob",
+    club: "Club C",
+    totalPoints: 40,
+    standardPoints: { numerator: 7, denominator: 1, label: "7" },
+    adjustedStandardPoints: { numerator: 7, denominator: 1, label: "7" },
+    averagePlacement: 2.4,
+    bonus: 8,
+  },
 ];
 
 const leaderboardRows = [
@@ -41,12 +68,12 @@ test("getNextSortState starts ascending when switching columns", () => {
   );
 });
 
-test("sortRankingRows restores the configured default order without changing rank values", () => {
+test("sortRankingRows restores the penalty-adjusted standard point order without changing rank values", () => {
   const sortedRows = sortRankingRows(rankingRows, null);
 
   assert.deepEqual(
     sortedRows.map((row) => `${row.rank}:${row.name}`),
-    ["2:Alice", "3:Bob", "1:Charlie"],
+    ["3:Bob", "2:Alice", "1:Charlie"],
   );
 });
 

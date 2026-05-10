@@ -37,8 +37,29 @@ function sortRows(rows, sortState, defaultState) {
   });
 }
 
+function getRankingSortValue(row, key) {
+  if (key === "standardPoints") {
+    return row.adjustedStandardPoints.numerator / row.adjustedStandardPoints.denominator;
+  }
+
+  return row[key];
+}
+
 export function sortRankingRows(rows, sortState) {
-  return sortRows(rows, sortState, { key: "totalPoints", direction: "desc" });
+  const effectiveSort = sortState ?? { key: "standardPoints", direction: "desc" };
+
+  return [...rows].sort((left, right) => {
+    const result = compareValues(
+      getRankingSortValue(left, effectiveSort.key),
+      getRankingSortValue(right, effectiveSort.key),
+    );
+
+    if (result !== 0) {
+      return effectiveSort.direction === "asc" ? result : -result;
+    }
+
+    return left.rank - right.rank;
+  });
 }
 
 export function sortLeaderboardRows(rows, sortState, defaultDirection) {

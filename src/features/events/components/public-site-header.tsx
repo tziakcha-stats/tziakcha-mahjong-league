@@ -12,15 +12,14 @@ export function PublicSiteHeader() {
             <p className="display-font text-lg font-bold uppercase tracking-[0.18em]">
               Tziakcha League
             </p>
-            <p className="text-xs text-[#6f675d]">赛事展示与管理前端原型</p>
+            <p className="text-xs text-[#6f675d]">SDU 国标麻将团体赛</p>
           </div>
         </Link>
 
         <nav className="hidden items-center gap-7 text-sm text-[#6f675d] md:flex">
           <Link href="/">首页</Link>
-          <Link href="/events">赛事列表</Link>
-          <a href="#updates">近期更新</a>
-          <Link href="/admin">后台入口</Link>
+          <Link href="/events">赛事</Link>
+          <a href="#updates">赛事概况</a>
         </nav>
       </div>
     </header>

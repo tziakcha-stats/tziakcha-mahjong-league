@@ -27,6 +27,14 @@ async function main() {
     path.join(outputRoot, "leaderboards", "beizimo-rate.json"),
     result.leaderboards.beizimoRate,
   );
+  await writeJson(
+    path.join(outputRoot, "leaderboards", "average-win-fan.json"),
+    result.leaderboards.averageWinFan,
+  );
+  await writeJson(
+    path.join(outputRoot, "leaderboards", "average-deal-in-fan.json"),
+    result.leaderboards.averageDealInFan,
+  );
 
   console.log("Generated sw-league content:");
   console.log(`- ${path.join(outputRoot, "teams.json")}`);
@@ -37,6 +45,8 @@ async function main() {
   console.log(`- ${path.join(outputRoot, "leaderboards", "zimo-rate.json")}`);
   console.log(`- ${path.join(outputRoot, "leaderboards", "fangchong-rate.json")}`);
   console.log(`- ${path.join(outputRoot, "leaderboards", "beizimo-rate.json")}`);
+  console.log(`- ${path.join(outputRoot, "leaderboards", "average-win-fan.json")}`);
+  console.log(`- ${path.join(outputRoot, "leaderboards", "average-deal-in-fan.json")}`);
 }
 
 main().catch((error) => {

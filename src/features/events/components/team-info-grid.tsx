@@ -79,6 +79,14 @@ function TeamRankingBadge({ ranking }: { ranking?: TeamRankingEntry }) {
       <span>暂 #{ranking.rank}</span>{" "}
       <span>标分</span>{" "}
       <FractionDisplay value={ranking.standardPoints} />
+      {ranking.standardPointPenalty.numerator !== 0 ? (
+        <>
+          {" "}
+          <span className="text-[#b4503b]">
+            (-<FractionDisplay value={ranking.standardPointPenalty} />)
+          </span>
+        </>
+      ) : null}
     </div>
   );
 }

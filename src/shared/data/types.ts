@@ -26,6 +26,7 @@ export interface EventScheduleRound {
 
 export interface MatchRecord {
   id: string;
+  replayUrl?: string;
   tableName: string;
   roundLabel: string;
   finishedAt: string;
@@ -46,6 +47,8 @@ export interface PlayerRankingEntry {
   club: string;
   totalPoints: number;
   standardPoints: FractionValue;
+  standardPointPenalty: FractionValue;
+  adjustedStandardPoints: FractionValue;
   averagePlacement: number;
   bonus: number;
   placementCounts: PlacementCounts;
@@ -56,6 +59,8 @@ export interface TeamRankingEntry {
   name: string;
   totalPoints: number;
   standardPoints: FractionValue;
+  standardPointPenalty: FractionValue;
+  adjustedStandardPoints: FractionValue;
   averageStandardPoints: number;
   matchCount: number;
   placementCounts: PlacementCounts;
@@ -114,5 +119,7 @@ export interface EventDetail {
     zimoRate: RateLeaderboardEntry[];
     fangchongRate: RateLeaderboardEntry[];
     beizimoRate: RateLeaderboardEntry[];
+    averageWinFan: RateLeaderboardEntry[];
+    averageDealInFan: RateLeaderboardEntry[];
   };
 }

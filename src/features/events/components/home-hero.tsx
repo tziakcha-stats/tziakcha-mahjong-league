@@ -10,28 +10,28 @@ export function HomeHero({ featuredEvent }: { featuredEvent: LeagueEvent }) {
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
           <div className="space-y-5">
             <p className="display-font text-sm font-semibold uppercase tracking-[0.36em] text-white/70">
-              Mahjong League Portal
+              Tziakcha League
             </p>
             <div className="space-y-4">
               <h1 className="max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-                多赛事入口首页，先看联赛，再进入每一场赛事的数据空间。
+                SDU 国标麻将团体赛赛程与数据更新。
               </h1>
               <p className="max-w-2xl text-sm leading-7 text-white/78 sm:text-base">
-                第一版聚焦公开展示与后台壳子，把赛事品牌、赛事入口和赛事数据空间拆分清楚，为后续接入管理后台与个人系统预留结构。
+                汇总赛程安排、队伍排名、选手排行与对局记录，跟进常规赛、半决赛和决赛的实时进展。
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
               <Link href="/events">
                 <Button className="h-11 rounded-full bg-white px-5 text-brand-strong hover:bg-white/90">
-                  浏览全部赛事
+                  查看赛事
                 </Button>
               </Link>
-              <Link href="/admin">
+              <Link href={`/events/${featuredEvent.slug}/ranking`}>
                 <Button
                   variant="outline"
                   className="h-11 rounded-full border-white/20 bg-transparent px-5 text-white hover:bg-white/10 hover:text-white"
                 >
-                  进入后台壳子
+                  查看排名
                 </Button>
               </Link>
             </div>
@@ -39,7 +39,7 @@ export function HomeHero({ featuredEvent }: { featuredEvent: LeagueEvent }) {
 
           <div className="rounded-[28px] border border-white/10 bg-white/10 p-6 backdrop-blur">
             <p className="display-font text-xs uppercase tracking-[0.26em] text-white/60">
-              Featured Event
+              正在进行
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight">
               {featuredEvent.name}

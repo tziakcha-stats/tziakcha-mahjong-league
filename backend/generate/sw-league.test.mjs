@@ -27,6 +27,22 @@ test("generateSwLeagueContent uses rank csv as authoritative leaderboard source"
   assert.equal(result.leaderboards.beizimoRate[0].count, 41);
 });
 
+test("generateSwLeagueContent calculates average win and deal-in fan leaderboards", async () => {
+  const result = await generateSwLeagueContent(process.cwd());
+
+  assert.equal(result.leaderboards.averageWinFan[0].name, "histo");
+  assert.equal(result.leaderboards.averageWinFan[0].team, "杠上开花队");
+  assert.equal(result.leaderboards.averageWinFan[0].rate, 23.666667);
+  assert.equal(result.leaderboards.averageWinFan[0].count, 18);
+  assert.match(result.leaderboards.averageWinFan[0].note, /总番数 426/);
+
+  assert.equal(result.leaderboards.averageDealInFan[0].name, "青火");
+  assert.equal(result.leaderboards.averageDealInFan[0].team, "复仇者联盟");
+  assert.equal(result.leaderboards.averageDealInFan[0].rate, 20.333333);
+  assert.equal(result.leaderboards.averageDealInFan[0].count, 15);
+  assert.match(result.leaderboards.averageDealInFan[0].note, /总番数 305/);
+});
+
 test("generateSwLeagueContent aggregates team summaries from authoritative player stats", async () => {
   const result = await generateSwLeagueContent(process.cwd());
   const team = result.teams.find((entry) => entry.name === "复仇者联盟");
@@ -36,11 +52,13 @@ test("generateSwLeagueContent aggregates team summaries from authoritative playe
   assert.match(team.note, /后端生成/);
 });
 
-test("generateSwLeagueContent builds recent matches from session history", async () => {
+test("generateSwLeagueContent builds all matches from session history", async () => {
   const result = await generateSwLeagueContent(process.cwd());
   const match = result.matches[0];
 
+  assert.equal(result.matches.length, 107);
   assert.equal(match.id, "vFeupRmM");
+  assert.equal(match.replayUrl, "https://tziakcha.net/game/?id=vFeupRmM");
   assert.equal(match.roundLabel, "常规赛第 58 轮");
   assert.equal(match.tableName, "B 桌");
   assert.equal(match.finishedAt, "05/09 20:39");
@@ -90,6 +108,16 @@ test("generateSwLeagueContent calculates overview ranking from session history",
         denominator: 1,
         label: "51",
       },
+      standardPointPenalty: {
+        numerator: 0,
+        denominator: 1,
+        label: "0",
+      },
+      adjustedStandardPoints: {
+        numerator: 51,
+        denominator: 1,
+        label: "51",
+      },
       averagePlacement: 2.22,
       bonus: 23,
       placementCounts: {
@@ -109,6 +137,16 @@ test("generateSwLeagueContent calculates overview ranking from session history",
         denominator: 2,
         label: "31又1/2",
       },
+      standardPointPenalty: {
+        numerator: 0,
+        denominator: 1,
+        label: "0",
+      },
+      adjustedStandardPoints: {
+        numerator: 63,
+        denominator: 2,
+        label: "31又1/2",
+      },
       averagePlacement: 2.25,
       bonus: 14,
       placementCounts: {
@@ -124,6 +162,16 @@ test("generateSwLeagueContent calculates overview ranking from session history",
       club: "杠上开花队",
       totalPoints: 190,
       standardPoints: {
+        numerator: 31,
+        denominator: 1,
+        label: "31",
+      },
+      standardPointPenalty: {
+        numerator: 0,
+        denominator: 1,
+        label: "0",
+      },
+      adjustedStandardPoints: {
         numerator: 31,
         denominator: 1,
         label: "31",
@@ -153,6 +201,16 @@ test("generateSwLeagueContent calculates team overview from player standard poin
         denominator: 2,
         label: "95又1/2",
       },
+      standardPointPenalty: {
+        numerator: 0,
+        denominator: 1,
+        label: "0",
+      },
+      adjustedStandardPoints: {
+        numerator: 191,
+        denominator: 2,
+        label: "95又1/2",
+      },
       averageStandardPoints: 2.12,
       matchCount: 45,
       placementCounts: {
@@ -167,6 +225,16 @@ test("generateSwLeagueContent calculates team overview from player standard poin
       name: "绿小龙",
       totalPoints: 1068,
       standardPoints: {
+        numerator: 92,
+        denominator: 1,
+        label: "92",
+      },
+      standardPointPenalty: {
+        numerator: 0,
+        denominator: 1,
+        label: "0",
+      },
+      adjustedStandardPoints: {
         numerator: 92,
         denominator: 1,
         label: "92",
@@ -188,6 +256,16 @@ test("generateSwLeagueContent calculates team overview from player standard poin
         numerator: 84,
         denominator: 1,
         label: "84",
+      },
+      standardPointPenalty: {
+        numerator: 1,
+        denominator: 1,
+        label: "1",
+      },
+      adjustedStandardPoints: {
+        numerator: 83,
+        denominator: 1,
+        label: "83",
       },
       averageStandardPoints: 1.87,
       matchCount: 45,
@@ -250,4 +328,30 @@ test("generateSwLeagueContent splits standard points and placement counts on tie
   assert.equal(sw279695293.standardPoints.label, "31又1/2");
   assert.equal(sw279695293.placementCounts.third.label, "3又1/2");
   assert.equal(sw279695293.placementCounts.fourth.label, "2又1/2");
+});
+
+test("generateSwLeagueContent applies player penalties for ranking without changing averages", async () => {
+  const result = await generateSwLeagueContent(process.cwd());
+  const qinNai = result.ranking.find((row) => row.name === "QinNai");
+
+  assert.ok(qinNai);
+  assert.equal(qinNai.standardPoints.label, "14");
+  assert.equal(qinNai.standardPointPenalty.label, "2");
+  assert.equal(qinNai.adjustedStandardPoints.label, "12");
+  assert.equal(qinNai.averagePlacement, 1.27);
+});
+
+test("generateSwLeagueContent applies team and player penalties to team ranking only", async () => {
+  const result = await generateSwLeagueContent(process.cwd());
+  const yunshangQiuyu = result.teamRanking.find((row) => row.name === "云上秋雨");
+  const huluhulu = result.teamRanking.find((row) => row.name === "呼噜呼噜哼🐷");
+
+  assert.ok(yunshangQiuyu);
+  assert.equal(yunshangQiuyu.standardPoints.label, "79");
+  assert.equal(yunshangQiuyu.standardPointPenalty.label, "3");
+  assert.equal(yunshangQiuyu.adjustedStandardPoints.label, "76");
+  assert.equal(yunshangQiuyu.averageStandardPoints, 1.84);
+
+  assert.ok(huluhulu);
+  assert.equal(huluhulu.standardPointPenalty.label, "4");
 });

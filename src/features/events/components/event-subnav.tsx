@@ -11,6 +11,7 @@ const navItems = [
   { label: "对局", href: "/matches" },
   { label: "统计", href: "/stats" },
   { label: "排行", href: "/ranking" },
+  { label: "分析", href: "/analysis" },
 ];
 
 export function EventSubnav({ slug }: { slug: string }) {

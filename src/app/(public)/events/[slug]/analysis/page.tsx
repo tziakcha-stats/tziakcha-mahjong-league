@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
-import { RankingPanel } from "@/features/ranking/components/ranking-panel";
+import { AnalysisPanel } from "@/features/ranking/components/analysis-panel";
 import { getEventDetail } from "@/shared/data/repositories";
 
-export default async function EventRankingPage({
+export default async function EventAnalysisPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
@@ -14,10 +14,5 @@ export default async function EventRankingPage({
     notFound();
   }
 
-  return (
-    <RankingPanel
-      ranking={detail.ranking}
-      teamRanking={detail.teamRanking}
-    />
-  );
+  return <AnalysisPanel leaderboards={detail.leaderboards} />;
 }

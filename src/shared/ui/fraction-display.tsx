@@ -18,12 +18,21 @@ export function FractionDisplay({ value }: { value: FractionValue }) {
 
   return (
     <span
-      className="inline-flex items-baseline gap-0.5 tabular-nums"
+      className="inline-flex items-baseline gap-1 tabular-nums"
       aria-label={value.label}
     >
       {whole > 0 ? <span>{sign}{whole}</span> : sign ? <span>{sign}</span> : null}
-      <span className="text-[0.78em] leading-none">
-        {remainder}/{denominator}
+      <span className="relative inline-grid h-[1.24em] min-w-[1.5em] translate-y-[0.14em] place-items-center text-[0.68em] leading-none">
+        <span className="absolute left-0 top-0 translate-x-[0.06em] -translate-y-[0.16em]">
+          {remainder}
+        </span>
+        <span
+          aria-hidden="true"
+          className="absolute left-1/2 top-1/2 h-px w-[1.45em] -translate-x-1/2 -translate-y-1/2 -rotate-[58deg] bg-current"
+        />
+        <span className="absolute bottom-0 right-0 translate-x-[0.02em] translate-y-[0.02em]">
+          {denominator}
+        </span>
       </span>
     </span>
   );

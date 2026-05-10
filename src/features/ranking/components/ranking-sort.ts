@@ -53,7 +53,7 @@ function compareValues(leftValue: string | number, rightValue: string | number) 
 
 function getRankingSortValue(row: PlayerRankingEntry, key: RankingSortKey) {
   if (key === "standardPoints") {
-    return row.standardPoints.numerator / row.standardPoints.denominator;
+    return row.adjustedStandardPoints.numerator / row.adjustedStandardPoints.denominator;
   }
 
   return row[key];
