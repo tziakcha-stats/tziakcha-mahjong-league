@@ -1,0 +1,8 @@
+[
+  { "rank": 1, "name": "三只大土鳖", "team": "小鲨鱼动物园", "rate": 0.084, "count": 3, "note": "防守能力突出" },
+  { "rank": 2, "name": "璃茉", "team": "青柠现代麻将文化研究协", "rate": 0.091, "count": 4, "note": "失误控制较好" },
+  { "rank": 3, "name": "River", "team": "绿小龙", "rate": 0.097, "count": 4, "note": "稳定型选手" },
+  { "rank": 4, "name": "未有期", "team": "杠上开花队", "rate": 0.103, "count": 5, "note": "低失误率" },
+  { "rank": 5, "name": "日出", "team": "择日读", "rate": 0.109, "count": 5, "note": "整体较稳" },
+  { "rank": 6, "name": "histo", "team": "杠上开花队", "rate": 0.114, "count": 5, "note": "防守意识明确" }
+]

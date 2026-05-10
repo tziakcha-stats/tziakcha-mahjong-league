@@ -5,7 +5,10 @@ import ranking from "../../../content/events/sdu-riichi-team-championship/rankin
 import rules from "../../../content/events/sdu-riichi-team-championship/rules.json";
 import schedule from "../../../content/events/sdu-riichi-team-championship/schedule.json";
 import stats from "../../../content/events/sdu-riichi-team-championship/stats.json";
-import teams from "../../../content/events/sdu-riichi-team-championship/teams.json";
+import teams from "../../../content/generated/sw-league/teams.json";
+import huleRate from "../../../content/generated/sw-league/leaderboards/hule-rate.json";
+import zimoRate from "../../../content/generated/sw-league/leaderboards/zimo-rate.json";
+import fangchongRate from "../../../content/generated/sw-league/leaderboards/fangchong-rate.json";
 import type {
   EventDetail,
   EventScheduleRound,
@@ -13,6 +16,7 @@ import type {
   LeagueEvent,
   MatchRecord,
   PlayerRankingEntry,
+  RateLeaderboardEntry,
   TeamInfo,
 } from "@/shared/data/types";
 
@@ -28,6 +32,11 @@ const eventDetailsBySlug: Record<string, EventDetail> = {
     ranking: ranking as PlayerRankingEntry[],
     stats: stats as EventStatsSummary[],
     teams: teams as TeamInfo[],
+    leaderboards: {
+      huleRate: huleRate as RateLeaderboardEntry[],
+      zimoRate: zimoRate as RateLeaderboardEntry[],
+      fangchongRate: fangchongRate as RateLeaderboardEntry[],
+    },
   },
 };
 
@@ -41,4 +50,11 @@ export function getFeaturedEvent(): LeagueEvent {
 
 export function getEventDetail(slug: string): EventDetail | undefined {
   return eventDetailsBySlug[slug];
+}
+
+export function getLeaderboard(
+  slug: string,
+  key: "huleRate" | "zimoRate" | "fangchongRate",
+) {
+  return eventDetailsBySlug[slug]?.leaderboards[key] ?? [];
 }

@@ -1,0 +1,8 @@
+[
+  { "rank": 1, "name": "青火", "team": "复仇者联盟", "rate": 0.421, "count": 18, "note": "自摸占比高" },
+  { "rank": 2, "name": "琳雨空", "team": "云上秋雨", "rate": 0.397, "count": 16, "note": "自摸输出稳定" },
+  { "rank": 3, "name": "小黄鸭", "team": "自摸七队", "rate": 0.384, "count": 15, "note": "门清推进较多" },
+  { "rank": 4, "name": "黄腾", "team": "择日读", "rate": 0.368, "count": 14, "note": "牌风积极" },
+  { "rank": 5, "name": "Choimoe", "team": "青柠现代麻将文化研究协", "rate": 0.351, "count": 13, "note": "擅长自摸收尾" },
+  { "rank": 6, "name": "sdmt", "team": "小鲨鱼动物园", "rate": 0.336, "count": 12, "note": "节奏偏快" }
+]

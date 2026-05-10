@@ -59,6 +59,15 @@ export interface TeamInfo {
   note: string;
 }
 
+export interface RateLeaderboardEntry {
+  rank: number;
+  name: string;
+  team: string;
+  rate: number;
+  count: number;
+  note: string;
+}
+
 export interface EventDetail {
   event: LeagueEvent;
   story: string;
@@ -68,4 +77,9 @@ export interface EventDetail {
   ranking: PlayerRankingEntry[];
   stats: EventStatsSummary[];
   teams: TeamInfo[];
+  leaderboards: {
+    huleRate: RateLeaderboardEntry[];
+    zimoRate: RateLeaderboardEntry[];
+    fangchongRate: RateLeaderboardEntry[];
+  };
 }
