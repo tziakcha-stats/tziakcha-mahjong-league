@@ -1,5 +1,6 @@
 import type { RateLeaderboardEntry } from "@/shared/data/types";
 import { SectionHeading } from "@/shared/ui/section-heading";
+import { TeamRankCell } from "./team-rank-cell";
 
 export function RateRankingTable({
   title,
@@ -31,7 +32,7 @@ export function RateRankingTable({
           <tbody className="divide-y divide-line bg-white/80">
             {rows.map((row) => (
               <tr key={`${row.rank}-${row.name}`}>
-                <td className="px-4 py-4 font-semibold">{row.rank}</td>
+                <TeamRankCell rank={row.rank} teamName={row.team} />
                 <td className="px-4 py-4 text-[#16120f]">{row.name}</td>
                 <td className="px-4 py-4 text-[#6f675d]">{row.team}</td>
                 <td className="px-4 py-4 text-brand">

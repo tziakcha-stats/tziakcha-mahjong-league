@@ -1,4 +1,5 @@
 import type { MatchRecord } from "@/shared/data/types";
+import { getTeamColor } from "@/shared/data/team-colors";
 import { SectionHeading } from "@/shared/ui/section-heading";
 
 const placementLabels = ["一位", "二位", "三位", "四位"] as const;
@@ -6,11 +7,7 @@ const placementLabels = ["一位", "二位", "三位", "四位"] as const;
 export function MatchRecordsTable({ matches }: { matches: MatchRecord[] }) {
   return (
     <section className="surface-card rounded-[30px] border border-line p-6">
-      <SectionHeading
-        eyebrow="对局记录"
-        title="近期完成对局"
-        description="按完成时间倒序展示最近完成的团体赛对局。"
-      />
+      <SectionHeading eyebrow="对局记录" title="近期完成对局" />
 
       <div className="mt-8 overflow-hidden rounded-[24px] border border-line">
         <table className="min-w-full divide-y divide-line text-left text-sm">
@@ -33,7 +30,11 @@ export function MatchRecordsTable({ matches }: { matches: MatchRecord[] }) {
                   <td className="px-4 py-4 text-[#6f675d]">{match.roundLabel}</td>
                   <td className="px-4 py-4 font-semibold">{match.tableName}</td>
                   {match.placements.map((placement) => (
-                    <td key={placement.placement} className="px-4 py-4 align-top">
+                    <td key={placement.placement} className="relative px-4 py-4 align-top">
+                      <div
+                        className="absolute inset-x-0 top-0 h-1.5"
+                        style={{ backgroundColor: getTeamColor(placement.team) }}
+                      />
                       <div className="font-semibold text-foreground">{placement.team}</div>
                       <div className="mt-1 text-xs text-[#6f675d]">{placement.player}</div>
                       <div className="mt-2 font-semibold text-brand">{placement.scoreLabel}</div>

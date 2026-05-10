@@ -16,7 +16,7 @@ export default async function EventTeamsPage({
 
   return (
     <div className="space-y-6">
-      <TeamInfoGrid teams={detail.teams} />
+      <TeamInfoGrid teams={detail.teams} teamRanking={detail.teamRanking} />
     </div>
   );
 }

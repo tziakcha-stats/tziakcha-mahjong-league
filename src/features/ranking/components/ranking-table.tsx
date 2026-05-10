@@ -1,5 +1,14 @@
 import type { PlayerRankingEntry } from "@/shared/data/types";
+import { FractionDisplay } from "@/shared/ui/fraction-display";
 import { SectionHeading } from "@/shared/ui/section-heading";
+import { TeamRankCell } from "./team-rank-cell";
+
+const placementCountColumns = [
+  { key: "first", label: "一位" },
+  { key: "second", label: "二位" },
+  { key: "third", label: "三位" },
+  { key: "fourth", label: "四位" },
+] as const;
 
 export function RankingTable({ ranking }: { ranking: PlayerRankingEntry[] }) {
   return (
@@ -17,26 +26,40 @@ export function RankingTable({ ranking }: { ranking: PlayerRankingEntry[] }) {
               <th className="px-4 py-3 font-medium">排名</th>
               <th className="px-4 py-3 font-medium">选手</th>
               <th className="px-4 py-3 font-medium">俱乐部</th>
-              <th className="px-4 py-3 font-medium">总积分</th>
+              <th className="px-4 py-3 font-medium">比赛分</th>
+              <th className="px-4 py-3 font-medium">标准分</th>
               <th className="px-4 py-3 font-medium">平均顺位</th>
-              <th className="px-4 py-3 font-medium">奖励分</th>
+              <th className="px-4 py-3 font-medium">出场数</th>
+              {placementCountColumns.map((column) => (
+                <th key={column.key} className="px-4 py-3 font-medium">
+                  {column.label}
+                </th>
+              ))}
             </tr>
           </thead>
           <tbody className="divide-y divide-line bg-white/80">
             {ranking.length ? (
               ranking.map((entry) => (
                 <tr key={entry.name}>
-                  <td className="px-4 py-4 font-semibold">{entry.rank}</td>
+                  <TeamRankCell rank={entry.rank} teamName={entry.club} />
                   <td className="px-4 py-4">{entry.name}</td>
                   <td className="px-4 py-4 text-[#6f675d]">{entry.club}</td>
                   <td className="px-4 py-4 text-brand">{entry.totalPoints}</td>
+                  <td className="px-4 py-4 text-brand">
+                    <FractionDisplay value={entry.standardPoints} />
+                  </td>
                   <td className="px-4 py-4 text-[#6f675d]">{entry.averagePlacement}</td>
                   <td className="px-4 py-4 text-[#6f675d]">{entry.bonus}</td>
+                  {placementCountColumns.map((column) => (
+                    <td key={column.key} className="px-4 py-4 text-[#6f675d]">
+                      <FractionDisplay value={entry.placementCounts[column.key]} />
+                    </td>
+                  ))}
                 </tr>
               ))
             ) : (
               <tr>
-                <td colSpan={6} className="px-4 py-10 text-center text-[#6f675d]">
+                <td colSpan={10} className="px-4 py-10 text-center text-[#6f675d]">
                   当前赛事尚未产生排行榜数据。
                 </td>
               </tr>
