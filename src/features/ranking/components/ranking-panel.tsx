@@ -26,8 +26,8 @@ const rankingColumns: { key: RankingSortKey; label: string }[] = [
   { key: "rank", label: "排名" },
   { key: "name", label: "选手" },
   { key: "club", label: "俱乐部" },
-  { key: "totalPoints", label: "比赛分" },
   { key: "standardPoints", label: "标准分" },
+  { key: "totalPoints", label: "比赛分" },
   { key: "averagePlacement", label: "平均标准分" },
   { key: "bonus", label: "出场数" },
 ];
@@ -36,8 +36,8 @@ const teamRankingColumns = [
   { key: "rank", label: "排名" },
   { key: "name", label: "队伍" },
   { key: "standardPoints", label: "标准分" },
-  { key: "averageStandardPoints", label: "平均标准分" },
   { key: "totalPoints", label: "比赛分" },
+  { key: "averageStandardPoints", label: "平均标准分" },
   { key: "matchCount", label: "出场桌数" },
 ] as const;
 
@@ -119,6 +119,9 @@ export function RankingPanel({ ranking, teamRanking }: RankingPanelProps) {
     <div className="space-y-6">
       <section className="surface-card rounded-[30px] border border-line p-6">
         <SectionHeading eyebrow="排行" title="队伍排行" />
+        <p className="mt-2 text-sm text-[#6f675d]">
+          括号前为未扣罚的标准分，括号内为罚分。
+        </p>
 
         <div className="mt-8 max-h-[780px] overflow-auto rounded-[24px] border border-line">
           <table className="min-w-full divide-y divide-line text-left text-sm">
@@ -149,10 +152,10 @@ export function RankingPanel({ ranking, teamRanking }: RankingPanelProps) {
                       />
                     </td>
                     <td className="px-4 py-4 text-[#6f675d]">
-                      {entry.averageStandardPoints}
+                      {entry.totalPoints}
                     </td>
                     <td className="px-4 py-4 text-[#6f675d]">
-                      {entry.totalPoints}
+                      {entry.averageStandardPoints}
                     </td>
                     <td className="px-4 py-4 text-[#6f675d]">
                       {entry.matchCount}
@@ -209,13 +212,13 @@ export function RankingPanel({ ranking, teamRanking }: RankingPanelProps) {
                     <TeamRankCell rank={entry.rank} teamName={entry.club} />
                     <td className="px-4 py-4">{entry.name}</td>
                     <td className="px-4 py-4 text-[#6f675d]">{entry.club}</td>
-                    <td className="px-4 py-4 text-brand">{entry.totalPoints}</td>
                     <td className="px-4 py-4 text-brand">
                       <PenaltyAwareFraction
                         standardPoints={entry.standardPoints}
                         standardPointPenalty={entry.standardPointPenalty}
                       />
                     </td>
+                    <td className="px-4 py-4 text-brand">{entry.totalPoints}</td>
                     <td className="px-4 py-4 text-[#6f675d]">
                       {entry.averagePlacement}
                     </td>
