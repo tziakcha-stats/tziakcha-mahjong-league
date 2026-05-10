@@ -2,12 +2,20 @@
 
 import { useMemo, useState } from "react";
 import { cn } from "@/lib/utils";
-import type { RateLeaderboardEntry } from "@/shared/data/types";
+import type {
+  BigWinLeaderboardEntry,
+  MakeupWinLeaderboard,
+  MakeupWinLeaderboardEntry,
+  RateLeaderboardEntry,
+  RoundIncomeLeaderboardEntry,
+} from "@/shared/data/types";
 import { SectionHeading } from "@/shared/ui/section-heading";
 import {
   getNextSortState,
   type LeaderboardSortKey,
+  type RoundIncomeSortKey,
   sortLeaderboardRows,
+  sortRoundIncomeRows,
   type SortDirection,
   type SortState,
 } from "./ranking-sort";
@@ -17,23 +25,41 @@ type LeaderboardKey =
   | "huleRate"
   | "zimoRate"
   | "fangchongRate"
+  | "winDealDiff"
   | "beizimoRate"
   | "averageWinFan"
-  | "averageDealInFan";
-type AnalysisTabKey = "winDealRate" | "drawAroundRate" | "averageFan";
+  | "averageDealInFan"
+  | "averageFlower"
+  | "averageTsumoLossFan";
+type PairedLeaderboardKey = Exclude<LeaderboardKey, "winDealDiff">;
+type AnalysisTabKey =
+  | "winDealRate"
+  | "drawAroundRate"
+  | "averageFan"
+  | "flowerTsumoLoss"
+  | "winDealDiff"
+  | "roundIncome"
+  | "makeupWin"
+  | "bigWin";
 
 interface AnalysisPanelProps {
-  leaderboards: Record<LeaderboardKey, RateLeaderboardEntry[]>;
+  leaderboards: Record<LeaderboardKey, RateLeaderboardEntry[]> & {
+    bigWin: BigWinLeaderboardEntry[];
+    makeupWin: MakeupWinLeaderboard;
+    roundIncome: RoundIncomeLeaderboardEntry[];
+  };
 }
 
 const leaderboardConfig: Record<
-  LeaderboardKey,
+  PairedLeaderboardKey,
   {
     title: string;
     valueLabel: string;
     defaultDirection: SortDirection;
     valueKind: "percent" | "number";
     countLabel: string;
+    relatedRateKey?: PairedLeaderboardKey;
+    relatedRateLabel?: string;
   }
 > = {
   huleRate: {
@@ -70,6 +96,8 @@ const leaderboardConfig: Record<
     defaultDirection: "desc",
     valueKind: "number",
     countLabel: "盘数",
+    relatedRateKey: "huleRate",
+    relatedRateLabel: "和率",
   },
   averageDealInFan: {
     title: "平均铳点",
@@ -77,6 +105,26 @@ const leaderboardConfig: Record<
     defaultDirection: "asc",
     valueKind: "number",
     countLabel: "盘数",
+    relatedRateKey: "fangchongRate",
+    relatedRateLabel: "铳率",
+  },
+  averageFlower: {
+    title: "平均花牌",
+    valueLabel: "平均花牌",
+    defaultDirection: "desc",
+    valueKind: "number",
+    countLabel: "盘数",
+    relatedRateKey: "huleRate",
+    relatedRateLabel: "和率",
+  },
+  averageTsumoLossFan: {
+    title: "被摸点",
+    valueLabel: "被摸点",
+    defaultDirection: "asc",
+    valueKind: "number",
+    countLabel: "盘数",
+    relatedRateKey: "beizimoRate",
+    relatedRateLabel: "被摸率",
   },
 };
 
@@ -86,7 +134,7 @@ const analysisTabs: Record<
     label: string;
     title: string;
     description: string;
-    leaderboards: [LeaderboardKey, LeaderboardKey];
+    leaderboards?: [PairedLeaderboardKey, PairedLeaderboardKey];
   }
 > = {
   winDealRate: {
@@ -107,18 +155,55 @@ const analysisTabs: Record<
     description: "并排观察选手和牌番数产出，以及点炮时给出的番数压力。",
     leaderboards: ["averageWinFan", "averageDealInFan"],
   },
+  flowerTsumoLoss: {
+    label: "花牌/被摸点",
+    title: "花牌 / 被摸点",
+    description: "并排观察和牌时的花牌数量，以及被他家自摸时承受的平均番数。",
+    leaderboards: ["averageFlower", "averageTsumoLossFan"],
+  },
+  winDealDiff: {
+    label: "和铳差",
+    title: "和铳差",
+    description: "观察选手和牌率与放铳率之间的差值。",
+  },
+  roundIncome: {
+    label: "局收支",
+    title: "局收支",
+    description: "按平均每盘收益拆分点和、放铳、自摸、被摸四个模块。",
+  },
+  makeupWin: {
+    label: "凑番",
+    title: "凑番",
+    description: "按最大番数不超过 2 的和牌拆分金8、银8、铜8、铁8。",
+  },
+  bigWin: {
+    label: "大牌榜",
+    title: "大牌榜",
+    description: "截取和牌总番数最高的前 20 小局，并列出 8 番及以上番种。",
+  },
 };
 
-const orderedTabs: AnalysisTabKey[] = ["winDealRate", "drawAroundRate", "averageFan"];
+const orderedTabs: AnalysisTabKey[] = [
+  "winDealRate",
+  "drawAroundRate",
+  "averageFan",
+  "flowerTsumoLoss",
+  "winDealDiff",
+  "roundIncome",
+  "makeupWin",
+  "bigWin",
+];
 
 const leaderboardColumns: {
   key: LeaderboardSortKey;
   label: string;
   valueLabel?: true;
+  relatedRateLabel?: true;
 }[] = [
   { key: "rank", label: "排名" },
   { key: "name", label: "选手" },
   { key: "rate", label: "", valueLabel: true },
+  { key: "relatedRate", label: "", relatedRateLabel: true },
   { key: "count", label: "" },
 ];
 
@@ -133,6 +218,43 @@ function formatLeaderboardValue(row: RateLeaderboardEntry, valueKind: "percent" 
   }
 
   return row.rate.toFixed(1);
+}
+
+function formatRelatedRate(row: RateLeaderboardEntry) {
+  return row.relatedRate == null ? "-" : `${(row.relatedRate * 100).toFixed(1)}%`;
+}
+
+function formatOptionalRate(value: number | undefined) {
+  return value == null ? "-" : `${(value * 100).toFixed(1)}%`;
+}
+
+function formatRateDiff(value: number | undefined) {
+  if (value == null) {
+    return "-";
+  }
+
+  const prefix = value > 0 ? "+" : "";
+  return `${prefix}${(value * 100).toFixed(1)}%`;
+}
+
+function buildRateIndex(rows: RateLeaderboardEntry[]) {
+  return new Map(rows.map((row) => [row.name, row.rate]));
+}
+
+function attachRelatedRate(
+  rows: RateLeaderboardEntry[],
+  relatedRows: RateLeaderboardEntry[] | undefined,
+) {
+  if (!relatedRows) {
+    return rows;
+  }
+
+  const rateIndex = buildRateIndex(relatedRows);
+
+  return rows.map((row) => ({
+    ...row,
+    relatedRate: rateIndex.get(row.name),
+  }));
 }
 
 function getSortIndicator<TSortKey extends string>(
@@ -194,6 +316,7 @@ function AnalysisTable({
   valueLabel,
   valueKind,
   countLabel,
+  relatedRateLabel,
   sortState,
   onSort,
 }: {
@@ -202,9 +325,14 @@ function AnalysisTable({
   valueLabel: string;
   valueKind: "percent" | "number";
   countLabel: string;
+  relatedRateLabel?: string;
   sortState: SortState<LeaderboardSortKey> | null;
   onSort: (key: LeaderboardSortKey) => void;
 }) {
+  const visibleColumns = leaderboardColumns.filter(
+    (column) => !column.relatedRateLabel || relatedRateLabel,
+  );
+
   return (
     <section className="min-w-0">
       <h3 className="text-base font-semibold text-[#16120f]">{title}</h3>
@@ -212,12 +340,14 @@ function AnalysisTable({
         <table className="min-w-full divide-y divide-line text-left text-sm">
           <thead className="sticky top-0 z-10 bg-black/[0.03] text-[#6f675d]">
             <tr>
-              {leaderboardColumns.map((column) => (
+              {visibleColumns.map((column) => (
                 <SortableHeader
                   key={column.key}
                   label={
                     column.valueLabel
                       ? valueLabel
+                      : column.relatedRateLabel
+                        ? relatedRateLabel ?? column.label
                       : column.key === "count"
                         ? countLabel
                         : column.label
@@ -241,6 +371,11 @@ function AnalysisTable({
                     <td className="px-4 py-4 text-brand">
                       {formatLeaderboardValue(row, valueKind)}
                     </td>
+                    {relatedRateLabel ? (
+                      <td className="px-4 py-4 text-[#6f675d]">
+                        {formatRelatedRate(row)}
+                      </td>
+                    ) : null}
                     <td className="px-4 py-4 text-[#6f675d]">
                       {sampleSize ?? row.count}
                     </td>
@@ -249,7 +384,10 @@ function AnalysisTable({
               })
             ) : (
               <tr>
-                <td colSpan={4} className="px-4 py-10 text-center text-[#6f675d]">
+                <td
+                  colSpan={visibleColumns.length}
+                  className="px-4 py-10 text-center text-[#6f675d]"
+                >
                   当前榜单暂无数据。
                 </td>
               </tr>
@@ -261,10 +399,367 @@ function AnalysisTable({
   );
 }
 
+function BigWinTable({ rows }: { rows: BigWinLeaderboardEntry[] }) {
+  return (
+    <div className="mt-8 max-h-[780px] overflow-auto rounded-[18px] border border-line">
+      <table className="min-w-full divide-y divide-line text-left text-sm">
+        <thead className="sticky top-0 z-10 bg-black/[0.03] text-[#6f675d]">
+          <tr>
+            <th className="px-4 py-3 font-medium">排名</th>
+            <th className="px-4 py-3 font-medium">番数</th>
+            <th className="px-4 py-3 font-medium">和牌家</th>
+            <th className="px-4 py-3 font-medium">队伍</th>
+            <th className="px-4 py-3 font-medium">放铳家</th>
+            <th className="px-4 py-3 font-medium">番种说明</th>
+            <th className="px-4 py-3 font-medium">对局</th>
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-line bg-white/80">
+          {rows.length ? (
+            rows.map((row) => (
+              <tr key={`${row.rank}-${row.matchId}-${row.recordId}`}>
+                <TeamRankCell rank={row.rank} teamName={row.winnerTeam} />
+                <td className="px-4 py-4 text-brand">{row.totalFan}</td>
+                <td className="px-4 py-4 text-[#16120f]">{row.winner}</td>
+                <td className="px-4 py-4 text-[#6f675d]">{row.winnerTeam}</td>
+                <td className="px-4 py-4 text-[#6f675d]">{row.discarder}</td>
+                <td className="min-w-48 px-4 py-4 text-[#16120f]">
+                  {row.description}
+                </td>
+                <td className="px-4 py-4 text-[#6f675d]">
+                  {row.replayUrl ? (
+                    <a
+                      href={row.replayUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-brand underline-offset-4 hover:underline"
+                    >
+                      {row.roundLabel} {row.tableName}
+                    </a>
+                  ) : (
+                    `${row.roundLabel} ${row.tableName}`
+                  )}
+                </td>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td colSpan={7} className="px-4 py-10 text-center text-[#6f675d]">
+                当前榜单暂无数据。
+              </td>
+            </tr>
+          )}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+const makeupWinSections: {
+  key: keyof MakeupWinLeaderboard;
+  title: string;
+}[] = [
+  { key: "gold", title: "金8" },
+  { key: "silver", title: "银8" },
+  { key: "bronze", title: "铜8" },
+  { key: "iron", title: "铁8" },
+];
+
+function MakeupWinTable({
+  title,
+  rows,
+}: {
+  title: string;
+  rows: MakeupWinLeaderboardEntry[];
+}) {
+  return (
+    <section>
+      <h3 className="text-base font-semibold text-[#16120f]">{title}</h3>
+      <div className="mt-3 overflow-auto rounded-[18px] border border-line">
+        <table className="min-w-full divide-y divide-line text-left text-sm">
+          <thead className="bg-black/[0.03] text-[#6f675d]">
+            <tr>
+              <th className="px-4 py-3 font-medium">和牌家</th>
+              <th className="px-4 py-3 font-medium">番种说明</th>
+              <th className="px-4 py-3 font-medium">对局</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-line bg-white/80">
+            {rows.length ? (
+              rows.map((row) => (
+                <tr key={`${row.matchId}-${row.recordId}-${row.winner}`}>
+                  <td className="px-4 py-4 text-[#16120f]">{row.winner}</td>
+                  <td className="min-w-48 px-4 py-4 text-[#16120f]">
+                    {row.description}
+                  </td>
+                  <td className="px-4 py-4 text-[#6f675d]">
+                    {row.replayUrl ? (
+                      <a
+                        href={row.replayUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-brand underline-offset-4 hover:underline"
+                      >
+                        {row.roundLabel} {row.tableName}
+                      </a>
+                    ) : (
+                      `${row.roundLabel} ${row.tableName}`
+                    )}
+                  </td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan={3} className="px-4 py-10 text-center text-[#6f675d]">
+                  当前暂无数据。
+                </td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  );
+}
+
+function MakeupWinTables({ rows }: { rows: MakeupWinLeaderboard }) {
+  return (
+    <div className="mt-8 space-y-8">
+      {makeupWinSections.map((section) => (
+        <MakeupWinTable
+          key={section.key}
+          title={section.title}
+          rows={rows[section.key]}
+        />
+      ))}
+    </div>
+  );
+}
+
+function formatIncome(value: number) {
+  const prefix = value > 0 ? "+" : "";
+  return `${prefix}${value.toFixed(2)}`;
+}
+
+function RoundIncomeTable({
+  rows,
+  sortState,
+  onSort,
+}: {
+  rows: RoundIncomeLeaderboardEntry[];
+  sortState: SortState<RoundIncomeSortKey> | null;
+  onSort: (key: RoundIncomeSortKey) => void;
+}) {
+  return (
+    <div className="mt-8 max-h-[780px] overflow-auto rounded-[18px] border border-line">
+      <table className="min-w-full divide-y divide-line text-left text-sm">
+        <thead className="sticky top-0 z-10 bg-black/[0.03] text-[#6f675d]">
+          <tr>
+            <SortableHeader
+              label="排名"
+              columnKey="rank"
+              sortState={sortState}
+              onSort={onSort}
+            />
+            <SortableHeader
+              label="选手"
+              columnKey="name"
+              sortState={sortState}
+              onSort={onSort}
+            />
+            <SortableHeader
+              label="队伍"
+              columnKey="team"
+              sortState={sortState}
+              onSort={onSort}
+            />
+            <SortableHeader
+              label="点和收益"
+              columnKey="pointWin"
+              sortState={sortState}
+              onSort={onSort}
+            />
+            <SortableHeader
+              label="放铳收益"
+              columnKey="dealIn"
+              sortState={sortState}
+              onSort={onSort}
+            />
+            <SortableHeader
+              label="自摸收益"
+              columnKey="selfDraw"
+              sortState={sortState}
+              onSort={onSort}
+            />
+            <SortableHeader
+              label="被摸收益"
+              columnKey="drawnByOthers"
+              sortState={sortState}
+              onSort={onSort}
+            />
+            <SortableHeader
+              label="局收支"
+              columnKey="roundIncome"
+              sortState={sortState}
+              onSort={onSort}
+            />
+            <SortableHeader
+              label="盘数"
+              columnKey="rounds"
+              sortState={sortState}
+              onSort={onSort}
+            />
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-line bg-white/80">
+          {rows.length ? (
+            rows.map((row) => (
+              <tr key={`${row.rank}-${row.name}`}>
+                <TeamRankCell rank={row.rank} teamName={row.team} />
+                <td className="px-4 py-4 text-[#16120f]">{row.name}</td>
+                <td className="px-4 py-4 text-[#6f675d]">{row.team}</td>
+                <IncomeModuleCell
+                  module={row.pointWin}
+                  getPointWinValue={(module) => module.averageFan + 24}
+                />
+                <IncomeModuleCell
+                  module={row.dealIn}
+                  getPointWinValue={(module) => -(module.averageFan + 8)}
+                />
+                <IncomeModuleCell
+                  module={row.selfDraw}
+                  getPointWinValue={(module) => module.averageFan * 3 + 24}
+                />
+                <IncomeModuleCell
+                  module={row.drawnByOthers}
+                  getPointWinValue={(module) => -(module.averageFan + 8)}
+                />
+                <td className="px-4 py-4 font-semibold text-brand">
+                  {formatIncome(row.roundIncome)}
+                </td>
+                <td className="px-4 py-4 text-[#6f675d]">{row.rounds}</td>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td colSpan={9} className="px-4 py-10 text-center text-[#6f675d]">
+                当前榜单暂无数据。
+              </td>
+            </tr>
+          )}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function IncomeModuleCell({
+  module,
+  getPointWinValue,
+}: {
+  module: RoundIncomeLeaderboardEntry["pointWin"];
+  getPointWinValue: (module: RoundIncomeLeaderboardEntry["pointWin"]) => number;
+}) {
+  return (
+    <td className="px-4 py-4 font-medium text-[#16120f]">
+      {formatIncome(getPointWinValue(module))}
+    </td>
+  );
+}
+
+function WinDealDiffTable({
+  rows,
+  sortState,
+  onSort,
+}: {
+  rows: RateLeaderboardEntry[];
+  sortState: SortState<LeaderboardSortKey> | null;
+  onSort: (key: LeaderboardSortKey) => void;
+}) {
+  return (
+    <div className="mt-8 max-h-[780px] overflow-auto rounded-[18px] border border-line">
+      <table className="min-w-full divide-y divide-line text-left text-sm">
+        <thead className="sticky top-0 z-10 bg-black/[0.03] text-[#6f675d]">
+          <tr>
+            <SortableHeader
+              label="排名"
+              columnKey="rank"
+              sortState={sortState}
+              onSort={onSort}
+            />
+            <SortableHeader
+              label="选手"
+              columnKey="name"
+              sortState={sortState}
+              onSort={onSort}
+            />
+            <SortableHeader
+              label="和牌率"
+              columnKey="rate"
+              sortState={sortState}
+              onSort={onSort}
+            />
+            <SortableHeader
+              label="放铳率"
+              columnKey="dealInRate"
+              sortState={sortState}
+              onSort={onSort}
+            />
+            <SortableHeader
+              label="和铳差"
+              columnKey="rateDiff"
+              sortState={sortState}
+              onSort={onSort}
+            />
+            <SortableHeader
+              label="盘数"
+              columnKey="count"
+              sortState={sortState}
+              onSort={onSort}
+            />
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-line bg-white/80">
+          {rows.length ? (
+            rows.map((row) => {
+              const sampleSize = getSampleSize(row.note);
+
+              return (
+                <tr key={`${row.rank}-${row.name}`}>
+                  <TeamRankCell rank={row.rank} teamName={row.team} />
+                  <td className="px-4 py-4 text-[#16120f]">{row.name}</td>
+                  <td className="px-4 py-4 text-brand">
+                    {formatOptionalRate(row.rate)}
+                  </td>
+                  <td className="px-4 py-4 text-[#6f675d]">
+                    {formatOptionalRate(row.dealInRate)}
+                  </td>
+                  <td className="px-4 py-4 font-semibold text-[#16120f]">
+                    {formatRateDiff(row.rateDiff)}
+                  </td>
+                  <td className="px-4 py-4 text-[#6f675d]">
+                    {sampleSize ?? row.count}
+                  </td>
+                </tr>
+              );
+            })
+          ) : (
+            <tr>
+              <td colSpan={6} className="px-4 py-10 text-center text-[#6f675d]">
+                当前榜单暂无数据。
+              </td>
+            </tr>
+          )}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 export function AnalysisPanel({ leaderboards }: AnalysisPanelProps) {
   const [activeTab, setActiveTab] = useState<AnalysisTabKey>("winDealRate");
   const [leaderboardSorts, setLeaderboardSorts] = useState<
-    Record<LeaderboardKey, SortState<LeaderboardSortKey> | null>
+    Record<PairedLeaderboardKey, SortState<LeaderboardSortKey> | null>
   >({
     huleRate: null,
     zimoRate: null,
@@ -272,28 +767,71 @@ export function AnalysisPanel({ leaderboards }: AnalysisPanelProps) {
     beizimoRate: null,
     averageWinFan: null,
     averageDealInFan: null,
+    averageFlower: null,
+    averageTsumoLossFan: null,
   });
+  const [winDealDiffSort, setWinDealDiffSort] =
+    useState<SortState<LeaderboardSortKey> | null>(null);
+  const [roundIncomeSort, setRoundIncomeSort] =
+    useState<SortState<RoundIncomeSortKey> | null>(null);
   const config = analysisTabs[activeTab];
-  const [leftKey, rightKey] = config.leaderboards;
+  const rateKeys = config.leaderboards;
   const sortedLeaderboards = useMemo(() => {
-    const sortLeaderboard = (key: LeaderboardKey) =>
-      sortLeaderboardRows(
+    if (!rateKeys) {
+      return null;
+    }
+
+    const [leftKey, rightKey] = rateKeys;
+    const sortLeaderboard = (key: PairedLeaderboardKey) => {
+      const keyConfig = leaderboardConfig[key];
+      const rows = attachRelatedRate(
         leaderboards[key],
-        leaderboardSorts[key],
-        leaderboardConfig[key].defaultDirection,
+        keyConfig.relatedRateKey ? leaderboards[keyConfig.relatedRateKey] : undefined,
       );
+
+      return sortLeaderboardRows(
+        rows,
+        leaderboardSorts[key],
+        keyConfig.defaultDirection,
+      );
+    };
 
     return {
       [leftKey]: sortLeaderboard(leftKey),
       [rightKey]: sortLeaderboard(rightKey),
     };
-  }, [leaderboardSorts, leaderboards, leftKey, rightKey]);
+  }, [leaderboardSorts, leaderboards, rateKeys]);
+  const winDealDiffRows = useMemo(
+    () =>
+      sortLeaderboardRows(
+        leaderboards.winDealDiff,
+        winDealDiffSort,
+        "desc",
+        "rateDiff",
+    ),
+    [leaderboards.winDealDiff, winDealDiffSort],
+  );
+  const roundIncomeRows = useMemo(
+    () => sortRoundIncomeRows(leaderboards.roundIncome, roundIncomeSort),
+    [leaderboards.roundIncome, roundIncomeSort],
+  );
 
-  function handleLeaderboardSort(key: LeaderboardKey, sortKey: LeaderboardSortKey) {
+  function handleLeaderboardSort(
+    key: PairedLeaderboardKey,
+    sortKey: LeaderboardSortKey,
+  ) {
     setLeaderboardSorts((currentSorts) => ({
       ...currentSorts,
       [key]: getNextSortState(currentSorts[key], sortKey),
     }));
+  }
+
+  function handleWinDealDiffSort(sortKey: LeaderboardSortKey) {
+    setWinDealDiffSort((currentSort) => getNextSortState(currentSort, sortKey));
+  }
+
+  function handleRoundIncomeSort(sortKey: RoundIncomeSortKey) {
+    setRoundIncomeSort((currentSort) => getNextSortState(currentSort, sortKey));
   }
 
   return (
@@ -301,7 +839,6 @@ export function AnalysisPanel({ leaderboards }: AnalysisPanelProps) {
       <SectionHeading
         eyebrow="分析"
         title={config.title}
-        description={config.description}
       />
 
       <div className="mt-5 flex flex-wrap gap-3" aria-label="分析榜单">
@@ -323,20 +860,39 @@ export function AnalysisPanel({ leaderboards }: AnalysisPanelProps) {
         ))}
       </div>
 
-      <div className="mt-8 grid gap-6 xl:grid-cols-2">
-        {[leftKey, rightKey].map((key) => (
-          <AnalysisTable
-            key={key}
-            title={leaderboardConfig[key].title}
-            rows={sortedLeaderboards[key]}
-            valueLabel={leaderboardConfig[key].valueLabel}
-            valueKind={leaderboardConfig[key].valueKind}
-            countLabel={leaderboardConfig[key].countLabel}
-            sortState={leaderboardSorts[key]}
-            onSort={(sortKey) => handleLeaderboardSort(key, sortKey)}
-          />
-        ))}
-      </div>
+      {activeTab === "winDealDiff" ? (
+        <WinDealDiffTable
+          rows={winDealDiffRows}
+          sortState={winDealDiffSort}
+          onSort={handleWinDealDiffSort}
+        />
+      ) : activeTab === "roundIncome" ? (
+        <RoundIncomeTable
+          rows={roundIncomeRows}
+          sortState={roundIncomeSort}
+          onSort={handleRoundIncomeSort}
+        />
+      ) : activeTab === "makeupWin" ? (
+        <MakeupWinTables rows={leaderboards.makeupWin} />
+      ) : rateKeys && sortedLeaderboards ? (
+        <div className="mt-8 grid gap-6 xl:grid-cols-2">
+          {rateKeys.map((key) => (
+            <AnalysisTable
+              key={key}
+              title={leaderboardConfig[key].title}
+              rows={sortedLeaderboards[key]}
+              valueLabel={leaderboardConfig[key].valueLabel}
+              valueKind={leaderboardConfig[key].valueKind}
+              countLabel={leaderboardConfig[key].countLabel}
+              relatedRateLabel={leaderboardConfig[key].relatedRateLabel}
+              sortState={leaderboardSorts[key]}
+              onSort={(sortKey) => handleLeaderboardSort(key, sortKey)}
+            />
+          ))}
+        </div>
+      ) : (
+        <BigWinTable rows={leaderboards.bigWin} />
+      )}
     </section>
   );
 }

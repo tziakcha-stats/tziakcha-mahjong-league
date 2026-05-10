@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 
 import {
   getNextSortState,
+  sortRoundIncomeRows,
   sortLeaderboardRows,
   sortRankingRows,
 } from "./ranking-sort.mjs";
@@ -113,5 +114,75 @@ test("sortLeaderboardRows can sort text fields ascending", () => {
   assert.deepEqual(
     sortedRows.map((row) => `${row.rank}:${row.name}`),
     ["2:Alice", "1:Charlie", "3:Bob"],
+  );
+});
+
+test("sortLeaderboardRows can sort optional related rate fields", () => {
+  const rows = [
+    { ...leaderboardRows[0], relatedRate: 0.2 },
+    { ...leaderboardRows[1], relatedRate: 0.4 },
+    leaderboardRows[2],
+  ];
+  const sortedRows = sortLeaderboardRows(
+    rows,
+    { key: "relatedRate", direction: "desc" },
+    "desc",
+  );
+
+  assert.deepEqual(
+    sortedRows.map((row) => row.name),
+    ["Alice", "Charlie", "Bob"],
+  );
+});
+
+test("sortLeaderboardRows can default-sort rate difference fields descending", () => {
+  const rows = [
+    { ...leaderboardRows[0], rateDiff: 0.1 },
+    { ...leaderboardRows[1], rateDiff: 0.3 },
+    { ...leaderboardRows[2], rateDiff: -0.1 },
+  ];
+  const sortedRows = sortLeaderboardRows(rows, null, "desc", "rateDiff");
+
+  assert.deepEqual(
+    sortedRows.map((row) => row.name),
+    ["Alice", "Charlie", "Bob"],
+  );
+});
+
+test("sortRoundIncomeRows can sort income module values and restore round income default", () => {
+  const rows = [
+    {
+      rank: 1,
+      name: "Charlie",
+      team: "Team B",
+      rounds: 20,
+      pointWin: { income: 100, averageFan: 16, count: 4 },
+      dealIn: { income: -20, averageFan: 12, count: 1 },
+      selfDraw: { income: 60, averageFan: 12, count: 1 },
+      drawnByOthers: { income: -30, averageFan: 10, count: 2 },
+      roundIncome: 5,
+    },
+    {
+      rank: 2,
+      name: "Alice",
+      team: "Team A",
+      rounds: 16,
+      pointWin: { income: 80, averageFan: 20, count: 2 },
+      dealIn: { income: -50, averageFan: 17, count: 2 },
+      selfDraw: { income: 100, averageFan: 13, count: 2 },
+      drawnByOthers: { income: -10, averageFan: 9, count: 1 },
+      roundIncome: 8,
+    },
+  ];
+
+  assert.deepEqual(
+    sortRoundIncomeRows(rows, null).map((row) => row.name),
+    ["Alice", "Charlie"],
+  );
+  assert.deepEqual(
+    sortRoundIncomeRows(rows, { key: "pointWin", direction: "asc" }).map(
+      (row) => row.name,
+    ),
+    ["Alice", "Charlie"],
   );
 });

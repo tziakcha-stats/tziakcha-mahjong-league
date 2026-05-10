@@ -1,4 +1,8 @@
-import type { PlayerRankingEntry, RateLeaderboardEntry } from "@/shared/data/types";
+import type {
+  PlayerRankingEntry,
+  RateLeaderboardEntry,
+  RoundIncomeLeaderboardEntry,
+} from "@/shared/data/types";
 
 const stringCollator = new Intl.Collator("zh-Hans-CN", {
   numeric: true,
@@ -20,8 +24,15 @@ export type RankingSortKey = keyof Pick<
 
 export type LeaderboardSortKey = keyof Pick<
   RateLeaderboardEntry,
-  "rank" | "name" | "team" | "rate" | "count"
+  "rank" | "name" | "team" | "rate" | "relatedRate" | "dealInRate" | "rateDiff" | "count"
 >;
+
+export type RoundIncomeSortKey =
+  | keyof Pick<RoundIncomeLeaderboardEntry, "rank" | "name" | "team" | "rounds" | "roundIncome">
+  | "pointWin"
+  | "dealIn"
+  | "selfDraw"
+  | "drawnByOthers";
 
 export interface SortState<TSortKey extends string> {
   key: TSortKey;
@@ -43,7 +54,22 @@ export function getNextSortState<TSortKey extends string>(
   return null;
 }
 
-function compareValues(leftValue: string | number, rightValue: string | number) {
+function compareValues(
+  leftValue: string | number | undefined,
+  rightValue: string | number | undefined,
+) {
+  if (leftValue == null && rightValue == null) {
+    return 0;
+  }
+
+  if (leftValue == null) {
+    return -1;
+  }
+
+  if (rightValue == null) {
+    return 1;
+  }
+
   if (typeof leftValue === "number" && typeof rightValue === "number") {
     return leftValue - rightValue;
   }
@@ -68,8 +94,8 @@ function sortRows<TRow extends { rank: number }, TSortKey extends keyof TRow>(
 
   return [...rows].sort((left, right) => {
     const result = compareValues(
-      left[effectiveSort.key] as string | number,
-      right[effectiveSort.key] as string | number,
+      left[effectiveSort.key] as string | number | undefined,
+      right[effectiveSort.key] as string | number | undefined,
     );
 
     if (result !== 0) {
@@ -107,9 +133,49 @@ export function sortLeaderboardRows(
   rows: RateLeaderboardEntry[],
   sortState: SortState<LeaderboardSortKey> | null,
   defaultDirection: SortDirection,
+  defaultKey: LeaderboardSortKey = "rate",
 ) {
   return sortRows<RateLeaderboardEntry, LeaderboardSortKey>(rows, sortState, {
-    key: "rate",
+    key: defaultKey,
     direction: defaultDirection,
+  });
+}
+
+function getRoundIncomeSortValue(
+  row: RoundIncomeLeaderboardEntry,
+  key: RoundIncomeSortKey,
+) {
+  if (
+    key === "pointWin" ||
+    key === "dealIn" ||
+    key === "selfDraw" ||
+    key === "drawnByOthers"
+  ) {
+    return row[key].income;
+  }
+
+  return row[key];
+}
+
+export function sortRoundIncomeRows(
+  rows: RoundIncomeLeaderboardEntry[],
+  sortState: SortState<RoundIncomeSortKey> | null,
+) {
+  const effectiveSort = sortState ?? {
+    key: "roundIncome" as const,
+    direction: "desc" as const,
+  };
+
+  return [...rows].sort((left, right) => {
+    const result = compareValues(
+      getRoundIncomeSortValue(left, effectiveSort.key),
+      getRoundIncomeSortValue(right, effectiveSort.key),
+    );
+
+    if (result !== 0) {
+      return effectiveSort.direction === "asc" ? result : -result;
+    }
+
+    return left.rank - right.rank;
   });
 }
