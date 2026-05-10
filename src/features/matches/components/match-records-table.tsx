@@ -129,7 +129,7 @@ export function MatchRecordsTable({ matches }: { matches: MatchRecord[] }) {
             {paginatedMatches.length ? (
               paginatedMatches.map((match) => (
                 <tr key={match.id}>
-                  <td className="px-4 py-4 text-[#6f675d]">{match.roundLabel}</td>
+                  <td className="px-4 py-4 text-[#6f675d]">{match.round}</td>
                   <td className="px-4 py-4 align-top">
                     <div className="font-semibold">{match.tableName}</div>
                     {match.replayUrl ? (

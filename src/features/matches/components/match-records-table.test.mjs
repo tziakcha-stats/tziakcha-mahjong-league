@@ -21,6 +21,7 @@ test("match records table exposes filtering, official links, and pagination cont
   assert.match(source, /全部玩家/);
   assert.match(source, /全部队伍/);
   assert.match(source, /PAGE_SIZE = 20/);
+  assert.match(source, /match\.round/);
   assert.match(source, /match\.replayUrl/);
   assert.match(source, /链接/);
   assert.match(source, /text-blue-600/);
