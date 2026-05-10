@@ -266,13 +266,17 @@ function parseMatchTitle(title) {
 
   if (!match) {
     return {
+      round: 0,
       roundLabel: title,
       tableName: "未知桌",
     };
   }
 
+  const round = normalizeRoundNumber(match[2]);
+
   return {
-    roundLabel: `${match[1]}第 ${normalizeRoundNumber(match[2])} 轮`,
+    round,
+    roundLabel: `${match[1]}第 ${round} 轮`,
     tableName: `${match[3]} 桌`,
   };
 }
@@ -298,6 +302,27 @@ function normalizeRoundNumber(value) {
   return chineseNumbers.get(value) ?? value;
 }
 
+function formatRoundLabel(round) {
+  return `常规赛第 ${round} 轮`;
+}
+
+function buildOfflineMatchRows(offlineRows) {
+  return offlineRows.map((match) => ({
+    id: match.id,
+    offline: true,
+    round: toNumber(match.round),
+    roundLabel: formatRoundLabel(toNumber(match.round)),
+    tableName: match.tableName,
+    location: match.location,
+    players: match.players.map((player) => ({
+      n: player.name,
+      s: toNumber(player.score),
+      standardPoint: player.standardPoint,
+      teamName: player.team,
+    })),
+  }));
+}
+
 function buildLeaderboard(rows, playerTeamIndex, options) {
   return rows.map((row) => {
     const playerName = options.resolvePlayerName(row["Player Name"]);
@@ -314,16 +339,67 @@ function buildLeaderboard(rows, playerTeamIndex, options) {
   });
 }
 
+function buildWinDealDiffLeaderboard(huleRows, fangchongRows, playerTeamIndex, options) {
+  const dealInIndex = new Map(
+    fangchongRows.map((row) => [
+      options.resolvePlayerName(row["Player Name"]),
+      {
+        rate: percentage(toNumber(row.Rate)),
+        count: toNumber(row.Rounds),
+      },
+    ]),
+  );
+
+  return huleRows
+    .map((row) => {
+      const playerName = options.resolvePlayerName(row["Player Name"]);
+      const team = playerTeamIndex.get(playerName);
+      const dealIn = dealInIndex.get(playerName);
+      const rate = percentage(toNumber(row.Rate));
+      const dealInRate = dealIn?.rate ?? 0;
+
+      return {
+        name: playerName,
+        team: team?.teamName ?? DEFAULT_TEAM_NAME,
+        rate,
+        dealInRate,
+        rateDiff: roundToSixDecimals(rate - dealInRate),
+        count: toNumber(row.Rounds),
+        note: `和牌率 ${(rate * 100).toFixed(1)}%，放铳率 ${(dealInRate * 100).toFixed(1)}%，来源：rate_win_rate.csv + rate_deal_in_rate.csv`,
+      };
+    })
+    .sort((left, right) => {
+      const rateDiff = right.rateDiff - left.rateDiff;
+      if (rateDiff !== 0) {
+        return rateDiff;
+      }
+
+      const countDiff = right.count - left.count;
+      if (countDiff !== 0) {
+        return countDiff;
+      }
+
+      return left.name.localeCompare(right.name, "zh-Hans-CN");
+    })
+    .map((row, index) => ({
+      rank: index + 1,
+      ...row,
+    }));
+}
+
 function buildAverageFanLeaderboard(playerStatsMap, playerTeamIndex, options) {
   return [...playerStatsMap.values()]
     .map((stats) => {
       const totalFan = stats[options.totalFanKey];
-      const count = stats[options.countKey];
+      const denominatorCount = stats[options.countKey];
 
       return {
         name: stats.name,
-        rate: percentage(count === 0 ? 0 : totalFan / count),
-        count,
+        rate: percentage(
+          denominatorCount === 0 ? 0 : totalFan / denominatorCount,
+        ),
+        count: stats.rounds,
+        denominatorCount,
         totalFan,
       };
     })
@@ -349,36 +425,104 @@ function buildAverageFanLeaderboard(playerStatsMap, playerTeamIndex, options) {
         team: team?.teamName ?? DEFAULT_TEAM_NAME,
         rate: row.rate,
         count: row.count,
-        note: `${row.count} 次样本，总番数 ${row.totalFan}，来源：详细牌谱 + tziakcha-fetcher`,
+        note: `${row.count} 局样本，${row.denominatorCount} 次${options.denominatorLabel}，总番数 ${row.totalFan}，来源：详细牌谱 + tziakcha-fetcher`,
       };
     });
 }
 
-async function buildAverageFanStatsMap({
-  projectRoot,
-  historyRows,
-  sessionRows,
-  aliases,
-}) {
-  const statsMap = new Map();
+function buildAverageFlowerLeaderboard(playerStatsMap, playerTeamIndex) {
+  return [...playerStatsMap.values()]
+    .map((stats) => ({
+      name: stats.name,
+      rate: roundToSixDecimals(
+        stats.winCount === 0 ? 0 : stats.flowerTotal / stats.winCount,
+      ),
+      count: stats.rounds,
+      winCount: stats.winCount,
+      flowerTotal: stats.flowerTotal,
+    }))
+    .sort((left, right) => {
+      const rateDiff = right.rate - left.rate;
+      if (rateDiff !== 0) {
+        return rateDiff;
+      }
+
+      const countDiff = right.count - left.count;
+      if (countDiff !== 0) {
+        return countDiff;
+      }
+
+      return left.name.localeCompare(right.name, "zh-Hans-CN");
+    })
+    .map((row, index) => {
+      const team = playerTeamIndex.get(row.name);
+
+      return {
+        rank: index + 1,
+        name: row.name,
+        team: team?.teamName ?? DEFAULT_TEAM_NAME,
+        rate: row.rate,
+        count: row.count,
+        note: `${row.count} 局样本，${row.winCount} 次和牌，总花牌 ${row.flowerTotal}，来源：详细牌谱 + tziakcha-fetcher`,
+      };
+    });
+}
+
+function buildAverageTsumoLossFanLeaderboard(playerStatsMap, playerTeamIndex) {
+  return [...playerStatsMap.values()]
+    .map((stats) => ({
+      name: stats.name,
+      rate: roundToSixDecimals(
+        stats.tsumoLossCount === 0
+          ? 0
+          : stats.tsumoLossFanTotal / stats.tsumoLossCount,
+      ),
+      count: stats.rounds,
+      tsumoLossCount: stats.tsumoLossCount,
+      tsumoLossFanTotal: stats.tsumoLossFanTotal,
+    }))
+    .sort((left, right) => {
+      const rateDiff = left.rate - right.rate;
+      if (rateDiff !== 0) {
+        return rateDiff;
+      }
+
+      const countDiff = right.count - left.count;
+      if (countDiff !== 0) {
+        return countDiff;
+      }
+
+      return left.name.localeCompare(right.name, "zh-Hans-CN");
+    })
+    .map((row, index) => {
+      const team = playerTeamIndex.get(row.name);
+
+      return {
+        rank: index + 1,
+        name: row.name,
+        team: team?.teamName ?? DEFAULT_TEAM_NAME,
+        rate: row.rate,
+        count: row.count,
+        note: `${row.count} 局样本，${row.tsumoLossCount} 次被摸，被摸总番数 ${row.tsumoLossFanTotal}，来源：详细牌谱 + tziakcha-fetcher`,
+      };
+    });
+}
+
+function formatBigWinDescription(fanItems) {
+  const fanNames = fanItems.map((fanItem) => fanItem.fanName);
+  return fanNames.length ? fanNames.join("、") : "无 8 番以上番种";
+}
+
+function roundToSixDecimals(value) {
+  return Math.round(value * 1_000_000) / 1_000_000;
+}
+
+async function buildDetailedSessions({ projectRoot, historyRows, sessionRows }) {
   const sessionIndex = new Map(
     sessionRows.map((session) => [session.session_id, session]),
   );
   const recordsRoot = path.join(projectRoot, "data", "sw_league", "records");
-
-  function ensurePlayerStats(playerName) {
-    const name = resolvePlayerName(playerName, aliases);
-    const stats = statsMap.get(name) ?? {
-      name,
-      winFanTotal: 0,
-      winCount: 0,
-      dealInFanTotal: 0,
-      dealInCount: 0,
-    };
-
-    statsMap.set(name, stats);
-    return stats;
-  }
+  const sessions = [];
 
   for (const match of historyRows) {
     const sessionRow = sessionIndex.get(match.id);
@@ -387,24 +531,387 @@ async function buildAverageFanStatsMap({
       throw new Error(`Missing session records for match ${match.id}.`);
     }
 
-    const session = {
-      sessionId: match.id,
-      players: match.players.map((player) => ({
-        name: player.n,
-        id: player.i,
-      })),
-      records: await Promise.all(
-        sessionRow.records.map(async (recordId, index) => {
-          const record = await readJson(path.join(recordsRoot, `${recordId}.json`));
+    sessions.push({
+      match,
+      session: {
+        sessionId: match.id,
+        players: match.players.map((player) => ({
+          name: player.n,
+          id: player.i,
+        })),
+        records: await Promise.all(
+          sessionRow.records.map(async (recordId, index) => {
+            const record = await readJson(path.join(recordsRoot, `${recordId}.json`));
+
+            return {
+              id: recordId,
+              index,
+              step: record.step,
+            };
+          }),
+        ),
+      },
+    });
+  }
+
+  return sessions;
+}
+
+function buildBigWinLeaderboard(detailedSessions, playerTeamIndex, aliases) {
+  return detailedSessions
+    .flatMap(({ match, session }) => {
+      const { roundLabel, tableName } = parseMatchTitle(match.title);
+
+      return extractTziakchaRoundWinInfos(session).flatMap((winInfo) => {
+        const discarder = winInfo.discarders[0];
+        const discarderName = winInfo.selfDraw
+          ? "自摸"
+          : discarder
+            ? resolvePlayerName(discarder.playerName, aliases)
+            : "未知";
+
+        return winInfo.winners.map((winner) => {
+          const winnerName = resolvePlayerName(winner.playerName, aliases);
+          const team = playerTeamIndex.get(winnerName);
+          const fanItems = winner.fanItems
+            .filter((fanItem) => fanItem.unitFan >= 8)
+            .map((fanItem) => ({
+              fanName: fanItem.fanName,
+              unitFan: fanItem.unitFan,
+              count: fanItem.count,
+              totalFan: fanItem.totalFan,
+            }));
 
           return {
-            id: recordId,
-            index,
-            step: record.step,
+            winner: winnerName,
+            winnerTeam: team?.teamName ?? DEFAULT_TEAM_NAME,
+            discarder: discarderName,
+            selfDraw: winInfo.selfDraw,
+            totalFan: winner.totalFan,
+            description: formatBigWinDescription(fanItems),
+            fanItems,
+            roundLabel,
+            tableName,
+            replayUrl: match.id ? `${OFFICIAL_REPLAY_BASE_URL}${match.id}` : undefined,
+            matchId: match.id,
+            recordId: winInfo.recordId,
+            roundNo: winInfo.roundNo,
+            finishedAt: formatFinishedAt(match.finish_time),
           };
-        }),
-      ),
+        });
+      });
+    })
+    .sort((left, right) => {
+      const fanDiff = right.totalFan - left.totalFan;
+      if (fanDiff !== 0) {
+        return fanDiff;
+      }
+
+      const finishTimeDiff = right.finishedAt.localeCompare(left.finishedAt);
+      if (finishTimeDiff !== 0) {
+        return finishTimeDiff;
+      }
+
+      return left.winner.localeCompare(right.winner, "zh-Hans-CN");
+    })
+    .slice(0, 20)
+    .map((row, index) => ({
+      rank: index + 1,
+      ...row,
+    }));
+}
+
+function createEmptyMakeupWinBuckets() {
+  return {
+    gold: [],
+    silver: [],
+    bronze: [],
+    iron: [],
+  };
+}
+
+function getMakeupWinBucket(twoFanCount) {
+  if (twoFanCount === 0) {
+    return "gold";
+  }
+
+  if (twoFanCount === 1) {
+    return "silver";
+  }
+
+  if (twoFanCount === 2) {
+    return "bronze";
+  }
+
+  return "iron";
+}
+
+function formatMakeupWinDescription(twoFanItems, allFanItems) {
+  if (!twoFanItems.length) {
+    const terminalPungCount =
+      allFanItems.find((fanItem) => fanItem.fanName === "幺九刻")?.count ?? 0;
+
+    return terminalPungCount >= 2 ? "金II" : "金I";
+  }
+
+  return twoFanItems
+    .flatMap((fanItem) => Array.from({ length: fanItem.count }, () => fanItem.fanName))
+    .join("、");
+}
+
+function sortMakeupWinRows(left, right) {
+  const finishTimeDiff = left.finishedAt.localeCompare(right.finishedAt);
+  if (finishTimeDiff !== 0) {
+    return finishTimeDiff;
+  }
+
+  const roundDiff = left.roundNo - right.roundNo;
+  if (roundDiff !== 0) {
+    return roundDiff;
+  }
+
+  return left.winner.localeCompare(right.winner, "zh-Hans-CN");
+}
+
+function buildMakeupWinLeaderboard(detailedSessions, playerTeamIndex, aliases) {
+  const buckets = createEmptyMakeupWinBuckets();
+
+  for (const { match, session } of detailedSessions) {
+    const { roundLabel, tableName } = parseMatchTitle(match.title);
+    const finishedAt = formatFinishedAt(match.finish_time);
+    const replayUrl = match.id ? `${OFFICIAL_REPLAY_BASE_URL}${match.id}` : undefined;
+
+    for (const winInfo of extractTziakchaRoundWinInfos(session)) {
+      for (const winner of winInfo.winners) {
+        const maxUnitFan = Math.max(
+          ...winner.fanItems.map((fanItem) => fanItem.unitFan),
+        );
+
+        if (maxUnitFan > 2) {
+          continue;
+        }
+
+        const winnerName = resolvePlayerName(winner.playerName, aliases);
+        const team = playerTeamIndex.get(winnerName);
+        const twoFanItems = winner.fanItems
+          .filter((fanItem) => fanItem.unitFan === 2)
+          .map((fanItem) => ({
+            fanName: fanItem.fanName,
+            unitFan: fanItem.unitFan,
+            count: fanItem.count,
+            totalFan: fanItem.totalFan,
+          }));
+        const twoFanCount = twoFanItems.reduce(
+          (total, fanItem) => total + fanItem.count,
+          0,
+        );
+        const bucket = getMakeupWinBucket(twoFanCount);
+
+        buckets[bucket].push({
+          winner: winnerName,
+          winnerTeam: team?.teamName ?? DEFAULT_TEAM_NAME,
+          totalFan: winner.totalFan,
+          maxUnitFan,
+          twoFanCount,
+          description: formatMakeupWinDescription(twoFanItems, winner.fanItems),
+          twoFanItems,
+          roundLabel,
+          tableName,
+          replayUrl,
+          matchId: match.id,
+          recordId: winInfo.recordId,
+          roundNo: winInfo.roundNo,
+          finishedAt,
+        });
+      }
+    }
+  }
+
+  return Object.fromEntries(
+    Object.entries(buckets).map(([bucket, rows]) => [
+      bucket,
+      rows.sort(sortMakeupWinRows).map((row, index) => ({
+        rank: index + 1,
+        ...row,
+      })),
+    ]),
+  );
+}
+
+function buildEmptyIncomeModule() {
+  return {
+    count: 0,
+    totalFan: 0,
+  };
+}
+
+function buildIncomeModule(module, rounds, getSingleIncome) {
+  const averageFan = module.count === 0 ? 0 : module.totalFan / module.count;
+  const income = module.count * getSingleIncome(averageFan);
+
+  return {
+    count: module.count,
+    averageFan: roundToSixDecimals(averageFan),
+    income: roundToSixDecimals(income),
+  };
+}
+
+function buildRoundIncomeLeaderboard(detailedSessions, playerTeamIndex, aliases) {
+  const statsMap = new Map();
+
+  function ensureStats(playerName) {
+    const name = resolvePlayerName(playerName, aliases);
+    const stats = statsMap.get(name) ?? {
+      name,
+      rounds: 0,
+      pointWin: buildEmptyIncomeModule(),
+      dealIn: buildEmptyIncomeModule(),
+      selfDraw: buildEmptyIncomeModule(),
+      drawnByOthers: buildEmptyIncomeModule(),
     };
+
+    statsMap.set(name, stats);
+    return stats;
+  }
+
+  for (const { match, session } of detailedSessions) {
+    for (const player of match.players) {
+      const playerStats = ensureStats(player.n);
+      playerStats.rounds += session.records.length;
+    }
+
+    for (const winInfo of extractTziakchaRoundWinInfos(session)) {
+      const winner = winInfo.winners[0];
+
+      if (!winner) {
+        continue;
+      }
+
+      const winnerStats = ensureStats(winner.playerName);
+
+      if (winInfo.selfDraw) {
+        winnerStats.selfDraw.count += 1;
+        winnerStats.selfDraw.totalFan += winner.totalFan;
+
+        for (const player of session.players) {
+          const playerName = resolvePlayerName(player.name, aliases);
+          const winnerName = resolvePlayerName(winner.playerName, aliases);
+
+          if (playerName === winnerName) {
+            continue;
+          }
+
+          const drawnByOthersStats = ensureStats(player.name);
+          drawnByOthersStats.drawnByOthers.count += 1;
+          drawnByOthersStats.drawnByOthers.totalFan += winner.totalFan;
+        }
+
+        continue;
+      }
+
+      winnerStats.pointWin.count += 1;
+      winnerStats.pointWin.totalFan += winner.totalFan;
+
+      const discarder = winInfo.discarders[0];
+
+      if (!discarder) {
+        continue;
+      }
+
+      const discarderStats = ensureStats(discarder.playerName);
+      discarderStats.dealIn.count += 1;
+      discarderStats.dealIn.totalFan += winner.totalFan;
+    }
+  }
+
+  return [...statsMap.values()]
+    .map((stats) => {
+      const team = playerTeamIndex.get(stats.name);
+      const pointWin = buildIncomeModule(
+        stats.pointWin,
+        stats.rounds,
+        (averageFan) => averageFan + 24,
+      );
+      const dealIn = buildIncomeModule(
+        stats.dealIn,
+        stats.rounds,
+        (averageFan) => -(averageFan + 8),
+      );
+      const selfDraw = buildIncomeModule(
+        stats.selfDraw,
+        stats.rounds,
+        (averageFan) => averageFan * 3 + 24,
+      );
+      const drawnByOthers = buildIncomeModule(
+        stats.drawnByOthers,
+        stats.rounds,
+        (averageFan) => -(averageFan + 8),
+      );
+      const totalIncome =
+        pointWin.income + dealIn.income + selfDraw.income + drawnByOthers.income;
+      const roundIncome = roundToSixDecimals(
+        stats.rounds === 0 ? 0 : totalIncome / stats.rounds,
+      );
+
+      return {
+        name: stats.name,
+        team: team?.teamName ?? DEFAULT_TEAM_NAME,
+        rounds: stats.rounds,
+        pointWin,
+        dealIn,
+        selfDraw,
+        drawnByOthers,
+        roundIncome,
+      };
+    })
+    .sort((left, right) => {
+      const incomeDiff = right.roundIncome - left.roundIncome;
+      if (incomeDiff !== 0) {
+        return incomeDiff;
+      }
+
+      const roundDiff = right.rounds - left.rounds;
+      if (roundDiff !== 0) {
+        return roundDiff;
+      }
+
+      return left.name.localeCompare(right.name, "zh-Hans-CN");
+    })
+    .map((row, index) => ({
+      rank: index + 1,
+      ...row,
+    }));
+}
+
+async function buildAverageFanStatsMap({
+  detailedSessions,
+  aliases,
+}) {
+  const statsMap = new Map();
+
+  function ensurePlayerStats(playerName) {
+    const name = resolvePlayerName(playerName, aliases);
+    const stats = statsMap.get(name) ?? {
+      name,
+      rounds: 0,
+      winFanTotal: 0,
+      winCount: 0,
+      flowerTotal: 0,
+      dealInFanTotal: 0,
+      dealInCount: 0,
+      tsumoLossFanTotal: 0,
+      tsumoLossCount: 0,
+    };
+
+    statsMap.set(name, stats);
+    return stats;
+  }
+
+  for (const { match, session } of detailedSessions) {
+    for (const player of match.players) {
+      const playerStats = ensurePlayerStats(player.n);
+      playerStats.rounds += session.records.length;
+    }
 
     for (const winInfo of extractTziakchaRoundWinInfos(session)) {
       const winner = winInfo.winners[0];
@@ -414,10 +921,29 @@ async function buildAverageFanStatsMap({
       }
 
       const winnerStats = ensurePlayerStats(winner.playerName);
+      const flowerItem = winner.fanItems.find(
+        (fanItem) => fanItem.fanName === "花牌",
+      );
+
       winnerStats.winFanTotal += winner.totalFan;
       winnerStats.winCount += 1;
+      winnerStats.flowerTotal += flowerItem?.count ?? 0;
 
       if (winInfo.selfDraw) {
+        const winnerName = resolvePlayerName(winner.playerName, aliases);
+
+        for (const player of session.players) {
+          const playerName = resolvePlayerName(player.name, aliases);
+
+          if (playerName === winnerName) {
+            continue;
+          }
+
+          const tsumoLossStats = ensurePlayerStats(player.name);
+          tsumoLossStats.tsumoLossFanTotal += winner.totalFan;
+          tsumoLossStats.tsumoLossCount += 1;
+        }
+
         continue;
       }
 
@@ -526,18 +1052,44 @@ function buildTeamEntries(teamRows, playerStatsMap) {
   });
 }
 
-function buildMatchRecords(historyRows, playerTeamIndex, aliases) {
-  return [...historyRows]
-    .sort((left, right) => right.finish_time - left.finish_time)
+function buildMatchRecords(matchRows, playerTeamIndex, aliases) {
+  return [...matchRows]
+    .sort((left, right) => {
+      const leftRound = getMatchRound(left);
+      const rightRound = getMatchRound(right);
+      const roundDiff = rightRound - leftRound;
+
+      if (roundDiff !== 0) {
+        return roundDiff;
+      }
+
+      const finishTimeDiff = toNumber(right.finish_time) - toNumber(left.finish_time);
+      if (finishTimeDiff !== 0) {
+        return finishTimeDiff;
+      }
+
+      return String(left.id).localeCompare(String(right.id), "zh-Hans-CN", {
+        numeric: true,
+      });
+    })
     .map((match) => {
-      const { roundLabel, tableName } = parseMatchTitle(match.title);
+      const titleInfo = match.offline
+        ? {
+            round: match.round,
+            roundLabel: match.roundLabel,
+            tableName: match.tableName,
+          }
+        : parseMatchTitle(match.title);
 
       return {
         id: match.id,
-        replayUrl: match.id ? `${OFFICIAL_REPLAY_BASE_URL}${match.id}` : undefined,
-        tableName,
-        roundLabel,
-        finishedAt: formatFinishedAt(match.finish_time),
+        replayUrl: match.offline || !match.id
+          ? undefined
+          : `${OFFICIAL_REPLAY_BASE_URL}${match.id}`,
+        round: titleInfo.round,
+        tableName: titleInfo.tableName,
+        roundLabel: titleInfo.roundLabel,
+        finishedAt: match.offline ? match.location : formatFinishedAt(match.finish_time),
         placements: match.players
           .map((player, index) => ({ player, seatIndex: index }))
           .sort((left, right) => {
@@ -561,19 +1113,41 @@ function buildMatchRecords(historyRows, playerTeamIndex, aliases) {
     });
 }
 
-function buildOverviewRanking(historyRows, playerTeamIndex, aliases, penalties) {
+function getMatchRound(match) {
+  if (Number.isFinite(match.round)) {
+    return match.round;
+  }
+
+  return toNumber(parseMatchTitle(match.title).round);
+}
+
+function getStandardPointForGroup(group) {
+  if (
+    group.members.every(({ player }) =>
+      Number.isFinite(Number(player.standardPoint)),
+    )
+  ) {
+    const total = group.members.reduce(
+      (sum, { player }) => sum + toNumber(player.standardPoint),
+      0,
+    );
+
+    return createFraction(total, group.members.length);
+  }
+
+  return getStandardPointFraction(group.startIndex, group.members.length);
+}
+
+function buildOverviewRanking(matchRows, playerTeamIndex, aliases, penalties) {
   const playerSummaries = new Map();
   const teamSummaries = new Map();
   const { playerPenalties, teamPenalties } = buildPenaltyMaps(penalties, aliases);
 
-  for (const match of historyRows) {
+  for (const match of matchRows) {
     const matchTeams = new Set();
 
     for (const group of getTieGroups(match.players)) {
-      const standardPoints = getStandardPointFraction(
-        group.startIndex,
-        group.members.length,
-      );
+      const standardPoints = getStandardPointForGroup(group);
       const placementShare = getPlacementShareFraction(group.members.length);
       const placementAverage =
         group.members.reduce((sum, _member, index) => {
@@ -584,7 +1158,7 @@ function buildOverviewRanking(historyRows, playerTeamIndex, aliases, penalties) 
         const score = toNumber(player.s);
         const playerName = resolvePlayerName(player.n, aliases);
         const team = playerTeamIndex.get(playerName);
-        const teamName = team?.teamName ?? DEFAULT_TEAM_NAME;
+        const teamName = player.teamName ?? team?.teamName ?? DEFAULT_TEAM_NAME;
         const current = playerSummaries.get(playerName) ?? {
           name: playerName,
           teamName,
@@ -771,6 +1345,7 @@ export async function generateSwLeagueContent(projectRoot = process.cwd()) {
   const aliasJsonPath = path.join(projectRoot, "data", "sw_league", "alias.json");
   const penaltiesJsonPath = path.join(projectRoot, "data", "sw_league", "penalties.json");
   const historyJsonPath = path.join(projectRoot, "data", "sw_league", "history.json");
+  const offlineJsonPath = path.join(projectRoot, "data", "sw_league", "offline.json");
   const sessionsJsonPath = path.join(projectRoot, "data", "sw_league", "sessions.json");
 
   const [
@@ -779,6 +1354,7 @@ export async function generateSwLeagueContent(projectRoot = process.cwd()) {
     manualAliases,
     penalties,
     historyRows,
+    offlineRows,
     sessionRows,
     huleRows,
     zimoRows,
@@ -791,6 +1367,7 @@ export async function generateSwLeagueContent(projectRoot = process.cwd()) {
     readJsonIfExists(aliasJsonPath, {}),
     readJsonIfExists(penaltiesJsonPath, {}),
     readJson(historyJsonPath),
+    readJsonIfExists(offlineJsonPath, []),
     readJson(sessionsJsonPath),
     readCsv(projectRoot, "data", "sw_league", "rank", "rate_win_rate.csv"),
     readCsv(projectRoot, "data", "sw_league", "rank", "rate_tsumo_rate.csv"),
@@ -805,7 +1382,14 @@ export async function generateSwLeagueContent(projectRoot = process.cwd()) {
   };
 
   const playerTeamIndex = buildPlayerIndex(teams, aliases);
+  const offlineMatchRows = buildOfflineMatchRows(offlineRows);
+  const overviewMatchRows = [...historyRows, ...offlineMatchRows];
   const resolveAlias = (playerName) => resolvePlayerName(playerName, aliases);
+  const detailedSessions = await buildDetailedSessions({
+    projectRoot,
+    historyRows,
+    sessionRows,
+  });
   const playerStatsMap = buildPlayerStatsMap({
     huleRows,
     zimoRows,
@@ -815,17 +1399,20 @@ export async function generateSwLeagueContent(projectRoot = process.cwd()) {
     aliases,
   });
   const averageFanStatsMap = await buildAverageFanStatsMap({
-    projectRoot,
-    historyRows,
-    sessionRows,
+    detailedSessions,
     aliases,
   });
 
-  const overview = buildOverviewRanking(historyRows, playerTeamIndex, aliases, penalties);
+  const overview = buildOverviewRanking(
+    overviewMatchRows,
+    playerTeamIndex,
+    aliases,
+    penalties,
+  );
 
   return {
     teams: buildTeamEntries(teams, playerStatsMap),
-    matches: buildMatchRecords(historyRows, playerTeamIndex, aliases),
+    matches: buildMatchRecords(overviewMatchRows, playerTeamIndex, aliases),
     ranking: overview.ranking,
     teamRanking: overview.teamRanking,
     leaderboards: {
@@ -853,6 +1440,14 @@ export async function generateSwLeagueContent(projectRoot = process.cwd()) {
         ...row,
         count: playerStatsMap.get(row.name)?.fangchongCount ?? row.count,
       })),
+      winDealDiff: buildWinDealDiffLeaderboard(
+        huleRows,
+        fangchongRows,
+        playerTeamIndex,
+        {
+          resolvePlayerName: resolveAlias,
+        },
+      ),
       beizimoRate: buildLeaderboard(beizimoRows, playerTeamIndex, {
         countColumn: "Value",
         sourceLabel: "rate_tsumo_against_rate.csv",
@@ -867,6 +1462,7 @@ export async function generateSwLeagueContent(projectRoot = process.cwd()) {
         {
           totalFanKey: "winFanTotal",
           countKey: "winCount",
+          denominatorLabel: "和牌",
         },
       ),
       averageDealInFan: buildAverageFanLeaderboard(
@@ -875,7 +1471,27 @@ export async function generateSwLeagueContent(projectRoot = process.cwd()) {
         {
           totalFanKey: "dealInFanTotal",
           countKey: "dealInCount",
+          denominatorLabel: "点炮",
         },
+      ),
+      averageFlower: buildAverageFlowerLeaderboard(
+        averageFanStatsMap,
+        playerTeamIndex,
+      ),
+      averageTsumoLossFan: buildAverageTsumoLossFanLeaderboard(
+        averageFanStatsMap,
+        playerTeamIndex,
+      ),
+      bigWin: buildBigWinLeaderboard(detailedSessions, playerTeamIndex, aliases),
+      makeupWin: buildMakeupWinLeaderboard(
+        detailedSessions,
+        playerTeamIndex,
+        aliases,
+      ),
+      roundIncome: buildRoundIncomeLeaderboard(
+        detailedSessions,
+        playerTeamIndex,
+        aliases,
       ),
     },
   };

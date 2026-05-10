@@ -27,6 +27,7 @@ export interface EventScheduleRound {
 export interface MatchRecord {
   id: string;
   replayUrl?: string;
+  round: number;
   tableName: string;
   roundLabel: string;
   finishedAt: string;
@@ -100,8 +101,79 @@ export interface RateLeaderboardEntry {
   name: string;
   team: string;
   rate: number;
+  relatedRate?: number;
+  dealInRate?: number;
+  rateDiff?: number;
   count: number;
   note: string;
+}
+
+export interface RoundIncomeModule {
+  count: number;
+  averageFan: number;
+  income: number;
+}
+
+export interface RoundIncomeLeaderboardEntry {
+  rank: number;
+  name: string;
+  team: string;
+  rounds: number;
+  pointWin: RoundIncomeModule;
+  dealIn: RoundIncomeModule;
+  selfDraw: RoundIncomeModule;
+  drawnByOthers: RoundIncomeModule;
+  roundIncome: number;
+}
+
+export interface BigWinFanItem {
+  fanName: string;
+  unitFan: number;
+  count: number;
+  totalFan: number;
+}
+
+export interface BigWinLeaderboardEntry {
+  rank: number;
+  winner: string;
+  winnerTeam: string;
+  discarder: string;
+  selfDraw: boolean;
+  totalFan: number;
+  description: string;
+  fanItems: BigWinFanItem[];
+  roundLabel: string;
+  tableName: string;
+  replayUrl?: string;
+  matchId: string;
+  recordId: string;
+  roundNo: number;
+  finishedAt: string;
+}
+
+export interface MakeupWinLeaderboardEntry {
+  rank: number;
+  winner: string;
+  winnerTeam: string;
+  totalFan: number;
+  maxUnitFan: number;
+  twoFanCount: number;
+  description: string;
+  twoFanItems: BigWinFanItem[];
+  roundLabel: string;
+  tableName: string;
+  replayUrl?: string;
+  matchId: string;
+  recordId: string;
+  roundNo: number;
+  finishedAt: string;
+}
+
+export interface MakeupWinLeaderboard {
+  gold: MakeupWinLeaderboardEntry[];
+  silver: MakeupWinLeaderboardEntry[];
+  bronze: MakeupWinLeaderboardEntry[];
+  iron: MakeupWinLeaderboardEntry[];
 }
 
 export interface EventDetail {
@@ -118,8 +190,14 @@ export interface EventDetail {
     huleRate: RateLeaderboardEntry[];
     zimoRate: RateLeaderboardEntry[];
     fangchongRate: RateLeaderboardEntry[];
+    winDealDiff: RateLeaderboardEntry[];
     beizimoRate: RateLeaderboardEntry[];
     averageWinFan: RateLeaderboardEntry[];
     averageDealInFan: RateLeaderboardEntry[];
+    averageFlower: RateLeaderboardEntry[];
+    averageTsumoLossFan: RateLeaderboardEntry[];
+    bigWin: BigWinLeaderboardEntry[];
+    makeupWin: MakeupWinLeaderboard;
+    roundIncome: RoundIncomeLeaderboardEntry[];
   };
 }

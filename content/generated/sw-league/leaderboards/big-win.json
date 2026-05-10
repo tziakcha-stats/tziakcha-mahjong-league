@@ -1,0 +1,560 @@
+[
+  {
+    "rank": 1,
+    "winner": "histo",
+    "winnerTeam": "杠上开花队",
+    "discarder": "zumgze",
+    "selfDraw": false,
+    "totalFan": 136,
+    "description": "小四喜、字一色",
+    "fanItems": [
+      {
+        "fanName": "小四喜",
+        "unitFan": 64,
+        "count": 1,
+        "totalFan": 64
+      },
+      {
+        "fanName": "字一色",
+        "unitFan": 64,
+        "count": 1,
+        "totalFan": 64
+      }
+    ],
+    "roundLabel": "常规赛第 32 轮",
+    "tableName": "B 桌",
+    "replayUrl": "https://tziakcha.net/game/?id=C2LL4QMc",
+    "matchId": "C2LL4QMc",
+    "recordId": "aoEiuDQ9",
+    "roundNo": 13,
+    "finishedAt": "04/12 20:53"
+  },
+  {
+    "rank": 2,
+    "winner": "River",
+    "winnerTeam": "绿小龙",
+    "discarder": "自摸",
+    "selfDraw": true,
+    "totalFan": 91,
+    "description": "十三幺",
+    "fanItems": [
+      {
+        "fanName": "十三幺",
+        "unitFan": 88,
+        "count": 1,
+        "totalFan": 88
+      }
+    ],
+    "roundLabel": "常规赛第 57 轮",
+    "tableName": "A 桌",
+    "replayUrl": "https://tziakcha.net/game/?id=McMSmqXU",
+    "matchId": "McMSmqXU",
+    "recordId": "ppPYoG7o",
+    "roundNo": 2,
+    "finishedAt": "05/09 19:45"
+  },
+  {
+    "rank": 3,
+    "winner": "叶凡",
+    "winnerTeam": "复仇者联盟",
+    "discarder": "幻秋",
+    "selfDraw": false,
+    "totalFan": 89,
+    "description": "大三元",
+    "fanItems": [
+      {
+        "fanName": "大三元",
+        "unitFan": 88,
+        "count": 1,
+        "totalFan": 88
+      }
+    ],
+    "roundLabel": "常规赛第 39 轮",
+    "tableName": "A 桌",
+    "replayUrl": "https://tziakcha.net/game/?id=Loxt9vz7",
+    "matchId": "Loxt9vz7",
+    "recordId": "Zj9qpxWS",
+    "roundNo": 6,
+    "finishedAt": "04/23 19:45"
+  },
+  {
+    "rank": 4,
+    "winner": "CKLm",
+    "winnerTeam": "择日读",
+    "discarder": "自摸",
+    "selfDraw": true,
+    "totalFan": 70,
+    "description": "小三元",
+    "fanItems": [
+      {
+        "fanName": "小三元",
+        "unitFan": 64,
+        "count": 1,
+        "totalFan": 64
+      }
+    ],
+    "roundLabel": "常规赛第 10 轮",
+    "tableName": "A 桌",
+    "replayUrl": "https://tziakcha.net/game/?id=3xP2bTtm",
+    "matchId": "3xP2bTtm",
+    "recordId": "KCY0Dx1w",
+    "roundNo": 14,
+    "finishedAt": "03/24 20:33"
+  },
+  {
+    "rank": 5,
+    "winner": "lidai",
+    "winnerTeam": "小鲨鱼动物园",
+    "discarder": "River",
+    "selfDraw": false,
+    "totalFan": 67,
+    "description": "小三元",
+    "fanItems": [
+      {
+        "fanName": "小三元",
+        "unitFan": 64,
+        "count": 1,
+        "totalFan": 64
+      }
+    ],
+    "roundLabel": "常规赛第 10 轮",
+    "tableName": "B 桌",
+    "replayUrl": "https://tziakcha.net/game/?id=ro4sBVbr",
+    "matchId": "ro4sBVbr",
+    "recordId": "8xVxdtZZ",
+    "roundNo": 8,
+    "finishedAt": "03/24 20:46"
+  },
+  {
+    "rank": 6,
+    "winner": "云出无心",
+    "winnerTeam": "小鲨鱼动物园",
+    "discarder": "钙热",
+    "selfDraw": false,
+    "totalFan": 63,
+    "description": "混幺九、七对",
+    "fanItems": [
+      {
+        "fanName": "混幺九",
+        "unitFan": 32,
+        "count": 1,
+        "totalFan": 32
+      },
+      {
+        "fanName": "七对",
+        "unitFan": 24,
+        "count": 1,
+        "totalFan": 24
+      }
+    ],
+    "roundLabel": "常规赛第 27 轮",
+    "tableName": "A 桌",
+    "replayUrl": "https://tziakcha.net/game/?id=v6xy67YT",
+    "matchId": "v6xy67YT",
+    "recordId": "cSFDAWAt",
+    "roundNo": 7,
+    "finishedAt": "04/09 19:43"
+  },
+  {
+    "rank": 7,
+    "winner": "zumgze",
+    "winnerTeam": "青柠现代麻将文化研究协会",
+    "discarder": "自摸",
+    "selfDraw": true,
+    "totalFan": 50,
+    "description": "一色三节高、三暗刻",
+    "fanItems": [
+      {
+        "fanName": "一色三节高",
+        "unitFan": 24,
+        "count": 1,
+        "totalFan": 24
+      },
+      {
+        "fanName": "三暗刻",
+        "unitFan": 16,
+        "count": 1,
+        "totalFan": 16
+      }
+    ],
+    "roundLabel": "常规赛第 34 轮",
+    "tableName": "A 桌",
+    "replayUrl": "https://tziakcha.net/game/?id=u0JyaQK8",
+    "matchId": "u0JyaQK8",
+    "recordId": "WYacATKp",
+    "roundNo": 4,
+    "finishedAt": "04/14 20:40"
+  },
+  {
+    "rank": 8,
+    "winner": "钙热",
+    "winnerTeam": "特邀——没上过沙袋",
+    "discarder": "自摸",
+    "selfDraw": true,
+    "totalFan": 48,
+    "description": "清一色、一色三步高",
+    "fanItems": [
+      {
+        "fanName": "清一色",
+        "unitFan": 24,
+        "count": 1,
+        "totalFan": 24
+      },
+      {
+        "fanName": "一色三步高",
+        "unitFan": 16,
+        "count": 1,
+        "totalFan": 16
+      }
+    ],
+    "roundLabel": "常规赛第 27 轮",
+    "tableName": "A 桌",
+    "replayUrl": "https://tziakcha.net/game/?id=v6xy67YT",
+    "matchId": "v6xy67YT",
+    "recordId": "GM1xL9ph",
+    "roundNo": 9,
+    "finishedAt": "04/09 19:43"
+  },
+  {
+    "rank": 9,
+    "winner": "zsseg",
+    "winnerTeam": "杠上开花队",
+    "discarder": "River",
+    "selfDraw": false,
+    "totalFan": 46,
+    "description": "清一色、清龙",
+    "fanItems": [
+      {
+        "fanName": "清一色",
+        "unitFan": 24,
+        "count": 1,
+        "totalFan": 24
+      },
+      {
+        "fanName": "清龙",
+        "unitFan": 16,
+        "count": 1,
+        "totalFan": 16
+      }
+    ],
+    "roundLabel": "常规赛第 57 轮",
+    "tableName": "A 桌",
+    "replayUrl": "https://tziakcha.net/game/?id=McMSmqXU",
+    "matchId": "McMSmqXU",
+    "recordId": "3P5xQngH",
+    "roundNo": 8,
+    "finishedAt": "05/09 19:45"
+  },
+  {
+    "rank": 10,
+    "winner": "吴下阿濛",
+    "winnerTeam": "绿小龙",
+    "discarder": "青火",
+    "selfDraw": false,
+    "totalFan": 46,
+    "description": "清一色、三暗刻",
+    "fanItems": [
+      {
+        "fanName": "清一色",
+        "unitFan": 24,
+        "count": 1,
+        "totalFan": 24
+      },
+      {
+        "fanName": "三暗刻",
+        "unitFan": 16,
+        "count": 1,
+        "totalFan": 16
+      }
+    ],
+    "roundLabel": "常规赛第 17 轮",
+    "tableName": "A 桌",
+    "replayUrl": "https://tziakcha.net/game/?id=kxDK21Bo",
+    "matchId": "kxDK21Bo",
+    "recordId": "QfUGv1Ee",
+    "roundNo": 4,
+    "finishedAt": "03/31 19:51"
+  },
+  {
+    "rank": 11,
+    "winner": "CatHikari",
+    "winnerTeam": "呼噜呼噜哼🐷",
+    "discarder": "sdmt",
+    "selfDraw": false,
+    "totalFan": 46,
+    "description": "清一色、清龙",
+    "fanItems": [
+      {
+        "fanName": "清一色",
+        "unitFan": 24,
+        "count": 1,
+        "totalFan": 24
+      },
+      {
+        "fanName": "清龙",
+        "unitFan": 16,
+        "count": 1,
+        "totalFan": 16
+      }
+    ],
+    "roundLabel": "常规赛第 6 轮",
+    "tableName": "B 桌",
+    "replayUrl": "https://tziakcha.net/game/?id=FRDBhonq",
+    "matchId": "FRDBhonq",
+    "recordId": "jbbm4d0K",
+    "roundNo": 2,
+    "finishedAt": "03/21 20:48"
+  },
+  {
+    "rank": 12,
+    "winner": "叶凡",
+    "winnerTeam": "复仇者联盟",
+    "discarder": "自摸",
+    "selfDraw": true,
+    "totalFan": 45,
+    "description": "三杠",
+    "fanItems": [
+      {
+        "fanName": "三杠",
+        "unitFan": 32,
+        "count": 1,
+        "totalFan": 32
+      }
+    ],
+    "roundLabel": "常规赛第 48 轮",
+    "tableName": "B 桌",
+    "replayUrl": "https://tziakcha.net/game/?id=2UND79jM",
+    "matchId": "2UND79jM",
+    "recordId": "sMxPA24u",
+    "roundNo": 2,
+    "finishedAt": "04/30 20:46"
+  },
+  {
+    "rank": 13,
+    "winner": "叶凡",
+    "winnerTeam": "复仇者联盟",
+    "discarder": "米夜",
+    "selfDraw": false,
+    "totalFan": 44,
+    "description": "清一色、清龙",
+    "fanItems": [
+      {
+        "fanName": "清一色",
+        "unitFan": 24,
+        "count": 1,
+        "totalFan": 24
+      },
+      {
+        "fanName": "清龙",
+        "unitFan": 16,
+        "count": 1,
+        "totalFan": 16
+      }
+    ],
+    "roundLabel": "常规赛第 52 轮",
+    "tableName": "A 桌",
+    "replayUrl": "https://tziakcha.net/game/?id=RkHiTLRH",
+    "matchId": "RkHiTLRH",
+    "recordId": "qYbkKLj0",
+    "roundNo": 14,
+    "finishedAt": "05/03 22:51"
+  },
+  {
+    "rank": 14,
+    "winner": "幻秋",
+    "winnerTeam": "呼噜呼噜哼🐷",
+    "discarder": "自摸",
+    "selfDraw": true,
+    "totalFan": 43,
+    "description": "清一色、妙手回春",
+    "fanItems": [
+      {
+        "fanName": "清一色",
+        "unitFan": 24,
+        "count": 1,
+        "totalFan": 24
+      },
+      {
+        "fanName": "妙手回春",
+        "unitFan": 8,
+        "count": 1,
+        "totalFan": 8
+      }
+    ],
+    "roundLabel": "常规赛第 37 轮",
+    "tableName": "A 桌",
+    "replayUrl": "https://tziakcha.net/game/?id=qSzVTHAd",
+    "matchId": "qSzVTHAd",
+    "recordId": "GpUY1TqZ",
+    "roundNo": 7,
+    "finishedAt": "04/21 19:40"
+  },
+  {
+    "rank": 15,
+    "winner": "未有期",
+    "winnerTeam": "杠上开花队",
+    "discarder": "钙热",
+    "selfDraw": false,
+    "totalFan": 42,
+    "description": "一色三节高",
+    "fanItems": [
+      {
+        "fanName": "一色三节高",
+        "unitFan": 24,
+        "count": 1,
+        "totalFan": 24
+      }
+    ],
+    "roundLabel": "常规赛第 14 轮",
+    "tableName": "B 桌",
+    "replayUrl": "https://tziakcha.net/game/?id=RT8QRLnn",
+    "matchId": "RT8QRLnn",
+    "recordId": "MtEAgoQ8",
+    "roundNo": 3,
+    "finishedAt": "03/28 20:48"
+  },
+  {
+    "rank": 16,
+    "winner": "lidai",
+    "winnerTeam": "小鲨鱼动物园",
+    "discarder": "CatHikari",
+    "selfDraw": false,
+    "totalFan": 39,
+    "description": "一色三节高",
+    "fanItems": [
+      {
+        "fanName": "一色三节高",
+        "unitFan": 24,
+        "count": 1,
+        "totalFan": 24
+      }
+    ],
+    "roundLabel": "常规赛第 52 轮",
+    "tableName": "B 桌",
+    "replayUrl": "https://tziakcha.net/game/?id=AKHwpLUa",
+    "matchId": "AKHwpLUa",
+    "recordId": "pstnJg03",
+    "roundNo": 5,
+    "finishedAt": "05/03 22:41"
+  },
+  {
+    "rank": 17,
+    "winner": "南桥s01",
+    "winnerTeam": "云上秋雨",
+    "discarder": "zsseg",
+    "selfDraw": false,
+    "totalFan": 37,
+    "description": "七对、小于五",
+    "fanItems": [
+      {
+        "fanName": "七对",
+        "unitFan": 24,
+        "count": 1,
+        "totalFan": 24
+      },
+      {
+        "fanName": "小于五",
+        "unitFan": 12,
+        "count": 1,
+        "totalFan": 12
+      }
+    ],
+    "roundLabel": "常规赛第 31 轮",
+    "tableName": "A 桌",
+    "replayUrl": "https://tziakcha.net/game/?id=kMPMzQwF",
+    "matchId": "kMPMzQwF",
+    "recordId": "DfddV5fs",
+    "roundNo": 3,
+    "finishedAt": "04/12 19:45"
+  },
+  {
+    "rank": 18,
+    "winner": "璃茉",
+    "winnerTeam": "青柠现代麻将文化研究协会",
+    "discarder": "自摸",
+    "selfDraw": true,
+    "totalFan": 37,
+    "description": "清一色、杠上开花",
+    "fanItems": [
+      {
+        "fanName": "清一色",
+        "unitFan": 24,
+        "count": 1,
+        "totalFan": 24
+      },
+      {
+        "fanName": "杠上开花",
+        "unitFan": 8,
+        "count": 1,
+        "totalFan": 8
+      }
+    ],
+    "roundLabel": "常规赛第 28 轮",
+    "tableName": "A 桌",
+    "replayUrl": "https://tziakcha.net/game/?id=mFv5YK8D",
+    "matchId": "mFv5YK8D",
+    "recordId": "KfG6r6pk",
+    "roundNo": 2,
+    "finishedAt": "04/09 20:41"
+  },
+  {
+    "rank": 19,
+    "winner": "黄腾",
+    "winnerTeam": "择日读",
+    "discarder": "自摸",
+    "selfDraw": true,
+    "totalFan": 36,
+    "description": "全大、三色三同顺",
+    "fanItems": [
+      {
+        "fanName": "全大",
+        "unitFan": 24,
+        "count": 1,
+        "totalFan": 24
+      },
+      {
+        "fanName": "三色三同顺",
+        "unitFan": 8,
+        "count": 1,
+        "totalFan": 8
+      }
+    ],
+    "roundLabel": "常规赛第 52 轮",
+    "tableName": "B 桌",
+    "replayUrl": "https://tziakcha.net/game/?id=AKHwpLUa",
+    "matchId": "AKHwpLUa",
+    "recordId": "2MLP5gqW",
+    "roundNo": 9,
+    "finishedAt": "05/03 22:41"
+  },
+  {
+    "rank": 20,
+    "winner": "日出",
+    "winnerTeam": "择日读",
+    "discarder": "叶凡",
+    "selfDraw": false,
+    "totalFan": 36,
+    "description": "三暗刻、推不倒",
+    "fanItems": [
+      {
+        "fanName": "三暗刻",
+        "unitFan": 16,
+        "count": 1,
+        "totalFan": 16
+      },
+      {
+        "fanName": "推不倒",
+        "unitFan": 8,
+        "count": 1,
+        "totalFan": 8
+      }
+    ],
+    "roundLabel": "常规赛第 23 轮",
+    "tableName": "B 桌",
+    "replayUrl": "https://tziakcha.net/game/?id=VKY9rZHY",
+    "matchId": "VKY9rZHY",
+    "recordId": "ajo3HvcY",
+    "roundNo": 5,
+    "finishedAt": "04/05 19:41"
+  }
+]

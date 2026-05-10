@@ -1,7 +1,45 @@
 [
   {
+    "id": "offline-r60-a",
+    "round": 60,
+    "tableName": "A 桌",
+    "roundLabel": "常规赛第 60 轮",
+    "finishedAt": "济南线下",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "择日读",
+        "player": "Sw279695293",
+        "score": 146,
+        "scoreLabel": "+146"
+      },
+      {
+        "placement": 2,
+        "team": "云上秋雨",
+        "player": "琳雨空",
+        "score": 55,
+        "scoreLabel": "+55"
+      },
+      {
+        "placement": 3,
+        "team": "特邀——没上过沙袋",
+        "player": "Quandaiwu42",
+        "score": 42,
+        "scoreLabel": "+42"
+      },
+      {
+        "placement": 4,
+        "team": "自摸七队",
+        "player": "小黄鸭",
+        "score": -243,
+        "scoreLabel": "-243"
+      }
+    ]
+  },
+  {
     "id": "vFeupRmM",
     "replayUrl": "https://tziakcha.net/game/?id=vFeupRmM",
+    "round": 58,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 58 轮",
     "finishedAt": "05/09 20:39",
@@ -39,6 +77,7 @@
   {
     "id": "YACpvokz",
     "replayUrl": "https://tziakcha.net/game/?id=YACpvokz",
+    "round": 58,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 58 轮",
     "finishedAt": "05/09 20:35",
@@ -76,6 +115,7 @@
   {
     "id": "McMSmqXU",
     "replayUrl": "https://tziakcha.net/game/?id=McMSmqXU",
+    "round": 57,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 57 轮",
     "finishedAt": "05/09 19:45",
@@ -113,6 +153,7 @@
   {
     "id": "sBiS1KCo",
     "replayUrl": "https://tziakcha.net/game/?id=sBiS1KCo",
+    "round": 57,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 57 轮",
     "finishedAt": "05/09 19:42",
@@ -148,45 +189,9 @@
     ]
   },
   {
-    "id": "6r6uGP9g",
-    "replayUrl": "https://tziakcha.net/game/?id=6r6uGP9g",
-    "tableName": "A 桌",
-    "roundLabel": "常规赛第 44 轮",
-    "finishedAt": "05/07 21:43",
-    "placements": [
-      {
-        "placement": 1,
-        "team": "复仇者联盟",
-        "player": "叶凡",
-        "score": 178,
-        "scoreLabel": "+178"
-      },
-      {
-        "placement": 2,
-        "team": "自摸七队",
-        "player": "自摸七对",
-        "score": 131,
-        "scoreLabel": "+131"
-      },
-      {
-        "placement": 3,
-        "team": "特邀——没上过沙袋",
-        "player": "米夜",
-        "score": -149,
-        "scoreLabel": "-149"
-      },
-      {
-        "placement": 4,
-        "team": "青柠现代麻将文化研究协会",
-        "player": "Choimoe",
-        "score": -160,
-        "scoreLabel": "-160"
-      }
-    ]
-  },
-  {
     "id": "U5FDd0yG",
     "replayUrl": "https://tziakcha.net/game/?id=U5FDd0yG",
+    "round": 56,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 56 轮",
     "finishedAt": "05/07 20:46",
@@ -222,8 +227,46 @@
     ]
   },
   {
+    "id": "offline-r56-b",
+    "round": 56,
+    "tableName": "B 桌",
+    "roundLabel": "常规赛第 56 轮",
+    "finishedAt": "青岛线下",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "复仇者联盟",
+        "player": "xixi",
+        "score": 236,
+        "scoreLabel": "+236"
+      },
+      {
+        "placement": 2,
+        "team": "特邀——没上过沙袋",
+        "player": "米夜",
+        "score": -19,
+        "scoreLabel": "-19"
+      },
+      {
+        "placement": 3,
+        "team": "小鲨鱼动物园",
+        "player": "三只大土鳖",
+        "score": -65,
+        "scoreLabel": "-65"
+      },
+      {
+        "placement": 4,
+        "team": "呼噜呼噜哼🐷",
+        "player": "幻秋",
+        "score": -152,
+        "scoreLabel": "-152"
+      }
+    ]
+  },
+  {
     "id": "p0unQ0QG",
     "replayUrl": "https://tziakcha.net/game/?id=p0unQ0QG",
+    "round": 55,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 55 轮",
     "finishedAt": "05/07 19:44",
@@ -261,6 +304,7 @@
   {
     "id": "TDrUKSKh",
     "replayUrl": "https://tziakcha.net/game/?id=TDrUKSKh",
+    "round": 55,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 55 轮",
     "finishedAt": "05/07 19:39",
@@ -298,6 +342,7 @@
   {
     "id": "w4zDANuN",
     "replayUrl": "https://tziakcha.net/game/?id=w4zDANuN",
+    "round": 54,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 54 轮",
     "finishedAt": "05/05 22:45",
@@ -335,6 +380,7 @@
   {
     "id": "4hesWcgD",
     "replayUrl": "https://tziakcha.net/game/?id=4hesWcgD",
+    "round": 54,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 54 轮",
     "finishedAt": "05/05 22:34",
@@ -372,6 +418,7 @@
   {
     "id": "3rM6ybSh",
     "replayUrl": "https://tziakcha.net/game/?id=3rM6ybSh",
+    "round": 53,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 53 轮",
     "finishedAt": "05/05 21:36",
@@ -409,6 +456,7 @@
   {
     "id": "M4eoNCAu",
     "replayUrl": "https://tziakcha.net/game/?id=M4eoNCAu",
+    "round": 53,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 53 轮",
     "finishedAt": "05/05 21:34",
@@ -446,6 +494,7 @@
   {
     "id": "RkHiTLRH",
     "replayUrl": "https://tziakcha.net/game/?id=RkHiTLRH",
+    "round": 52,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 52 轮",
     "finishedAt": "05/03 22:51",
@@ -483,6 +532,7 @@
   {
     "id": "AKHwpLUa",
     "replayUrl": "https://tziakcha.net/game/?id=AKHwpLUa",
+    "round": 52,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 52 轮",
     "finishedAt": "05/03 22:41",
@@ -520,6 +570,7 @@
   {
     "id": "QtzxvJuQ",
     "replayUrl": "https://tziakcha.net/game/?id=QtzxvJuQ",
+    "round": 51,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 51 轮",
     "finishedAt": "05/03 21:41",
@@ -557,6 +608,7 @@
   {
     "id": "Ji9oLY7S",
     "replayUrl": "https://tziakcha.net/game/?id=Ji9oLY7S",
+    "round": 51,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 51 轮",
     "finishedAt": "05/03 21:36",
@@ -594,6 +646,7 @@
   {
     "id": "GHQY2zTj",
     "replayUrl": "https://tziakcha.net/game/?id=GHQY2zTj",
+    "round": 50,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 50 轮",
     "finishedAt": "05/02 22:46",
@@ -629,8 +682,46 @@
     ]
   },
   {
+    "id": "offline-r50-b",
+    "round": 50,
+    "tableName": "B 桌",
+    "roundLabel": "常规赛第 50 轮",
+    "finishedAt": "济南线下",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "择日读",
+        "player": "Sw279695293",
+        "score": 156,
+        "scoreLabel": "+156"
+      },
+      {
+        "placement": 2,
+        "team": "杠上开花队",
+        "player": "未有期",
+        "score": 86,
+        "scoreLabel": "+86"
+      },
+      {
+        "placement": 3,
+        "team": "自摸七队",
+        "player": "小黄鸭",
+        "score": -109,
+        "scoreLabel": "-109"
+      },
+      {
+        "placement": 4,
+        "team": "小鲨鱼动物园",
+        "player": "云出无心",
+        "score": -143,
+        "scoreLabel": "-143"
+      }
+    ]
+  },
+  {
     "id": "dX8qc10q",
     "replayUrl": "https://tziakcha.net/game/?id=dX8qc10q",
+    "round": 49,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 49 轮",
     "finishedAt": "05/02 21:45",
@@ -666,8 +757,46 @@
     ]
   },
   {
+    "id": "offline-r49-a",
+    "round": 49,
+    "tableName": "A 桌",
+    "roundLabel": "常规赛第 49 轮",
+    "finishedAt": "青岛线下",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "复仇者联盟",
+        "player": "月曦",
+        "score": 139,
+        "scoreLabel": "+139"
+      },
+      {
+        "placement": 2,
+        "team": "呼噜呼噜哼🐷",
+        "player": "bzh",
+        "score": 25,
+        "scoreLabel": "+25"
+      },
+      {
+        "placement": 3,
+        "team": "特邀——没上过沙袋",
+        "player": "米夜",
+        "score": 24,
+        "scoreLabel": "+24"
+      },
+      {
+        "placement": 4,
+        "team": "自摸七队",
+        "player": "自摸七对",
+        "score": -188,
+        "scoreLabel": "-188"
+      }
+    ]
+  },
+  {
     "id": "2UND79jM",
     "replayUrl": "https://tziakcha.net/game/?id=2UND79jM",
+    "round": 48,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 48 轮",
     "finishedAt": "04/30 20:46",
@@ -705,6 +834,7 @@
   {
     "id": "WHTRs74C",
     "replayUrl": "https://tziakcha.net/game/?id=WHTRs74C",
+    "round": 48,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 48 轮",
     "finishedAt": "04/30 20:45",
@@ -742,6 +872,7 @@
   {
     "id": "ndqFFB2W",
     "replayUrl": "https://tziakcha.net/game/?id=ndqFFB2W",
+    "round": 47,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 47 轮",
     "finishedAt": "04/30 19:41",
@@ -779,6 +910,7 @@
   {
     "id": "xMVyULCk",
     "replayUrl": "https://tziakcha.net/game/?id=xMVyULCk",
+    "round": 47,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 47 轮",
     "finishedAt": "04/30 19:32",
@@ -816,6 +948,7 @@
   {
     "id": "9YSetYDT",
     "replayUrl": "https://tziakcha.net/game/?id=9YSetYDT",
+    "round": 46,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 46 轮",
     "finishedAt": "04/28 20:48",
@@ -851,8 +984,46 @@
     ]
   },
   {
+    "id": "offline-r46-b",
+    "round": 46,
+    "tableName": "B 桌",
+    "roundLabel": "常规赛第 46 轮",
+    "finishedAt": "青岛线下",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "呼噜呼噜哼🐷",
+        "player": "bzh",
+        "score": 120,
+        "scoreLabel": "+120"
+      },
+      {
+        "placement": 2,
+        "team": "小鲨鱼动物园",
+        "player": "三只大土鳖",
+        "score": 17,
+        "scoreLabel": "+17"
+      },
+      {
+        "placement": 3,
+        "team": "复仇者联盟",
+        "player": "xixi",
+        "score": -35,
+        "scoreLabel": "-35"
+      },
+      {
+        "placement": 4,
+        "team": "特邀——没上过沙袋",
+        "player": "米夜",
+        "score": -102,
+        "scoreLabel": "-102"
+      }
+    ]
+  },
+  {
     "id": "b9J9nHSj",
     "replayUrl": "https://tziakcha.net/game/?id=b9J9nHSj",
+    "round": 45,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 45 轮",
     "finishedAt": "04/28 19:50",
@@ -890,6 +1061,7 @@
   {
     "id": "TegCHh0v",
     "replayUrl": "https://tziakcha.net/game/?id=TegCHh0v",
+    "round": 45,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 45 轮",
     "finishedAt": "04/28 19:42",
@@ -925,8 +1097,47 @@
     ]
   },
   {
+    "id": "6r6uGP9g",
+    "replayUrl": "https://tziakcha.net/game/?id=6r6uGP9g",
+    "round": 44,
+    "tableName": "A 桌",
+    "roundLabel": "常规赛第 44 轮",
+    "finishedAt": "05/07 21:43",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "复仇者联盟",
+        "player": "叶凡",
+        "score": 178,
+        "scoreLabel": "+178"
+      },
+      {
+        "placement": 2,
+        "team": "自摸七队",
+        "player": "自摸七对",
+        "score": 131,
+        "scoreLabel": "+131"
+      },
+      {
+        "placement": 3,
+        "team": "特邀——没上过沙袋",
+        "player": "米夜",
+        "score": -149,
+        "scoreLabel": "-149"
+      },
+      {
+        "placement": 4,
+        "team": "青柠现代麻将文化研究协会",
+        "player": "Choimoe",
+        "score": -160,
+        "scoreLabel": "-160"
+      }
+    ]
+  },
+  {
     "id": "nLKhLYBQ",
     "replayUrl": "https://tziakcha.net/game/?id=nLKhLYBQ",
+    "round": 44,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 44 轮",
     "finishedAt": "04/26 20:46",
@@ -964,6 +1175,7 @@
   {
     "id": "wCbfG81R",
     "replayUrl": "https://tziakcha.net/game/?id=wCbfG81R",
+    "round": 43,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 43 轮",
     "finishedAt": "04/26 19:43",
@@ -1001,6 +1213,7 @@
   {
     "id": "UEpBNKgs",
     "replayUrl": "https://tziakcha.net/game/?id=UEpBNKgs",
+    "round": 43,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 43 轮",
     "finishedAt": "04/26 19:32",
@@ -1038,6 +1251,7 @@
   {
     "id": "JJvZTV3K",
     "replayUrl": "https://tziakcha.net/game/?id=JJvZTV3K",
+    "round": 42,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 42 轮",
     "finishedAt": "04/25 20:50",
@@ -1075,6 +1289,7 @@
   {
     "id": "ApHbH1Jw",
     "replayUrl": "https://tziakcha.net/game/?id=ApHbH1Jw",
+    "round": 42,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 42 轮",
     "finishedAt": "04/25 20:44",
@@ -1112,6 +1327,7 @@
   {
     "id": "bM7Rnc3S",
     "replayUrl": "https://tziakcha.net/game/?id=bM7Rnc3S",
+    "round": 41,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 41 轮",
     "finishedAt": "04/25 19:55",
@@ -1149,6 +1365,7 @@
   {
     "id": "Sy9Z7A7v",
     "replayUrl": "https://tziakcha.net/game/?id=Sy9Z7A7v",
+    "round": 41,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 41 轮",
     "finishedAt": "04/25 19:46",
@@ -1186,6 +1403,7 @@
   {
     "id": "Tr5oGjRe",
     "replayUrl": "https://tziakcha.net/game/?id=Tr5oGjRe",
+    "round": 40,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 40 轮",
     "finishedAt": "04/23 20:42",
@@ -1223,6 +1441,7 @@
   {
     "id": "J7R53ahS",
     "replayUrl": "https://tziakcha.net/game/?id=J7R53ahS",
+    "round": 40,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 40 轮",
     "finishedAt": "04/23 20:38",
@@ -1260,6 +1479,7 @@
   {
     "id": "Loxt9vz7",
     "replayUrl": "https://tziakcha.net/game/?id=Loxt9vz7",
+    "round": 39,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 39 轮",
     "finishedAt": "04/23 19:45",
@@ -1297,6 +1517,7 @@
   {
     "id": "vpBHWiY5",
     "replayUrl": "https://tziakcha.net/game/?id=vpBHWiY5",
+    "round": 39,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 39 轮",
     "finishedAt": "04/23 19:41",
@@ -1334,6 +1555,7 @@
   {
     "id": "aPzMiUZQ",
     "replayUrl": "https://tziakcha.net/game/?id=aPzMiUZQ",
+    "round": 38,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 38 轮",
     "finishedAt": "04/21 20:44",
@@ -1371,6 +1593,7 @@
   {
     "id": "qSgU75N0",
     "replayUrl": "https://tziakcha.net/game/?id=qSgU75N0",
+    "round": 38,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 38 轮",
     "finishedAt": "04/21 20:43",
@@ -1408,6 +1631,7 @@
   {
     "id": "hxMXyfrk",
     "replayUrl": "https://tziakcha.net/game/?id=hxMXyfrk",
+    "round": 37,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 37 轮",
     "finishedAt": "04/21 19:48",
@@ -1445,6 +1669,7 @@
   {
     "id": "qSzVTHAd",
     "replayUrl": "https://tziakcha.net/game/?id=qSzVTHAd",
+    "round": 37,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 37 轮",
     "finishedAt": "04/21 19:40",
@@ -1482,6 +1707,7 @@
   {
     "id": "qVBoV3s2",
     "replayUrl": "https://tziakcha.net/game/?id=qVBoV3s2",
+    "round": 36,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 36 轮",
     "finishedAt": "04/16 20:47",
@@ -1519,6 +1745,7 @@
   {
     "id": "jJ3bBQGu",
     "replayUrl": "https://tziakcha.net/game/?id=jJ3bBQGu",
+    "round": 36,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 36 轮",
     "finishedAt": "04/16 20:37",
@@ -1556,6 +1783,7 @@
   {
     "id": "W5BWxDHF",
     "replayUrl": "https://tziakcha.net/game/?id=W5BWxDHF",
+    "round": 35,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 35 轮",
     "finishedAt": "04/16 19:47",
@@ -1591,8 +1819,46 @@
     ]
   },
   {
+    "id": "offline-r35-a",
+    "round": 35,
+    "tableName": "A 桌",
+    "roundLabel": "常规赛第 35 轮",
+    "finishedAt": "济南线下",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "择日读",
+        "player": "Sw279695293",
+        "score": 170,
+        "scoreLabel": "+170"
+      },
+      {
+        "placement": 2,
+        "team": "特邀——没上过沙袋",
+        "player": "Quandaiwu42",
+        "score": 42,
+        "scoreLabel": "+42"
+      },
+      {
+        "placement": 3,
+        "team": "云上秋雨",
+        "player": "琳雨空",
+        "score": -54,
+        "scoreLabel": "-54"
+      },
+      {
+        "placement": 4,
+        "team": "自摸七队",
+        "player": "小黄鸭",
+        "score": -158,
+        "scoreLabel": "-158"
+      }
+    ]
+  },
+  {
     "id": "2AieXvQ6",
     "replayUrl": "https://tziakcha.net/game/?id=2AieXvQ6",
+    "round": 34,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 34 轮",
     "finishedAt": "04/14 20:40",
@@ -1630,6 +1896,7 @@
   {
     "id": "u0JyaQK8",
     "replayUrl": "https://tziakcha.net/game/?id=u0JyaQK8",
+    "round": 34,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 34 轮",
     "finishedAt": "04/14 20:40",
@@ -1667,6 +1934,7 @@
   {
     "id": "mjk3Q7cq",
     "replayUrl": "https://tziakcha.net/game/?id=mjk3Q7cq",
+    "round": 33,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 33 轮",
     "finishedAt": "04/14 19:46",
@@ -1704,6 +1972,7 @@
   {
     "id": "PBq0cfDQ",
     "replayUrl": "https://tziakcha.net/game/?id=PBq0cfDQ",
+    "round": 33,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 33 轮",
     "finishedAt": "04/14 19:44",
@@ -1741,6 +2010,7 @@
   {
     "id": "C2LL4QMc",
     "replayUrl": "https://tziakcha.net/game/?id=C2LL4QMc",
+    "round": 32,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 32 轮",
     "finishedAt": "04/12 20:53",
@@ -1778,6 +2048,7 @@
   {
     "id": "2LbmLp89",
     "replayUrl": "https://tziakcha.net/game/?id=2LbmLp89",
+    "round": 32,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 32 轮",
     "finishedAt": "04/12 20:38",
@@ -1815,6 +2086,7 @@
   {
     "id": "kMPMzQwF",
     "replayUrl": "https://tziakcha.net/game/?id=kMPMzQwF",
+    "round": 31,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 31 轮",
     "finishedAt": "04/12 19:45",
@@ -1852,6 +2124,7 @@
   {
     "id": "v3Ryk2YN",
     "replayUrl": "https://tziakcha.net/game/?id=v3Ryk2YN",
+    "round": 31,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 31 轮",
     "finishedAt": "04/12 19:42",
@@ -1889,6 +2162,7 @@
   {
     "id": "2scRcX0C",
     "replayUrl": "https://tziakcha.net/game/?id=2scRcX0C",
+    "round": 30,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 30 轮",
     "finishedAt": "04/11 20:40",
@@ -1926,6 +2200,7 @@
   {
     "id": "jy7zxRP6",
     "replayUrl": "https://tziakcha.net/game/?id=jy7zxRP6",
+    "round": 30,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 30 轮",
     "finishedAt": "04/11 20:30",
@@ -1963,6 +2238,7 @@
   {
     "id": "bcWJG011",
     "replayUrl": "https://tziakcha.net/game/?id=bcWJG011",
+    "round": 29,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 29 轮",
     "finishedAt": "04/11 19:47",
@@ -2000,6 +2276,7 @@
   {
     "id": "j78GST9h",
     "replayUrl": "https://tziakcha.net/game/?id=j78GST9h",
+    "round": 29,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 29 轮",
     "finishedAt": "04/11 19:40",
@@ -2037,6 +2314,7 @@
   {
     "id": "mFv5YK8D",
     "replayUrl": "https://tziakcha.net/game/?id=mFv5YK8D",
+    "round": 28,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 28 轮",
     "finishedAt": "04/09 20:41",
@@ -2074,6 +2352,7 @@
   {
     "id": "sT3GTGmQ",
     "replayUrl": "https://tziakcha.net/game/?id=sT3GTGmQ",
+    "round": 28,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 28 轮",
     "finishedAt": "04/09 20:33",
@@ -2111,6 +2390,7 @@
   {
     "id": "Y1WtCUMf",
     "replayUrl": "https://tziakcha.net/game/?id=Y1WtCUMf",
+    "round": 27,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 27 轮",
     "finishedAt": "04/09 19:49",
@@ -2148,6 +2428,7 @@
   {
     "id": "v6xy67YT",
     "replayUrl": "https://tziakcha.net/game/?id=v6xy67YT",
+    "round": 27,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 27 轮",
     "finishedAt": "04/09 19:43",
@@ -2185,6 +2466,7 @@
   {
     "id": "DcgmSH3D",
     "replayUrl": "https://tziakcha.net/game/?id=DcgmSH3D",
+    "round": 26,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 26 轮",
     "finishedAt": "04/07 20:49",
@@ -2222,6 +2504,7 @@
   {
     "id": "0qNbmBjc",
     "replayUrl": "https://tziakcha.net/game/?id=0qNbmBjc",
+    "round": 26,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 26 轮",
     "finishedAt": "04/07 20:44",
@@ -2259,6 +2542,7 @@
   {
     "id": "JwvAWYFM",
     "replayUrl": "https://tziakcha.net/game/?id=JwvAWYFM",
+    "round": 25,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 25 轮",
     "finishedAt": "04/07 19:46",
@@ -2294,8 +2578,46 @@
     ]
   },
   {
+    "id": "offline-r25-b",
+    "round": 25,
+    "tableName": "B 桌",
+    "roundLabel": "常规赛第 25 轮",
+    "finishedAt": "青岛线下",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "青柠现代麻将文化研究协会",
+        "player": "zumgze",
+        "score": 76,
+        "scoreLabel": "+76"
+      },
+      {
+        "placement": 2,
+        "team": "复仇者联盟",
+        "player": "月曦",
+        "score": 48,
+        "scoreLabel": "+48"
+      },
+      {
+        "placement": 3,
+        "team": "特邀——没上过沙袋",
+        "player": "米夜",
+        "score": -58,
+        "scoreLabel": "-58"
+      },
+      {
+        "placement": 4,
+        "team": "小鲨鱼动物园",
+        "player": "lidai",
+        "score": -66,
+        "scoreLabel": "-66"
+      }
+    ]
+  },
+  {
     "id": "cMg4yMk4",
     "replayUrl": "https://tziakcha.net/game/?id=cMg4yMk4",
+    "round": 24,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 24 轮",
     "finishedAt": "04/05 20:43",
@@ -2333,6 +2655,7 @@
   {
     "id": "EGY2ocEW",
     "replayUrl": "https://tziakcha.net/game/?id=EGY2ocEW",
+    "round": 24,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 24 轮",
     "finishedAt": "04/05 20:42",
@@ -2370,6 +2693,7 @@
   {
     "id": "7hB7cg0j",
     "replayUrl": "https://tziakcha.net/game/?id=7hB7cg0j",
+    "round": 23,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 23 轮",
     "finishedAt": "04/05 19:53",
@@ -2407,6 +2731,7 @@
   {
     "id": "VKY9rZHY",
     "replayUrl": "https://tziakcha.net/game/?id=VKY9rZHY",
+    "round": 23,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 23 轮",
     "finishedAt": "04/05 19:41",
@@ -2444,6 +2769,7 @@
   {
     "id": "CC3H6eR8",
     "replayUrl": "https://tziakcha.net/game/?id=CC3H6eR8",
+    "round": 22,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 22 轮",
     "finishedAt": "04/04 20:46",
@@ -2481,6 +2807,7 @@
   {
     "id": "2VugbTDY",
     "replayUrl": "https://tziakcha.net/game/?id=2VugbTDY",
+    "round": 22,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 22 轮",
     "finishedAt": "04/04 20:40",
@@ -2518,6 +2845,7 @@
   {
     "id": "aHuP625D",
     "replayUrl": "https://tziakcha.net/game/?id=aHuP625D",
+    "round": 21,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 21 轮",
     "finishedAt": "04/04 19:52",
@@ -2555,6 +2883,7 @@
   {
     "id": "fA8nLdED",
     "replayUrl": "https://tziakcha.net/game/?id=fA8nLdED",
+    "round": 21,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 21 轮",
     "finishedAt": "04/04 19:42",
@@ -2592,6 +2921,7 @@
   {
     "id": "2YZdXqrK",
     "replayUrl": "https://tziakcha.net/game/?id=2YZdXqrK",
+    "round": 20,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 20 轮",
     "finishedAt": "04/02 20:44",
@@ -2629,6 +2959,7 @@
   {
     "id": "sbuB4qB1",
     "replayUrl": "https://tziakcha.net/game/?id=sbuB4qB1",
+    "round": 20,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 20 轮",
     "finishedAt": "04/02 20:40",
@@ -2666,6 +2997,7 @@
   {
     "id": "kZMEAS3i",
     "replayUrl": "https://tziakcha.net/game/?id=kZMEAS3i",
+    "round": 19,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 19 轮",
     "finishedAt": "04/02 19:50",
@@ -2703,6 +3035,7 @@
   {
     "id": "0NG4t2af",
     "replayUrl": "https://tziakcha.net/game/?id=0NG4t2af",
+    "round": 19,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 19 轮",
     "finishedAt": "04/02 19:44",
@@ -2740,6 +3073,7 @@
   {
     "id": "bcmKNzx2",
     "replayUrl": "https://tziakcha.net/game/?id=bcmKNzx2",
+    "round": 18,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 18 轮",
     "finishedAt": "03/31 20:51",
@@ -2777,6 +3111,7 @@
   {
     "id": "rfTR5mDB",
     "replayUrl": "https://tziakcha.net/game/?id=rfTR5mDB",
+    "round": 18,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 18 轮",
     "finishedAt": "03/31 20:45",
@@ -2814,6 +3149,7 @@
   {
     "id": "kxDK21Bo",
     "replayUrl": "https://tziakcha.net/game/?id=kxDK21Bo",
+    "round": 17,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 17 轮",
     "finishedAt": "03/31 19:51",
@@ -2849,8 +3185,46 @@
     ]
   },
   {
+    "id": "offline-r17-b",
+    "round": 17,
+    "tableName": "B 桌",
+    "roundLabel": "常规赛第 17 轮",
+    "finishedAt": "北京线下",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "小鲨鱼动物园",
+        "player": "云出无心",
+        "score": 368,
+        "scoreLabel": "+368"
+      },
+      {
+        "placement": 2,
+        "team": "特邀——没上过沙袋",
+        "player": "Quandaiwu42",
+        "score": -87,
+        "scoreLabel": "-87"
+      },
+      {
+        "placement": 3,
+        "team": "青柠现代麻将文化研究协会",
+        "player": "Choimoe",
+        "score": -93,
+        "scoreLabel": "-93"
+      },
+      {
+        "placement": 4,
+        "team": "自摸七队",
+        "player": "海叔利安",
+        "score": -188,
+        "scoreLabel": "-188"
+      }
+    ]
+  },
+  {
     "id": "sT0GE5dB",
     "replayUrl": "https://tziakcha.net/game/?id=sT0GE5dB",
+    "round": 16,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 16 轮",
     "finishedAt": "03/29 20:49",
@@ -2888,6 +3262,7 @@
   {
     "id": "QVCoLJAh",
     "replayUrl": "https://tziakcha.net/game/?id=QVCoLJAh",
+    "round": 16,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 16 轮",
     "finishedAt": "03/29 20:44",
@@ -2925,6 +3300,7 @@
   {
     "id": "Y1TszHDS",
     "replayUrl": "https://tziakcha.net/game/?id=Y1TszHDS",
+    "round": 15,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 15 轮",
     "finishedAt": "03/29 19:53",
@@ -2962,6 +3338,7 @@
   {
     "id": "53gQ5UkC",
     "replayUrl": "https://tziakcha.net/game/?id=53gQ5UkC",
+    "round": 15,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 15 轮",
     "finishedAt": "03/29 19:46",
@@ -2999,6 +3376,7 @@
   {
     "id": "RT8QRLnn",
     "replayUrl": "https://tziakcha.net/game/?id=RT8QRLnn",
+    "round": 14,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 14 轮",
     "finishedAt": "03/28 20:48",
@@ -3036,6 +3414,7 @@
   {
     "id": "BmgGg6GR",
     "replayUrl": "https://tziakcha.net/game/?id=BmgGg6GR",
+    "round": 14,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 14 轮",
     "finishedAt": "03/28 20:41",
@@ -3073,6 +3452,7 @@
   {
     "id": "Gubr5Dwc",
     "replayUrl": "https://tziakcha.net/game/?id=Gubr5Dwc",
+    "round": 13,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 13 轮",
     "finishedAt": "03/28 19:45",
@@ -3108,8 +3488,46 @@
     ]
   },
   {
+    "id": "offline-r13-a",
+    "round": 13,
+    "tableName": "A 桌",
+    "roundLabel": "常规赛第 13 轮",
+    "finishedAt": "济南线下",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "自摸七队",
+        "player": "小黄鸭",
+        "score": 114,
+        "scoreLabel": "+114"
+      },
+      {
+        "placement": 2,
+        "team": "云上秋雨",
+        "player": "琳雨空",
+        "score": 58,
+        "scoreLabel": "+58"
+      },
+      {
+        "placement": 3,
+        "team": "杠上开花队",
+        "player": "未有期",
+        "score": 15,
+        "scoreLabel": "+15"
+      },
+      {
+        "placement": 4,
+        "team": "特邀——没上过沙袋",
+        "player": "Quandaiwu42",
+        "score": -187,
+        "scoreLabel": "-187"
+      }
+    ]
+  },
+  {
     "id": "QKeqaysP",
     "replayUrl": "https://tziakcha.net/game/?id=QKeqaysP",
+    "round": 12,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 12 轮",
     "finishedAt": "03/26 20:52",
@@ -3145,8 +3563,46 @@
     ]
   },
   {
+    "id": "offline-r12-a",
+    "round": 12,
+    "tableName": "A 桌",
+    "roundLabel": "常规赛第 12 轮",
+    "finishedAt": "济南线下",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "云上秋雨",
+        "player": "琳雨空",
+        "score": 265,
+        "scoreLabel": "+265"
+      },
+      {
+        "placement": 2,
+        "team": "自摸七队",
+        "player": "小黄鸭",
+        "score": -8,
+        "scoreLabel": "-8"
+      },
+      {
+        "placement": 3,
+        "team": "特邀——没上过沙袋",
+        "player": "Quandaiwu42",
+        "score": -12,
+        "scoreLabel": "-12"
+      },
+      {
+        "placement": 4,
+        "team": "杠上开花队",
+        "player": "未有期",
+        "score": -245,
+        "scoreLabel": "-245"
+      }
+    ]
+  },
+  {
     "id": "bqiQvsG0",
     "replayUrl": "https://tziakcha.net/game/?id=bqiQvsG0",
+    "round": 11,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 11 轮",
     "finishedAt": "03/26 19:47",
@@ -3184,6 +3640,7 @@
   {
     "id": "9ntxzaGQ",
     "replayUrl": "https://tziakcha.net/game/?id=9ntxzaGQ",
+    "round": 11,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 11 轮",
     "finishedAt": "03/26 19:43",
@@ -3221,6 +3678,7 @@
   {
     "id": "ro4sBVbr",
     "replayUrl": "https://tziakcha.net/game/?id=ro4sBVbr",
+    "round": 10,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 10 轮",
     "finishedAt": "03/24 20:46",
@@ -3258,6 +3716,7 @@
   {
     "id": "3xP2bTtm",
     "replayUrl": "https://tziakcha.net/game/?id=3xP2bTtm",
+    "round": 10,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 10 轮",
     "finishedAt": "03/24 20:33",
@@ -3295,6 +3754,7 @@
   {
     "id": "uhYe4VHs",
     "replayUrl": "https://tziakcha.net/game/?id=uhYe4VHs",
+    "round": 9,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 9 轮",
     "finishedAt": "03/24 19:41",
@@ -3330,8 +3790,46 @@
     ]
   },
   {
+    "id": "offline-r09-b",
+    "round": 9,
+    "tableName": "B 桌",
+    "roundLabel": "常规赛第 9 轮",
+    "finishedAt": "青岛线下",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "青柠现代麻将文化研究协会",
+        "player": "zumgze",
+        "score": 156,
+        "scoreLabel": "+156"
+      },
+      {
+        "placement": 2,
+        "team": "特邀——没上过沙袋",
+        "player": "米夜",
+        "score": 82,
+        "scoreLabel": "+82"
+      },
+      {
+        "placement": 3,
+        "team": "复仇者联盟",
+        "player": "月曦",
+        "score": -65,
+        "scoreLabel": "-65"
+      },
+      {
+        "placement": 4,
+        "team": "呼噜呼噜哼🐷",
+        "player": "幻秋",
+        "score": -173,
+        "scoreLabel": "-173"
+      }
+    ]
+  },
+  {
     "id": "HMMKiAVL",
     "replayUrl": "https://tziakcha.net/game/?id=HMMKiAVL",
+    "round": 8,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 8 轮",
     "finishedAt": "03/22 20:42",
@@ -3369,6 +3867,7 @@
   {
     "id": "mArawZB5",
     "replayUrl": "https://tziakcha.net/game/?id=mArawZB5",
+    "round": 8,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 8 轮",
     "finishedAt": "03/22 20:42",
@@ -3406,6 +3905,7 @@
   {
     "id": "4yFsvLHF",
     "replayUrl": "https://tziakcha.net/game/?id=4yFsvLHF",
+    "round": 7,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 7 轮",
     "finishedAt": "03/22 19:44",
@@ -3443,6 +3943,7 @@
   {
     "id": "XwTNbjHb",
     "replayUrl": "https://tziakcha.net/game/?id=XwTNbjHb",
+    "round": 7,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 7 轮",
     "finishedAt": "03/22 19:44",
@@ -3480,6 +3981,7 @@
   {
     "id": "FRDBhonq",
     "replayUrl": "https://tziakcha.net/game/?id=FRDBhonq",
+    "round": 6,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 6 轮",
     "finishedAt": "03/21 20:48",
@@ -3517,6 +4019,7 @@
   {
     "id": "h2tmsaUp",
     "replayUrl": "https://tziakcha.net/game/?id=h2tmsaUp",
+    "round": 6,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 6 轮",
     "finishedAt": "03/21 20:35",
@@ -3554,6 +4057,7 @@
   {
     "id": "9Eo3vcAG",
     "replayUrl": "https://tziakcha.net/game/?id=9Eo3vcAG",
+    "round": 5,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 5 轮",
     "finishedAt": "03/21 19:49",
@@ -3591,6 +4095,7 @@
   {
     "id": "QHVB13WJ",
     "replayUrl": "https://tziakcha.net/game/?id=QHVB13WJ",
+    "round": 5,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 5 轮",
     "finishedAt": "03/21 19:35",
@@ -3628,6 +4133,7 @@
   {
     "id": "6r6fRBbh",
     "replayUrl": "https://tziakcha.net/game/?id=6r6fRBbh",
+    "round": 4,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 4 轮",
     "finishedAt": "03/19 20:52",
@@ -3665,6 +4171,7 @@
   {
     "id": "BiF3vDAD",
     "replayUrl": "https://tziakcha.net/game/?id=BiF3vDAD",
+    "round": 4,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 4 轮",
     "finishedAt": "03/19 20:42",
@@ -3702,6 +4209,7 @@
   {
     "id": "tqonC4SP",
     "replayUrl": "https://tziakcha.net/game/?id=tqonC4SP",
+    "round": 3,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 3 轮",
     "finishedAt": "03/19 20:11",
@@ -3739,6 +4247,7 @@
   {
     "id": "w32Tfayi",
     "replayUrl": "https://tziakcha.net/game/?id=w32Tfayi",
+    "round": 3,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 3 轮",
     "finishedAt": "03/19 19:49",
@@ -3774,45 +4283,9 @@
     ]
   },
   {
-    "id": "ArxJNC5N",
-    "replayUrl": "https://tziakcha.net/game/?id=ArxJNC5N",
-    "tableName": "B 桌",
-    "roundLabel": "常规赛第 3 轮",
-    "finishedAt": "03/19 19:20",
-    "placements": [
-      {
-        "placement": 1,
-        "team": "青柠现代麻将文化研究协会",
-        "player": "璃茉",
-        "score": 181,
-        "scoreLabel": "+181"
-      },
-      {
-        "placement": 2,
-        "team": "呼噜呼噜哼🐷",
-        "player": "QinNai",
-        "score": -50,
-        "scoreLabel": "-50"
-      },
-      {
-        "placement": 3,
-        "team": "绿小龙",
-        "player": "吴下阿濛",
-        "score": -62,
-        "scoreLabel": "-62"
-      },
-      {
-        "placement": 4,
-        "team": "杠上开花队",
-        "player": "zsseg",
-        "score": -69,
-        "scoreLabel": "-69"
-      }
-    ]
-  },
-  {
     "id": "YMgAazQn",
     "replayUrl": "https://tziakcha.net/game/?id=YMgAazQn",
+    "round": 2,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 2 轮",
     "finishedAt": "03/17 20:47",
@@ -3850,6 +4323,7 @@
   {
     "id": "km4eizxi",
     "replayUrl": "https://tziakcha.net/game/?id=km4eizxi",
+    "round": 2,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 2 轮",
     "finishedAt": "03/17 20:33",
@@ -3887,6 +4361,7 @@
   {
     "id": "HpvHHjQH",
     "replayUrl": "https://tziakcha.net/game/?id=HpvHHjQH",
+    "round": 1,
     "tableName": "A 桌",
     "roundLabel": "常规赛第 1 轮",
     "finishedAt": "03/17 19:43",
@@ -3924,6 +4399,7 @@
   {
     "id": "9SFTMARc",
     "replayUrl": "https://tziakcha.net/game/?id=9SFTMARc",
+    "round": 1,
     "tableName": "B 桌",
     "roundLabel": "常规赛第 1 轮",
     "finishedAt": "03/17 19:41",

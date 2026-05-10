@@ -1,0 +1,402 @@
+[
+  {
+    "rank": 1,
+    "name": "三只大土鳖",
+    "team": "小鲨鱼动物园",
+    "rate": 0.286885,
+    "dealInRate": 0.131148,
+    "rateDiff": 0.155737,
+    "count": 122,
+    "note": "和牌率 28.7%，放铳率 13.1%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 2,
+    "name": "River",
+    "team": "绿小龙",
+    "rate": 0.286713,
+    "dealInRate": 0.132867,
+    "rateDiff": 0.153846,
+    "count": 143,
+    "note": "和牌率 28.7%，放铳率 13.3%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 3,
+    "name": "叶凡",
+    "team": "复仇者联盟",
+    "rate": 0.304225,
+    "dealInRate": 0.16338,
+    "rateDiff": 0.140845,
+    "count": 355,
+    "note": "和牌率 30.4%，放铳率 16.3%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 4,
+    "name": "吴下阿濛",
+    "team": "绿小龙",
+    "rate": 0.287671,
+    "dealInRate": 0.150685,
+    "rateDiff": 0.136986,
+    "count": 146,
+    "note": "和牌率 28.8%，放铳率 15.1%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 5,
+    "name": "云出无心",
+    "team": "小鲨鱼动物园",
+    "rate": 0.256158,
+    "dealInRate": 0.137931,
+    "rateDiff": 0.118227,
+    "count": 203,
+    "note": "和牌率 25.6%，放铳率 13.8%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 6,
+    "name": "CKLm",
+    "team": "择日读",
+    "rate": 0.255319,
+    "dealInRate": 0.138298,
+    "rateDiff": 0.117021,
+    "count": 188,
+    "note": "和牌率 25.5%，放铳率 13.8%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 7,
+    "name": "黄腾",
+    "team": "择日读",
+    "rate": 0.255682,
+    "dealInRate": 0.147727,
+    "rateDiff": 0.107955,
+    "count": 176,
+    "note": "和牌率 25.6%，放铳率 14.8%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 8,
+    "name": "钙热",
+    "team": "特邀——没上过沙袋",
+    "rate": 0.303571,
+    "dealInRate": 0.205357,
+    "rateDiff": 0.098214,
+    "count": 112,
+    "note": "和牌率 30.4%，放铳率 20.5%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 9,
+    "name": "ChaosDon",
+    "team": "绿小龙",
+    "rate": 0.25463,
+    "dealInRate": 0.157407,
+    "rateDiff": 0.097223,
+    "count": 216,
+    "note": "和牌率 25.5%，放铳率 15.7%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 10,
+    "name": "海叔利安",
+    "team": "自摸七队",
+    "rate": 0.270833,
+    "dealInRate": 0.173611,
+    "rateDiff": 0.097222,
+    "count": 144,
+    "note": "和牌率 27.1%，放铳率 17.4%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 11,
+    "name": "zsseg",
+    "team": "杠上开花队",
+    "rate": 0.273913,
+    "dealInRate": 0.178261,
+    "rateDiff": 0.095652,
+    "count": 230,
+    "note": "和牌率 27.4%，放铳率 17.8%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 12,
+    "name": "CatHikari",
+    "team": "呼噜呼噜哼🐷",
+    "rate": 0.259259,
+    "dealInRate": 0.166667,
+    "rateDiff": 0.092592,
+    "count": 162,
+    "note": "和牌率 25.9%，放铳率 16.7%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 13,
+    "name": "alaya23",
+    "team": "绿小龙",
+    "rate": 0.240196,
+    "dealInRate": 0.151961,
+    "rateDiff": 0.088235,
+    "count": 204,
+    "note": "和牌率 24.0%，放铳率 15.2%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 14,
+    "name": "青火",
+    "team": "复仇者联盟",
+    "rate": 0.235294,
+    "dealInRate": 0.147059,
+    "rateDiff": 0.088235,
+    "count": 102,
+    "note": "和牌率 23.5%，放铳率 14.7%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 15,
+    "name": "自摸七对",
+    "team": "自摸七队",
+    "rate": 0.216,
+    "dealInRate": 0.128,
+    "rateDiff": 0.088,
+    "count": 125,
+    "note": "和牌率 21.6%，放铳率 12.8%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 16,
+    "name": "琳雨空",
+    "team": "云上秋雨",
+    "rate": 0.258883,
+    "dealInRate": 0.172589,
+    "rateDiff": 0.086294,
+    "count": 197,
+    "note": "和牌率 25.9%，放铳率 17.3%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 17,
+    "name": "sdmt",
+    "team": "小鲨鱼动物园",
+    "rate": 0.228571,
+    "dealInRate": 0.142857,
+    "rateDiff": 0.085714,
+    "count": 105,
+    "note": "和牌率 22.9%，放铳率 14.3%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 18,
+    "name": "南桥s01",
+    "team": "云上秋雨",
+    "rate": 0.271357,
+    "dealInRate": 0.18593,
+    "rateDiff": 0.085427,
+    "count": 199,
+    "note": "和牌率 27.1%，放铳率 18.6%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 19,
+    "name": "墨色清涟池",
+    "team": "特邀——没上过沙袋",
+    "rate": 0.277174,
+    "dealInRate": 0.195652,
+    "rateDiff": 0.081522,
+    "count": 184,
+    "note": "和牌率 27.7%，放铳率 19.6%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 20,
+    "name": "lidai",
+    "team": "小鲨鱼动物园",
+    "rate": 0.257143,
+    "dealInRate": 0.17619,
+    "rateDiff": 0.080953,
+    "count": 210,
+    "note": "和牌率 25.7%，放铳率 17.6%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 21,
+    "name": "足立レイ",
+    "team": "青柠现代麻将文化研究协会",
+    "rate": 0.253086,
+    "dealInRate": 0.17284,
+    "rateDiff": 0.080246,
+    "count": 162,
+    "note": "和牌率 25.3%，放铳率 17.3%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 22,
+    "name": "川上珧",
+    "team": "云上秋雨",
+    "rate": 0.238636,
+    "dealInRate": 0.159091,
+    "rateDiff": 0.079545,
+    "count": 88,
+    "note": "和牌率 23.9%，放铳率 15.9%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 23,
+    "name": "米夜",
+    "team": "特邀——没上过沙袋",
+    "rate": 0.238411,
+    "dealInRate": 0.15894,
+    "rateDiff": 0.079471,
+    "count": 151,
+    "note": "和牌率 23.8%，放铳率 15.9%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 24,
+    "name": "Sw279695293",
+    "team": "择日读",
+    "rate": 0.278539,
+    "dealInRate": 0.200913,
+    "rateDiff": 0.077626,
+    "count": 219,
+    "note": "和牌率 27.9%，放铳率 20.1%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 25,
+    "name": "日出",
+    "team": "择日读",
+    "rate": 0.245455,
+    "dealInRate": 0.172727,
+    "rateDiff": 0.072728,
+    "count": 110,
+    "note": "和牌率 24.5%，放铳率 17.3%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 26,
+    "name": "xixi",
+    "team": "复仇者联盟",
+    "rate": 0.201923,
+    "dealInRate": 0.144231,
+    "rateDiff": 0.057692,
+    "count": 104,
+    "note": "和牌率 20.2%，放铳率 14.4%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 27,
+    "name": "未有期",
+    "team": "杠上开花队",
+    "rate": 0.215827,
+    "dealInRate": 0.165468,
+    "rateDiff": 0.050359,
+    "count": 139,
+    "note": "和牌率 21.6%，放铳率 16.5%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 28,
+    "name": "Nephele",
+    "team": "云上秋雨",
+    "rate": 0.168605,
+    "dealInRate": 0.127907,
+    "rateDiff": 0.040698,
+    "count": 172,
+    "note": "和牌率 16.9%，放铳率 12.8%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 29,
+    "name": "月曦",
+    "team": "复仇者联盟",
+    "rate": 0.189873,
+    "dealInRate": 0.151899,
+    "rateDiff": 0.037974,
+    "count": 79,
+    "note": "和牌率 19.0%，放铳率 15.2%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 30,
+    "name": "小黄鸭",
+    "team": "自摸七队",
+    "rate": 0.218487,
+    "dealInRate": 0.184874,
+    "rateDiff": 0.033613,
+    "count": 119,
+    "note": "和牌率 21.8%，放铳率 18.5%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 31,
+    "name": "Quandaiwu42",
+    "team": "特邀——没上过沙袋",
+    "rate": 0.256,
+    "dealInRate": 0.224,
+    "rateDiff": 0.032,
+    "count": 125,
+    "note": "和牌率 25.6%，放铳率 22.4%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 32,
+    "name": "zumgze",
+    "team": "青柠现代麻将文化研究协会",
+    "rate": 0.234742,
+    "dealInRate": 0.215962,
+    "rateDiff": 0.01878,
+    "count": 213,
+    "note": "和牌率 23.5%，放铳率 21.6%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 33,
+    "name": "海仲利安",
+    "team": "自摸七队",
+    "rate": 0.207207,
+    "dealInRate": 0.193694,
+    "rateDiff": 0.013513,
+    "count": 222,
+    "note": "和牌率 20.7%，放铳率 19.4%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 34,
+    "name": "Choimoe",
+    "team": "青柠现代麻将文化研究协会",
+    "rate": 0.22807,
+    "dealInRate": 0.222222,
+    "rateDiff": 0.005848,
+    "count": 171,
+    "note": "和牌率 22.8%，放铳率 22.2%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 35,
+    "name": "bzh",
+    "team": "呼噜呼噜哼🐷",
+    "rate": 0.186869,
+    "dealInRate": 0.191919,
+    "rateDiff": -0.00505,
+    "count": 198,
+    "note": "和牌率 18.7%，放铳率 19.2%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 36,
+    "name": "redbean",
+    "team": "杠上开花队",
+    "rate": 0.221591,
+    "dealInRate": 0.25,
+    "rateDiff": -0.028409,
+    "count": 176,
+    "note": "和牌率 22.2%，放铳率 25.0%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 37,
+    "name": "histo",
+    "team": "杠上开花队",
+    "rate": 0.173077,
+    "dealInRate": 0.201923,
+    "rateDiff": -0.028846,
+    "count": 104,
+    "note": "和牌率 17.3%，放铳率 20.2%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 38,
+    "name": "璃茉",
+    "team": "青柠现代麻将文化研究协会",
+    "rate": 0.210084,
+    "dealInRate": 0.252101,
+    "rateDiff": -0.042017,
+    "count": 119,
+    "note": "和牌率 21.0%，放铳率 25.2%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 39,
+    "name": "QinNai",
+    "team": "呼噜呼噜哼🐷",
+    "rate": 0.186335,
+    "dealInRate": 0.236025,
+    "rateDiff": -0.04969,
+    "count": 161,
+    "note": "和牌率 18.6%，放铳率 23.6%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 40,
+    "name": "幻秋",
+    "team": "呼噜呼噜哼🐷",
+    "rate": 0.176,
+    "dealInRate": 0.248,
+    "rateDiff": -0.072,
+    "count": 125,
+    "note": "和牌率 17.6%，放铳率 24.8%，来源：rate_win_rate.csv + rate_deal_in_rate.csv"
+  }
+]

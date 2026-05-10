@@ -1,0 +1,1653 @@
+{
+  "gold": [],
+  "silver": [
+    {
+      "rank": 1,
+      "winner": "黄腾",
+      "winnerTeam": "择日读",
+      "totalFan": 10,
+      "maxUnitFan": 2,
+      "twoFanCount": 1,
+      "description": "双同刻",
+      "twoFanItems": [
+        {
+          "fanName": "双同刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 36 轮",
+      "tableName": "A 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=qVBoV3s2",
+      "matchId": "qVBoV3s2",
+      "recordId": "3RnSjL9p",
+      "roundNo": 13,
+      "finishedAt": "04/16 20:47"
+    }
+  ],
+  "bronze": [
+    {
+      "rank": 1,
+      "winner": "海叔利安",
+      "winnerTeam": "自摸七队",
+      "totalFan": 13,
+      "maxUnitFan": 2,
+      "twoFanCount": 2,
+      "description": "平和、断幺",
+      "twoFanItems": [
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "断幺",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 2 轮",
+      "tableName": "A 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=km4eizxi",
+      "matchId": "km4eizxi",
+      "recordId": "RHYLcRD2",
+      "roundNo": 6,
+      "finishedAt": "03/17 20:33"
+    },
+    {
+      "rank": 2,
+      "winner": "zsseg",
+      "winnerTeam": "杠上开花队",
+      "totalFan": 10,
+      "maxUnitFan": 2,
+      "twoFanCount": 2,
+      "description": "平和、断幺",
+      "twoFanItems": [
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "断幺",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 3 轮",
+      "tableName": "B 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=tqonC4SP",
+      "matchId": "tqonC4SP",
+      "recordId": "rMTE2E3f",
+      "roundNo": 10,
+      "finishedAt": "03/19 20:11"
+    },
+    {
+      "rank": 3,
+      "winner": "云出无心",
+      "winnerTeam": "小鲨鱼动物园",
+      "totalFan": 8,
+      "maxUnitFan": 2,
+      "twoFanCount": 2,
+      "description": "门前清、平和",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 9 轮",
+      "tableName": "A 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=uhYe4VHs",
+      "matchId": "uhYe4VHs",
+      "recordId": "oYauQ6pY",
+      "roundNo": 12,
+      "finishedAt": "03/24 19:41"
+    },
+    {
+      "rank": 4,
+      "winner": "墨色清涟池",
+      "winnerTeam": "特邀——没上过沙袋",
+      "totalFan": 9,
+      "maxUnitFan": 2,
+      "twoFanCount": 2,
+      "description": "门前清、平和",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 11 轮",
+      "tableName": "B 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=9ntxzaGQ",
+      "matchId": "9ntxzaGQ",
+      "recordId": "Xa1M5tc8",
+      "roundNo": 15,
+      "finishedAt": "03/26 19:43"
+    },
+    {
+      "rank": 5,
+      "winner": "足立レイ",
+      "winnerTeam": "青柠现代麻将文化研究协会",
+      "totalFan": 10,
+      "maxUnitFan": 2,
+      "twoFanCount": 2,
+      "description": "门风刻、门前清",
+      "twoFanItems": [
+        {
+          "fanName": "门风刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 12 轮",
+      "tableName": "B 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=QKeqaysP",
+      "matchId": "QKeqaysP",
+      "recordId": "pNsq0uft",
+      "roundNo": 4,
+      "finishedAt": "03/26 20:52"
+    },
+    {
+      "rank": 6,
+      "winner": "钙热",
+      "winnerTeam": "特邀——没上过沙袋",
+      "totalFan": 10,
+      "maxUnitFan": 2,
+      "twoFanCount": 2,
+      "description": "圈风刻、门风刻",
+      "twoFanItems": [
+        {
+          "fanName": "圈风刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "门风刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 14 轮",
+      "tableName": "B 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=RT8QRLnn",
+      "matchId": "RT8QRLnn",
+      "recordId": "cweLv2pH",
+      "roundNo": 4,
+      "finishedAt": "03/28 20:48"
+    },
+    {
+      "rank": 7,
+      "winner": "吴下阿濛",
+      "winnerTeam": "绿小龙",
+      "totalFan": 9,
+      "maxUnitFan": 2,
+      "twoFanCount": 2,
+      "description": "门前清、双暗刻",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "双暗刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 15 轮",
+      "tableName": "A 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=53gQ5UkC",
+      "matchId": "53gQ5UkC",
+      "recordId": "v69cc16Y",
+      "roundNo": 11,
+      "finishedAt": "03/29 19:46"
+    },
+    {
+      "rank": 8,
+      "winner": "黄腾",
+      "winnerTeam": "择日读",
+      "totalFan": 11,
+      "maxUnitFan": 2,
+      "twoFanCount": 2,
+      "description": "门前清、平和",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 21 轮",
+      "tableName": "A 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=aHuP625D",
+      "matchId": "aHuP625D",
+      "recordId": "Y4Pq2Bnq",
+      "roundNo": 6,
+      "finishedAt": "04/04 19:52"
+    },
+    {
+      "rank": 9,
+      "winner": "bzh",
+      "winnerTeam": "呼噜呼噜哼🐷",
+      "totalFan": 10,
+      "maxUnitFan": 2,
+      "twoFanCount": 2,
+      "description": "箭刻、双暗刻",
+      "twoFanItems": [
+        {
+          "fanName": "箭刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "双暗刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 23 轮",
+      "tableName": "B 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=VKY9rZHY",
+      "matchId": "VKY9rZHY",
+      "recordId": "TRyyGtuD",
+      "roundNo": 14,
+      "finishedAt": "04/05 19:41"
+    },
+    {
+      "rank": 10,
+      "winner": "未有期",
+      "winnerTeam": "杠上开花队",
+      "totalFan": 8,
+      "maxUnitFan": 2,
+      "twoFanCount": 2,
+      "description": "门前清、平和",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 25 轮",
+      "tableName": "A 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=JwvAWYFM",
+      "matchId": "JwvAWYFM",
+      "recordId": "FPbvvgrs",
+      "roundNo": 14,
+      "finishedAt": "04/07 19:46"
+    },
+    {
+      "rank": 11,
+      "winner": "Sw279695293",
+      "winnerTeam": "择日读",
+      "totalFan": 11,
+      "maxUnitFan": 2,
+      "twoFanCount": 2,
+      "description": "门前清、平和",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 27 轮",
+      "tableName": "B 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=Y1WtCUMf",
+      "matchId": "Y1WtCUMf",
+      "recordId": "VKRxURNJ",
+      "roundNo": 2,
+      "finishedAt": "04/09 19:49"
+    },
+    {
+      "rank": 12,
+      "winner": "Choimoe",
+      "winnerTeam": "青柠现代麻将文化研究协会",
+      "totalFan": 10,
+      "maxUnitFan": 2,
+      "twoFanCount": 2,
+      "description": "门前清、双暗刻",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "双暗刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 29 轮",
+      "tableName": "B 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=j78GST9h",
+      "matchId": "j78GST9h",
+      "recordId": "H1PVX3HV",
+      "roundNo": 9,
+      "finishedAt": "04/11 19:40"
+    },
+    {
+      "rank": 13,
+      "winner": "alaya23",
+      "winnerTeam": "绿小龙",
+      "totalFan": 8,
+      "maxUnitFan": 2,
+      "twoFanCount": 2,
+      "description": "四归一、双同刻",
+      "twoFanItems": [
+        {
+          "fanName": "四归一",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "双同刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 29 轮",
+      "tableName": "B 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=j78GST9h",
+      "matchId": "j78GST9h",
+      "recordId": "XCzsyGP4",
+      "roundNo": 12,
+      "finishedAt": "04/11 19:40"
+    },
+    {
+      "rank": 14,
+      "winner": "lidai",
+      "winnerTeam": "小鲨鱼动物园",
+      "totalFan": 10,
+      "maxUnitFan": 2,
+      "twoFanCount": 2,
+      "description": "门前清、平和",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 36 轮",
+      "tableName": "B 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=jJ3bBQGu",
+      "matchId": "jJ3bBQGu",
+      "recordId": "fByy0kwh",
+      "roundNo": 2,
+      "finishedAt": "04/16 20:37"
+    },
+    {
+      "rank": 15,
+      "winner": "River",
+      "winnerTeam": "绿小龙",
+      "totalFan": 11,
+      "maxUnitFan": 2,
+      "twoFanCount": 2,
+      "description": "平和、断幺",
+      "twoFanItems": [
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "断幺",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 36 轮",
+      "tableName": "A 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=qVBoV3s2",
+      "matchId": "qVBoV3s2",
+      "recordId": "2ZZd9jcV",
+      "roundNo": 14,
+      "finishedAt": "04/16 20:47"
+    },
+    {
+      "rank": 16,
+      "winner": "Choimoe",
+      "winnerTeam": "青柠现代麻将文化研究协会",
+      "totalFan": 10,
+      "maxUnitFan": 2,
+      "twoFanCount": 2,
+      "description": "门前清、平和",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 50 轮",
+      "tableName": "A 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=GHQY2zTj",
+      "matchId": "GHQY2zTj",
+      "recordId": "c6M2SkkV",
+      "roundNo": 9,
+      "finishedAt": "05/02 22:46"
+    }
+  ],
+  "iron": [
+    {
+      "rank": 1,
+      "winner": "琳雨空",
+      "winnerTeam": "云上秋雨",
+      "totalFan": 10,
+      "maxUnitFan": 2,
+      "twoFanCount": 3,
+      "description": "门前清、平和、断幺",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "断幺",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 2 轮",
+      "tableName": "A 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=km4eizxi",
+      "matchId": "km4eizxi",
+      "recordId": "S3eJY7yw",
+      "roundNo": 16,
+      "finishedAt": "03/17 20:33"
+    },
+    {
+      "rank": 2,
+      "winner": "Nephele",
+      "winnerTeam": "云上秋雨",
+      "totalFan": 10,
+      "maxUnitFan": 2,
+      "twoFanCount": 3,
+      "description": "门前清、平和、断幺",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "断幺",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 3 轮",
+      "tableName": "A 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=w32Tfayi",
+      "matchId": "w32Tfayi",
+      "recordId": "sExXc9Xv",
+      "roundNo": 8,
+      "finishedAt": "03/19 19:49"
+    },
+    {
+      "rank": 3,
+      "winner": "River",
+      "winnerTeam": "绿小龙",
+      "totalFan": 10,
+      "maxUnitFan": 2,
+      "twoFanCount": 3,
+      "description": "门前清、平和、断幺",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "断幺",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 4 轮",
+      "tableName": "B 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=BiF3vDAD",
+      "matchId": "BiF3vDAD",
+      "recordId": "XxWM55AQ",
+      "roundNo": 5,
+      "finishedAt": "03/19 20:42"
+    },
+    {
+      "rank": 4,
+      "winner": "xixi",
+      "winnerTeam": "复仇者联盟",
+      "totalFan": 9,
+      "maxUnitFan": 2,
+      "twoFanCount": 3,
+      "description": "门前清、平和、断幺",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "断幺",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 7 轮",
+      "tableName": "B 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=4yFsvLHF",
+      "matchId": "4yFsvLHF",
+      "recordId": "RGtuhkYK",
+      "roundNo": 1,
+      "finishedAt": "03/22 19:44"
+    },
+    {
+      "rank": 5,
+      "winner": "海叔利安",
+      "winnerTeam": "自摸七队",
+      "totalFan": 10,
+      "maxUnitFan": 2,
+      "twoFanCount": 3,
+      "description": "门前清、平和、断幺",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "断幺",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 8 轮",
+      "tableName": "B 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=HMMKiAVL",
+      "matchId": "HMMKiAVL",
+      "recordId": "gbQVqLrq",
+      "roundNo": 13,
+      "finishedAt": "03/22 20:42"
+    },
+    {
+      "rank": 6,
+      "winner": "云出无心",
+      "winnerTeam": "小鲨鱼动物园",
+      "totalFan": 9,
+      "maxUnitFan": 2,
+      "twoFanCount": 3,
+      "description": "门前清、平和、断幺",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "断幺",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 9 轮",
+      "tableName": "A 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=uhYe4VHs",
+      "matchId": "uhYe4VHs",
+      "recordId": "VvFRrDH5",
+      "roundNo": 13,
+      "finishedAt": "03/24 19:41"
+    },
+    {
+      "rank": 7,
+      "winner": "CatHikari",
+      "winnerTeam": "呼噜呼噜哼🐷",
+      "totalFan": 9,
+      "maxUnitFan": 2,
+      "twoFanCount": 4,
+      "description": "门前清、四归一、双同刻、双暗刻",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "四归一",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "双同刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "双暗刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 14 轮",
+      "tableName": "A 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=BmgGg6GR",
+      "matchId": "BmgGg6GR",
+      "recordId": "cZriuemD",
+      "roundNo": 2,
+      "finishedAt": "03/28 20:41"
+    },
+    {
+      "rank": 8,
+      "winner": "吴下阿濛",
+      "winnerTeam": "绿小龙",
+      "totalFan": 11,
+      "maxUnitFan": 2,
+      "twoFanCount": 3,
+      "description": "门前清、平和、断幺",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "断幺",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 15 轮",
+      "tableName": "A 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=53gQ5UkC",
+      "matchId": "53gQ5UkC",
+      "recordId": "X4dTDBmz",
+      "roundNo": 9,
+      "finishedAt": "03/29 19:46"
+    },
+    {
+      "rank": 9,
+      "winner": "xixi",
+      "winnerTeam": "复仇者联盟",
+      "totalFan": 11,
+      "maxUnitFan": 2,
+      "twoFanCount": 3,
+      "description": "门前清、平和、断幺",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "断幺",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 18 轮",
+      "tableName": "B 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=rfTR5mDB",
+      "matchId": "rfTR5mDB",
+      "recordId": "8qYj7b4n",
+      "roundNo": 5,
+      "finishedAt": "03/31 20:45"
+    },
+    {
+      "rank": 10,
+      "winner": "CatHikari",
+      "winnerTeam": "呼噜呼噜哼🐷",
+      "totalFan": 11,
+      "maxUnitFan": 2,
+      "twoFanCount": 3,
+      "description": "门前清、平和、断幺",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "断幺",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 22 轮",
+      "tableName": "A 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=2VugbTDY",
+      "matchId": "2VugbTDY",
+      "recordId": "kYnJdWN7",
+      "roundNo": 12,
+      "finishedAt": "04/04 20:40"
+    },
+    {
+      "rank": 11,
+      "winner": "云出无心",
+      "winnerTeam": "小鲨鱼动物园",
+      "totalFan": 8,
+      "maxUnitFan": 2,
+      "twoFanCount": 3,
+      "description": "门前清、双同刻、双暗刻",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "双同刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "双暗刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 26 轮",
+      "tableName": "A 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=DcgmSH3D",
+      "matchId": "DcgmSH3D",
+      "recordId": "QLMEUw9o",
+      "roundNo": 7,
+      "finishedAt": "04/07 20:49"
+    },
+    {
+      "rank": 12,
+      "winner": "alaya23",
+      "winnerTeam": "绿小龙",
+      "totalFan": 9,
+      "maxUnitFan": 2,
+      "twoFanCount": 3,
+      "description": "门前清、平和、断幺",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "断幺",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 29 轮",
+      "tableName": "B 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=j78GST9h",
+      "matchId": "j78GST9h",
+      "recordId": "8oQNPRBA",
+      "roundNo": 6,
+      "finishedAt": "04/11 19:40"
+    },
+    {
+      "rank": 13,
+      "winner": "小黄鸭",
+      "winnerTeam": "自摸七队",
+      "totalFan": 11,
+      "maxUnitFan": 2,
+      "twoFanCount": 3,
+      "description": "门前清、双暗刻、暗杠",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "双暗刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "暗杠",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 29 轮",
+      "tableName": "A 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=bcWJG011",
+      "matchId": "bcWJG011",
+      "recordId": "JTJpkhgA",
+      "roundNo": 1,
+      "finishedAt": "04/11 19:47"
+    },
+    {
+      "rank": 14,
+      "winner": "小黄鸭",
+      "winnerTeam": "自摸七队",
+      "totalFan": 9,
+      "maxUnitFan": 2,
+      "twoFanCount": 3,
+      "description": "门前清、平和、断幺",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "断幺",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 30 轮",
+      "tableName": "B 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=2scRcX0C",
+      "matchId": "2scRcX0C",
+      "recordId": "jDtH7E1u",
+      "roundNo": 4,
+      "finishedAt": "04/11 20:40"
+    },
+    {
+      "rank": 15,
+      "winner": "alaya23",
+      "winnerTeam": "绿小龙",
+      "totalFan": 9,
+      "maxUnitFan": 2,
+      "twoFanCount": 4,
+      "description": "门前清、双同刻、双暗刻、断幺",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "双同刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "双暗刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "断幺",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 30 轮",
+      "tableName": "B 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=2scRcX0C",
+      "matchId": "2scRcX0C",
+      "recordId": "tY7C5M6s",
+      "roundNo": 6,
+      "finishedAt": "04/11 20:40"
+    },
+    {
+      "rank": 16,
+      "winner": "自摸七对",
+      "winnerTeam": "自摸七队",
+      "totalFan": 10,
+      "maxUnitFan": 2,
+      "twoFanCount": 3,
+      "description": "门前清、平和、断幺",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "断幺",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 33 轮",
+      "tableName": "A 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=mjk3Q7cq",
+      "matchId": "mjk3Q7cq",
+      "recordId": "34kuTc9x",
+      "roundNo": 11,
+      "finishedAt": "04/14 19:46"
+    },
+    {
+      "rank": 17,
+      "winner": "QinNai",
+      "winnerTeam": "呼噜呼噜哼🐷",
+      "totalFan": 10,
+      "maxUnitFan": 2,
+      "twoFanCount": 3,
+      "description": "门前清、平和、断幺",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "断幺",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 38 轮",
+      "tableName": "A 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=qSgU75N0",
+      "matchId": "qSgU75N0",
+      "recordId": "e8bs8YZM",
+      "roundNo": 1,
+      "finishedAt": "04/21 20:43"
+    },
+    {
+      "rank": 18,
+      "winner": "Choimoe",
+      "winnerTeam": "青柠现代麻将文化研究协会",
+      "totalFan": 10,
+      "maxUnitFan": 2,
+      "twoFanCount": 3,
+      "description": "门前清、平和、断幺",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "断幺",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 38 轮",
+      "tableName": "A 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=qSgU75N0",
+      "matchId": "qSgU75N0",
+      "recordId": "aR77dSPu",
+      "roundNo": 10,
+      "finishedAt": "04/21 20:43"
+    },
+    {
+      "rank": 19,
+      "winner": "Quandaiwu42",
+      "winnerTeam": "特邀——没上过沙袋",
+      "totalFan": 11,
+      "maxUnitFan": 2,
+      "twoFanCount": 3,
+      "description": "圈风刻、门风刻、双同刻",
+      "twoFanItems": [
+        {
+          "fanName": "圈风刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "门风刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "双同刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 39 轮",
+      "tableName": "B 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=vpBHWiY5",
+      "matchId": "vpBHWiY5",
+      "recordId": "Jg9hPJf8",
+      "roundNo": 4,
+      "finishedAt": "04/23 19:41"
+    },
+    {
+      "rank": 20,
+      "winner": "Quandaiwu42",
+      "winnerTeam": "特邀——没上过沙袋",
+      "totalFan": 9,
+      "maxUnitFan": 2,
+      "twoFanCount": 3,
+      "description": "门前清、双同刻、双暗刻",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "双同刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "双暗刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 39 轮",
+      "tableName": "B 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=vpBHWiY5",
+      "matchId": "vpBHWiY5",
+      "recordId": "D0ZnG3o6",
+      "roundNo": 10,
+      "finishedAt": "04/23 19:41"
+    },
+    {
+      "rank": 21,
+      "winner": "青火",
+      "winnerTeam": "复仇者联盟",
+      "totalFan": 10,
+      "maxUnitFan": 2,
+      "twoFanCount": 3,
+      "description": "门前清、平和、断幺",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "断幺",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 41 轮",
+      "tableName": "A 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=Sy9Z7A7v",
+      "matchId": "Sy9Z7A7v",
+      "recordId": "GTyccGSJ",
+      "roundNo": 8,
+      "finishedAt": "04/25 19:46"
+    },
+    {
+      "rank": 22,
+      "winner": "sdmt",
+      "winnerTeam": "小鲨鱼动物园",
+      "totalFan": 12,
+      "maxUnitFan": 2,
+      "twoFanCount": 4,
+      "description": "箭刻、门前清、双暗刻、暗杠",
+      "twoFanItems": [
+        {
+          "fanName": "箭刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "双暗刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "暗杠",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 44 轮",
+      "tableName": "B 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=nLKhLYBQ",
+      "matchId": "nLKhLYBQ",
+      "recordId": "M1pxgob6",
+      "roundNo": 14,
+      "finishedAt": "04/26 20:46"
+    },
+    {
+      "rank": 23,
+      "winner": "Nephele",
+      "winnerTeam": "云上秋雨",
+      "totalFan": 9,
+      "maxUnitFan": 2,
+      "twoFanCount": 3,
+      "description": "门前清、平和、断幺",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "断幺",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 53 轮",
+      "tableName": "A 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=M4eoNCAu",
+      "matchId": "M4eoNCAu",
+      "recordId": "3n5JUzQ0",
+      "roundNo": 1,
+      "finishedAt": "05/05 21:34"
+    },
+    {
+      "rank": 24,
+      "winner": "云出无心",
+      "winnerTeam": "小鲨鱼动物园",
+      "totalFan": 9,
+      "maxUnitFan": 2,
+      "twoFanCount": 3,
+      "description": "门前清、平和、断幺",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "断幺",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 53 轮",
+      "tableName": "A 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=M4eoNCAu",
+      "matchId": "M4eoNCAu",
+      "recordId": "6hgAHLWp",
+      "roundNo": 14,
+      "finishedAt": "05/05 21:34"
+    },
+    {
+      "rank": 25,
+      "winner": "zsseg",
+      "winnerTeam": "杠上开花队",
+      "totalFan": 11,
+      "maxUnitFan": 2,
+      "twoFanCount": 3,
+      "description": "箭刻、四归一、双暗刻",
+      "twoFanItems": [
+        {
+          "fanName": "箭刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "四归一",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "双暗刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 53 轮",
+      "tableName": "B 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=3rM6ybSh",
+      "matchId": "3rM6ybSh",
+      "recordId": "qTm4pC8h",
+      "roundNo": 3,
+      "finishedAt": "05/05 21:36"
+    },
+    {
+      "rank": 26,
+      "winner": "bzh",
+      "winnerTeam": "呼噜呼噜哼🐷",
+      "totalFan": 10,
+      "maxUnitFan": 2,
+      "twoFanCount": 3,
+      "description": "门前清、平和、断幺",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "断幺",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 55 轮",
+      "tableName": "A 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=TDrUKSKh",
+      "matchId": "TDrUKSKh",
+      "recordId": "QsMaNHbE",
+      "roundNo": 5,
+      "finishedAt": "05/07 19:39"
+    },
+    {
+      "rank": 27,
+      "winner": "自摸七对",
+      "winnerTeam": "自摸七队",
+      "totalFan": 10,
+      "maxUnitFan": 2,
+      "twoFanCount": 3,
+      "description": "门前清、平和、断幺",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "断幺",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 55 轮",
+      "tableName": "A 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=TDrUKSKh",
+      "matchId": "TDrUKSKh",
+      "recordId": "AMqtJTy0",
+      "roundNo": 13,
+      "finishedAt": "05/07 19:39"
+    },
+    {
+      "rank": 28,
+      "winner": "自摸七对",
+      "winnerTeam": "自摸七队",
+      "totalFan": 12,
+      "maxUnitFan": 2,
+      "twoFanCount": 3,
+      "description": "门前清、平和、断幺",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "断幺",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 44 轮",
+      "tableName": "A 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=6r6uGP9g",
+      "matchId": "6r6uGP9g",
+      "recordId": "iZxdoXnL",
+      "roundNo": 11,
+      "finishedAt": "05/07 21:43"
+    },
+    {
+      "rank": 29,
+      "winner": "zumgze",
+      "winnerTeam": "青柠现代麻将文化研究协会",
+      "totalFan": 12,
+      "maxUnitFan": 2,
+      "twoFanCount": 4,
+      "description": "箭刻、圈风刻、门风刻、双暗刻",
+      "twoFanItems": [
+        {
+          "fanName": "箭刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "圈风刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "门风刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "双暗刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 57 轮",
+      "tableName": "B 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=sBiS1KCo",
+      "matchId": "sBiS1KCo",
+      "recordId": "Q5Tuv3p6",
+      "roundNo": 5,
+      "finishedAt": "05/09 19:42"
+    },
+    {
+      "rank": 30,
+      "winner": "南桥s01",
+      "winnerTeam": "云上秋雨",
+      "totalFan": 10,
+      "maxUnitFan": 2,
+      "twoFanCount": 3,
+      "description": "门前清、平和、断幺",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "断幺",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 57 轮",
+      "tableName": "A 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=McMSmqXU",
+      "matchId": "McMSmqXU",
+      "recordId": "TFcqJapy",
+      "roundNo": 9,
+      "finishedAt": "05/09 19:45"
+    },
+    {
+      "rank": 31,
+      "winner": "叶凡",
+      "winnerTeam": "复仇者联盟",
+      "totalFan": 9,
+      "maxUnitFan": 2,
+      "twoFanCount": 3,
+      "description": "门前清、平和、断幺",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "断幺",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 58 轮",
+      "tableName": "B 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=vFeupRmM",
+      "matchId": "vFeupRmM",
+      "recordId": "18Wh7QBJ",
+      "roundNo": 13,
+      "finishedAt": "05/09 20:39"
+    }
+  ]
+}

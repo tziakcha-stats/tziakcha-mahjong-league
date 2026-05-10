@@ -1,0 +1,1082 @@
+[
+  {
+    "rank": 1,
+    "name": "吴下阿濛",
+    "team": "绿小龙",
+    "rounds": 139,
+    "pointWin": {
+      "count": 29,
+      "averageFan": 16.137931,
+      "income": 1164
+    },
+    "dealIn": {
+      "count": 20,
+      "averageFan": 14.95,
+      "income": -459
+    },
+    "selfDraw": {
+      "count": 12,
+      "averageFan": 14.416667,
+      "income": 807
+    },
+    "drawnByOthers": {
+      "count": 27,
+      "averageFan": 12.259259,
+      "income": -547
+    },
+    "roundIncome": 6.942446
+  },
+  {
+    "rank": 2,
+    "name": "叶凡",
+    "team": "复仇者联盟",
+    "rounds": 355,
+    "pointWin": {
+      "count": 74,
+      "averageFan": 16.027027,
+      "income": 2962
+    },
+    "dealIn": {
+      "count": 58,
+      "averageFan": 15.448276,
+      "income": -1360
+    },
+    "selfDraw": {
+      "count": 34,
+      "averageFan": 15.176471,
+      "income": 2364
+    },
+    "drawnByOthers": {
+      "count": 65,
+      "averageFan": 16.261538,
+      "income": -1577
+    },
+    "roundIncome": 6.729577
+  },
+  {
+    "rank": 3,
+    "name": "Sw279695293",
+    "team": "择日读",
+    "rounds": 219,
+    "pointWin": {
+      "count": 40,
+      "averageFan": 14.825,
+      "income": 1553
+    },
+    "dealIn": {
+      "count": 44,
+      "averageFan": 13.340909,
+      "income": -939
+    },
+    "selfDraw": {
+      "count": 21,
+      "averageFan": 14.857143,
+      "income": 1440
+    },
+    "drawnByOthers": {
+      "count": 26,
+      "averageFan": 14.846154,
+      "income": -594
+    },
+    "roundIncome": 6.666667
+  },
+  {
+    "rank": 4,
+    "name": "River",
+    "team": "绿小龙",
+    "rounds": 143,
+    "pointWin": {
+      "count": 30,
+      "averageFan": 14.2,
+      "income": 1146
+    },
+    "dealIn": {
+      "count": 19,
+      "averageFan": 19.631579,
+      "income": -525
+    },
+    "selfDraw": {
+      "count": 11,
+      "averageFan": 21.909091,
+      "income": 987
+    },
+    "drawnByOthers": {
+      "count": 32,
+      "averageFan": 15.8125,
+      "income": -762
+    },
+    "roundIncome": 5.916084
+  },
+  {
+    "rank": 5,
+    "name": "墨色清涟池",
+    "team": "特邀——没上过沙袋",
+    "rounds": 184,
+    "pointWin": {
+      "count": 35,
+      "averageFan": 15.057143,
+      "income": 1367
+    },
+    "dealIn": {
+      "count": 36,
+      "averageFan": 13.861111,
+      "income": -787
+    },
+    "selfDraw": {
+      "count": 16,
+      "averageFan": 14.625,
+      "income": 1086
+    },
+    "drawnByOthers": {
+      "count": 27,
+      "averageFan": 14.518519,
+      "income": -608
+    },
+    "roundIncome": 5.75
+  },
+  {
+    "rank": 6,
+    "name": "三只大土鳖",
+    "team": "小鲨鱼动物园",
+    "rounds": 122,
+    "pointWin": {
+      "count": 26,
+      "averageFan": 14.807692,
+      "income": 1009
+    },
+    "dealIn": {
+      "count": 16,
+      "averageFan": 14.8125,
+      "income": -365
+    },
+    "selfDraw": {
+      "count": 9,
+      "averageFan": 15.444444,
+      "income": 633
+    },
+    "drawnByOthers": {
+      "count": 30,
+      "averageFan": 13.766667,
+      "income": -653
+    },
+    "roundIncome": 5.114754
+  },
+  {
+    "rank": 7,
+    "name": "钙热",
+    "team": "特邀——没上过沙袋",
+    "rounds": 112,
+    "pointWin": {
+      "count": 25,
+      "averageFan": 12.76,
+      "income": 919
+    },
+    "dealIn": {
+      "count": 23,
+      "averageFan": 19.695652,
+      "income": -637
+    },
+    "selfDraw": {
+      "count": 9,
+      "averageFan": 17.222222,
+      "income": 681
+    },
+    "drawnByOthers": {
+      "count": 20,
+      "averageFan": 13.75,
+      "income": -435
+    },
+    "roundIncome": 4.714286
+  },
+  {
+    "rank": 8,
+    "name": "CKLm",
+    "team": "择日读",
+    "rounds": 188,
+    "pointWin": {
+      "count": 34,
+      "averageFan": 16.352941,
+      "income": 1372
+    },
+    "dealIn": {
+      "count": 26,
+      "averageFan": 13.5,
+      "income": -559
+    },
+    "selfDraw": {
+      "count": 14,
+      "averageFan": 18.214286,
+      "income": 1101
+    },
+    "drawnByOthers": {
+      "count": 45,
+      "averageFan": 15.244444,
+      "income": -1046
+    },
+    "roundIncome": 4.617021
+  },
+  {
+    "rank": 9,
+    "name": "云出无心",
+    "team": "小鲨鱼动物园",
+    "rounds": 203,
+    "pointWin": {
+      "count": 37,
+      "averageFan": 15.513514,
+      "income": 1462
+    },
+    "dealIn": {
+      "count": 28,
+      "averageFan": 13.857143,
+      "income": -612
+    },
+    "selfDraw": {
+      "count": 15,
+      "averageFan": 15.333333,
+      "income": 1050
+    },
+    "drawnByOthers": {
+      "count": 41,
+      "averageFan": 16.219512,
+      "income": -993
+    },
+    "roundIncome": 4.46798
+  },
+  {
+    "rank": 10,
+    "name": "ChaosDon",
+    "team": "绿小龙",
+    "rounds": 216,
+    "pointWin": {
+      "count": 37,
+      "averageFan": 15.081081,
+      "income": 1446
+    },
+    "dealIn": {
+      "count": 34,
+      "averageFan": 14.588235,
+      "income": -768
+    },
+    "selfDraw": {
+      "count": 18,
+      "averageFan": 14.555556,
+      "income": 1218
+    },
+    "drawnByOthers": {
+      "count": 40,
+      "averageFan": 16.525,
+      "income": -981
+    },
+    "roundIncome": 4.236111
+  },
+  {
+    "rank": 11,
+    "name": "CatHikari",
+    "team": "呼噜呼噜哼🐷",
+    "rounds": 162,
+    "pointWin": {
+      "count": 29,
+      "averageFan": 14.103448,
+      "income": 1105
+    },
+    "dealIn": {
+      "count": 27,
+      "averageFan": 14.555556,
+      "income": -609
+    },
+    "selfDraw": {
+      "count": 13,
+      "averageFan": 15.923077,
+      "income": 933
+    },
+    "drawnByOthers": {
+      "count": 32,
+      "averageFan": 15.90625,
+      "income": -765
+    },
+    "roundIncome": 4.098765
+  },
+  {
+    "rank": 12,
+    "name": "zsseg",
+    "team": "杠上开花队",
+    "rounds": 223,
+    "pointWin": {
+      "count": 48,
+      "averageFan": 15.666667,
+      "income": 1904
+    },
+    "dealIn": {
+      "count": 39,
+      "averageFan": 16.358974,
+      "income": -950
+    },
+    "selfDraw": {
+      "count": 14,
+      "averageFan": 14.357143,
+      "income": 939
+    },
+    "drawnByOthers": {
+      "count": 39,
+      "averageFan": 17.692308,
+      "income": -1002
+    },
+    "roundIncome": 3.995516
+  },
+  {
+    "rank": 13,
+    "name": "琳雨空",
+    "team": "云上秋雨",
+    "rounds": 197,
+    "pointWin": {
+      "count": 35,
+      "averageFan": 14.028571,
+      "income": 1331
+    },
+    "dealIn": {
+      "count": 34,
+      "averageFan": 14.264706,
+      "income": -757
+    },
+    "selfDraw": {
+      "count": 16,
+      "averageFan": 14.375,
+      "income": 1074
+    },
+    "drawnByOthers": {
+      "count": 38,
+      "averageFan": 15.473684,
+      "income": -892
+    },
+    "roundIncome": 3.837563
+  },
+  {
+    "rank": 14,
+    "name": "黄腾",
+    "team": "择日读",
+    "rounds": 176,
+    "pointWin": {
+      "count": 35,
+      "averageFan": 12.057143,
+      "income": 1262
+    },
+    "dealIn": {
+      "count": 26,
+      "averageFan": 13.538462,
+      "income": -560
+    },
+    "selfDraw": {
+      "count": 10,
+      "averageFan": 16.5,
+      "income": 735
+    },
+    "drawnByOthers": {
+      "count": 32,
+      "averageFan": 16,
+      "income": -768
+    },
+    "roundIncome": 3.801136
+  },
+  {
+    "rank": 15,
+    "name": "南桥s01",
+    "team": "云上秋雨",
+    "rounds": 199,
+    "pointWin": {
+      "count": 36,
+      "averageFan": 16.805556,
+      "income": 1469
+    },
+    "dealIn": {
+      "count": 37,
+      "averageFan": 15.432432,
+      "income": -867
+    },
+    "selfDraw": {
+      "count": 18,
+      "averageFan": 12.777778,
+      "income": 1122
+    },
+    "drawnByOthers": {
+      "count": 37,
+      "averageFan": 19.891892,
+      "income": -1032
+    },
+    "roundIncome": 3.477387
+  },
+  {
+    "rank": 16,
+    "name": "足立レイ",
+    "team": "青柠现代麻将文化研究协会",
+    "rounds": 162,
+    "pointWin": {
+      "count": 23,
+      "averageFan": 12.304348,
+      "income": 835
+    },
+    "dealIn": {
+      "count": 28,
+      "averageFan": 12.75,
+      "income": -581
+    },
+    "selfDraw": {
+      "count": 18,
+      "averageFan": 15.166667,
+      "income": 1251
+    },
+    "drawnByOthers": {
+      "count": 39,
+      "averageFan": 16.333333,
+      "income": -949
+    },
+    "roundIncome": 3.432099
+  },
+  {
+    "rank": 17,
+    "name": "海叔利安",
+    "team": "自摸七队",
+    "rounds": 144,
+    "pointWin": {
+      "count": 30,
+      "averageFan": 14.4,
+      "income": 1152
+    },
+    "dealIn": {
+      "count": 25,
+      "averageFan": 12.96,
+      "income": -524
+    },
+    "selfDraw": {
+      "count": 9,
+      "averageFan": 16,
+      "income": 648
+    },
+    "drawnByOthers": {
+      "count": 34,
+      "averageFan": 15.794118,
+      "income": -809
+    },
+    "roundIncome": 3.243056
+  },
+  {
+    "rank": 18,
+    "name": "zumgze",
+    "team": "青柠现代麻将文化研究协会",
+    "rounds": 213,
+    "pointWin": {
+      "count": 32,
+      "averageFan": 14.25,
+      "income": 1224
+    },
+    "dealIn": {
+      "count": 46,
+      "averageFan": 17.217391,
+      "income": -1160
+    },
+    "selfDraw": {
+      "count": 18,
+      "averageFan": 16.944444,
+      "income": 1347
+    },
+    "drawnByOthers": {
+      "count": 37,
+      "averageFan": 14.135135,
+      "income": -819
+    },
+    "roundIncome": 2.779343
+  },
+  {
+    "rank": 19,
+    "name": "Quandaiwu42",
+    "team": "特邀——没上过沙袋",
+    "rounds": 125,
+    "pointWin": {
+      "count": 26,
+      "averageFan": 14.884615,
+      "income": 1011
+    },
+    "dealIn": {
+      "count": 28,
+      "averageFan": 12.678571,
+      "income": -579
+    },
+    "selfDraw": {
+      "count": 6,
+      "averageFan": 15.833333,
+      "income": 429
+    },
+    "drawnByOthers": {
+      "count": 23,
+      "averageFan": 15.217391,
+      "income": -534
+    },
+    "roundIncome": 2.616
+  },
+  {
+    "rank": 20,
+    "name": "日出",
+    "team": "择日读",
+    "rounds": 110,
+    "pointWin": {
+      "count": 22,
+      "averageFan": 16.181818,
+      "income": 884
+    },
+    "dealIn": {
+      "count": 19,
+      "averageFan": 14.578947,
+      "income": -429
+    },
+    "selfDraw": {
+      "count": 5,
+      "averageFan": 15.2,
+      "income": 348
+    },
+    "drawnByOthers": {
+      "count": 23,
+      "averageFan": 14.434783,
+      "income": -516
+    },
+    "roundIncome": 2.609091
+  },
+  {
+    "rank": 21,
+    "name": "米夜",
+    "team": "特邀——没上过沙袋",
+    "rounds": 151,
+    "pointWin": {
+      "count": 26,
+      "averageFan": 12.307692,
+      "income": 944
+    },
+    "dealIn": {
+      "count": 24,
+      "averageFan": 16.375,
+      "income": -585
+    },
+    "selfDraw": {
+      "count": 10,
+      "averageFan": 14.3,
+      "income": 669
+    },
+    "drawnByOthers": {
+      "count": 26,
+      "averageFan": 17.884615,
+      "income": -673
+    },
+    "roundIncome": 2.350993
+  },
+  {
+    "rank": 22,
+    "name": "lidai",
+    "team": "小鲨鱼动物园",
+    "rounds": 210,
+    "pointWin": {
+      "count": 47,
+      "averageFan": 15.829787,
+      "income": 1872
+    },
+    "dealIn": {
+      "count": 37,
+      "averageFan": 16.540541,
+      "income": -908
+    },
+    "selfDraw": {
+      "count": 7,
+      "averageFan": 17.714286,
+      "income": 540
+    },
+    "drawnByOthers": {
+      "count": 43,
+      "averageFan": 16.627907,
+      "income": -1059
+    },
+    "roundIncome": 2.119048
+  },
+  {
+    "rank": 23,
+    "name": "xixi",
+    "team": "复仇者联盟",
+    "rounds": 104,
+    "pointWin": {
+      "count": 15,
+      "averageFan": 12.533333,
+      "income": 548
+    },
+    "dealIn": {
+      "count": 15,
+      "averageFan": 14.133333,
+      "income": -332
+    },
+    "selfDraw": {
+      "count": 6,
+      "averageFan": 17.666667,
+      "income": 462
+    },
+    "drawnByOthers": {
+      "count": 21,
+      "averageFan": 14.666667,
+      "income": -476
+    },
+    "roundIncome": 1.942308
+  },
+  {
+    "rank": 24,
+    "name": "alaya23",
+    "team": "绿小龙",
+    "rounds": 204,
+    "pointWin": {
+      "count": 39,
+      "averageFan": 13.794872,
+      "income": 1474
+    },
+    "dealIn": {
+      "count": 31,
+      "averageFan": 13.129032,
+      "income": -655
+    },
+    "selfDraw": {
+      "count": 10,
+      "averageFan": 15,
+      "income": 690
+    },
+    "drawnByOthers": {
+      "count": 47,
+      "averageFan": 15.851064,
+      "income": -1121
+    },
+    "roundIncome": 1.901961
+  },
+  {
+    "rank": 25,
+    "name": "自摸七对",
+    "team": "自摸七队",
+    "rounds": 125,
+    "pointWin": {
+      "count": 21,
+      "averageFan": 15.428571,
+      "income": 828
+    },
+    "dealIn": {
+      "count": 16,
+      "averageFan": 13.3125,
+      "income": -341
+    },
+    "selfDraw": {
+      "count": 6,
+      "averageFan": 13,
+      "income": 378
+    },
+    "drawnByOthers": {
+      "count": 27,
+      "averageFan": 16,
+      "income": -648
+    },
+    "roundIncome": 1.736
+  },
+  {
+    "rank": 26,
+    "name": "月曦",
+    "team": "复仇者联盟",
+    "rounds": 79,
+    "pointWin": {
+      "count": 14,
+      "averageFan": 15.5,
+      "income": 553
+    },
+    "dealIn": {
+      "count": 12,
+      "averageFan": 13.166667,
+      "income": -254
+    },
+    "selfDraw": {
+      "count": 1,
+      "averageFan": 12,
+      "income": 60
+    },
+    "drawnByOthers": {
+      "count": 10,
+      "averageFan": 14.5,
+      "income": -225
+    },
+    "roundIncome": 1.696203
+  },
+  {
+    "rank": 27,
+    "name": "海仲利安",
+    "team": "自摸七队",
+    "rounds": 222,
+    "pointWin": {
+      "count": 33,
+      "averageFan": 16.30303,
+      "income": 1330
+    },
+    "dealIn": {
+      "count": 43,
+      "averageFan": 15.302326,
+      "income": -1002
+    },
+    "selfDraw": {
+      "count": 13,
+      "averageFan": 20.846154,
+      "income": 1125
+    },
+    "drawnByOthers": {
+      "count": 48,
+      "averageFan": 14.8125,
+      "income": -1095
+    },
+    "roundIncome": 1.612613
+  },
+  {
+    "rank": 28,
+    "name": "Nephele",
+    "team": "云上秋雨",
+    "rounds": 172,
+    "pointWin": {
+      "count": 22,
+      "averageFan": 16.590909,
+      "income": 893
+    },
+    "dealIn": {
+      "count": 22,
+      "averageFan": 13.090909,
+      "income": -464
+    },
+    "selfDraw": {
+      "count": 7,
+      "averageFan": 18.714286,
+      "income": 561
+    },
+    "drawnByOthers": {
+      "count": 31,
+      "averageFan": 15.645161,
+      "income": -733
+    },
+    "roundIncome": 1.494186
+  },
+  {
+    "rank": 29,
+    "name": "川上珧",
+    "team": "云上秋雨",
+    "rounds": 88,
+    "pointWin": {
+      "count": 15,
+      "averageFan": 14.866667,
+      "income": 583
+    },
+    "dealIn": {
+      "count": 14,
+      "averageFan": 16.214286,
+      "income": -339
+    },
+    "selfDraw": {
+      "count": 6,
+      "averageFan": 13.666667,
+      "income": 390
+    },
+    "drawnByOthers": {
+      "count": 23,
+      "averageFan": 14.869565,
+      "income": -526
+    },
+    "roundIncome": 1.227273
+  },
+  {
+    "rank": 30,
+    "name": "Choimoe",
+    "team": "青柠现代麻将文化研究协会",
+    "rounds": 171,
+    "pointWin": {
+      "count": 23,
+      "averageFan": 12.652174,
+      "income": 843
+    },
+    "dealIn": {
+      "count": 38,
+      "averageFan": 15,
+      "income": -874
+    },
+    "selfDraw": {
+      "count": 16,
+      "averageFan": 15.375,
+      "income": 1122
+    },
+    "drawnByOthers": {
+      "count": 40,
+      "averageFan": 14.775,
+      "income": -911
+    },
+    "roundIncome": 1.052632
+  },
+  {
+    "rank": 31,
+    "name": "小黄鸭",
+    "team": "自摸七队",
+    "rounds": 119,
+    "pointWin": {
+      "count": 20,
+      "averageFan": 12.65,
+      "income": 733
+    },
+    "dealIn": {
+      "count": 22,
+      "averageFan": 13.590909,
+      "income": -475
+    },
+    "selfDraw": {
+      "count": 6,
+      "averageFan": 16,
+      "income": 432
+    },
+    "drawnByOthers": {
+      "count": 25,
+      "averageFan": 16.48,
+      "income": -612
+    },
+    "roundIncome": 0.655462
+  },
+  {
+    "rank": 32,
+    "name": "sdmt",
+    "team": "小鲨鱼动物园",
+    "rounds": 105,
+    "pointWin": {
+      "count": 19,
+      "averageFan": 14.157895,
+      "income": 725
+    },
+    "dealIn": {
+      "count": 15,
+      "averageFan": 16.866667,
+      "income": -373
+    },
+    "selfDraw": {
+      "count": 5,
+      "averageFan": 11.2,
+      "income": 288
+    },
+    "drawnByOthers": {
+      "count": 27,
+      "averageFan": 16.074074,
+      "income": -650
+    },
+    "roundIncome": -0.095238
+  },
+  {
+    "rank": 33,
+    "name": "璃茉",
+    "team": "青柠现代麻将文化研究协会",
+    "rounds": 112,
+    "pointWin": {
+      "count": 14,
+      "averageFan": 14.214286,
+      "income": 535
+    },
+    "dealIn": {
+      "count": 30,
+      "averageFan": 13,
+      "income": -630
+    },
+    "selfDraw": {
+      "count": 7,
+      "averageFan": 19.428571,
+      "income": 576
+    },
+    "drawnByOthers": {
+      "count": 23,
+      "averageFan": 13.608696,
+      "income": -497
+    },
+    "roundIncome": -0.142857
+  },
+  {
+    "rank": 34,
+    "name": "bzh",
+    "team": "呼噜呼噜哼🐷",
+    "rounds": 198,
+    "pointWin": {
+      "count": 26,
+      "averageFan": 15.730769,
+      "income": 1033
+    },
+    "dealIn": {
+      "count": 38,
+      "averageFan": 15.131579,
+      "income": -879
+    },
+    "selfDraw": {
+      "count": 11,
+      "averageFan": 15.363636,
+      "income": 771
+    },
+    "drawnByOthers": {
+      "count": 42,
+      "averageFan": 14.928571,
+      "income": -963
+    },
+    "roundIncome": -0.191919
+  },
+  {
+    "rank": 35,
+    "name": "histo",
+    "team": "杠上开花队",
+    "rounds": 104,
+    "pointWin": {
+      "count": 14,
+      "averageFan": 26.571429,
+      "income": 708
+    },
+    "dealIn": {
+      "count": 21,
+      "averageFan": 16.142857,
+      "income": -507
+    },
+    "selfDraw": {
+      "count": 4,
+      "averageFan": 13.5,
+      "income": 258
+    },
+    "drawnByOthers": {
+      "count": 23,
+      "averageFan": 14.26087,
+      "income": -512
+    },
+    "roundIncome": -0.509615
+  },
+  {
+    "rank": 36,
+    "name": "青火",
+    "team": "复仇者联盟",
+    "rounds": 102,
+    "pointWin": {
+      "count": 20,
+      "averageFan": 14.9,
+      "income": 778
+    },
+    "dealIn": {
+      "count": 15,
+      "averageFan": 20.333333,
+      "income": -425
+    },
+    "selfDraw": {
+      "count": 4,
+      "averageFan": 11,
+      "income": 228
+    },
+    "drawnByOthers": {
+      "count": 28,
+      "averageFan": 15.071429,
+      "income": -646
+    },
+    "roundIncome": -0.637255
+  },
+  {
+    "rank": 37,
+    "name": "redbean",
+    "team": "杠上开花队",
+    "rounds": 176,
+    "pointWin": {
+      "count": 31,
+      "averageFan": 14.451613,
+      "income": 1192
+    },
+    "dealIn": {
+      "count": 44,
+      "averageFan": 14.659091,
+      "income": -997
+    },
+    "selfDraw": {
+      "count": 8,
+      "averageFan": 13.25,
+      "income": 510
+    },
+    "drawnByOthers": {
+      "count": 35,
+      "averageFan": 16.028571,
+      "income": -841
+    },
+    "roundIncome": -0.772727
+  },
+  {
+    "rank": 38,
+    "name": "未有期",
+    "team": "杠上开花队",
+    "rounds": 139,
+    "pointWin": {
+      "count": 24,
+      "averageFan": 17.416667,
+      "income": 994
+    },
+    "dealIn": {
+      "count": 23,
+      "averageFan": 15.869565,
+      "income": -549
+    },
+    "selfDraw": {
+      "count": 6,
+      "averageFan": 11.166667,
+      "income": 345
+    },
+    "drawnByOthers": {
+      "count": 41,
+      "averageFan": 15.146341,
+      "income": -949
+    },
+    "roundIncome": -1.143885
+  },
+  {
+    "rank": 39,
+    "name": "幻秋",
+    "team": "呼噜呼噜哼🐷",
+    "rounds": 125,
+    "pointWin": {
+      "count": 15,
+      "averageFan": 12.666667,
+      "income": 550
+    },
+    "dealIn": {
+      "count": 31,
+      "averageFan": 17.774194,
+      "income": -799
+    },
+    "selfDraw": {
+      "count": 7,
+      "averageFan": 22.857143,
+      "income": 648
+    },
+    "drawnByOthers": {
+      "count": 24,
+      "averageFan": 15.416667,
+      "income": -562
+    },
+    "roundIncome": -1.304
+  },
+  {
+    "rank": 40,
+    "name": "QinNai",
+    "team": "呼噜呼噜哼🐷",
+    "rounds": 154,
+    "pointWin": {
+      "count": 20,
+      "averageFan": 17.25,
+      "income": 825
+    },
+    "dealIn": {
+      "count": 37,
+      "averageFan": 14.891892,
+      "income": -847
+    },
+    "selfDraw": {
+      "count": 9,
+      "averageFan": 14.111111,
+      "income": 597
+    },
+    "drawnByOthers": {
+      "count": 34,
+      "averageFan": 17.352941,
+      "income": -862
+    },
+    "roundIncome": -1.863636
+  }
+]
