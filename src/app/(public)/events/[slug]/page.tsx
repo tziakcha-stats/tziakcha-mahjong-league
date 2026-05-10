@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import { EventOverview } from "@/features/events/components/event-overview";
-import { EventSubnav } from "@/features/events/components/event-subnav";
 import { getEventDetail } from "@/shared/data/repositories";
 
 export default async function EventPage({
@@ -17,7 +16,6 @@ export default async function EventPage({
 
   return (
     <div className="space-y-6">
-      <EventSubnav slug={slug} currentPath={`/events/${slug}`} />
       <EventOverview detail={detail} />
     </div>
   );

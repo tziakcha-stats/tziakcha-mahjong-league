@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import { TeamInfoGrid } from "@/features/events/components/team-info-grid";
-import { EventSubnav } from "@/features/events/components/event-subnav";
 import { getEventDetail } from "@/shared/data/repositories";
 
 export default async function EventTeamsPage({
@@ -17,7 +16,6 @@ export default async function EventTeamsPage({
 
   return (
     <div className="space-y-6">
-      <EventSubnav slug={slug} currentPath={`/events/${slug}/teams`} />
       <TeamInfoGrid teams={detail.teams} />
     </div>
   );

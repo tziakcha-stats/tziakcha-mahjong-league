@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import { EventSubnav } from "@/features/events/components/event-subnav";
 import { MatchRecordsTable } from "@/features/matches/components/match-records-table";
 import { getEventDetail } from "@/shared/data/repositories";
 
@@ -17,7 +16,6 @@ export default async function EventMatchesPage({
 
   return (
     <div className="space-y-6">
-      <EventSubnav slug={slug} currentPath={`/events/${slug}/matches`} />
       <MatchRecordsTable matches={detail.matches} />
     </div>
   );
