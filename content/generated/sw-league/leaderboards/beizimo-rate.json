@@ -1,0 +1,322 @@
+[
+  {
+    "rank": 1,
+    "name": "未有期",
+    "team": "杠上开花队",
+    "rate": 0.294964,
+    "count": 41,
+    "note": "139 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 2,
+    "name": "青火",
+    "team": "复仇者联盟",
+    "rate": 0.27451,
+    "count": 28,
+    "note": "102 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 3,
+    "name": "川上珧",
+    "team": "云上秋雨",
+    "rate": 0.261364,
+    "count": 23,
+    "note": "88 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 4,
+    "name": "sdmt",
+    "team": "小鲨鱼动物园",
+    "rate": 0.257143,
+    "count": 27,
+    "note": "105 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 5,
+    "name": "三只大土鳖",
+    "team": "小鲨鱼动物园",
+    "rate": 0.245902,
+    "count": 30,
+    "note": "122 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 6,
+    "name": "足立レイ",
+    "team": "青柠现代麻将文化研究协会",
+    "rate": 0.240741,
+    "count": 39,
+    "note": "162 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 7,
+    "name": "CKLm",
+    "team": "择日读",
+    "rate": 0.239362,
+    "count": 45,
+    "note": "188 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 8,
+    "name": "海叔利安",
+    "team": "自摸七队",
+    "rate": 0.236111,
+    "count": 34,
+    "note": "144 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 9,
+    "name": "Choimoe",
+    "team": "青柠现代麻将文化研究协会",
+    "rate": 0.233918,
+    "count": 40,
+    "note": "171 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 10,
+    "name": "alaya23",
+    "team": "绿小龙",
+    "rate": 0.230392,
+    "count": 47,
+    "note": "204 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 11,
+    "name": "River",
+    "team": "绿小龙",
+    "rate": 0.223776,
+    "count": 32,
+    "note": "143 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 12,
+    "name": "QinNai",
+    "team": "呼噜呼噜哼🐷",
+    "rate": 0.223602,
+    "count": 36,
+    "note": "161 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 13,
+    "name": "histo",
+    "team": "杠上开花队",
+    "rate": 0.221154,
+    "count": 23,
+    "note": "104 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 14,
+    "name": "海仲利安",
+    "team": "自摸七队",
+    "rate": 0.216216,
+    "count": 48,
+    "note": "222 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 15,
+    "name": "自摸七对",
+    "team": "自摸七队",
+    "rate": 0.216,
+    "count": 27,
+    "note": "125 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 16,
+    "name": "bzh",
+    "team": "呼噜呼噜哼🐷",
+    "rate": 0.212121,
+    "count": 42,
+    "note": "198 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 17,
+    "name": "小黄鸭",
+    "team": "自摸七队",
+    "rate": 0.210084,
+    "count": 25,
+    "note": "119 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 18,
+    "name": "日出",
+    "team": "择日读",
+    "rate": 0.209091,
+    "count": 23,
+    "note": "110 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 19,
+    "name": "lidai",
+    "team": "小鲨鱼动物园",
+    "rate": 0.204762,
+    "count": 43,
+    "note": "210 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 20,
+    "name": "云出无心",
+    "team": "小鲨鱼动物园",
+    "rate": 0.20197,
+    "count": 41,
+    "note": "203 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 21,
+    "name": "xixi",
+    "team": "复仇者联盟",
+    "rate": 0.201923,
+    "count": 21,
+    "note": "104 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 22,
+    "name": "redbean",
+    "team": "杠上开花队",
+    "rate": 0.198864,
+    "count": 35,
+    "note": "176 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 23,
+    "name": "吴下阿濛",
+    "team": "绿小龙",
+    "rate": 0.19863,
+    "count": 29,
+    "note": "146 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 24,
+    "name": "CatHikari",
+    "team": "呼噜呼噜哼🐷",
+    "rate": 0.197531,
+    "count": 32,
+    "note": "162 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 25,
+    "name": "璃茉",
+    "team": "青柠现代麻将文化研究协会",
+    "rate": 0.193277,
+    "count": 23,
+    "note": "119 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 26,
+    "name": "琳雨空",
+    "team": "云上秋雨",
+    "rate": 0.192893,
+    "count": 38,
+    "note": "197 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 27,
+    "name": "幻秋",
+    "team": "呼噜呼噜哼🐷",
+    "rate": 0.192,
+    "count": 24,
+    "note": "125 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 28,
+    "name": "南桥s01",
+    "team": "云上秋雨",
+    "rate": 0.18593,
+    "count": 37,
+    "note": "199 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 29,
+    "name": "ChaosDon",
+    "team": "绿小龙",
+    "rate": 0.185185,
+    "count": 40,
+    "note": "216 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 30,
+    "name": "Quandaiwu42",
+    "team": "特邀——没上过沙袋",
+    "rate": 0.184,
+    "count": 23,
+    "note": "125 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 31,
+    "name": "叶凡",
+    "team": "复仇者联盟",
+    "rate": 0.183099,
+    "count": 65,
+    "note": "355 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 32,
+    "name": "黄腾",
+    "team": "择日读",
+    "rate": 0.181818,
+    "count": 32,
+    "note": "176 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 33,
+    "name": "Nephele",
+    "team": "云上秋雨",
+    "rate": 0.180233,
+    "count": 31,
+    "note": "172 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 34,
+    "name": "钙热",
+    "team": "特邀——没上过沙袋",
+    "rate": 0.178571,
+    "count": 20,
+    "note": "112 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 35,
+    "name": "zsseg",
+    "team": "杠上开花队",
+    "rate": 0.178261,
+    "count": 41,
+    "note": "230 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 36,
+    "name": "zumgze",
+    "team": "青柠现代麻将文化研究协会",
+    "rate": 0.173709,
+    "count": 37,
+    "note": "213 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 37,
+    "name": "米夜",
+    "team": "特邀——没上过沙袋",
+    "rate": 0.172185,
+    "count": 26,
+    "note": "151 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 38,
+    "name": "墨色清涟池",
+    "team": "特邀——没上过沙袋",
+    "rate": 0.146739,
+    "count": 27,
+    "note": "184 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 39,
+    "name": "月曦",
+    "team": "复仇者联盟",
+    "rate": 0.126582,
+    "count": 10,
+    "note": "79 局样本，来源：rate_tsumo_against_rate.csv"
+  },
+  {
+    "rank": 40,
+    "name": "Sw279695293",
+    "team": "择日读",
+    "rate": 0.118721,
+    "count": 26,
+    "note": "219 局样本，来源：rate_tsumo_against_rate.csv"
+  }
+]

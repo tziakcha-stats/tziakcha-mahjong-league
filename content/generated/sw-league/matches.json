@@ -1,0 +1,722 @@
+[
+  {
+    "id": "vFeupRmM",
+    "tableName": "B 桌",
+    "roundLabel": "常规赛第 58 轮",
+    "finishedAt": "05/09 20:39",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "复仇者联盟",
+        "player": "叶凡",
+        "score": 278,
+        "scoreLabel": "+278"
+      },
+      {
+        "placement": 2,
+        "team": "择日读",
+        "player": "CKLm",
+        "score": 89,
+        "scoreLabel": "+89"
+      },
+      {
+        "placement": 3,
+        "team": "绿小龙",
+        "player": "alaya23",
+        "score": -152,
+        "scoreLabel": "-152"
+      },
+      {
+        "placement": 4,
+        "team": "自摸七队",
+        "player": "海仲利安",
+        "score": -215,
+        "scoreLabel": "-215"
+      }
+    ]
+  },
+  {
+    "id": "YACpvokz",
+    "tableName": "A 桌",
+    "roundLabel": "常规赛第 58 轮",
+    "finishedAt": "05/09 20:35",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "特邀——没上过沙袋",
+        "player": "墨色清涟池",
+        "score": 145,
+        "scoreLabel": "+145"
+      },
+      {
+        "placement": 2,
+        "team": "杠上开花队",
+        "player": "zsseg",
+        "score": 85,
+        "scoreLabel": "+85"
+      },
+      {
+        "placement": 3,
+        "team": "云上秋雨",
+        "player": "南桥s01",
+        "score": -81,
+        "scoreLabel": "-81"
+      },
+      {
+        "placement": 4,
+        "team": "呼噜呼噜哼🐷",
+        "player": "bzh",
+        "score": -149,
+        "scoreLabel": "-149"
+      }
+    ]
+  },
+  {
+    "id": "McMSmqXU",
+    "tableName": "A 桌",
+    "roundLabel": "常规赛第 57 轮",
+    "finishedAt": "05/09 19:45",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "绿小龙",
+        "player": "River",
+        "score": 266,
+        "scoreLabel": "+266"
+      },
+      {
+        "placement": 2,
+        "team": "复仇者联盟",
+        "player": "叶凡",
+        "score": 118,
+        "scoreLabel": "+118"
+      },
+      {
+        "placement": 3,
+        "team": "云上秋雨",
+        "player": "南桥s01",
+        "score": -119,
+        "scoreLabel": "-119"
+      },
+      {
+        "placement": 4,
+        "team": "杠上开花队",
+        "player": "zsseg",
+        "score": -265,
+        "scoreLabel": "-265"
+      }
+    ]
+  },
+  {
+    "id": "sBiS1KCo",
+    "tableName": "B 桌",
+    "roundLabel": "常规赛第 57 轮",
+    "finishedAt": "05/09 19:42",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "择日读",
+        "player": "CKLm",
+        "score": 74,
+        "scoreLabel": "+74"
+      },
+      {
+        "placement": 2,
+        "team": "呼噜呼噜哼🐷",
+        "player": "QinNai",
+        "score": 42,
+        "scoreLabel": "+42"
+      },
+      {
+        "placement": 3,
+        "team": "小鲨鱼动物园",
+        "player": "云出无心",
+        "score": 13,
+        "scoreLabel": "+13"
+      },
+      {
+        "placement": 4,
+        "team": "青柠现代麻将文化研究协会",
+        "player": "zumgze",
+        "score": -129,
+        "scoreLabel": "-129"
+      }
+    ]
+  },
+  {
+    "id": "6r6uGP9g",
+    "tableName": "A 桌",
+    "roundLabel": "常规赛第 44 轮",
+    "finishedAt": "05/07 21:43",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "复仇者联盟",
+        "player": "叶凡",
+        "score": 178,
+        "scoreLabel": "+178"
+      },
+      {
+        "placement": 2,
+        "team": "自摸七队",
+        "player": "自摸七对",
+        "score": 131,
+        "scoreLabel": "+131"
+      },
+      {
+        "placement": 3,
+        "team": "特邀——没上过沙袋",
+        "player": "米夜",
+        "score": -149,
+        "scoreLabel": "-149"
+      },
+      {
+        "placement": 4,
+        "team": "青柠现代麻将文化研究协会",
+        "player": "Choimoe",
+        "score": -160,
+        "scoreLabel": "-160"
+      }
+    ]
+  },
+  {
+    "id": "U5FDd0yG",
+    "tableName": "A 桌",
+    "roundLabel": "常规赛第 56 轮",
+    "finishedAt": "05/07 20:46",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "云上秋雨",
+        "player": "琳雨空",
+        "score": 45,
+        "scoreLabel": "+45"
+      },
+      {
+        "placement": 2,
+        "team": "青柠现代麻将文化研究协会",
+        "player": "足立レイ",
+        "score": 15,
+        "scoreLabel": "+15"
+      },
+      {
+        "placement": 3,
+        "team": "杠上开花队",
+        "player": "redbean",
+        "score": -10,
+        "scoreLabel": "-10"
+      },
+      {
+        "placement": 4,
+        "team": "绿小龙",
+        "player": "River",
+        "score": -50,
+        "scoreLabel": "-50"
+      }
+    ]
+  },
+  {
+    "id": "p0unQ0QG",
+    "tableName": "B 桌",
+    "roundLabel": "常规赛第 55 轮",
+    "finishedAt": "05/07 19:44",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "小鲨鱼动物园",
+        "player": "云出无心",
+        "score": 262,
+        "scoreLabel": "+262"
+      },
+      {
+        "placement": 2,
+        "team": "特邀——没上过沙袋",
+        "player": "米夜",
+        "score": -41,
+        "scoreLabel": "-41"
+      },
+      {
+        "placement": 3,
+        "team": "复仇者联盟",
+        "player": "叶凡",
+        "score": -110,
+        "scoreLabel": "-110"
+      },
+      {
+        "placement": 4,
+        "team": "绿小龙",
+        "player": "ChaosDon",
+        "score": -111,
+        "scoreLabel": "-111"
+      }
+    ]
+  },
+  {
+    "id": "TDrUKSKh",
+    "tableName": "A 桌",
+    "roundLabel": "常规赛第 55 轮",
+    "finishedAt": "05/07 19:39",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "自摸七队",
+        "player": "自摸七对",
+        "score": 178,
+        "scoreLabel": "+178"
+      },
+      {
+        "placement": 2,
+        "team": "青柠现代麻将文化研究协会",
+        "player": "zumgze",
+        "score": -40,
+        "scoreLabel": "-40"
+      },
+      {
+        "placement": 3,
+        "team": "择日读",
+        "player": "Sw279695293",
+        "score": -41,
+        "scoreLabel": "-41"
+      },
+      {
+        "placement": 4,
+        "team": "呼噜呼噜哼🐷",
+        "player": "bzh",
+        "score": -97,
+        "scoreLabel": "-97"
+      }
+    ]
+  },
+  {
+    "id": "w4zDANuN",
+    "tableName": "B 桌",
+    "roundLabel": "常规赛第 54 轮",
+    "finishedAt": "05/05 22:45",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "特邀——没上过沙袋",
+        "player": "墨色清涟池",
+        "score": 128,
+        "scoreLabel": "+128"
+      },
+      {
+        "placement": 2,
+        "team": "青柠现代麻将文化研究协会",
+        "player": "zumgze",
+        "score": -3,
+        "scoreLabel": "-3"
+      },
+      {
+        "placement": 3,
+        "team": "小鲨鱼动物园",
+        "player": "sdmt",
+        "score": -40,
+        "scoreLabel": "-40"
+      },
+      {
+        "placement": 4,
+        "team": "择日读",
+        "player": "CKLm",
+        "score": -85,
+        "scoreLabel": "-85"
+      }
+    ]
+  },
+  {
+    "id": "4hesWcgD",
+    "tableName": "A 桌",
+    "roundLabel": "常规赛第 54 轮",
+    "finishedAt": "05/05 22:34",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "杠上开花队",
+        "player": "zsseg",
+        "score": 35,
+        "scoreLabel": "+35"
+      },
+      {
+        "placement": 2,
+        "team": "复仇者联盟",
+        "player": "叶凡",
+        "score": 13,
+        "scoreLabel": "+13"
+      },
+      {
+        "placement": 3,
+        "team": "呼噜呼噜哼🐷",
+        "player": "幻秋",
+        "score": -20,
+        "scoreLabel": "-20"
+      },
+      {
+        "placement": 4,
+        "team": "自摸七队",
+        "player": "海仲利安",
+        "score": -28,
+        "scoreLabel": "-28"
+      }
+    ]
+  },
+  {
+    "id": "3rM6ybSh",
+    "tableName": "B 桌",
+    "roundLabel": "常规赛第 53 轮",
+    "finishedAt": "05/05 21:36",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "青柠现代麻将文化研究协会",
+        "player": "zumgze",
+        "score": 168,
+        "scoreLabel": "+168"
+      },
+      {
+        "placement": 2,
+        "team": "杠上开花队",
+        "player": "zsseg",
+        "score": 2,
+        "scoreLabel": "+2"
+      },
+      {
+        "placement": 3,
+        "team": "复仇者联盟",
+        "player": "叶凡",
+        "score": -66,
+        "scoreLabel": "-66"
+      },
+      {
+        "placement": 4,
+        "team": "特邀——没上过沙袋",
+        "player": "钙热",
+        "score": -104,
+        "scoreLabel": "-104"
+      }
+    ]
+  },
+  {
+    "id": "M4eoNCAu",
+    "tableName": "A 桌",
+    "roundLabel": "常规赛第 53 轮",
+    "finishedAt": "05/05 21:34",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "自摸七队",
+        "player": "海仲利安",
+        "score": 76,
+        "scoreLabel": "+76"
+      },
+      {
+        "placement": 2,
+        "team": "小鲨鱼动物园",
+        "player": "云出无心",
+        "score": 34,
+        "scoreLabel": "+34"
+      },
+      {
+        "placement": 3,
+        "team": "云上秋雨",
+        "player": "Nephele",
+        "score": 25,
+        "scoreLabel": "+25"
+      },
+      {
+        "placement": 4,
+        "team": "绿小龙",
+        "player": "alaya23",
+        "score": -135,
+        "scoreLabel": "-135"
+      }
+    ]
+  },
+  {
+    "id": "RkHiTLRH",
+    "tableName": "A 桌",
+    "roundLabel": "常规赛第 52 轮",
+    "finishedAt": "05/03 22:51",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "自摸七队",
+        "player": "海仲利安",
+        "score": 187,
+        "scoreLabel": "+187"
+      },
+      {
+        "placement": 2,
+        "team": "复仇者联盟",
+        "player": "叶凡",
+        "score": 157,
+        "scoreLabel": "+157"
+      },
+      {
+        "placement": 3,
+        "team": "云上秋雨",
+        "player": "琳雨空",
+        "score": -43,
+        "scoreLabel": "-43"
+      },
+      {
+        "placement": 4,
+        "team": "特邀——没上过沙袋",
+        "player": "米夜",
+        "score": -301,
+        "scoreLabel": "-301"
+      }
+    ]
+  },
+  {
+    "id": "AKHwpLUa",
+    "tableName": "B 桌",
+    "roundLabel": "常规赛第 52 轮",
+    "finishedAt": "05/03 22:41",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "择日读",
+        "player": "黄腾",
+        "score": 250,
+        "scoreLabel": "+250"
+      },
+      {
+        "placement": 2,
+        "team": "小鲨鱼动物园",
+        "player": "lidai",
+        "score": -29,
+        "scoreLabel": "-29"
+      },
+      {
+        "placement": 3,
+        "team": "呼噜呼噜哼🐷",
+        "player": "CatHikari",
+        "score": -78,
+        "scoreLabel": "-78"
+      },
+      {
+        "placement": 4,
+        "team": "杠上开花队",
+        "player": "redbean",
+        "score": -143,
+        "scoreLabel": "-143"
+      }
+    ]
+  },
+  {
+    "id": "QtzxvJuQ",
+    "tableName": "B 桌",
+    "roundLabel": "常规赛第 51 轮",
+    "finishedAt": "05/03 21:41",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "自摸七队",
+        "player": "海仲利安",
+        "score": 191,
+        "scoreLabel": "+191"
+      },
+      {
+        "placement": 2,
+        "team": "呼噜呼噜哼🐷",
+        "player": "bzh",
+        "score": -19,
+        "scoreLabel": "-19"
+      },
+      {
+        "placement": 3,
+        "team": "小鲨鱼动物园",
+        "player": "lidai",
+        "score": -47,
+        "scoreLabel": "-47"
+      },
+      {
+        "placement": 4,
+        "team": "杠上开花队",
+        "player": "未有期",
+        "score": -125,
+        "scoreLabel": "-125"
+      }
+    ]
+  },
+  {
+    "id": "Ji9oLY7S",
+    "tableName": "A 桌",
+    "roundLabel": "常规赛第 51 轮",
+    "finishedAt": "05/03 21:36",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "青柠现代麻将文化研究协会",
+        "player": "足立レイ",
+        "score": 202,
+        "scoreLabel": "+202"
+      },
+      {
+        "placement": 2,
+        "team": "特邀——没上过沙袋",
+        "player": "Quandaiwu42",
+        "score": 34,
+        "scoreLabel": "+34"
+      },
+      {
+        "placement": 3,
+        "team": "云上秋雨",
+        "player": "南桥s01",
+        "score": -4,
+        "scoreLabel": "-4"
+      },
+      {
+        "placement": 4,
+        "team": "绿小龙",
+        "player": "ChaosDon",
+        "score": -232,
+        "scoreLabel": "-232"
+      }
+    ]
+  },
+  {
+    "id": "GHQY2zTj",
+    "tableName": "A 桌",
+    "roundLabel": "常规赛第 50 轮",
+    "finishedAt": "05/02 22:46",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "绿小龙",
+        "player": "ChaosDon",
+        "score": 100,
+        "scoreLabel": "+100"
+      },
+      {
+        "placement": 2,
+        "team": "青柠现代麻将文化研究协会",
+        "player": "Choimoe",
+        "score": 8,
+        "scoreLabel": "+8"
+      },
+      {
+        "placement": 3,
+        "team": "特邀——没上过沙袋",
+        "player": "米夜",
+        "score": -31,
+        "scoreLabel": "-31"
+      },
+      {
+        "placement": 4,
+        "team": "云上秋雨",
+        "player": "琳雨空",
+        "score": -77,
+        "scoreLabel": "-77"
+      }
+    ]
+  },
+  {
+    "id": "dX8qc10q",
+    "tableName": "B 桌",
+    "roundLabel": "常规赛第 49 轮",
+    "finishedAt": "05/02 21:45",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "择日读",
+        "player": "Sw279695293",
+        "score": 195,
+        "scoreLabel": "+195"
+      },
+      {
+        "placement": 2,
+        "team": "杠上开花队",
+        "player": "未有期",
+        "score": 11,
+        "scoreLabel": "+11"
+      },
+      {
+        "placement": 3,
+        "team": "青柠现代麻将文化研究协会",
+        "player": "Choimoe",
+        "score": -43,
+        "scoreLabel": "-43"
+      },
+      {
+        "placement": 4,
+        "team": "绿小龙",
+        "player": "吴下阿濛",
+        "score": -163,
+        "scoreLabel": "-163"
+      }
+    ]
+  },
+  {
+    "id": "2UND79jM",
+    "tableName": "B 桌",
+    "roundLabel": "常规赛第 48 轮",
+    "finishedAt": "04/30 20:46",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "复仇者联盟",
+        "player": "叶凡",
+        "score": 181,
+        "scoreLabel": "+181"
+      },
+      {
+        "placement": 2,
+        "team": "绿小龙",
+        "player": "ChaosDon",
+        "score": -33,
+        "scoreLabel": "-33"
+      },
+      {
+        "placement": 3,
+        "team": "择日读",
+        "player": "Sw279695293",
+        "score": -35,
+        "scoreLabel": "-35"
+      },
+      {
+        "placement": 4,
+        "team": "自摸七队",
+        "player": "小黄鸭",
+        "score": -113,
+        "scoreLabel": "-113"
+      }
+    ]
+  },
+  {
+    "id": "WHTRs74C",
+    "tableName": "A 桌",
+    "roundLabel": "常规赛第 48 轮",
+    "finishedAt": "04/30 20:45",
+    "placements": [
+      {
+        "placement": 1,
+        "team": "特邀——没上过沙袋",
+        "player": "墨色清涟池",
+        "score": 170,
+        "scoreLabel": "+170"
+      },
+      {
+        "placement": 2,
+        "team": "呼噜呼噜哼🐷",
+        "player": "CatHikari",
+        "score": 16,
+        "scoreLabel": "+16"
+      },
+      {
+        "placement": 3,
+        "team": "青柠现代麻将文化研究协会",
+        "player": "Choimoe",
+        "score": -64,
+        "scoreLabel": "-64"
+      },
+      {
+        "placement": 4,
+        "team": "云上秋雨",
+        "player": "川上珧",
+        "score": -122,
+        "scoreLabel": "-122"
+      }
+    ]
+  }
+]

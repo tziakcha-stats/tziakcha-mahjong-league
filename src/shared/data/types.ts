@@ -29,9 +29,15 @@ export interface MatchRecord {
   tableName: string;
   roundLabel: string;
   finishedAt: string;
-  players: string[];
-  winner: string;
-  points: string;
+  placements: MatchPlacement[];
+}
+
+export interface MatchPlacement {
+  placement: number;
+  team: string;
+  player: string;
+  score: number;
+  scoreLabel: string;
 }
 
 export interface PlayerRankingEntry {
@@ -81,5 +87,6 @@ export interface EventDetail {
     huleRate: RateLeaderboardEntry[];
     zimoRate: RateLeaderboardEntry[];
     fangchongRate: RateLeaderboardEntry[];
+    beizimoRate: RateLeaderboardEntry[];
   };
 }

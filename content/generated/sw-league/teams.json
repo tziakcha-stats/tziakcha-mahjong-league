@@ -2,131 +2,131 @@
   {
     "id": "1",
     "name": "云上秋雨",
-    "school": "sw_league",
+    "school": "SDU 国标麻将团体赛",
     "captain": "琳雨空",
     "members": [
       "川上珧",
       "Nephele",
       "南桥s01"
     ],
-    "record": "待接入后端统计",
-    "note": "当前由 backend/generate/sw-league.mjs 根据 team.json 生成。"
+    "record": "155 和 / 47 自摸 / 107 放铳 / 129 被自摸",
+    "note": "由后端生成脚本根据 team.json 与 rank/*.csv 聚合生成。"
   },
   {
     "id": "2",
     "name": "自摸七队",
-    "school": "sw_league",
+    "school": "SDU 国标麻将团体赛",
     "captain": "海仲利安",
     "members": [
       "小黄鸭",
       "自摸七对",
       "海叔利安"
     ],
-    "record": "待接入后端统计",
-    "note": "当前由 backend/generate/sw-league.mjs 根据 team.json 生成。"
+    "record": "138 和 / 34 自摸 / 106 放铳 / 134 被自摸",
+    "note": "由后端生成脚本根据 team.json 与 rank/*.csv 聚合生成。"
   },
   {
     "id": "3",
     "name": "择日读",
-    "school": "sw_league",
+    "school": "SDU 国标麻将团体赛",
     "captain": "Sw279695293",
     "members": [
       "日出",
       "CKLm",
       "黄腾"
     ],
-    "record": "待接入后端统计",
-    "note": "当前由 backend/generate/sw-league.mjs 根据 team.json 生成。"
+    "record": "181 和 / 50 自摸 / 115 放铳 / 126 被自摸",
+    "note": "由后端生成脚本根据 team.json 与 rank/*.csv 聚合生成。"
   },
   {
     "id": "4",
     "name": "复仇者联盟",
-    "school": "sw_league",
+    "school": "SDU 国标麻将团体赛",
     "captain": "叶凡",
     "members": [
       "青火",
       "月曦",
       "xixi"
     ],
-    "record": "待接入后端统计",
-    "note": "当前由 backend/generate/sw-league.mjs 根据 team.json 生成。"
+    "record": "168 和 / 45 自摸 / 100 放铳 / 124 被自摸",
+    "note": "由后端生成脚本根据 team.json 与 rank/*.csv 聚合生成。"
   },
   {
     "id": "5",
     "name": "绿小龙",
-    "school": "sw_league",
+    "school": "SDU 国标麻将团体赛",
     "captain": "alaya23",
     "members": [
       "ChaosDon",
       "River",
       "吴下阿濛"
     ],
-    "record": "待接入后端统计",
-    "note": "当前由 backend/generate/sw-league.mjs 根据 team.json 生成。"
+    "record": "187 和 / 51 自摸 / 106 放铳 / 148 被自摸",
+    "note": "由后端生成脚本根据 team.json 与 rank/*.csv 聚合生成。"
   },
   {
     "id": "6",
     "name": "特邀——没上过沙袋",
-    "school": "sw_league",
+    "school": "SDU 国标麻将团体赛",
     "captain": "米夜",
     "members": [
       "钙热",
       "墨色清涟池",
       "Quandaiwu42"
     ],
-    "record": "待接入后端统计",
-    "note": "当前由 backend/generate/sw-league.mjs 根据 team.json 生成。"
+    "record": "153 和 / 41 自摸 / 111 放铳 / 96 被自摸",
+    "note": "由后端生成脚本根据 team.json 与 rank/*.csv 聚合生成。"
   },
   {
     "id": "7",
     "name": "小鲨鱼动物园",
-    "school": "sw_league",
+    "school": "SDU 国标麻将团体赛",
     "captain": "lidai",
     "members": [
       "sdmt",
       "云出无心",
       "三只大土鳖"
     ],
-    "record": "待接入后端统计",
-    "note": "当前由 backend/generate/sw-league.mjs 根据 team.json 生成。"
+    "record": "165 和 / 36 自摸 / 96 放铳 / 141 被自摸",
+    "note": "由后端生成脚本根据 team.json 与 rank/*.csv 聚合生成。"
   },
   {
     "id": "8",
     "name": "杠上开花队",
-    "school": "sw_league",
+    "school": "SDU 国标麻将团体赛",
     "captain": "zsseg",
     "members": [
       "histo",
       "未有期",
       "redbean"
     ],
-    "record": "待接入后端统计",
-    "note": "当前由 backend/generate/sw-league.mjs 根据 team.json 生成。"
+    "record": "150 和 / 32 自摸 / 129 放铳 / 140 被自摸",
+    "note": "由后端生成脚本根据 team.json 与 rank/*.csv 聚合生成。"
   },
   {
     "id": "9",
-    "name": "青柠现代麻将文化研究协",
-    "school": "sw_league",
+    "name": "青柠现代麻将文化研究协会",
+    "school": "SDU 国标麻将团体赛",
     "captain": "zumgze",
     "members": [
       "Choimoe",
       "璃茉",
       "足立レイ"
     ],
-    "record": "待接入后端统计",
-    "note": "当前由 backend/generate/sw-league.mjs 根据 team.json 生成。"
+    "record": "155 和 / 61 自摸 / 142 放铳 / 139 被自摸",
+    "note": "由后端生成脚本根据 team.json 与 rank/*.csv 聚合生成。"
   },
   {
     "id": "10",
     "name": "呼噜呼噜哼🐷",
-    "school": "sw_league",
+    "school": "SDU 国标麻将团体赛",
     "captain": "bzh",
     "members": [
       "幻秋",
       "CatHikari",
       "QinNai"
     ],
-    "record": "待接入后端统计",
-    "note": "当前由 backend/generate/sw-league.mjs 根据 team.json 生成。"
+    "record": "131 和 / 40 自摸 / 134 放铳 / 134 被自摸",
+    "note": "由后端生成脚本根据 team.json 与 rank/*.csv 聚合生成。"
   }
 ]

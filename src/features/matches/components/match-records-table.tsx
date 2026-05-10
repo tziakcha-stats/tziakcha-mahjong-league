@@ -1,24 +1,28 @@
 import type { MatchRecord } from "@/shared/data/types";
 import { SectionHeading } from "@/shared/ui/section-heading";
 
+const placementLabels = ["一位", "二位", "三位", "四位"] as const;
+
 export function MatchRecordsTable({ matches }: { matches: MatchRecord[] }) {
   return (
     <section className="surface-card rounded-[30px] border border-line p-6">
       <SectionHeading
         eyebrow="对局记录"
         title="近期完成对局"
-        description="后续接后端时，这里可以自然扩展为分页表格、筛选器、单对局详情抽屉等能力。"
+        description="按完成时间倒序展示最近完成的团体赛对局。"
       />
 
       <div className="mt-8 overflow-hidden rounded-[24px] border border-line">
         <table className="min-w-full divide-y divide-line text-left text-sm">
           <thead className="bg-black/[0.03] text-[#6f675d]">
             <tr>
-              <th className="px-4 py-3 font-medium">桌次</th>
               <th className="px-4 py-3 font-medium">轮次</th>
-              <th className="px-4 py-3 font-medium">选手</th>
-              <th className="px-4 py-3 font-medium">胜者</th>
-              <th className="px-4 py-3 font-medium">得点</th>
+              <th className="px-4 py-3 font-medium">桌次</th>
+              {placementLabels.map((label) => (
+                <th key={label} className="px-4 py-3 font-medium">
+                  {label}
+                </th>
+              ))}
               <th className="px-4 py-3 font-medium">完成时间</th>
             </tr>
           </thead>
@@ -26,17 +30,21 @@ export function MatchRecordsTable({ matches }: { matches: MatchRecord[] }) {
             {matches.length ? (
               matches.map((match) => (
                 <tr key={match.id}>
-                  <td className="px-4 py-4 font-semibold">{match.tableName}</td>
                   <td className="px-4 py-4 text-[#6f675d]">{match.roundLabel}</td>
-                  <td className="px-4 py-4 text-[#6f675d]">{match.players.join(" / ")}</td>
-                  <td className="px-4 py-4">{match.winner}</td>
-                  <td className="px-4 py-4 text-brand">{match.points}</td>
+                  <td className="px-4 py-4 font-semibold">{match.tableName}</td>
+                  {match.placements.map((placement) => (
+                    <td key={placement.placement} className="px-4 py-4 align-top">
+                      <div className="font-semibold text-foreground">{placement.team}</div>
+                      <div className="mt-1 text-xs text-[#6f675d]">{placement.player}</div>
+                      <div className="mt-2 font-semibold text-brand">{placement.scoreLabel}</div>
+                    </td>
+                  ))}
                   <td className="px-4 py-4 text-[#6f675d]">{match.finishedAt}</td>
                 </tr>
               ))
             ) : (
               <tr>
-                <td colSpan={6} className="px-4 py-10 text-center text-[#6f675d]">
+                <td colSpan={7} className="px-4 py-10 text-center text-[#6f675d]">
                   当前赛事尚未产生对局记录。
                 </td>
               </tr>

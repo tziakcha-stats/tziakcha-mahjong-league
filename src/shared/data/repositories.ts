@@ -1,6 +1,6 @@
 import events from "../../../content/events/index.json";
 import eventMeta from "../../../content/events/sdu-riichi-team-championship/event.json";
-import matches from "../../../content/events/sdu-riichi-team-championship/matches.json";
+import matches from "../../../content/generated/sw-league/matches.json";
 import ranking from "../../../content/events/sdu-riichi-team-championship/ranking.json";
 import rules from "../../../content/events/sdu-riichi-team-championship/rules.json";
 import schedule from "../../../content/events/sdu-riichi-team-championship/schedule.json";
@@ -9,6 +9,7 @@ import teams from "../../../content/generated/sw-league/teams.json";
 import huleRate from "../../../content/generated/sw-league/leaderboards/hule-rate.json";
 import zimoRate from "../../../content/generated/sw-league/leaderboards/zimo-rate.json";
 import fangchongRate from "../../../content/generated/sw-league/leaderboards/fangchong-rate.json";
+import beizimoRate from "../../../content/generated/sw-league/leaderboards/beizimo-rate.json";
 import type {
   EventDetail,
   EventScheduleRound,
@@ -36,6 +37,7 @@ const eventDetailsBySlug: Record<string, EventDetail> = {
       huleRate: huleRate as RateLeaderboardEntry[],
       zimoRate: zimoRate as RateLeaderboardEntry[],
       fangchongRate: fangchongRate as RateLeaderboardEntry[],
+      beizimoRate: beizimoRate as RateLeaderboardEntry[],
     },
   },
 };
@@ -54,7 +56,7 @@ export function getEventDetail(slug: string): EventDetail | undefined {
 
 export function getLeaderboard(
   slug: string,
-  key: "huleRate" | "zimoRate" | "fangchongRate",
+  key: "huleRate" | "zimoRate" | "fangchongRate" | "beizimoRate",
 ) {
   return eventDetailsBySlug[slug]?.leaderboards[key] ?? [];
 }

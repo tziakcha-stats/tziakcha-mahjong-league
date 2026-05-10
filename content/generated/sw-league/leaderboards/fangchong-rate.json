@@ -1,98 +1,322 @@
 [
   {
     "rank": 1,
-    "name": "琳雨空",
-    "team": "云上秋雨",
-    "rate": 0.08,
-    "count": 42,
-    "note": "当前为生成脚本的占位结果，后续将由真实牌谱统计替换。"
+    "name": "璃茉",
+    "team": "青柠现代麻将文化研究协会",
+    "rate": 0.252101,
+    "count": 30,
+    "note": "119 局样本，来源：rate_deal_in_rate.csv"
   },
   {
     "rank": 2,
-    "name": "川上珧",
-    "team": "云上秋雨",
-    "rate": 0.087,
-    "count": 39,
-    "note": "当前为生成脚本的占位结果，后续将由真实牌谱统计替换。"
+    "name": "redbean",
+    "team": "杠上开花队",
+    "rate": 0.25,
+    "count": 44,
+    "note": "176 局样本，来源：rate_deal_in_rate.csv"
   },
   {
     "rank": 3,
-    "name": "Nephele",
-    "team": "云上秋雨",
-    "rate": 0.094,
-    "count": 36,
-    "note": "当前为生成脚本的占位结果，后续将由真实牌谱统计替换。"
+    "name": "幻秋",
+    "team": "呼噜呼噜哼🐷",
+    "rate": 0.248,
+    "count": 31,
+    "note": "125 局样本，来源：rate_deal_in_rate.csv"
   },
   {
     "rank": 4,
-    "name": "南桥s01",
-    "team": "云上秋雨",
-    "rate": 0.101,
-    "count": 33,
-    "note": "当前为生成脚本的占位结果，后续将由真实牌谱统计替换。"
+    "name": "QinNai",
+    "team": "呼噜呼噜哼🐷",
+    "rate": 0.236025,
+    "count": 38,
+    "note": "161 局样本，来源：rate_deal_in_rate.csv"
   },
   {
     "rank": 5,
-    "name": "海仲利安",
-    "team": "自摸七队",
-    "rate": 0.108,
-    "count": 30,
-    "note": "当前为生成脚本的占位结果，后续将由真实牌谱统计替换。"
+    "name": "Quandaiwu42",
+    "team": "特邀——没上过沙袋",
+    "rate": 0.224,
+    "count": 28,
+    "note": "125 局样本，来源：rate_deal_in_rate.csv"
   },
   {
     "rank": 6,
-    "name": "小黄鸭",
-    "team": "自摸七队",
-    "rate": 0.115,
-    "count": 27,
-    "note": "当前为生成脚本的占位结果，后续将由真实牌谱统计替换。"
+    "name": "Choimoe",
+    "team": "青柠现代麻将文化研究协会",
+    "rate": 0.222222,
+    "count": 38,
+    "note": "171 局样本，来源：rate_deal_in_rate.csv"
   },
   {
     "rank": 7,
-    "name": "自摸七对",
-    "team": "自摸七队",
-    "rate": 0.122,
-    "count": 24,
-    "note": "当前为生成脚本的占位结果，后续将由真实牌谱统计替换。"
+    "name": "zumgze",
+    "team": "青柠现代麻将文化研究协会",
+    "rate": 0.215962,
+    "count": 46,
+    "note": "213 局样本，来源：rate_deal_in_rate.csv"
   },
   {
     "rank": 8,
-    "name": "海叔利安",
-    "team": "自摸七队",
-    "rate": 0.129,
-    "count": 21,
-    "note": "当前为生成脚本的占位结果，后续将由真实牌谱统计替换。"
+    "name": "钙热",
+    "team": "特邀——没上过沙袋",
+    "rate": 0.205357,
+    "count": 23,
+    "note": "112 局样本，来源：rate_deal_in_rate.csv"
   },
   {
     "rank": 9,
-    "name": "Sw279695293",
-    "team": "择日读",
-    "rate": 0.136,
-    "count": 18,
-    "note": "当前为生成脚本的占位结果，后续将由真实牌谱统计替换。"
+    "name": "histo",
+    "team": "杠上开花队",
+    "rate": 0.201923,
+    "count": 21,
+    "note": "104 局样本，来源：rate_deal_in_rate.csv"
   },
   {
     "rank": 10,
-    "name": "日出",
+    "name": "Sw279695293",
     "team": "择日读",
-    "rate": 0.143,
-    "count": 15,
-    "note": "当前为生成脚本的占位结果，后续将由真实牌谱统计替换。"
+    "rate": 0.200913,
+    "count": 44,
+    "note": "219 局样本，来源：rate_deal_in_rate.csv"
   },
   {
     "rank": 11,
-    "name": "CKLm",
-    "team": "择日读",
-    "rate": 0.15,
-    "count": 12,
-    "note": "当前为生成脚本的占位结果，后续将由真实牌谱统计替换。"
+    "name": "墨色清涟池",
+    "team": "特邀——没上过沙袋",
+    "rate": 0.195652,
+    "count": 36,
+    "note": "184 局样本，来源：rate_deal_in_rate.csv"
   },
   {
     "rank": 12,
+    "name": "海仲利安",
+    "team": "自摸七队",
+    "rate": 0.193694,
+    "count": 43,
+    "note": "222 局样本，来源：rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 13,
+    "name": "bzh",
+    "team": "呼噜呼噜哼🐷",
+    "rate": 0.191919,
+    "count": 38,
+    "note": "198 局样本，来源：rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 14,
+    "name": "南桥s01",
+    "team": "云上秋雨",
+    "rate": 0.18593,
+    "count": 37,
+    "note": "199 局样本，来源：rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 15,
+    "name": "小黄鸭",
+    "team": "自摸七队",
+    "rate": 0.184874,
+    "count": 22,
+    "note": "119 局样本，来源：rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 16,
+    "name": "zsseg",
+    "team": "杠上开花队",
+    "rate": 0.178261,
+    "count": 41,
+    "note": "230 局样本，来源：rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 17,
+    "name": "lidai",
+    "team": "小鲨鱼动物园",
+    "rate": 0.17619,
+    "count": 37,
+    "note": "210 局样本，来源：rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 18,
+    "name": "海叔利安",
+    "team": "自摸七队",
+    "rate": 0.173611,
+    "count": 25,
+    "note": "144 局样本，来源：rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 19,
+    "name": "足立レイ",
+    "team": "青柠现代麻将文化研究协会",
+    "rate": 0.17284,
+    "count": 28,
+    "note": "162 局样本，来源：rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 20,
+    "name": "日出",
+    "team": "择日读",
+    "rate": 0.172727,
+    "count": 19,
+    "note": "110 局样本，来源：rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 21,
+    "name": "琳雨空",
+    "team": "云上秋雨",
+    "rate": 0.172589,
+    "count": 34,
+    "note": "197 局样本，来源：rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 22,
+    "name": "CatHikari",
+    "team": "呼噜呼噜哼🐷",
+    "rate": 0.166667,
+    "count": 27,
+    "note": "162 局样本，来源：rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 23,
+    "name": "未有期",
+    "team": "杠上开花队",
+    "rate": 0.165468,
+    "count": 23,
+    "note": "139 局样本，来源：rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 24,
+    "name": "叶凡",
+    "team": "复仇者联盟",
+    "rate": 0.16338,
+    "count": 58,
+    "note": "355 局样本，来源：rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 25,
+    "name": "川上珧",
+    "team": "云上秋雨",
+    "rate": 0.159091,
+    "count": 14,
+    "note": "88 局样本，来源：rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 26,
+    "name": "米夜",
+    "team": "特邀——没上过沙袋",
+    "rate": 0.15894,
+    "count": 24,
+    "note": "151 局样本，来源：rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 27,
+    "name": "ChaosDon",
+    "team": "绿小龙",
+    "rate": 0.157407,
+    "count": 34,
+    "note": "216 局样本，来源：rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 28,
+    "name": "alaya23",
+    "team": "绿小龙",
+    "rate": 0.151961,
+    "count": 31,
+    "note": "204 局样本，来源：rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 29,
+    "name": "月曦",
+    "team": "复仇者联盟",
+    "rate": 0.151899,
+    "count": 12,
+    "note": "79 局样本，来源：rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 30,
+    "name": "吴下阿濛",
+    "team": "绿小龙",
+    "rate": 0.150685,
+    "count": 22,
+    "note": "146 局样本，来源：rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 31,
     "name": "黄腾",
     "team": "择日读",
-    "rate": 0.157,
-    "count": 9,
-    "note": "当前为生成脚本的占位结果，后续将由真实牌谱统计替换。"
+    "rate": 0.147727,
+    "count": 26,
+    "note": "176 局样本，来源：rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 32,
+    "name": "青火",
+    "team": "复仇者联盟",
+    "rate": 0.147059,
+    "count": 15,
+    "note": "102 局样本，来源：rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 33,
+    "name": "xixi",
+    "team": "复仇者联盟",
+    "rate": 0.144231,
+    "count": 15,
+    "note": "104 局样本，来源：rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 34,
+    "name": "sdmt",
+    "team": "小鲨鱼动物园",
+    "rate": 0.142857,
+    "count": 15,
+    "note": "105 局样本，来源：rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 35,
+    "name": "CKLm",
+    "team": "择日读",
+    "rate": 0.138298,
+    "count": 26,
+    "note": "188 局样本，来源：rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 36,
+    "name": "云出无心",
+    "team": "小鲨鱼动物园",
+    "rate": 0.137931,
+    "count": 28,
+    "note": "203 局样本，来源：rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 37,
+    "name": "River",
+    "team": "绿小龙",
+    "rate": 0.132867,
+    "count": 19,
+    "note": "143 局样本，来源：rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 38,
+    "name": "三只大土鳖",
+    "team": "小鲨鱼动物园",
+    "rate": 0.131148,
+    "count": 16,
+    "note": "122 局样本，来源：rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 39,
+    "name": "自摸七对",
+    "team": "自摸七队",
+    "rate": 0.128,
+    "count": 16,
+    "note": "125 局样本，来源：rate_deal_in_rate.csv"
+  },
+  {
+    "rank": 40,
+    "name": "Nephele",
+    "team": "云上秋雨",
+    "rate": 0.127907,
+    "count": 22,
+    "note": "172 局样本，来源：rate_deal_in_rate.csv"
   }
 ]
