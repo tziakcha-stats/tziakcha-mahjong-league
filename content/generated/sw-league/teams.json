@@ -1,0 +1,132 @@
+[
+  {
+    "id": "1",
+    "name": "云上秋雨",
+    "school": "sw_league",
+    "captain": "琳雨空",
+    "members": [
+      "川上珧",
+      "Nephele",
+      "南桥s01"
+    ],
+    "record": "待接入后端统计",
+    "note": "当前由 backend/generate/sw-league.mjs 根据 team.json 生成。"
+  },
+  {
+    "id": "2",
+    "name": "自摸七队",
+    "school": "sw_league",
+    "captain": "海仲利安",
+    "members": [
+      "小黄鸭",
+      "自摸七对",
+      "海叔利安"
+    ],
+    "record": "待接入后端统计",
+    "note": "当前由 backend/generate/sw-league.mjs 根据 team.json 生成。"
+  },
+  {
+    "id": "3",
+    "name": "择日读",
+    "school": "sw_league",
+    "captain": "Sw279695293",
+    "members": [
+      "日出",
+      "CKLm",
+      "黄腾"
+    ],
+    "record": "待接入后端统计",
+    "note": "当前由 backend/generate/sw-league.mjs 根据 team.json 生成。"
+  },
+  {
+    "id": "4",
+    "name": "复仇者联盟",
+    "school": "sw_league",
+    "captain": "叶凡",
+    "members": [
+      "青火",
+      "月曦",
+      "xixi"
+    ],
+    "record": "待接入后端统计",
+    "note": "当前由 backend/generate/sw-league.mjs 根据 team.json 生成。"
+  },
+  {
+    "id": "5",
+    "name": "绿小龙",
+    "school": "sw_league",
+    "captain": "alaya23",
+    "members": [
+      "ChaosDon",
+      "River",
+      "吴下阿濛"
+    ],
+    "record": "待接入后端统计",
+    "note": "当前由 backend/generate/sw-league.mjs 根据 team.json 生成。"
+  },
+  {
+    "id": "6",
+    "name": "特邀——没上过沙袋",
+    "school": "sw_league",
+    "captain": "米夜",
+    "members": [
+      "钙热",
+      "墨色清涟池",
+      "Quandaiwu42"
+    ],
+    "record": "待接入后端统计",
+    "note": "当前由 backend/generate/sw-league.mjs 根据 team.json 生成。"
+  },
+  {
+    "id": "7",
+    "name": "小鲨鱼动物园",
+    "school": "sw_league",
+    "captain": "lidai",
+    "members": [
+      "sdmt",
+      "云出无心",
+      "三只大土鳖"
+    ],
+    "record": "待接入后端统计",
+    "note": "当前由 backend/generate/sw-league.mjs 根据 team.json 生成。"
+  },
+  {
+    "id": "8",
+    "name": "杠上开花队",
+    "school": "sw_league",
+    "captain": "zsseg",
+    "members": [
+      "histo",
+      "未有期",
+      "redbean"
+    ],
+    "record": "待接入后端统计",
+    "note": "当前由 backend/generate/sw-league.mjs 根据 team.json 生成。"
+  },
+  {
+    "id": "9",
+    "name": "青柠现代麻将文化研究协",
+    "school": "sw_league",
+    "captain": "zumgze",
+    "members": [
+      "Choimoe",
+      "璃茉",
+      "足立レイ"
+    ],
+    "record": "待接入后端统计",
+    "note": "当前由 backend/generate/sw-league.mjs 根据 team.json 生成。"
+  },
+  {
+    "id": "10",
+    "name": "呼噜呼噜哼🐷",
+    "school": "sw_league",
+    "captain": "bzh",
+    "members": [
+      "幻秋",
+      "CatHikari",
+      "QinNai"
+    ],
+    "record": "待接入后端统计",
+    "note": "当前由 backend/generate/sw-league.mjs 根据 team.json 生成。"
+  }
+]

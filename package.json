@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "generate:sw-league": "node backend/generate/sw-league.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
