@@ -124,7 +124,6 @@ const teamRankingColumns = [
   { key: "averageStandardPoints", label: "平均标准分" },
   { key: "totalPoints", label: "比赛分" },
   { key: "matchCount", label: "出场桌数" },
-  { key: "memberCount", label: "出场人数" },
 ] as const;
 
 const placementCountColumns = [
@@ -296,6 +295,11 @@ export function RankingPanel({
                     {column.label}
                   </th>
                 ))}
+                {placementCountColumns.map((column) => (
+                  <th key={column.key} className="px-4 py-3 font-medium">
+                    {column.label}
+                  </th>
+                ))}
               </tr>
             </thead>
             <tbody className="divide-y divide-line bg-white/80">
@@ -316,15 +320,17 @@ export function RankingPanel({
                     <td className="px-4 py-4 text-[#6f675d]">
                       {entry.matchCount}
                     </td>
-                    <td className="px-4 py-4 text-[#6f675d]">
-                      {entry.memberCount}
-                    </td>
+                    {placementCountColumns.map((column) => (
+                      <td key={column.key} className="px-4 py-4 text-[#6f675d]">
+                        <FractionDisplay value={entry.placementCounts[column.key]} />
+                      </td>
+                    ))}
                   </tr>
                 ))
               ) : (
                 <tr>
                   <td
-                    colSpan={7}
+                    colSpan={10}
                     className="px-4 py-10 text-center text-[#6f675d]"
                   >
                     当前赛事尚未产生队伍排行数据。

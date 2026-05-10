@@ -58,7 +58,7 @@ export interface TeamRankingEntry {
   standardPoints: FractionValue;
   averageStandardPoints: number;
   matchCount: number;
-  memberCount: number;
+  placementCounts: PlacementCounts;
 }
 
 export interface FractionValue {

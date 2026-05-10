@@ -155,7 +155,12 @@ test("generateSwLeagueContent calculates team overview from player standard poin
       },
       averageStandardPoints: 2.12,
       matchCount: 45,
-      memberCount: 4,
+      placementCounts: {
+        first: { numerator: 15, denominator: 1, label: "15" },
+        second: { numerator: 12, denominator: 1, label: "12" },
+        third: { numerator: 23, denominator: 2, label: "11又1/2" },
+        fourth: { numerator: 13, denominator: 2, label: "6又1/2" },
+      },
     },
     {
       rank: 2,
@@ -168,7 +173,12 @@ test("generateSwLeagueContent calculates team overview from player standard poin
       },
       averageStandardPoints: 1.96,
       matchCount: 47,
-      memberCount: 4,
+      placementCounts: {
+        first: { numerator: 16, denominator: 1, label: "16" },
+        second: { numerator: 11, denominator: 1, label: "11" },
+        third: { numerator: 6, denominator: 1, label: "6" },
+        fourth: { numerator: 14, denominator: 1, label: "14" },
+      },
     },
     {
       rank: 3,
@@ -181,7 +191,12 @@ test("generateSwLeagueContent calculates team overview from player standard poin
       },
       averageStandardPoints: 1.87,
       matchCount: 45,
-      memberCount: 4,
+      placementCounts: {
+        first: { numerator: 13, denominator: 1, label: "13" },
+        second: { numerator: 9, denominator: 1, label: "9" },
+        third: { numerator: 14, denominator: 1, label: "14" },
+        fourth: { numerator: 9, denominator: 1, label: "9" },
+      },
     },
   ]);
 });

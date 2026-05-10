@@ -470,14 +470,26 @@ function buildOverviewRanking(historyRows, playerTeamIndex, aliases) {
           totalPoints: 0,
           standardPoints: createFraction(0),
           matchIds: new Set(),
-          memberNames: new Set(),
+          placementCounts: Object.fromEntries(
+            PLACEMENT_KEYS.map((placementKey) => [placementKey, createFraction(0)]),
+          ),
         };
         teamSummary.totalPoints += score;
         teamSummary.standardPoints = addFractions(
           teamSummary.standardPoints,
           standardPoints,
         );
-        teamSummary.memberNames.add(playerName);
+        for (
+          let placementIndex = group.startIndex;
+          placementIndex < group.startIndex + group.members.length;
+          placementIndex += 1
+        ) {
+          const placementKey = PLACEMENT_KEYS[placementIndex];
+          teamSummary.placementCounts[placementKey] = addFractions(
+            teamSummary.placementCounts[placementKey],
+            placementShare,
+          );
+        }
         teamSummaries.set(teamName, teamSummary);
         matchTeams.add(teamName);
       }
@@ -547,7 +559,12 @@ function buildOverviewRanking(historyRows, playerTeamIndex, aliases) {
         fractionToNumber(team.standardPoints) / team.matchIds.size,
       ),
       matchCount: team.matchIds.size,
-      memberCount: team.memberNames.size,
+      placementCounts: Object.fromEntries(
+        Object.entries(team.placementCounts).map(([placementKey, fraction]) => [
+          placementKey,
+          serializeFraction(fraction),
+        ]),
+      ),
     }));
 
   return { ranking, teamRanking };
