@@ -1,6 +1,6 @@
 import { permanentRedirect } from "next/navigation";
 
-export default async function FangchongRatePage({
+export default async function BeiZimoRatePage({
   params,
 }: {
   params: Promise<{ slug: string }>;

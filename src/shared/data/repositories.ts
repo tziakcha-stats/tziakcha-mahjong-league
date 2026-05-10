@@ -1,7 +1,8 @@
 import events from "../../../content/events/index.json";
 import eventMeta from "../../../content/events/sdu-riichi-team-championship/event.json";
 import matches from "../../../content/generated/sw-league/matches.json";
-import ranking from "../../../content/events/sdu-riichi-team-championship/ranking.json";
+import ranking from "../../../content/generated/sw-league/ranking.json";
+import teamRanking from "../../../content/generated/sw-league/team-ranking.json";
 import rules from "../../../content/events/sdu-riichi-team-championship/rules.json";
 import schedule from "../../../content/events/sdu-riichi-team-championship/schedule.json";
 import stats from "../../../content/events/sdu-riichi-team-championship/stats.json";
@@ -19,6 +20,7 @@ import type {
   PlayerRankingEntry,
   RateLeaderboardEntry,
   TeamInfo,
+  TeamRankingEntry,
 } from "@/shared/data/types";
 
 const allEvents = events as LeagueEvent[];
@@ -31,6 +33,7 @@ const eventDetailsBySlug: Record<string, EventDetail> = {
     schedule: schedule as EventScheduleRound[],
     matches: matches as MatchRecord[],
     ranking: ranking as PlayerRankingEntry[],
+    teamRanking: teamRanking as TeamRankingEntry[],
     stats: stats as EventStatsSummary[],
     teams: teams as TeamInfo[],
     leaderboards: {
