@@ -5,7 +5,9 @@ import path from "node:path";
 
 const publicHomepageFiles = [
   "src/app/(public)/page.tsx",
+  "src/app/(public)/events/page.tsx",
   "src/features/events/components/home-hero.tsx",
+  "src/features/events/components/event-overview.tsx",
   "src/features/events/components/public-site-header.tsx",
 ];
 
@@ -17,11 +19,14 @@ const developmentCopyPatterns = [
   /当前仅/,
   /保留少量/,
   /数据空间/,
+  /后续/,
+  /mock/,
+  /恢复多赛事/,
   /Portal/,
   /Featured Event/,
 ];
 
-test("public homepage copy does not expose development-stage wording", () => {
+test("public event pages do not expose development-stage wording", () => {
   const violations = [];
 
   for (const file of publicHomepageFiles) {

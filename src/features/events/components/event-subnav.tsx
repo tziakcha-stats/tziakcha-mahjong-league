@@ -9,7 +9,6 @@ const navItems = [
   { label: "组队", href: "/teams" },
   { label: "赛程", href: "/schedule" },
   { label: "对局", href: "/matches" },
-  { label: "统计", href: "/stats" },
   { label: "排行", href: "/ranking" },
   { label: "分析", href: "/analysis" },
 ];

@@ -18,7 +18,7 @@ export function EventOverview({ detail }: { detail: EventDetail }) {
           <SectionHeading
             eyebrow="赛事规则"
             title="核心规则摘要"
-            description="第一版先以摘要形式展示，后续可以扩展成完整规则文档页面。"
+            description="整理本届赛事的关键规则，便于参赛选手和观众快速了解赛制。"
           />
           <ul className="mt-6 space-y-3 text-sm leading-7 text-[#6f675d]">
             {detail.rules.map((rule) => (
@@ -35,7 +35,7 @@ export function EventOverview({ detail }: { detail: EventDetail }) {
           <SectionHeading
             eyebrow="概览统计"
             title="当前赛事摘要"
-            description="概览页保留少量高价值摘要，详细信息分别进入统计、赛程与排行子页。"
+            description="汇总赛事规模、赛程进度和核心数据，详细记录可进入赛程、对局与排行页面查看。"
           />
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             {detail.stats.map((stat) => (
