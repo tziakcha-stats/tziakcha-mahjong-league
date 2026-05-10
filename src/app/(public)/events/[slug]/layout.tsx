@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { notFound } from "next/navigation";
 import { EventDetailHeader } from "@/features/events/components/event-detail-header";
 import { getEventDetail } from "@/shared/data/repositories";
+import { EventSubnav } from "@/features/events/components/event-subnav";
 
 export default async function EventLayout({
   children,
@@ -20,6 +21,9 @@ export default async function EventLayout({
   return (
     <main className="container py-10 pb-16">
       <EventDetailHeader event={detail.event} />
+      <div className="mt-6">
+        <EventSubnav slug={slug} currentPath={`/events/${slug}`} />
+      </div>
       <div className="mt-8">{children}</div>
     </main>
   );
