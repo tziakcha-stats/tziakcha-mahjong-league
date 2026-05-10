@@ -22,7 +22,7 @@ export default async function EventLayout({
     <main className="container py-10 pb-16">
       <EventDetailHeader event={detail.event} />
       <div className="mt-6">
-        <EventSubnav slug={slug} currentPath={`/events/${slug}`} />
+        <EventSubnav slug={slug} />
       </div>
       <div className="mt-8">{children}</div>
     </main>

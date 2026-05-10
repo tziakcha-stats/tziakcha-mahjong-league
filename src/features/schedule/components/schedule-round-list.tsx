@@ -4,11 +4,7 @@ import { SectionHeading } from "@/shared/ui/section-heading";
 export function ScheduleRoundList({ rounds }: { rounds: EventScheduleRound[] }) {
   return (
     <section className="surface-card rounded-[30px] border border-line p-6">
-      <SectionHeading
-        eyebrow="赛程"
-        title="轮次与关键节点"
-        description="每个赛事页面都以独立路由承载完整赛程，后续可在此扩展筛选、轮次切换和赛制视图。"
-      />
+      <SectionHeading eyebrow="赛程" title="轮次与关键节点" />
 
       <div className="mt-8 space-y-4">
         {rounds.length ? (

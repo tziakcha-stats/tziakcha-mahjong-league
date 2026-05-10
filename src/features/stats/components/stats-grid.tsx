@@ -5,11 +5,7 @@ import { StatCard } from "@/shared/ui/stat-card";
 export function StatsGrid({ stats }: { stats: EventStatsSummary[] }) {
   return (
     <section className="surface-card rounded-[30px] border border-line p-6">
-      <SectionHeading
-        eyebrow="统计"
-        title="赛事关键指标"
-        description="第一版用高可读性的指标卡和图表占位组织信息，避免在纯前端阶段过度引入复杂图表方案。"
-      />
+      <SectionHeading eyebrow="统计" title="赛事关键指标" />
 
       <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
         {stats.map((stat) => (
