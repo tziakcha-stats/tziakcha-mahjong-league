@@ -3,15 +3,15 @@
     "slug": "sdu-riichi-team-championship",
     "name": "SDU国标麻将团体赛",
     "shortName": "SDU团体赛",
-    "tagline": "以团体积分与轮转策略为核心的国标麻将赛事展示站。",
-    "city": "济南",
-    "venue": "山东大学学生活动中心",
-    "startDate": "2026.05.24",
-    "endDate": "2026.05.25",
-    "players": 48,
-    "rounds": 10,
+    "tagline": "山东大学麻将部主办的首届国标麻将团队赛，采用常规赛、半决赛、决赛三阶段团体积分赛制。",
+    "city": "线上",
+    "venue": "雀渣平台",
+    "startDate": "2026.03.13",
+    "endDate": "2026.06.14",
+    "players": 40,
+    "rounds": 158,
     "status": "进行中",
-    "season": "2026 Team Season",
+    "season": "2026 首届团队赛",
     "coverAccent": "from-[#4a1010] to-[#7f1d1d]"
   }
 ]
