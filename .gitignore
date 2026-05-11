@@ -25,6 +25,7 @@
 *.pem
 .superpowers/
 docs/superpowers/
+.claude/
 
 # debug
 npm-debug.log*

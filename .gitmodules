@@ -1,0 +1,3 @@
+[submodule "backend"]
+	path = backend
+	url = https://github.com/tziakcha-stats/tziakcha-mahjong-league-backend.git
