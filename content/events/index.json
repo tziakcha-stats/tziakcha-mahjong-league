@@ -1,17 +1,32 @@
 [
   {
     "slug": "sdu-riichi-team-championship",
-    "name": "SDU国标麻将团体赛",
-    "shortName": "SDU团体赛",
-    "tagline": "山东大学麻将部主办的首届国标麻将团队赛，采用常规赛、半决赛、决赛三阶段团体积分赛制。",
+    "name": "SDU国标麻将团体赛·常规赛",
+    "shortName": "SDU团体赛·常规赛",
+    "tagline": "山东大学麻将部主办的首届国标麻将团队赛常规赛阶段，前 6 名晋级半决赛，常规赛成绩带入后续阶段。",
     "city": "线上",
     "venue": "雀渣平台",
     "startDate": "2026.03.13",
-    "endDate": "2026.06.14",
+    "endDate": "2026.05.24",
     "players": 40,
-    "rounds": 158,
-    "status": "进行中",
-    "season": "2026 首届团队赛",
+    "rounds": 120,
+    "status": "已结束",
+    "season": "2026 首届团队赛常规赛",
     "coverAccent": "from-[#4a1010] to-[#7f1d1d]"
+  },
+  {
+    "slug": "sdu-mcr-team-semifinal",
+    "name": "SDU国标麻将团体赛·半决赛",
+    "shortName": "SDU团体赛·半决赛",
+    "tagline": "常规赛前 6 名进入半决赛，扣罚后的常规赛标准分和比赛分作为初始成绩带入。",
+    "city": "线上",
+    "venue": "雀渣平台",
+    "startDate": "2026.05.12",
+    "endDate": "2026.06.06",
+    "players": 24,
+    "rounds": 30,
+    "status": "即将开始",
+    "season": "2026 首届团队赛半决赛",
+    "coverAccent": "from-[#173f35] to-[#256d5a]"
   }
 ]

@@ -22,6 +22,14 @@ export interface EventScheduleRound {
   date: string;
   stage: string;
   summary: string;
+  tables?: EventScheduleTable[];
+}
+
+export interface EventScheduleTable {
+  id: string;
+  tableName: string;
+  teams: string[];
+  replayUrl?: string;
 }
 
 export interface MatchRecord {
@@ -58,6 +66,7 @@ export interface PlayerRankingEntry {
 export interface TeamRankingEntry {
   rank: number;
   name: string;
+  record?: string;
   totalPoints: number;
   standardPoints: FractionValue;
   standardPointPenalty: FractionValue;

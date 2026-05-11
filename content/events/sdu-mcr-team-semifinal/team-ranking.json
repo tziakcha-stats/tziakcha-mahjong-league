@@ -1,0 +1,104 @@
+[
+  {
+    "rank": 1,
+    "name": "择日读",
+    "record": "常规赛战绩",
+    "totalPoints": 1692,
+    "standardPoints": { "numerator": 215, "denominator": 2, "label": "107又1/2" },
+    "standardPointPenalty": { "numerator": 0, "denominator": 1, "label": "0" },
+    "adjustedStandardPoints": { "numerator": 215, "denominator": 2, "label": "107又1/2" },
+    "averageStandardPoints": 0,
+    "matchCount": 0,
+    "placementCounts": {
+      "first": { "numerator": 0, "denominator": 1, "label": "0" },
+      "second": { "numerator": 0, "denominator": 1, "label": "0" },
+      "third": { "numerator": 0, "denominator": 1, "label": "0" },
+      "fourth": { "numerator": 0, "denominator": 1, "label": "0" }
+    }
+  },
+  {
+    "rank": 2,
+    "name": "绿小龙",
+    "record": "常规赛战绩",
+    "totalPoints": 1119,
+    "standardPoints": { "numerator": 95, "denominator": 1, "label": "95" },
+    "standardPointPenalty": { "numerator": 0, "denominator": 1, "label": "0" },
+    "adjustedStandardPoints": { "numerator": 95, "denominator": 1, "label": "95" },
+    "averageStandardPoints": 0,
+    "matchCount": 0,
+    "placementCounts": {
+      "first": { "numerator": 0, "denominator": 1, "label": "0" },
+      "second": { "numerator": 0, "denominator": 1, "label": "0" },
+      "third": { "numerator": 0, "denominator": 1, "label": "0" },
+      "fourth": { "numerator": 0, "denominator": 1, "label": "0" }
+    }
+  },
+  {
+    "rank": 3,
+    "name": "青柠现代麻将文化研究协会",
+    "record": "常规赛战绩",
+    "totalPoints": 30,
+    "standardPoints": { "numerator": 92, "denominator": 1, "label": "92" },
+    "standardPointPenalty": { "numerator": 0, "denominator": 1, "label": "0" },
+    "adjustedStandardPoints": { "numerator": 92, "denominator": 1, "label": "92" },
+    "averageStandardPoints": 0,
+    "matchCount": 0,
+    "placementCounts": {
+      "first": { "numerator": 0, "denominator": 1, "label": "0" },
+      "second": { "numerator": 0, "denominator": 1, "label": "0" },
+      "third": { "numerator": 0, "denominator": 1, "label": "0" },
+      "fourth": { "numerator": 0, "denominator": 1, "label": "0" }
+    }
+  },
+  {
+    "rank": 4,
+    "name": "复仇者联盟",
+    "record": "常规赛战绩",
+    "totalPoints": 924,
+    "standardPoints": { "numerator": 177, "denominator": 2, "label": "88又1/2" },
+    "standardPointPenalty": { "numerator": 0, "denominator": 1, "label": "0" },
+    "adjustedStandardPoints": { "numerator": 177, "denominator": 2, "label": "88又1/2" },
+    "averageStandardPoints": 0,
+    "matchCount": 0,
+    "placementCounts": {
+      "first": { "numerator": 0, "denominator": 1, "label": "0" },
+      "second": { "numerator": 0, "denominator": 1, "label": "0" },
+      "third": { "numerator": 0, "denominator": 1, "label": "0" },
+      "fourth": { "numerator": 0, "denominator": 1, "label": "0" }
+    }
+  },
+  {
+    "rank": 5,
+    "name": "小鲨鱼动物园",
+    "record": "常规赛战绩",
+    "totalPoints": 350,
+    "standardPoints": { "numerator": 175, "denominator": 2, "label": "87又1/2" },
+    "standardPointPenalty": { "numerator": 0, "denominator": 1, "label": "0" },
+    "adjustedStandardPoints": { "numerator": 175, "denominator": 2, "label": "87又1/2" },
+    "averageStandardPoints": 0,
+    "matchCount": 0,
+    "placementCounts": {
+      "first": { "numerator": 0, "denominator": 1, "label": "0" },
+      "second": { "numerator": 0, "denominator": 1, "label": "0" },
+      "third": { "numerator": 0, "denominator": 1, "label": "0" },
+      "fourth": { "numerator": 0, "denominator": 1, "label": "0" }
+    }
+  },
+  {
+    "rank": 6,
+    "name": "特邀——没上过沙袋",
+    "record": "常规赛战绩",
+    "totalPoints": 183,
+    "standardPoints": { "numerator": 87, "denominator": 1, "label": "87" },
+    "standardPointPenalty": { "numerator": 0, "denominator": 1, "label": "0" },
+    "adjustedStandardPoints": { "numerator": 87, "denominator": 1, "label": "87" },
+    "averageStandardPoints": 0,
+    "matchCount": 0,
+    "placementCounts": {
+      "first": { "numerator": 0, "denominator": 1, "label": "0" },
+      "second": { "numerator": 0, "denominator": 1, "label": "0" },
+      "third": { "numerator": 0, "denominator": 1, "label": "0" },
+      "fourth": { "numerator": 0, "denominator": 1, "label": "0" }
+    }
+  }
+]

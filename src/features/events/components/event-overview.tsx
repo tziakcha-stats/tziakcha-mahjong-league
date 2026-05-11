@@ -3,6 +3,9 @@ import { SectionHeading } from "@/shared/ui/section-heading";
 import { StatCard } from "@/shared/ui/stat-card";
 
 export function EventOverview({ detail }: { detail: EventDetail }) {
+  const recentSchedule = detail.schedule.slice(-4);
+  const currentStage = recentSchedule.at(-1)?.stage ?? detail.event.shortName;
+
   return (
     <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
       <div className="space-y-6">
@@ -47,11 +50,11 @@ export function EventOverview({ detail }: { detail: EventDetail }) {
         <section className="surface-card rounded-[30px] border border-line p-6">
           <SectionHeading
             eyebrow="赛程预览"
-            title="最近节点"
-            description="展示最近几个关键赛程节点，完整赛程在独立子页查看。"
+            title="最近轮次"
+            description={`展示最近几个${currentStage}对局轮次，完整赛程在独立子页查看。`}
           />
           <div className="mt-5 space-y-4">
-            {detail.schedule.map((round) => (
+            {recentSchedule.map((round) => (
               <div key={round.id} className="rounded-2xl border border-line bg-white/70 p-4">
                 <div className="flex items-center justify-between gap-4">
                   <p className="font-semibold">{round.title}</p>

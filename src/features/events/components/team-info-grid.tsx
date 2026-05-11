@@ -36,6 +36,11 @@ export function TeamInfoGrid({
                       <h3 className="text-2xl font-semibold tracking-tight text-[#16120f]">
                         {team.name}
                       </h3>
+                      {ranking && ranking.rank <= 6 ? (
+                        <span className="rounded-full bg-brand/10 px-2.5 py-1 text-xs font-semibold text-brand">
+                          晋级
+                        </span>
+                      ) : null}
                     </div>
                     <p className="mt-2 text-sm text-[#6f675d]">{team.school}</p>
                   </div>
@@ -76,7 +81,7 @@ function TeamRankingBadge({ ranking }: { ranking?: TeamRankingEntry }) {
 
   return (
     <div className="shrink-0 rounded-full bg-brand/10 px-3 py-1 text-sm font-semibold tabular-nums text-brand">
-      <span>暂 #{ranking.rank}</span>{" "}
+      <span>#{ranking.rank}</span>{" "}
       <span>标分</span>{" "}
       <FractionDisplay value={ranking.standardPoints} />
       {ranking.standardPointPenalty.numerator !== 0 ? (

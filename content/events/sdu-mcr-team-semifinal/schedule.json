@@ -1,0 +1,287 @@
+[
+  {
+    "id": "semifinal-round-1",
+    "title": "半决赛第 1 轮",
+    "date": "5.12 星期二",
+    "stage": "半决赛",
+    "summary": "本轮进行 2 局；轮空：绿小龙 / 青柠现代麻将文化研究协会。",
+    "tables": [
+      {
+        "id": "semifinal-round-1-game-1",
+        "tableName": "第 1 局",
+        "teams": ["择日读", "复仇者联盟", "特邀——没上过沙袋", "小鲨鱼动物园"]
+      },
+      {
+        "id": "semifinal-round-1-game-2",
+        "tableName": "第 2 局",
+        "teams": ["择日读", "复仇者联盟", "特邀——没上过沙袋", "小鲨鱼动物园"]
+      }
+    ]
+  },
+  {
+    "id": "semifinal-round-2",
+    "title": "半决赛第 2 轮",
+    "date": "5.14 星期四",
+    "stage": "半决赛",
+    "summary": "本轮进行 2 局；轮空：择日读 / 特邀——没上过沙袋。",
+    "tables": [
+      {
+        "id": "semifinal-round-2-game-1",
+        "tableName": "第 1 局",
+        "teams": ["复仇者联盟", "小鲨鱼动物园", "绿小龙", "青柠现代麻将文化研究协会"]
+      },
+      {
+        "id": "semifinal-round-2-game-2",
+        "tableName": "第 2 局",
+        "teams": ["复仇者联盟", "小鲨鱼动物园", "绿小龙", "青柠现代麻将文化研究协会"]
+      }
+    ]
+  },
+  {
+    "id": "semifinal-round-3",
+    "title": "半决赛第 3 轮",
+    "date": "5.16 星期六",
+    "stage": "半决赛",
+    "summary": "本轮进行 2 局；轮空：复仇者联盟 / 小鲨鱼动物园。",
+    "tables": [
+      {
+        "id": "semifinal-round-3-game-1",
+        "tableName": "第 1 局",
+        "teams": ["择日读", "特邀——没上过沙袋", "绿小龙", "青柠现代麻将文化研究协会"]
+      },
+      {
+        "id": "semifinal-round-3-game-2",
+        "tableName": "第 2 局",
+        "teams": ["择日读", "特邀——没上过沙袋", "绿小龙", "青柠现代麻将文化研究协会"]
+      }
+    ]
+  },
+  {
+    "id": "semifinal-round-4",
+    "title": "半决赛第 4 轮",
+    "date": "5.17 星期日",
+    "stage": "半决赛",
+    "summary": "本轮进行 2 局；轮空：特邀——没上过沙袋 / 小鲨鱼动物园。",
+    "tables": [
+      {
+        "id": "semifinal-round-4-game-1",
+        "tableName": "第 1 局",
+        "teams": ["择日读", "复仇者联盟", "绿小龙", "青柠现代麻将文化研究协会"]
+      },
+      {
+        "id": "semifinal-round-4-game-2",
+        "tableName": "第 2 局",
+        "teams": ["择日读", "复仇者联盟", "绿小龙", "青柠现代麻将文化研究协会"]
+      }
+    ]
+  },
+  {
+    "id": "semifinal-round-5",
+    "title": "半决赛第 5 轮",
+    "date": "5.19 星期二",
+    "stage": "半决赛",
+    "summary": "本轮进行 2 局；轮空：择日读 / 绿小龙。",
+    "tables": [
+      {
+        "id": "semifinal-round-5-game-1",
+        "tableName": "第 1 局",
+        "teams": ["复仇者联盟", "特邀——没上过沙袋", "小鲨鱼动物园", "青柠现代麻将文化研究协会"]
+      },
+      {
+        "id": "semifinal-round-5-game-2",
+        "tableName": "第 2 局",
+        "teams": ["复仇者联盟", "特邀——没上过沙袋", "小鲨鱼动物园", "青柠现代麻将文化研究协会"]
+      }
+    ]
+  },
+  {
+    "id": "semifinal-round-6",
+    "title": "半决赛第 6 轮",
+    "date": "5.21 星期四",
+    "stage": "半决赛",
+    "summary": "本轮进行 2 局；轮空：复仇者联盟 / 青柠现代麻将文化研究协会。",
+    "tables": [
+      {
+        "id": "semifinal-round-6-game-1",
+        "tableName": "第 1 局",
+        "teams": ["择日读", "特邀——没上过沙袋", "小鲨鱼动物园", "绿小龙"]
+      },
+      {
+        "id": "semifinal-round-6-game-2",
+        "tableName": "第 2 局",
+        "teams": ["择日读", "特邀——没上过沙袋", "小鲨鱼动物园", "绿小龙"]
+      }
+    ]
+  },
+  {
+    "id": "semifinal-round-7",
+    "title": "半决赛第 7 轮",
+    "date": "5.23 星期六",
+    "stage": "半决赛",
+    "summary": "本轮进行 2 局；轮空：小鲨鱼动物园 / 绿小龙。",
+    "tables": [
+      {
+        "id": "semifinal-round-7-game-1",
+        "tableName": "第 1 局",
+        "teams": ["择日读", "复仇者联盟", "特邀——没上过沙袋", "青柠现代麻将文化研究协会"]
+      },
+      {
+        "id": "semifinal-round-7-game-2",
+        "tableName": "第 2 局",
+        "teams": ["择日读", "复仇者联盟", "特邀——没上过沙袋", "青柠现代麻将文化研究协会"]
+      }
+    ]
+  },
+  {
+    "id": "semifinal-round-8",
+    "title": "半决赛第 8 轮",
+    "date": "5.24 星期日",
+    "stage": "半决赛",
+    "summary": "本轮进行 2 局；轮空：择日读 / 青柠现代麻将文化研究协会。",
+    "tables": [
+      {
+        "id": "semifinal-round-8-game-1",
+        "tableName": "第 1 局",
+        "teams": ["复仇者联盟", "特邀——没上过沙袋", "小鲨鱼动物园", "绿小龙"]
+      },
+      {
+        "id": "semifinal-round-8-game-2",
+        "tableName": "第 2 局",
+        "teams": ["复仇者联盟", "特邀——没上过沙袋", "小鲨鱼动物园", "绿小龙"]
+      }
+    ]
+  },
+  {
+    "id": "semifinal-round-9",
+    "title": "半决赛第 9 轮",
+    "date": "5.26 星期二",
+    "stage": "半决赛",
+    "summary": "本轮进行 2 局；轮空：复仇者联盟 / 特邀——没上过沙袋。",
+    "tables": [
+      {
+        "id": "semifinal-round-9-game-1",
+        "tableName": "第 1 局",
+        "teams": ["择日读", "小鲨鱼动物园", "绿小龙", "青柠现代麻将文化研究协会"]
+      },
+      {
+        "id": "semifinal-round-9-game-2",
+        "tableName": "第 2 局",
+        "teams": ["择日读", "小鲨鱼动物园", "绿小龙", "青柠现代麻将文化研究协会"]
+      }
+    ]
+  },
+  {
+    "id": "semifinal-round-10",
+    "title": "半决赛第 10 轮",
+    "date": "5.28 星期四",
+    "stage": "半决赛",
+    "summary": "本轮进行 2 局；轮空：复仇者联盟 / 绿小龙。",
+    "tables": [
+      {
+        "id": "semifinal-round-10-game-1",
+        "tableName": "第 1 局",
+        "teams": ["择日读", "特邀——没上过沙袋", "小鲨鱼动物园", "青柠现代麻将文化研究协会"]
+      },
+      {
+        "id": "semifinal-round-10-game-2",
+        "tableName": "第 2 局",
+        "teams": ["择日读", "特邀——没上过沙袋", "小鲨鱼动物园", "青柠现代麻将文化研究协会"]
+      }
+    ]
+  },
+  {
+    "id": "semifinal-round-11",
+    "title": "半决赛第 11 轮",
+    "date": "5.30 星期六",
+    "stage": "半决赛",
+    "summary": "本轮进行 2 局；轮空：特邀——没上过沙袋 / 青柠现代麻将文化研究协会。",
+    "tables": [
+      {
+        "id": "semifinal-round-11-game-1",
+        "tableName": "第 1 局",
+        "teams": ["择日读", "复仇者联盟", "小鲨鱼动物园", "绿小龙"]
+      },
+      {
+        "id": "semifinal-round-11-game-2",
+        "tableName": "第 2 局",
+        "teams": ["择日读", "复仇者联盟", "小鲨鱼动物园", "绿小龙"]
+      }
+    ]
+  },
+  {
+    "id": "semifinal-round-12",
+    "title": "半决赛第 12 轮",
+    "date": "5.31 星期日",
+    "stage": "半决赛",
+    "summary": "本轮进行 2 局；轮空：择日读 / 小鲨鱼动物园。",
+    "tables": [
+      {
+        "id": "semifinal-round-12-game-1",
+        "tableName": "第 1 局",
+        "teams": ["复仇者联盟", "特邀——没上过沙袋", "绿小龙", "青柠现代麻将文化研究协会"]
+      },
+      {
+        "id": "semifinal-round-12-game-2",
+        "tableName": "第 2 局",
+        "teams": ["复仇者联盟", "特邀——没上过沙袋", "绿小龙", "青柠现代麻将文化研究协会"]
+      }
+    ]
+  },
+  {
+    "id": "semifinal-round-13",
+    "title": "半决赛第 13 轮",
+    "date": "6.2 星期二",
+    "stage": "半决赛",
+    "summary": "本轮进行 2 局；轮空：特邀——没上过沙袋 / 绿小龙。",
+    "tables": [
+      {
+        "id": "semifinal-round-13-game-1",
+        "tableName": "第 1 局",
+        "teams": ["择日读", "复仇者联盟", "小鲨鱼动物园", "青柠现代麻将文化研究协会"]
+      },
+      {
+        "id": "semifinal-round-13-game-2",
+        "tableName": "第 2 局",
+        "teams": ["择日读", "复仇者联盟", "小鲨鱼动物园", "青柠现代麻将文化研究协会"]
+      }
+    ]
+  },
+  {
+    "id": "semifinal-round-14",
+    "title": "半决赛第 14 轮",
+    "date": "6.4 星期四",
+    "stage": "半决赛",
+    "summary": "本轮进行 2 局；轮空：小鲨鱼动物园 / 青柠现代麻将文化研究协会。",
+    "tables": [
+      {
+        "id": "semifinal-round-14-game-1",
+        "tableName": "第 1 局",
+        "teams": ["择日读", "复仇者联盟", "特邀——没上过沙袋", "绿小龙"]
+      },
+      {
+        "id": "semifinal-round-14-game-2",
+        "tableName": "第 2 局",
+        "teams": ["择日读", "复仇者联盟", "特邀——没上过沙袋", "绿小龙"]
+      }
+    ]
+  },
+  {
+    "id": "semifinal-round-15",
+    "title": "半决赛第 15 轮",
+    "date": "6.6 星期六",
+    "stage": "半决赛",
+    "summary": "本轮进行 2 局；轮空：择日读 / 复仇者联盟。",
+    "tables": [
+      {
+        "id": "semifinal-round-15-game-1",
+        "tableName": "第 1 局",
+        "teams": ["特邀——没上过沙袋", "小鲨鱼动物园", "绿小龙", "青柠现代麻将文化研究协会"]
+      },
+      {
+        "id": "semifinal-round-15-game-2",
+        "tableName": "第 2 局",
+        "teams": ["特邀——没上过沙袋", "小鲨鱼动物园", "绿小龙", "青柠现代麻将文化研究协会"]
+      }
+    ]
+  }
+]
