@@ -9,8 +9,8 @@ export default function EventsPage() {
     <main className="container py-12 pb-16">
       <SectionHeading
         eyebrow="赛事页面"
-        title="SDU 国标麻将团体赛"
-        description="查看 SDU 国标麻将团体赛的赛程安排、队伍信息、对局记录与排名数据。"
+        title="SDU 国标麻将团体赛·常规赛"
+        description="查看 SDU 国标麻将团体赛常规赛的赛程安排、队伍信息、对局记录与排名数据。"
       />
       <div className="grid-stagger mt-8 grid gap-5 lg:grid-cols-3">
         {events.map((event) => (

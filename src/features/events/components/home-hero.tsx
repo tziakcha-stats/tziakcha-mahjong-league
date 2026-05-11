@@ -10,14 +10,14 @@ export function HomeHero({ featuredEvent }: { featuredEvent: LeagueEvent }) {
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
           <div className="space-y-5">
             <p className="display-font text-sm font-semibold uppercase tracking-[0.36em] text-white/70">
-              Tziakcha League
+              大渣林
             </p>
             <div className="space-y-4">
               <h1 className="max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-                SDU 国标麻将团体赛赛程与数据更新。
+                国标麻将网络联赛赛事管理平台。
               </h1>
               <p className="max-w-2xl text-sm leading-7 text-white/78 sm:text-base">
-                汇总赛程安排、队伍排名、选手排行与对局记录，跟进常规赛、半决赛和决赛的实时进展。
+                汇总常规赛赛程安排、队伍排名、选手排行与对局记录，并提供半决赛赛程入口。
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
@@ -39,7 +39,7 @@ export function HomeHero({ featuredEvent }: { featuredEvent: LeagueEvent }) {
 
           <div className="rounded-[28px] border border-white/10 bg-white/10 p-6 backdrop-blur">
             <p className="display-font text-xs uppercase tracking-[0.26em] text-white/60">
-              正在进行
+              主推赛事
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight">
               {featuredEvent.name}

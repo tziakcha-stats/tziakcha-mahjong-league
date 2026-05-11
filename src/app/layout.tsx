@@ -16,8 +16,8 @@ const rajdhani = Rajdhani({
 });
 
 export const metadata: Metadata = {
-  title: "食茶麻将联赛",
-  description: "麻将赛事展示与管理前端站点",
+  title: "大渣林",
+  description: "国标麻将网络联赛赛事管理平台",
 };
 
 export default function RootLayout({

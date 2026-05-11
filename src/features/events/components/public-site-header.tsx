@@ -5,14 +5,16 @@ export function PublicSiteHeader() {
     <header className="border-b border-line/80">
       <div className="container flex items-center justify-between py-5">
         <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-brand text-sm font-bold text-white">
-            茶
-          </div>
+          <img
+            src="/sduleague/brand-icon.png"
+            alt="大渣林"
+            className="h-12 w-12 rounded-2xl object-contain"
+          />
           <div>
             <p className="display-font text-lg font-bold uppercase tracking-[0.18em]">
-              Tziakcha League
+              大渣林
             </p>
-            <p className="text-xs text-[#6f675d]">SDU 国标麻将团体赛</p>
+            <p className="text-xs text-[#6f675d]">国标麻将网络联赛赛事管理平台</p>
           </div>
         </Link>
 

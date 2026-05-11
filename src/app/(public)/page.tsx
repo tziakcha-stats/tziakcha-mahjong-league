@@ -16,7 +16,7 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="赛事入口"
           title="SDU 国标麻将团体赛"
-          description="山东大学麻将部主办的国标麻将团队赛，采用常规赛、半决赛、决赛三阶段团体积分赛制。"
+          description="常规赛数据归档已完成，半决赛入口同步开放，可查看两个阶段的赛程、规则、队伍与排名数据。"
         />
         <div className="grid-stagger mt-8 grid gap-5 lg:grid-cols-3">
           {events.map((event) => (
@@ -29,12 +29,12 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="赛事概况"
           title="赛程与数据同步更新"
-          description="查看赛程、排名、对局记录与选手数据，跟进 SDU 国标麻将团体赛的最新进展。"
+          description="首页主推常规赛完整数据，同时提供半决赛入口，便于跟进半决赛阶段安排。"
         />
         <div className="mt-8 grid gap-4 md:grid-cols-3">
-          <StatCard label="赛事" value="1" note="SDU 国标麻将团体赛" />
-          <StatCard label="参赛队伍" value="12" note="SDU 国标麻将团体赛当前参赛队伍数" />
-          <StatCard label="最近更新" value="05.24" note="已更新至小组赛第 5 轮数据" />
+          <StatCard label="赛事" value="2" note="常规赛归档 / 半决赛入口" />
+          <StatCard label="晋级队伍" value="6" note="常规赛前 6 名进入半决赛" />
+          <StatCard label="最近更新" value="06.06" note="半决赛完整赛程已发布" />
         </div>
       </section>
     </main>
