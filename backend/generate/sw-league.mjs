@@ -59,6 +59,10 @@ async function main() {
     path.join(outputRoot, "leaderboards", "round-income.json"),
     result.leaderboards.roundIncome,
   );
+  await writeJson(
+    path.join(outputRoot, "leaderboards", "collector.json"),
+    result.leaderboards.collector,
+  );
 
   console.log("Generated sw-league content:");
   console.log(`- ${path.join(outputRoot, "teams.json")}`);
@@ -77,6 +81,7 @@ async function main() {
   console.log(`- ${path.join(outputRoot, "leaderboards", "big-win.json")}`);
   console.log(`- ${path.join(outputRoot, "leaderboards", "makeup-win.json")}`);
   console.log(`- ${path.join(outputRoot, "leaderboards", "round-income.json")}`);
+  console.log(`- ${path.join(outputRoot, "leaderboards", "collector.json")}`);
 }
 
 main().catch((error) => {

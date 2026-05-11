@@ -35,6 +35,17 @@ export function percentage(value) {
   return Number(value.toFixed(6));
 }
 
+export function toNumber(value) {
+  const parsed = Number(value);
+  return Number.isFinite(parsed) ? parsed : 0;
+}
+
+export async function readCsv(projectRoot, ...segments) {
+  const filePath = path.join(projectRoot, ...segments);
+  const content = await readText(filePath);
+  return parseCsv(content);
+}
+
 export function parseCsv(content) {
   const lines = content
     .split(/\r?\n/u)

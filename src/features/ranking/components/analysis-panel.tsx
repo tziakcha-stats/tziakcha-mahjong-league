@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { cn } from "@/lib/utils";
 import type {
   BigWinLeaderboardEntry,
+  CollectorLeaderboardEntry,
   MakeupWinLeaderboard,
   MakeupWinLeaderboardEntry,
   RateLeaderboardEntry,
@@ -40,13 +41,15 @@ type AnalysisTabKey =
   | "winDealDiff"
   | "roundIncome"
   | "makeupWin"
-  | "bigWin";
+  | "bigWin"
+  | "collector";
 
 interface AnalysisPanelProps {
   leaderboards: Record<LeaderboardKey, RateLeaderboardEntry[]> & {
     bigWin: BigWinLeaderboardEntry[];
     makeupWin: MakeupWinLeaderboard;
     roundIncome: RoundIncomeLeaderboardEntry[];
+    collector: CollectorLeaderboardEntry[];
   };
 }
 
@@ -181,6 +184,11 @@ const analysisTabs: Record<
     title: "大牌榜",
     description: "截取和牌总番数最高的前 20 小局，并列出 8 番及以上番种。",
   },
+  collector: {
+    label: "收藏家",
+    title: "收藏家",
+    description: "统计一局中单个玩家和出不同 4 番及以上番种的种类数。",
+  },
 };
 
 const orderedTabs: AnalysisTabKey[] = [
@@ -192,6 +200,7 @@ const orderedTabs: AnalysisTabKey[] = [
   "roundIncome",
   "makeupWin",
   "bigWin",
+  "collector",
 ];
 
 const leaderboardColumns: {
@@ -532,6 +541,58 @@ function MakeupWinTables({ rows }: { rows: MakeupWinLeaderboard }) {
           rows={rows[section.key]}
         />
       ))}
+    </div>
+  );
+}
+
+function CollectorTable({ rows }: { rows: CollectorLeaderboardEntry[] }) {
+  return (
+    <div className="mt-8 max-h-[780px] overflow-auto rounded-[18px] border border-line">
+      <table className="min-w-full divide-y divide-line text-left text-sm">
+        <thead className="sticky top-0 z-10 bg-black/[0.03] text-[#6f675d]">
+          <tr>
+            <th className="px-4 py-3 font-medium">排名</th>
+            <th className="px-4 py-3 font-medium">和牌家</th>
+            <th className="px-4 py-3 font-medium">队伍</th>
+            <th className="px-4 py-3 font-medium">番种数量</th>
+            <th className="px-4 py-3 font-medium">番种名称</th>
+            <th className="px-4 py-3 font-medium">对局</th>
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-line bg-white/80">
+          {rows.length ? (
+            rows.map((row) => (
+              <tr key={`${row.rank}-${row.matchId}-${row.winner}`}>
+                <TeamRankCell rank={row.rank} teamName={row.winnerTeam} />
+                <td className="px-4 py-4 text-[#16120f]">{row.winner}</td>
+                <td className="px-4 py-4 text-[#6f675d]">{row.winnerTeam}</td>
+                <td className="px-4 py-4 font-semibold text-brand">{row.yakuCount}</td>
+                <td className="min-w-48 px-4 py-4 text-[#16120f]">{row.yakuNames}</td>
+                <td className="px-4 py-4 text-[#6f675d]">
+                  {row.replayUrl ? (
+                    <a
+                      href={row.replayUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-brand underline-offset-4 hover:underline"
+                    >
+                      {row.roundLabel} {row.tableName}
+                    </a>
+                  ) : (
+                    `${row.roundLabel} ${row.tableName}`
+                  )}
+                </td>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td colSpan={6} className="px-4 py-10 text-center text-[#6f675d]">
+                当前榜单暂无数据。
+              </td>
+            </tr>
+          )}
+        </tbody>
+      </table>
     </div>
   );
 }
@@ -890,6 +951,8 @@ export function AnalysisPanel({ leaderboards }: AnalysisPanelProps) {
             />
           ))}
         </div>
+      ) : activeTab === "collector" ? (
+        <CollectorTable rows={leaderboards.collector} />
       ) : (
         <BigWinTable rows={leaderboards.bigWin} />
       )}

@@ -27,8 +27,10 @@ import averageTsumoLossFan from "../../../content/generated/sw-league/leaderboar
 import bigWin from "../../../content/generated/sw-league/leaderboards/big-win.json";
 import makeupWin from "../../../content/generated/sw-league/leaderboards/makeup-win.json";
 import roundIncome from "../../../content/generated/sw-league/leaderboards/round-income.json";
+import collector from "../../../content/generated/sw-league/leaderboards/collector.json";
 import type {
   BigWinLeaderboardEntry,
+  CollectorLeaderboardEntry,
   EventDetail,
   EventScheduleRound,
   EventStatsSummary,
@@ -108,6 +110,7 @@ const emptyLeaderboards = {
     iron: [],
   },
   roundIncome: [],
+  collector: [],
 };
 
 const eventDetailsBySlug: Record<string, EventDetail> = {
@@ -136,6 +139,7 @@ const eventDetailsBySlug: Record<string, EventDetail> = {
       bigWin: bigWin as BigWinLeaderboardEntry[],
       makeupWin: makeupWin as MakeupWinLeaderboard,
       roundIncome: roundIncome as RoundIncomeLeaderboardEntry[],
+      collector: collector as CollectorLeaderboardEntry[],
     },
   },
   "sdu-mcr-team-semifinal": {
@@ -178,7 +182,8 @@ export function getLeaderboard(
     | "averageTsumoLossFan"
     | "bigWin"
     | "makeupWin"
-    | "roundIncome",
+    | "roundIncome"
+    | "collector",
 ) {
   return eventDetailsBySlug[slug]?.leaderboards[key] ?? [];
 }

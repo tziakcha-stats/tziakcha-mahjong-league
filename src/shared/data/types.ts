@@ -178,6 +178,19 @@ export interface MakeupWinLeaderboardEntry {
   finishedAt: string;
 }
 
+export interface CollectorLeaderboardEntry {
+  rank: number;
+  winner: string;
+  winnerTeam: string;
+  yakuCount: number;
+  yakuNames: string;
+  roundLabel: string;
+  tableName: string;
+  replayUrl?: string;
+  matchId: string;
+  finishedAt: string;
+}
+
 export interface MakeupWinLeaderboard {
   gold: MakeupWinLeaderboardEntry[];
   silver: MakeupWinLeaderboardEntry[];
@@ -208,5 +221,6 @@ export interface EventDetail {
     bigWin: BigWinLeaderboardEntry[];
     makeupWin: MakeupWinLeaderboard;
     roundIncome: RoundIncomeLeaderboardEntry[];
+    collector: CollectorLeaderboardEntry[];
   };
 }
