@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 大渣林 — 国标麻将网络联赛赛事管理平台
 
-## Getting Started
+在线访问：https://web.choimoe.com/sduleague/
 
-First, run the development server:
+## 简介
+
+大渣林是一个基于 Next.js 构建的静态赛事管理平台，用于展示和分析雀渣平台上的国标麻将网络联赛数据。目前主要服务于 **SDU国标麻将团体赛**。
+
+## 功能
+
+赛事首页、赛程表、队伍名册、个人与团队排名、对局记录，以及涵盖和率、铳率、自摸率、打点、铳点、局收支、凑番榜、大牌榜、收藏家等维度的统计分析。
+
+## 快速开始
+
+### 前置要求
+
+- Node.js
+- npm
+
+### 安装与运行
 
 ```bash
+# 安装依赖
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# 访问 http://localhost:3000/sduleague/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 构建
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 当前赛事
 
-## Learn More
+| 赛事 | 状态 | 时间 | 队伍 | 选手 |
+|------|------|------|------|------|
+| SDU国标麻将团体赛 · 常规赛 | 已结束 | 2026.03.13 – 2026.05.24 | 10 | 40 |
+| SDU国标麻将团体赛 · 半决赛 | 即将开始 | 2026.05.12 – 2026.06.06 | 6 | 24 |
 
-To learn more about Next.js, take a look at the following resources:
+## 许可
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+本项目采用 [GNU AGPL v3](LICENSE) 许可协议。
