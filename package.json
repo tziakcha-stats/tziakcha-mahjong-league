@@ -6,6 +6,7 @@
     "dev": "next dev",
     "generate:sw-league": "node backend/generate/sw-league.mjs",
     "build": "next build",
+    "deploy": "bash scripts/deploy.sh",
     "start": "next start",
     "lint": "eslint"
   },
