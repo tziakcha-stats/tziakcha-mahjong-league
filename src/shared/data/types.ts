@@ -151,6 +151,8 @@ export interface BigWinLeaderboardEntry {
   totalFan: number;
   description: string;
   fanItems: BigWinFanItem[];
+  winTile?: number | null;
+  winTileName?: string | null;
   roundLabel: string;
   tableName: string;
   replayUrl?: string;
@@ -169,6 +171,8 @@ export interface MakeupWinLeaderboardEntry {
   twoFanCount: number;
   description: string;
   twoFanItems: BigWinFanItem[];
+  winTile?: number | null;
+  winTileName?: string | null;
   roundLabel: string;
   tableName: string;
   replayUrl?: string;

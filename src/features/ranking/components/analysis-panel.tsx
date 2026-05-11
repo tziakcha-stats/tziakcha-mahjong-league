@@ -419,6 +419,7 @@ function BigWinTable({ rows }: { rows: BigWinLeaderboardEntry[] }) {
             <th className="px-4 py-3 font-medium">和牌家</th>
             <th className="px-4 py-3 font-medium">队伍</th>
             <th className="px-4 py-3 font-medium">放铳家</th>
+            <th className="px-4 py-3 font-medium">和牌张</th>
             <th className="px-4 py-3 font-medium">番种说明</th>
             <th className="px-4 py-3 font-medium">对局</th>
           </tr>
@@ -432,6 +433,7 @@ function BigWinTable({ rows }: { rows: BigWinLeaderboardEntry[] }) {
                 <td className="px-4 py-4 text-[#16120f]">{row.winner}</td>
                 <td className="px-4 py-4 text-[#6f675d]">{row.winnerTeam}</td>
                 <td className="px-4 py-4 text-[#6f675d]">{row.discarder}</td>
+                <td className="px-4 py-4 font-mono text-[#16120f]">{row.winTileName ?? "-"}</td>
                 <td className="min-w-48 px-4 py-4 text-[#16120f]">
                   {row.description}
                 </td>
@@ -453,7 +455,7 @@ function BigWinTable({ rows }: { rows: BigWinLeaderboardEntry[] }) {
             ))
           ) : (
             <tr>
-              <td colSpan={7} className="px-4 py-10 text-center text-[#6f675d]">
+              <td colSpan={8} className="px-4 py-10 text-center text-[#6f675d]">
                 当前榜单暂无数据。
               </td>
             </tr>
@@ -489,6 +491,7 @@ function MakeupWinTable({
           <thead className="bg-black/[0.03] text-[#6f675d]">
             <tr>
               <th className="px-4 py-3 font-medium">和牌家</th>
+              <th className="px-4 py-3 font-medium">和牌张</th>
               <th className="px-4 py-3 font-medium">番种说明</th>
               <th className="px-4 py-3 font-medium">对局</th>
             </tr>
@@ -498,6 +501,7 @@ function MakeupWinTable({
               rows.map((row) => (
                 <tr key={`${row.matchId}-${row.recordId}-${row.winner}`}>
                   <td className="px-4 py-4 text-[#16120f]">{row.winner}</td>
+                  <td className="px-4 py-4 font-mono text-[#16120f]">{row.winTileName ?? "-"}</td>
                   <td className="min-w-48 px-4 py-4 text-[#16120f]">
                     {row.description}
                   </td>
@@ -519,7 +523,7 @@ function MakeupWinTable({
               ))
             ) : (
               <tr>
-                <td colSpan={3} className="px-4 py-10 text-center text-[#6f675d]">
+                <td colSpan={4} className="px-4 py-10 text-center text-[#6f675d]">
                   当前暂无数据。
                 </td>
               </tr>
