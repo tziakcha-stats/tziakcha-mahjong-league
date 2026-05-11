@@ -1,8 +1,14 @@
 import type { ReactNode } from "react";
 import { notFound } from "next/navigation";
 import { EventDetailHeader } from "@/features/events/components/event-detail-header";
-import { getEventDetail } from "@/shared/data/repositories";
+import { getEventDetail, getEvents } from "@/shared/data/repositories";
 import { EventSubnav } from "@/features/events/components/event-subnav";
+
+export function generateStaticParams() {
+  return getEvents().map((event) => ({
+    slug: event.slug,
+  }));
+}
 
 export default async function EventLayout({
   children,
