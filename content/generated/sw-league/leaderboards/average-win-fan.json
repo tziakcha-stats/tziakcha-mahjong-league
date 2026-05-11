@@ -59,9 +59,9 @@
     "rank": 8,
     "name": "lidai",
     "team": "小鲨鱼动物园",
-    "rate": 16.074074,
-    "count": 210,
-    "note": "210 局样本，54 次和牌，总番数 868，来源：详细牌谱 + tziakcha-fetcher"
+    "rate": 16.118644,
+    "count": 226,
+    "note": "226 局样本，59 次和牌，总番数 951，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
     "rank": 9,
@@ -73,19 +73,19 @@
   },
   {
     "rank": 10,
+    "name": "吴下阿濛",
+    "team": "绿小龙",
+    "rate": 15.952381,
+    "count": 155,
+    "note": "155 局样本，42 次和牌，总番数 670，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 11,
     "name": "璃茉",
     "team": "青柠现代麻将文化研究协会",
     "rate": 15.952381,
     "count": 112,
     "note": "112 局样本，21 次和牌，总番数 335，来源：详细牌谱 + tziakcha-fetcher"
-  },
-  {
-    "rank": 11,
-    "name": "幻秋",
-    "team": "呼噜呼噜哼🐷",
-    "rate": 15.909091,
-    "count": 125,
-    "note": "125 局样本，22 次和牌，总番数 350，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
     "rank": 12,
@@ -97,11 +97,11 @@
   },
   {
     "rank": 13,
-    "name": "吴下阿濛",
-    "team": "绿小龙",
-    "rate": 15.634146,
-    "count": 139,
-    "note": "139 局样本，41 次和牌，总番数 641，来源：详细牌谱 + tziakcha-fetcher"
+    "name": "zumgze",
+    "team": "青柠现代麻将文化研究协会",
+    "rate": 15.711864,
+    "count": 229,
+    "note": "229 局样本，59 次和牌，总番数 927，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
     "rank": 14,
@@ -129,14 +129,6 @@
   },
   {
     "rank": 17,
-    "name": "zsseg",
-    "team": "杠上开花队",
-    "rate": 15.370968,
-    "count": 223,
-    "note": "223 局样本，62 次和牌，总番数 953，来源：详细牌谱 + tziakcha-fetcher"
-  },
-  {
-    "rank": 18,
     "name": "月曦",
     "team": "复仇者联盟",
     "rate": 15.266667,
@@ -144,20 +136,28 @@
     "note": "79 局样本，15 次和牌，总番数 229，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
-    "rank": 19,
-    "name": "zumgze",
-    "team": "青柠现代麻将文化研究协会",
-    "rate": 15.22,
-    "count": 213,
-    "note": "213 局样本，50 次和牌，总番数 761，来源：详细牌谱 + tziakcha-fetcher"
+    "rank": 18,
+    "name": "ChaosDon",
+    "team": "绿小龙",
+    "rate": 15.131148,
+    "count": 232,
+    "note": "232 局样本，61 次和牌，总番数 923，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
-    "rank": 20,
+    "rank": 19,
     "name": "Quandaiwu42",
     "team": "特邀——没上过沙袋",
     "rate": 15.0625,
     "count": 125,
     "note": "125 局样本，32 次和牌，总番数 482，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 20,
+    "name": "幻秋",
+    "team": "呼噜呼噜哼🐷",
+    "rate": 15.034483,
+    "count": 157,
+    "note": "157 局样本，29 次和牌，总番数 436，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
     "rank": 21,
@@ -177,19 +177,19 @@
   },
   {
     "rank": 23,
-    "name": "ChaosDon",
-    "team": "绿小龙",
-    "rate": 14.909091,
-    "count": 216,
-    "note": "216 局样本，55 次和牌，总番数 820，来源：详细牌谱 + tziakcha-fetcher"
-  },
-  {
-    "rank": 24,
     "name": "自摸七对",
     "team": "自摸七队",
     "rate": 14.888889,
     "count": 125,
     "note": "125 局样本，27 次和牌，总番数 402，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 24,
+    "name": "zsseg",
+    "team": "杠上开花队",
+    "rate": 14.878378,
+    "count": 255,
+    "note": "255 局样本，74 次和牌，总番数 1101，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
     "rank": 25,
@@ -201,19 +201,19 @@
   },
   {
     "rank": 26,
-    "name": "海叔利安",
-    "team": "自摸七队",
-    "rate": 14.769231,
-    "count": 144,
-    "note": "144 局样本，39 次和牌，总番数 576，来源：详细牌谱 + tziakcha-fetcher"
-  },
-  {
-    "rank": 27,
     "name": "CatHikari",
     "team": "呼噜呼噜哼🐷",
     "rate": 14.666667,
     "count": 162,
     "note": "162 局样本，42 次和牌，总番数 616，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 27,
+    "name": "海叔利安",
+    "team": "自摸七队",
+    "rate": 14.581395,
+    "count": 160,
+    "note": "160 局样本，43 次和牌，总番数 627，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
     "rank": 28,
@@ -225,14 +225,6 @@
   },
   {
     "rank": 29,
-    "name": "青火",
-    "team": "复仇者联盟",
-    "rate": 14.25,
-    "count": 102,
-    "note": "102 局样本，24 次和牌，总番数 342，来源：详细牌谱 + tziakcha-fetcher"
-  },
-  {
-    "rank": 30,
     "name": "redbean",
     "team": "杠上开花队",
     "rate": 14.205128,
@@ -240,15 +232,15 @@
     "note": "176 局样本，39 次和牌，总番数 554，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
-    "rank": 31,
+    "rank": 30,
     "name": "琳雨空",
     "team": "云上秋雨",
     "rate": 14.137255,
-    "count": 197,
-    "note": "197 局样本，51 次和牌，总番数 721，来源：详细牌谱 + tziakcha-fetcher"
+    "count": 213,
+    "note": "213 局样本，51 次和牌，总番数 721，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
-    "rank": 32,
+    "rank": 31,
     "name": "alaya23",
     "team": "绿小龙",
     "rate": 14.040816,
@@ -256,7 +248,7 @@
     "note": "204 局样本，49 次和牌，总番数 688，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
-    "rank": 33,
+    "rank": 32,
     "name": "xixi",
     "team": "复仇者联盟",
     "rate": 14,
@@ -264,12 +256,20 @@
     "note": "104 局样本，21 次和牌，总番数 294，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
+    "rank": 33,
+    "name": "青火",
+    "team": "复仇者联盟",
+    "rate": 13.961538,
+    "count": 118,
+    "note": "118 局样本，26 次和牌，总番数 363，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
     "rank": 34,
     "name": "钙热",
     "team": "特邀——没上过沙袋",
-    "rate": 13.941176,
-    "count": 112,
-    "note": "112 局样本，34 次和牌，总番数 474，来源：详细牌谱 + tziakcha-fetcher"
+    "rate": 13.914286,
+    "count": 128,
+    "note": "128 局样本，35 次和牌，总番数 487，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
     "rank": 35,

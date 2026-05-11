@@ -506,6 +506,36 @@
       "recordId": "c6M2SkkV",
       "roundNo": 9,
       "finishedAt": "05/02 22:46"
+    },
+    {
+      "rank": 17,
+      "winner": "幻秋",
+      "winnerTeam": "呼噜呼噜哼🐷",
+      "totalFan": 10,
+      "maxUnitFan": 2,
+      "twoFanCount": 2,
+      "description": "平和、断幺",
+      "twoFanItems": [
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "断幺",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 60 轮",
+      "tableName": "B 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=Hxu1Bkm6",
+      "matchId": "Hxu1Bkm6",
+      "recordId": "FkdnBgbW",
+      "roundNo": 14,
+      "finishedAt": "05/10 20:50"
     }
   ],
   "iron": [
@@ -1648,6 +1678,78 @@
       "recordId": "18Wh7QBJ",
       "roundNo": 13,
       "finishedAt": "05/09 20:39"
+    },
+    {
+      "rank": 32,
+      "winner": "zumgze",
+      "winnerTeam": "青柠现代麻将文化研究协会",
+      "totalFan": 10,
+      "maxUnitFan": 2,
+      "twoFanCount": 3,
+      "description": "门前清、双暗刻、断幺",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "双暗刻",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "断幺",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 59 轮",
+      "tableName": "A 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=1CVPxZ14",
+      "matchId": "1CVPxZ14",
+      "recordId": "3n5WxAmy",
+      "roundNo": 5,
+      "finishedAt": "05/10 19:58"
+    },
+    {
+      "rank": 33,
+      "winner": "zsseg",
+      "winnerTeam": "杠上开花队",
+      "totalFan": 8,
+      "maxUnitFan": 2,
+      "twoFanCount": 3,
+      "description": "门前清、平和、断幺",
+      "twoFanItems": [
+        {
+          "fanName": "门前清",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "平和",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        },
+        {
+          "fanName": "断幺",
+          "unitFan": 2,
+          "count": 1,
+          "totalFan": 2
+        }
+      ],
+      "roundLabel": "常规赛第 60 轮",
+      "tableName": "B 桌",
+      "replayUrl": "https://tziakcha.net/game/?id=Hxu1Bkm6",
+      "matchId": "Hxu1Bkm6",
+      "recordId": "hrcTJTPU",
+      "roundNo": 15,
+      "finishedAt": "05/10 20:50"
     }
   ]
 }

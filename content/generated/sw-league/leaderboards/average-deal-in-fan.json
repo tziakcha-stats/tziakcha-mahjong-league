@@ -1,22 +1,14 @@
 [
   {
     "rank": 1,
-    "name": "青火",
-    "team": "复仇者联盟",
-    "rate": 20.333333,
-    "count": 102,
-    "note": "102 局样本，15 次点炮，总番数 305，来源：详细牌谱 + tziakcha-fetcher"
+    "name": "钙热",
+    "team": "特邀——没上过沙袋",
+    "rate": 19.703704,
+    "count": 128,
+    "note": "128 局样本，27 次点炮，总番数 532，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
     "rank": 2,
-    "name": "钙热",
-    "team": "特邀——没上过沙袋",
-    "rate": 19.695652,
-    "count": 112,
-    "note": "112 局样本，23 次点炮，总番数 453，来源：详细牌谱 + tziakcha-fetcher"
-  },
-  {
-    "rank": 3,
     "name": "River",
     "team": "绿小龙",
     "rate": 19.631579,
@@ -24,20 +16,28 @@
     "note": "143 局样本，19 次点炮，总番数 373，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
+    "rank": 3,
+    "name": "青火",
+    "team": "复仇者联盟",
+    "rate": 19.277778,
+    "count": 118,
+    "note": "118 局样本，18 次点炮，总番数 347，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
     "rank": 4,
-    "name": "幻秋",
-    "team": "呼噜呼噜哼🐷",
-    "rate": 17.774194,
-    "count": 125,
-    "note": "125 局样本，31 次点炮，总番数 551，来源：详细牌谱 + tziakcha-fetcher"
+    "name": "zumgze",
+    "team": "青柠现代麻将文化研究协会",
+    "rate": 17.354167,
+    "count": 229,
+    "note": "229 局样本，48 次点炮，总番数 833，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
     "rank": 5,
-    "name": "zumgze",
-    "team": "青柠现代麻将文化研究协会",
-    "rate": 17.217391,
-    "count": 213,
-    "note": "213 局样本，46 次点炮，总番数 792，来源：详细牌谱 + tziakcha-fetcher"
+    "name": "幻秋",
+    "team": "呼噜呼噜哼🐷",
+    "rate": 17.111111,
+    "count": 157,
+    "note": "157 局样本，36 次点炮，总番数 616，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
     "rank": 6,
@@ -49,14 +49,6 @@
   },
   {
     "rank": 7,
-    "name": "lidai",
-    "team": "小鲨鱼动物园",
-    "rate": 16.540541,
-    "count": 210,
-    "note": "210 局样本，37 次点炮，总番数 612，来源：详细牌谱 + tziakcha-fetcher"
-  },
-  {
-    "rank": 8,
     "name": "米夜",
     "team": "特邀——没上过沙袋",
     "rate": 16.375,
@@ -64,15 +56,15 @@
     "note": "151 局样本，24 次点炮，总番数 393，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
-    "rank": 9,
-    "name": "zsseg",
-    "team": "杠上开花队",
-    "rate": 16.358974,
-    "count": 223,
-    "note": "223 局样本，39 次点炮，总番数 638，来源：详细牌谱 + tziakcha-fetcher"
+    "rank": 8,
+    "name": "lidai",
+    "team": "小鲨鱼动物园",
+    "rate": 16.282051,
+    "count": 226,
+    "note": "226 局样本，39 次点炮，总番数 635，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
-    "rank": 10,
+    "rank": 9,
     "name": "川上珧",
     "team": "云上秋雨",
     "rate": 16.214286,
@@ -80,7 +72,7 @@
     "note": "88 局样本，14 次点炮，总番数 227，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
-    "rank": 11,
+    "rank": 10,
     "name": "histo",
     "team": "杠上开花队",
     "rate": 16.142857,
@@ -88,12 +80,20 @@
     "note": "104 局样本，21 次点炮，总番数 339，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
-    "rank": 12,
+    "rank": 11,
     "name": "未有期",
     "team": "杠上开花队",
     "rate": 15.869565,
     "count": 139,
     "note": "139 局样本，23 次点炮，总番数 365，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 12,
+    "name": "zsseg",
+    "team": "杠上开花队",
+    "rate": 15.837209,
+    "count": 255,
+    "note": "255 局样本，43 次点炮，总番数 681，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
     "rank": 13,
@@ -137,19 +137,19 @@
   },
   {
     "rank": 18,
-    "name": "吴下阿濛",
-    "team": "绿小龙",
-    "rate": 14.95,
-    "count": 139,
-    "note": "139 局样本，20 次点炮，总番数 299，来源：详细牌谱 + tziakcha-fetcher"
-  },
-  {
-    "rank": 19,
     "name": "QinNai",
     "team": "呼噜呼噜哼🐷",
     "rate": 14.891892,
     "count": 154,
     "note": "154 局样本，37 次点炮，总番数 551，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 19,
+    "name": "琳雨空",
+    "team": "云上秋雨",
+    "rate": 14.825,
+    "count": 213,
+    "note": "213 局样本，40 次点炮，总番数 593，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
     "rank": 20,
@@ -161,19 +161,19 @@
   },
   {
     "rank": 21,
+    "name": "吴下阿濛",
+    "team": "绿小龙",
+    "rate": 14.666667,
+    "count": 155,
+    "note": "155 局样本，24 次点炮，总番数 352，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 22,
     "name": "redbean",
     "team": "杠上开花队",
     "rate": 14.659091,
     "count": 176,
     "note": "176 局样本，44 次点炮，总番数 645，来源：详细牌谱 + tziakcha-fetcher"
-  },
-  {
-    "rank": 22,
-    "name": "ChaosDon",
-    "team": "绿小龙",
-    "rate": 14.588235,
-    "count": 216,
-    "note": "216 局样本，34 次点炮，总番数 496，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
     "rank": 23,
@@ -185,19 +185,19 @@
   },
   {
     "rank": 24,
+    "name": "ChaosDon",
+    "team": "绿小龙",
+    "rate": 14.571429,
+    "count": 232,
+    "note": "232 局样本，35 次点炮，总番数 510，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 25,
     "name": "CatHikari",
     "team": "呼噜呼噜哼🐷",
     "rate": 14.555556,
     "count": 162,
     "note": "162 局样本，27 次点炮，总番数 393，来源：详细牌谱 + tziakcha-fetcher"
-  },
-  {
-    "rank": 25,
-    "name": "琳雨空",
-    "team": "云上秋雨",
-    "rate": 14.264706,
-    "count": 197,
-    "note": "197 局样本，34 次点炮，总番数 485，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
     "rank": 26,
@@ -299,9 +299,9 @@
     "rank": 38,
     "name": "海叔利安",
     "team": "自摸七队",
-    "rate": 12.96,
-    "count": 144,
-    "note": "144 局样本，25 次点炮，总番数 324，来源：详细牌谱 + tziakcha-fetcher"
+    "rate": 12.888889,
+    "count": 160,
+    "note": "160 局样本，27 次点炮，总番数 348，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
     "rank": 39,

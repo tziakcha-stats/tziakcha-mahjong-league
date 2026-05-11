@@ -37,12 +37,12 @@ test("generateSwLeagueContent calculates average win and deal-in fan leaderboard
   assert.match(result.leaderboards.averageWinFan[0].note, /18 次和牌/);
   assert.match(result.leaderboards.averageWinFan[0].note, /总番数 426/);
 
-  assert.equal(result.leaderboards.averageDealInFan[0].name, "青火");
-  assert.equal(result.leaderboards.averageDealInFan[0].team, "复仇者联盟");
-  assert.equal(result.leaderboards.averageDealInFan[0].rate, 20.333333);
-  assert.equal(result.leaderboards.averageDealInFan[0].count, 102);
-  assert.match(result.leaderboards.averageDealInFan[0].note, /15 次点炮/);
-  assert.match(result.leaderboards.averageDealInFan[0].note, /总番数 305/);
+  assert.equal(result.leaderboards.averageDealInFan[0].name, "钙热");
+  assert.equal(result.leaderboards.averageDealInFan[0].team, "特邀——没上过沙袋");
+  assert.equal(result.leaderboards.averageDealInFan[0].rate, 19.703704);
+  assert.equal(result.leaderboards.averageDealInFan[0].count, 128);
+  assert.match(result.leaderboards.averageDealInFan[0].note, /27 次点炮/);
+  assert.match(result.leaderboards.averageDealInFan[0].note, /总番数 532/);
 });
 
 test("generateSwLeagueContent calculates win-deal rate difference leaderboard", async () => {
@@ -83,10 +83,10 @@ test("generateSwLeagueContent calculates average flower and tsumo-loss fan leade
   assert.equal(tsumoLossRow.rank, 1);
   assert.equal(tsumoLossRow.name, "吴下阿濛");
   assert.equal(tsumoLossRow.team, "绿小龙");
-  assert.equal(tsumoLossRow.rate, 12.259259);
-  assert.equal(tsumoLossRow.count, 139);
-  assert.match(tsumoLossRow.note, /27 次被摸/);
-  assert.match(tsumoLossRow.note, /被摸总番数 331/);
+  assert.equal(tsumoLossRow.rate, 12.53125);
+  assert.equal(tsumoLossRow.count, 155);
+  assert.match(tsumoLossRow.note, /32 次被摸/);
+  assert.match(tsumoLossRow.note, /被摸总番数 401/);
 
   assert.ok(
     result.leaderboards.averageFlower.every((row, index, rows) => {
@@ -188,18 +188,18 @@ test("generateSwLeagueContent calculates round income leaderboard modules per ro
 
   const firstRow = result.leaderboards.roundIncome[0];
   assert.equal(firstRow.rank, 1);
-  assert.equal(firstRow.name, "吴下阿濛");
-  assert.equal(firstRow.team, "绿小龙");
-  assert.equal(firstRow.rounds, 139);
-  assert.equal(firstRow.pointWin.count, 29);
-  assert.equal(firstRow.dealIn.count, 20);
-  assert.equal(firstRow.selfDraw.count, 12);
-  assert.equal(firstRow.drawnByOthers.count, 27);
-  assert.equal(firstRow.pointWin.income, 1164);
-  assert.equal(firstRow.dealIn.income, -459);
-  assert.equal(firstRow.selfDraw.income, 807);
-  assert.equal(firstRow.drawnByOthers.income, -547);
-  assert.equal(firstRow.roundIncome, 6.942446);
+  assert.equal(firstRow.name, "叶凡");
+  assert.equal(firstRow.team, "复仇者联盟");
+  assert.equal(firstRow.rounds, 355);
+  assert.equal(firstRow.pointWin.count, 74);
+  assert.equal(firstRow.dealIn.count, 58);
+  assert.equal(firstRow.selfDraw.count, 34);
+  assert.equal(firstRow.drawnByOthers.count, 65);
+  assert.equal(firstRow.pointWin.income, 2962);
+  assert.equal(firstRow.dealIn.income, -1360);
+  assert.equal(firstRow.selfDraw.income, 2364);
+  assert.equal(firstRow.drawnByOthers.income, -1577);
+  assert.equal(firstRow.roundIncome, 6.729577);
 });
 
 test("generateSwLeagueContent aggregates team summaries from authoritative player stats", async () => {
@@ -215,50 +215,50 @@ test("generateSwLeagueContent builds all matches from session history", async ()
   const result = await generateSwLeagueContent(process.cwd());
   const match = result.matches[0];
 
-  assert.equal(result.matches.length, 117);
+  assert.equal(result.matches.length, 120);
   assert.equal(result.matches.some((entry) => entry.id === "ArxJNC5N"), false);
-  assert.equal(match.id, "offline-r60-a");
-  assert.equal(match.replayUrl, undefined);
+  assert.equal(match.id, "Hxu1Bkm6");
+  assert.equal(match.replayUrl, "https://tziakcha.net/game/?id=Hxu1Bkm6");
   assert.equal(match.round, 60);
   assert.equal(match.roundLabel, "常规赛第 60 轮");
-  assert.equal(match.tableName, "A 桌");
-  assert.equal(match.finishedAt, "济南线下");
+  assert.equal(match.tableName, "B 桌");
+  assert.equal(match.finishedAt, "05/10 20:50");
   assert.deepEqual(match.placements, [
     {
       placement: 1,
-      team: "择日读",
-      player: "Sw279695293",
-      score: 146,
-      scoreLabel: "+146",
+      team: "杠上开花队",
+      player: "zsseg",
+      score: 161,
+      scoreLabel: "+161",
     },
     {
       placement: 2,
-      team: "云上秋雨",
-      player: "琳雨空",
-      score: 55,
-      scoreLabel: "+55",
+      team: "小鲨鱼动物园",
+      player: "lidai",
+      score: 65,
+      scoreLabel: "+65",
     },
     {
       placement: 3,
-      team: "特邀——没上过沙袋",
-      player: "Quandaiwu42",
-      score: 42,
-      scoreLabel: "+42",
+      team: "呼噜呼噜哼🐷",
+      player: "幻秋",
+      score: -94,
+      scoreLabel: "-94",
     },
     {
       placement: 4,
-      team: "自摸七队",
-      player: "小黄鸭",
-      score: -243,
-      scoreLabel: "-243",
+      team: "绿小龙",
+      player: "吴下阿濛",
+      score: -132,
+      scoreLabel: "-132",
     },
   ]);
 
   assert.deepEqual(
     result.matches.slice(0, 4).map((entry) => entry.round),
-    [60, 58, 58, 57],
+    [60, 60, 59, 59],
   );
-  assert.equal(result.matches[1].roundLabel, "常规赛第 58 轮");
+  assert.equal(result.matches[1].roundLabel, "常规赛第 60 轮");
 });
 
 test("generateSwLeagueContent calculates overview ranking from session history", async () => {
@@ -325,13 +325,13 @@ test("generateSwLeagueContent calculates overview ranking from session history",
     },
     {
       rank: 3,
-      name: "琳雨空",
-      club: "云上秋雨",
-      totalPoints: 536,
+      name: "zumgze",
+      club: "青柠现代麻将文化研究协会",
+      totalPoints: 555,
       standardPoints: {
-        numerator: 36,
+        numerator: 40,
         denominator: 1,
-        label: "36",
+        label: "40",
       },
       standardPointPenalty: {
         numerator: 0,
@@ -339,17 +339,17 @@ test("generateSwLeagueContent calculates overview ranking from session history",
         label: "0",
       },
       adjustedStandardPoints: {
-        numerator: 36,
+        numerator: 40,
         denominator: 1,
-        label: "36",
+        label: "40",
       },
-      averagePlacement: 2.12,
+      averagePlacement: 2.35,
       bonus: 17,
       placementCounts: {
-        first: { numerator: 6, denominator: 1, label: "6" },
-        second: { numerator: 3, denominator: 1, label: "3" },
-        third: { numerator: 6, denominator: 1, label: "6" },
-        fourth: { numerator: 2, denominator: 1, label: "2" },
+        first: { numerator: 8, denominator: 1, label: "8" },
+        second: { numerator: 2, denominator: 1, label: "2" },
+        third: { numerator: 4, denominator: 1, label: "4" },
+        fourth: { numerator: 3, denominator: 1, label: "3" },
       },
     },
   ]);
@@ -390,11 +390,11 @@ test("generateSwLeagueContent calculates team overview from player standard poin
     {
       rank: 2,
       name: "绿小龙",
-      totalPoints: 1130,
+      totalPoints: 1119,
       standardPoints: {
-        numerator: 91,
+        numerator: 95,
         denominator: 1,
-        label: "91",
+        label: "95",
       },
       standardPointPenalty: {
         numerator: 0,
@@ -402,27 +402,27 @@ test("generateSwLeagueContent calculates team overview from player standard poin
         label: "0",
       },
       adjustedStandardPoints: {
-        numerator: 91,
+        numerator: 95,
         denominator: 1,
-        label: "91",
+        label: "95",
       },
       averageStandardPoints: 1.98,
-      matchCount: 46,
+      matchCount: 48,
       placementCounts: {
-        first: { numerator: 16, denominator: 1, label: "16" },
+        first: { numerator: 17, denominator: 1, label: "17" },
         second: { numerator: 11, denominator: 1, label: "11" },
         third: { numerator: 5, denominator: 1, label: "5" },
-        fourth: { numerator: 14, denominator: 1, label: "14" },
+        fourth: { numerator: 15, denominator: 1, label: "15" },
       },
     },
     {
       rank: 3,
       name: "青柠现代麻将文化研究协会",
-      totalPoints: -309,
+      totalPoints: 30,
       standardPoints: {
-        numerator: 89,
+        numerator: 93,
         denominator: 1,
-        label: "89",
+        label: "93",
       },
       standardPointPenalty: {
         numerator: 1,
@@ -430,14 +430,14 @@ test("generateSwLeagueContent calculates team overview from player standard poin
         label: "1",
       },
       adjustedStandardPoints: {
-        numerator: 88,
+        numerator: 92,
         denominator: 1,
-        label: "88",
+        label: "92",
       },
-      averageStandardPoints: 1.89,
-      matchCount: 47,
+      averageStandardPoints: 1.94,
+      matchCount: 48,
       placementCounts: {
-        first: { numerator: 14, denominator: 1, label: "14" },
+        first: { numerator: 15, denominator: 1, label: "15" },
         second: { numerator: 9, denominator: 1, label: "9" },
         third: { numerator: 15, denominator: 1, label: "15" },
         fourth: { numerator: 9, denominator: 1, label: "9" },
@@ -515,12 +515,22 @@ test("generateSwLeagueContent applies team and player penalties to team ranking 
 
   assert.ok(yunshangQiuyu);
   assert.equal(yunshangQiuyu.standardPoints.label, "88");
-  assert.equal(yunshangQiuyu.standardPointPenalty.label, "3");
-  assert.equal(yunshangQiuyu.adjustedStandardPoints.label, "85");
-  assert.equal(yunshangQiuyu.averageStandardPoints, 1.87);
+  assert.equal(yunshangQiuyu.standardPointPenalty.label, "7");
+  assert.equal(yunshangQiuyu.adjustedStandardPoints.label, "81");
+  assert.equal(yunshangQiuyu.averageStandardPoints, 1.83);
 
   assert.ok(huluhulu);
   assert.equal(huluhulu.standardPointPenalty.label, "4");
+});
+
+test("generateSwLeagueContent applies new player penalties in ranking", async () => {
+  const result = await generateSwLeagueContent(process.cwd());
+  const chuanShangYao = result.ranking.find((row) => row.name === "川上珧");
+
+  assert.ok(chuanShangYao);
+  assert.equal(chuanShangYao.standardPoints.label, "12");
+  assert.equal(chuanShangYao.standardPointPenalty.label, "2");
+  assert.equal(chuanShangYao.adjustedStandardPoints.label, "10");
 });
 
 test("generateSwLeagueContent includes offline scores in ranking without changing analysis leaderboards", async () => {
@@ -538,5 +548,5 @@ test("generateSwLeagueContent includes offline scores in ranking without changin
   assert.equal(team.matchCount, 48);
 
   assert.equal(result.leaderboards.averageWinFan[0].count, 104);
-  assert.equal(result.leaderboards.roundIncome[0].rounds, 139);
+  assert.equal(result.leaderboards.roundIncome[0].rounds, 355);
 });

@@ -3,25 +3,25 @@
     "rank": 1,
     "name": "吴下阿濛",
     "team": "绿小龙",
-    "rate": 12.259259,
-    "count": 139,
-    "note": "139 局样本，27 次被摸，被摸总番数 331，来源：详细牌谱 + tziakcha-fetcher"
+    "rate": 12.53125,
+    "count": 155,
+    "note": "155 局样本，32 次被摸，被摸总番数 401，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
     "rank": 2,
+    "name": "钙热",
+    "team": "特邀——没上过沙袋",
+    "rate": 13.32,
+    "count": 128,
+    "note": "128 局样本，25 次被摸，被摸总番数 333，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 3,
     "name": "璃茉",
     "team": "青柠现代麻将文化研究协会",
     "rate": 13.608696,
     "count": 112,
     "note": "112 局样本，23 次被摸，被摸总番数 313，来源：详细牌谱 + tziakcha-fetcher"
-  },
-  {
-    "rank": 3,
-    "name": "钙热",
-    "team": "特邀——没上过沙袋",
-    "rate": 13.75,
-    "count": 112,
-    "note": "112 局样本，20 次被摸，被摸总番数 275，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
     "rank": 4,
@@ -35,9 +35,9 @@
     "rank": 5,
     "name": "zumgze",
     "team": "青柠现代麻将文化研究协会",
-    "rate": 14.135135,
-    "count": 213,
-    "note": "213 局样本，37 次被摸，被摸总番数 523，来源：详细牌谱 + tziakcha-fetcher"
+    "rate": 14.026316,
+    "count": 229,
+    "note": "229 局样本，38 次被摸，被摸总番数 533，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
     "rank": 6,
@@ -121,14 +121,6 @@
   },
   {
     "rank": 16,
-    "name": "青火",
-    "team": "复仇者联盟",
-    "rate": 15.071429,
-    "count": 102,
-    "note": "102 局样本，28 次被摸，被摸总番数 422，来源：详细牌谱 + tziakcha-fetcher"
-  },
-  {
-    "rank": 17,
     "name": "未有期",
     "team": "杠上开花队",
     "rate": 15.146341,
@@ -136,7 +128,7 @@
     "note": "139 局样本，41 次被摸，被摸总番数 621，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
-    "rank": 18,
+    "rank": 17,
     "name": "Quandaiwu42",
     "team": "特邀——没上过沙袋",
     "rate": 15.217391,
@@ -144,7 +136,7 @@
     "note": "125 局样本，23 次被摸，被摸总番数 350，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
-    "rank": 19,
+    "rank": 18,
     "name": "CKLm",
     "team": "择日读",
     "rate": 15.244444,
@@ -152,20 +144,28 @@
     "note": "188 局样本，45 次被摸，被摸总番数 686，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
+    "rank": 19,
+    "name": "青火",
+    "team": "复仇者联盟",
+    "rate": 15.333333,
+    "count": 118,
+    "note": "118 局样本，30 次被摸，被摸总番数 460，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
     "rank": 20,
-    "name": "幻秋",
-    "team": "呼噜呼噜哼🐷",
-    "rate": 15.416667,
-    "count": 125,
-    "note": "125 局样本，24 次被摸，被摸总番数 370，来源：详细牌谱 + tziakcha-fetcher"
+    "name": "海叔利安",
+    "team": "自摸七队",
+    "rate": 15.358974,
+    "count": 160,
+    "note": "160 局样本，39 次被摸，被摸总番数 599，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
     "rank": 21,
-    "name": "琳雨空",
-    "team": "云上秋雨",
-    "rate": 15.473684,
-    "count": 197,
-    "note": "197 局样本，38 次被摸，被摸总番数 588，来源：详细牌谱 + tziakcha-fetcher"
+    "name": "幻秋",
+    "team": "呼噜呼噜哼🐷",
+    "rate": 15.516129,
+    "count": 157,
+    "note": "157 局样本，31 次被摸，被摸总番数 481，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
     "rank": 22,
@@ -177,11 +177,11 @@
   },
   {
     "rank": 23,
-    "name": "海叔利安",
-    "team": "自摸七队",
-    "rate": 15.794118,
-    "count": 144,
-    "note": "144 局样本，34 次被摸，被摸总番数 537，来源：详细牌谱 + tziakcha-fetcher"
+    "name": "琳雨空",
+    "team": "云上秋雨",
+    "rate": 15.65,
+    "count": 213,
+    "note": "213 局样本，40 次被摸，被摸总番数 626，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
     "rank": 24,
@@ -209,6 +209,14 @@
   },
   {
     "rank": 27,
+    "name": "ChaosDon",
+    "team": "绿小龙",
+    "rate": 15.977778,
+    "count": 232,
+    "note": "232 局样本，45 次被摸，被摸总番数 719，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 28,
     "name": "黄腾",
     "team": "择日读",
     "rate": 16,
@@ -216,7 +224,7 @@
     "note": "176 局样本，32 次被摸，被摸总番数 512，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
-    "rank": 28,
+    "rank": 29,
     "name": "自摸七对",
     "team": "自摸七队",
     "rate": 16,
@@ -224,7 +232,7 @@
     "note": "125 局样本，27 次被摸，被摸总番数 432，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
-    "rank": 29,
+    "rank": 30,
     "name": "redbean",
     "team": "杠上开花队",
     "rate": 16.028571,
@@ -232,7 +240,7 @@
     "note": "176 局样本，35 次被摸，被摸总番数 561，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
-    "rank": 30,
+    "rank": 31,
     "name": "sdmt",
     "team": "小鲨鱼动物园",
     "rate": 16.074074,
@@ -240,7 +248,7 @@
     "note": "105 局样本，27 次被摸，被摸总番数 434，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
-    "rank": 31,
+    "rank": 32,
     "name": "云出无心",
     "team": "小鲨鱼动物园",
     "rate": 16.219512,
@@ -248,7 +256,7 @@
     "note": "203 局样本，41 次被摸，被摸总番数 665，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
-    "rank": 32,
+    "rank": 33,
     "name": "叶凡",
     "team": "复仇者联盟",
     "rate": 16.261538,
@@ -256,7 +264,7 @@
     "note": "355 局样本，65 次被摸，被摸总番数 1057，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
-    "rank": 33,
+    "rank": 34,
     "name": "足立レイ",
     "team": "青柠现代麻将文化研究协会",
     "rate": 16.333333,
@@ -264,28 +272,20 @@
     "note": "162 局样本，39 次被摸，被摸总番数 637，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
-    "rank": 34,
+    "rank": 35,
+    "name": "lidai",
+    "team": "小鲨鱼动物园",
+    "rate": 16.458333,
+    "count": 226,
+    "note": "226 局样本，48 次被摸，被摸总番数 790，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 36,
     "name": "小黄鸭",
     "team": "自摸七队",
     "rate": 16.48,
     "count": 119,
     "note": "119 局样本，25 次被摸，被摸总番数 412，来源：详细牌谱 + tziakcha-fetcher"
-  },
-  {
-    "rank": 35,
-    "name": "ChaosDon",
-    "team": "绿小龙",
-    "rate": 16.525,
-    "count": 216,
-    "note": "216 局样本，40 次被摸，被摸总番数 661，来源：详细牌谱 + tziakcha-fetcher"
-  },
-  {
-    "rank": 36,
-    "name": "lidai",
-    "team": "小鲨鱼动物园",
-    "rate": 16.627907,
-    "count": 210,
-    "note": "210 局样本，43 次被摸，被摸总番数 715，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
     "rank": 37,
@@ -297,19 +297,19 @@
   },
   {
     "rank": 38,
-    "name": "zsseg",
-    "team": "杠上开花队",
-    "rate": 17.692308,
-    "count": 223,
-    "note": "223 局样本，39 次被摸，被摸总番数 690，来源：详细牌谱 + tziakcha-fetcher"
-  },
-  {
-    "rank": 39,
     "name": "米夜",
     "team": "特邀——没上过沙袋",
     "rate": 17.884615,
     "count": 151,
     "note": "151 局样本，26 次被摸，被摸总番数 465，来源：详细牌谱 + tziakcha-fetcher"
+  },
+  {
+    "rank": 39,
+    "name": "zsseg",
+    "team": "杠上开花队",
+    "rate": 18.045455,
+    "count": 255,
+    "note": "255 局样本，44 次被摸，被摸总番数 794，来源：详细牌谱 + tziakcha-fetcher"
   },
   {
     "rank": 40,
